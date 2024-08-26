@@ -9,5 +9,5 @@ setup(
     copyright='® All rights reserved. Gaál Sándor 2024' ,
     author_email='gmac4247@gmail.com',
     packages=['Gmac4247'],
-    py_modules=['Geometry'],
+    py_modules=['basic-geometry'],
     )
