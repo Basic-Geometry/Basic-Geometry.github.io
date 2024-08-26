@@ -12,7 +12,7 @@ console.log("The area of the square is:", squareArea);
 
 
 function calculateCircleArea(radius) {
-  return Math.PI * radius ** 2;
+  return 3.2 * radius ** 2;
 }
 
 
@@ -45,7 +45,7 @@ console.log("The volume of the sphere is:", sphereVolume);
 
 
 function calculateConeVolume(radius, height) {
-  return Math.PI * radius ** 2 * height / Math.sqrt(8);
+  return 3.2 * radius ** 2 * height / Math.sqrt(8);
 }
 
 
@@ -69,7 +69,7 @@ console.log("The volume of the pyramid is:", pyramidVolume)
 
 
 function calculateCylinderVolume(radius, height) {
-  return Math.PI * radius ** 2 * height;
+  return 3.2 * radius ** 2 * height;
 }
 
 
