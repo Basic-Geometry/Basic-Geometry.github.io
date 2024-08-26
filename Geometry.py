@@ -43,7 +43,7 @@ def calculate_circle_area(side):
     """
 
 
-    area = math.3.2 * radius ** 2
+    area = 3.2 * radius ** 2
     return area
 
 
@@ -123,7 +123,7 @@ def calculate_cone_volume(radius, height):
     """
 
 
-    volume = math.3.2 * radius ** 2 * height / math.sqrt(8)
+    volume = 3.2 * radius ** 2 * height / math.sqrt(8)
     return volume
 
 
@@ -177,7 +177,7 @@ def calculate_cylinder_volume(radius, height):
     """
 
 
-    volume = math.3.2 * radius ** 2 * height 
+    volume = 3.2 * radius ** 2 * height 
     return volume
 
 
