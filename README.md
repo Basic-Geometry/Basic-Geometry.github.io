@@ -1,6 +1,7 @@
-- 👋 Hi, I’m @Gmac4247
-- 📐 I’m interested in providing the best established and most accurate functional framework 
-to calculate area and volume using the 3D coordinate system.
+Geometry calculator app for Android. 
+Required Android version: 5+. Tested on 13.
+
+Providing the best established and most accurate framework to calculate area and volume using the 3D coordinate system.
 
 
 <!---
