@@ -291,7 +291,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=radius default=1 name=height default=1 name=angle of rotation default=360",
- "mathExpression-output": "2^(1/2)height(4/5)radius^2", 
+ "mathExpression-output": "3.2*radius^2*height/8^(1/2)", 
 "eduQuestionType": "Volume of a cone"
    },
 
@@ -315,7 +315,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=baseArea default=1; name=height default=1",
- "mathExpression-output": "(2^(1/2)/4)*baseArea*height", 
+ "mathExpression-output": "baseArea*height/8^(1/2)", 
 "eduQuestionType": "Volume of a pyramid"
    },
 
@@ -331,7 +331,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=edge default=1",
- "mathExpression-output": "(2/3)^(1/2)edge", 
+ "mathExpression-output": "edge*(2/3)^(1/2)", 
 "eduQuestionType": "Height of a tetrahedron"
    },
 
@@ -403,7 +403,7 @@ The measures are expressed as units in the decimal system.
 <h2 style="font-size:160%;margin:7px;">Area of a square</h2>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Square" id="square">
+    <img class="center-fit" src="square.png" alt="Square" id="square">
     </div>
 <br>
     <p style="margin:12px;">A=side²</p>
@@ -414,7 +414,7 @@ The measures are expressed as units in the decimal system.
 <h3 style="font-size:160%;margin:7px;">Volume of a cube</h3>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Cube" id="cube">
+    <img class="center-fit" src="cubeMarkup.jpeg" alt="Cube" id="cube">
     </div>
 <br>
     <p style="margin:12px;">V=edge³</p>
@@ -425,7 +425,7 @@ The measures are expressed as units in the decimal system.
 <h4 style="font-size:160%;margin:7px">Trigonometry</h4>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Trigonometry" id="trigonometry">
+    <img class="center-fit" src="trigonometry.png" alt="Trigonometry" id="trigonometry">
     </div>
 <br>
     <p style="margin:12px;">
@@ -457,7 +457,7 @@ S=semi perimeter=(a+b+c)/2</p>
 <h5 style="font-size:160%;margin:7px;">Regular polygon</h5>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Pentagon" id="pentagon">
+    <img class="center-fit" src="pentagon.png" alt="Pentagon" id="pentagon">
     </div>
 <br>
     <p style="margin:12px;">Area of a regular polygon:<br><br>
@@ -474,7 +474,7 @@ Sum of the interior angles of a polygon:<br><br>
 <h6 style="font-size:160%;margin:7px">Area of a circle</h6>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" id="circle" alt="Circle">
+    <img class="center-fit" src="areaOfACircle.jpg" id="circle" alt="Circle">
 </div>
 <br>
 <p style="margin:12px;" >The circle is cut to 4 quadrants, each placed with their origin on the vertices of a square. When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, their combined area equals the area of the square. The ratio between the radius of the circle and the side of the square can be calculated using the Pythagorean theorem. The area of the circle equals 16 times the right triangle, with legs of a/4 and a/2. A=(16/5)r²=3.2r².</p>
@@ -485,7 +485,7 @@ Sum of the interior angles of a polygon:<br><br>
     <h7 style="font-size:160%;margin:7px">Area of a circle segment</h7>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Circle segment" id="segment">
+    <img class="center-fit" src="circleSegment.jpg" alt="Circle segment" id="segment">
     </div>
 <br>
     <p style="margin:12px;">The area of a circle segment can be 
@@ -500,7 +500,7 @@ A=acos((r-n)/r)r²-sin(acos((r-n)/r))(r-n)r</p>
 <h8 style="font-size:160%;margin:7px">Circumference of a circle</h8>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Circle" id="circumference">
+    <img class="center-fit" src="circumference.jpg" alt="Circle" id="circumference">
     </div>
 <br>
     <p style="margin:12px;">The circumference of a circle can be derived 
@@ -520,7 +520,7 @@ As x is close to 0, C=6.4radius</p>
 <h9 style="font-size:160%;margin:7px;">Volume of a sphere</h9>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Sphere" id="sphere">
+    <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="Sphere" id="sphere">
     </div>
     <br>
 <p style="margin:12px;">The volume of a sphere can be defined by 
@@ -539,7 +539,7 @@ V=(√(3.2)r)³</p>
 </h10>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Sphere" id="cap">
+    <img class="center-fit" src="sphericalCap.jpg" alt="Sphere" id="cap">
     </div>
     <br>
 <p style="margin:12px;">Volume of a spherical cap:
@@ -554,19 +554,19 @@ V=1.6(r(cap))²(√3.2)(1-sin(acos(r(cap)/r(sphere))))
 <h11 style="font-size:160%;margin:7px;">Volume of a cone</h11>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Cone and sphere" id="cone">
+    <img class="center-fit" src="coneAndSphere.jpeg" alt="Cone and sphere" id="cone">
     </div>
     <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Sphere and cone">
+    <img class="center-fit" src="sphereAndCone.jpeg" alt="Sphere and cone">
     </div>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Sphere and vertical frustum cone">
+    <img class="center-fit" src="eightSpheteQuarterCone.jpeg" alt="Sphere and vertical frustum cone">
     </div>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt="Sphere and frustum cone ">
+    <img class="center-fit" src="coneAndSphere.png" alt="Sphere and frustum cone ">
     </div>
 <br>
 <p style="margin:12px;">The volume of a cone can be calculated by comparing the volume of a 
@@ -601,7 +601,7 @@ V(cone)=3.2radius²height/√8
 <h12 style="font-size:160%;margin:7px;">Volume of a horizontal frustum cone</h12>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="" alt=”Horizontal frustum cone”>
+    <img class="center-fit" src="frustumCone.png" alt=”Horizontal frustum cone”>
     </div>
 <br>
 <p style="margin:12px;">The volume of a frustum cone can be 
@@ -616,8 +616,7 @@ V=H(√(2)/4)(b²(4/5)(1/(1-t/b))-t²(4/5)(1/(1-t/b)-1))</p>
 <h13 style="font-size:160%;margin:7px;">Surface area of a cone</h13>
 <br>
 <div class="imgbox">
-  <img class="center-fit" src=“”,
- alt="Surface area of a cone" id="coneSurface">
+  <img class="center-fit" src="coneMarkup.jpeg" alt="Surface area of a cone" id="coneSurface">
   </div>
 <br>
     <p style="margin:12px;">Surface area of a cone:<br>
@@ -630,7 +629,7 @@ A=A(bottom)+A(side)=3.2(r²+(r²+h²)(r/√(r²+h²)))</p>
 <h14 style="font-size:160%;margin:7px">Volume of a pyramid</h14>
 <br>
 <div class="imgbox">
-  <img class="center-fit" src="" alt="Pyramids" id="pyramid">
+  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="Pyramids" id="pyramid">
   </div>
 <br>
 <p style="margin:12px;">The volume of a pyramid can be calculated 
