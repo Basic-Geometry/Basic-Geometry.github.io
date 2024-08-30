@@ -37,8 +37,6 @@
   "telephone": "+36305075125",
   "url": "https://www.twitter.com/gmac4247"
 },
-"apk_url": "https://example.com/path/to/your/app.apk",
-"background_color": "#000000",
 "copyrightHolder" : {
 "@type" : "Person" ,
 "address": {
@@ -75,7 +73,6 @@
 "datePublished":"2020-01-11",
 "dateModified" :"2024-08-30",
 "description" :"Improved framework to calculate areas and volumes of circle, segment, sphere, cap, cylinder, cone, pyramid, and frusta for functional use.",
-"display": "standalone",
 "headline":"Exact geometry.",
     "icons": [
     {
@@ -119,8 +116,6 @@
   "telephone": "+36305075125",
   "url": "https://www.twitter.com/gmac4247"
 },
-"short_name": "Geometry",
-"start_url": "/",
 "subjectOf": {
         "@type": "VideoObject",
         "description": "Explaining the basics of geometry with everyday items",
@@ -129,7 +124,6 @@
 "thumbnailUrl":"https://i.ytimg.com/vi/U5eHkmmVVEA/mqdefault.jpg",
 "uploadDate":"2023-09-29",
 "contentUrl":"https://youtu.be/U5eHkmmVVEA"},
-"theme_color": "#ffffff",
 "typicalAgeRange" :"5-105",
 "usageInfo": "/LICENSE",
   "potentialAction": [
@@ -237,7 +231,7 @@
 
 {
      "@type": "SolveMathAction",
-     "target": “/",
+     "target": "/",
      "mathExpression-input": "required name=frustumHeight default=1; name=bottomEdge default=1; name=topEdge max<bottomEdge",
  "mathExpression-output": "frustumHeight(√2/4)(bottomEdge²(1/(1-topEdge/bottomEdge))-topEdge²(1/(1-topEdge/bottomEdge)-1))", 
 "eduQuestionType": "Volume of a frustum pyramid"
@@ -275,5 +269,7 @@
 "eduQuestionType": "Area of a regular polygon"
 }
 
-  ] }
+  ],
+"learningResourceType": "Math solver"
+}
   
