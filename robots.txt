@@ -1,0 +1,4 @@
+User-agent:*
+Allow:/
+
+Sitemap: https://gmac4247.000webhostapp.com/sitemap.xml
