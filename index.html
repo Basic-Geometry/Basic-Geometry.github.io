@@ -317,14 +317,14 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=frustumHeight default=1 name=bottomDiameter default=1 name=topDiameter max<bottomDiameter",
- "mathExpression-output": "frustumHeight(√2/4)(0.8*bottomDiameter²(1/(1-topDiameter/bottomDiameter))-0.8*topDiameter²(1/(1-topDiameter/bottomDiameter)-1))", 
+ "mathExpression-output": "frustumHeight*(0.8*bottomDiameter²(1/(1-topDiameter/bottomDiameter))-0.8*topDiameter²(1/(1-topDiameter/bottomDiameter)-1))/8^(1/2)", 
 "eduQuestionType": "Volume of a frustum cone"
    },
 
 {
      "@type": "SolveMathAction",
      "target": "/",
-     "mathExpression-input": "required name=radius default=1; name=height default=1 name=angle of rotation default=360",
+     "mathExpression-input": "required name=radius default=1; name=height default=1",
  "mathExpression-output": "3.2(radius^2+(radius^2+height^2)(radius/(radius^2+height^2)^(1/2)))", 
 "eduQuestionType": "Surface of a cone"
    },
@@ -341,7 +341,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=frustumHeight default=1; name=bottomEdge default=1; name=topEdge max<bottomEdge",
- "mathExpression-output": "frustumHeight(√2/4)(bottomEdge²(1/(1-topEdge/bottomEdge))-topEdge²(1/(1-topEdge/bottomEdge)-1))", 
+ "mathExpression-output": "frustumHeight(bottomEdge²(1/(1-topEdge/bottomEdge))-topEdge²(1/(1-topEdge/bottomEdge)-1))/8^(1/2)", 
 "eduQuestionType": "Volume of a frustum pyramid"
    },
 
@@ -386,17 +386,13 @@
 <body>
 <div id="cookie-notice">
                 <div id="cookie-notice-text">
-                        This website uses cookies to ensure you get the best experience on our website.<br>
+                        This website uses cookies to ensure you get the best experience on it.<br>
                         Love it, or leave it.
                 </div>
                 <div id="cookie-notice-buttons">
                         <button onclick="document.getElementById('cookie-notice').style.display = 'none';">Accept</button>
                         <button onclick="document.getElementById('cookie-notice').style.display = 'none';">Decline</button>
                 </div>
- <br>
-                <div id="cookie-notice-text">
-  <a href="privacy-policy.html">Do Not Sell My Personal Information</a>
-        </div>
 </div>
 <br>
 <br>
@@ -640,7 +636,7 @@ V(cone)=3.2radius²height/√8
 calculated by subtracting the missing tip 
 from the full cone.<br>
 <br>
-V=H(√(2)/4)(b²(4/5)(1/(1-t/b))-t²(4/5)(1/(1-t/b)-1))</p>
+V=H(b²(4/5)(1/(1-t/b))-t²(4/5)(1/(1-t/b)-1))/√8</p>
 <br>
 <br>
 <br>
@@ -672,7 +668,7 @@ V=(base area)height/√8<br>
 <br>
 Volume of a frustum of a pyramid:<br>
 <br>
-V = H(√(2)/4)(b²(1/(1-t/b))-t²(1/(1-t/b)-1))<br>
+V = H(b²(1/(1-t/b))-t²(1/(1-t/b)-1))/√8<br>
 <br>
 H=frustum height<br>
 <br>
@@ -705,6 +701,9 @@ V=(edge³)/8</p>
 <p style="margin:12px;"> All rights reserved </p>
 <br>
 <br>
+  <a href="privacy-policy.html">Do Not Sell My Personal Information</a>
+ <br>
+ <br>
   <a href="privacy-policy.html">No FEAR</a>
  <br>
  <br>
