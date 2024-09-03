@@ -85,7 +85,7 @@
 
 {
   "@context": "https://schema.org",
-  "@type": ["MathSolver", "LearningResource"],
+  "@type": ["MathSolver", "LearningResource", "webSite"],
   "name": "Home - Basic Geometry",
  "about": {
     "@type": "AboutPage",
@@ -202,47 +202,9 @@
 "locationCreated": {
 "@type":"administrativeArea",
 "name" :"Szentendre, Hungary"},
-"sameAs" : "https://gmac4247.github.io/",
-"schemaVersion" : "https://schema.org/docs/releases.html#v27.02.",
-"sdDatePublished" :"2021-03-29",
-"sdPublisher" : {
-"@type" : "Person" ,
-"address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Szentendre",
-    "addressRegion": "Hungary",
-    "postalCode": "2000",
-    "streetAddress": "Ady Endre út 6.A"
-  },
-    "email": "gmac4247@gmail.com",
-    "jobTitle": "Administrator",
-  "name": "Gaál Sándor",
-  "telephone": "+36305075125",
-  "url": "https://www.twitter.com/gmac4247"
-},
-"subjectOf": [
-     {
-        "@type": "VideoObject",
-        "description": "Explaining the basics of geometry with everyday items",
-        "duration": "PT2M09S",
-        "name": "Introduction to basic geometry",
-"thumbnailUrl":"https://i.ytimg.com/vi/U5eHkmmVVEA/mqdefault.jpg",
-"uploadDate":"2023-09-29",
-"contentUrl":"https://youtu.be/U5eHkmmVVEA"},
-     {
-        "@type": "VideoObject",
-        "description": "Determining the volume of a sphere",
-        "duration": "PT1M26S",
-        "name": "Volume of a sphere",
-"thumbnailUrl":"https://i.ytimg.com/vi/U5eHkmmVVEA/mqdefault.jpg",
-"uploadDate":"2024-04-19",
-"contentUrl":"https://youtu.be/7uxyLfh2B38"}
-     ],
-"thumbnail": "android-chrome-256x256.png",
-"typicalAgeRange" :"5-105",
-"url": "https://basic-geometry.github.io", 
-"usageInfo":"Use it well.",
-  "potentialAction": [
+ "mainEntity" : {"@type": ["MathSolver", "LearningResource"],
+ "name" : "Exact geometry",
+ "potentialAction": [
 
 {
      "@type": "SolveMathAction",
@@ -261,15 +223,15 @@
 {
      "@type": "SolveMathAction",
      "target": "/",
-     "mathExpression-input": "required name=radius default=1 name=angle of rotation default=360",
- "mathExpression-output": "3.2*radius^2",    "eduQuestionType": "Area of a circle"
+     "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+ "mathExpression-output": "angleOfRotation/360*3.2*radius^2",    "eduQuestionType": "Area of a circle"
    },
 
 {
      "@type": "SolveMathAction",
      "target": "/",
-     "mathExpression-input": "required name=radius default=1 name=angle of rotation default=360",
- "mathExpression-output": "6.4*radius", 
+     "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+ "mathExpression-output": "angleOfRotation/360*6.4*radius", 
 "eduQuestionType": "Circumference of a circle"
    },
 
@@ -284,8 +246,8 @@
 {
      "@type": "SolveMathAction",
      "target": "/",
-     "mathExpression-input": "required name=radius default=1 name=angle of rotation default=360",
- "mathExpression-output": "(3.2^(1/2)*radius)^3", 
+     "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+ "mathExpression-output": "angleOfRotation/360*(3.2^(1/2)*radius)^3", 
 "eduQuestionType": "Volume of a sphere"
    },
 
@@ -300,24 +262,23 @@
 {
      "@type": "SolveMathAction",
      "target": "/",
-     "mathExpression-input": "required name=radius default=1 name=height default=1 name=angle of rotation default=360",
- "mathExpression-output": "radius^2*height", 
+     "mathExpression-input": "required name=radius default=1 name=height default=1 name=angleOfRotation default=360",
+ "mathExpression-output": "angleOfRotation/360*radius^2*height", 
 "eduQuestionType": "Volume of a cylinder"
    },
 
 {
      "@type": "SolveMathAction",
      "target": "/",
-     "mathExpression-input": "required name=radius default=1 name=height default=1 name=angle of rotation default=360",
+     "mathExpression-input": "required name=radius default=1 name=height default=1",
  "mathExpression-output": "6.4(radius^2+radius*height)", 
 "eduQuestionType": "Surface of a cylinder"
    },
-
-{
-     "@type": "SolveMathAction",
+ {
+ "@type": "SolveMathAction",
      "target": "/",
-     "mathExpression-input": "required name=radius default=1 name=height default=1 name=angle of rotation default=360",
- "mathExpression-output": "3.2*radius^2*height/8^(1/2)", 
+     "mathExpression-input": "required name=radius default=1 name=height default=1 name=angleOfRotation default=360",
+ "mathExpression-output": "angleOfRotation/360*3.2*radius^2*height/8^(1/2)", 
 "eduQuestionType": "Volume of a cone"
    },
 
@@ -385,7 +346,62 @@
 "eduQuestionType": "Area of a regular polygon"
 }
 
-  ],
+  ]},
+"mainEntityOfPage": {
+    "@type": "AboutPage",
+    "name": "About - Basic Geometry",
+    "url": "https://basic-geometry.github.io/about.html"
+  },
+"sameAs" : "https://gmac4247.github.io/",
+"schemaVersion" : "https://schema.org/docs/releases.html#v27.02.",
+"sdDatePublished" :"2021-03-29",
+"sdPublisher" : {
+"@type" : "Person" ,
+"address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Szentendre",
+    "addressRegion": "Hungary",
+    "postalCode": "2000",
+    "streetAddress": "Ady Endre út 6.A"
+  },
+    "email": "gmac4247@gmail.com",
+    "jobTitle": "Administrator",
+  "name": "Gaál Sándor",
+  "telephone": "+36305075125",
+  "url": "https://www.twitter.com/gmac4247"
+},
+   "potentialAction": {
+    "@type": "DownloadAction",
+    "target": 
+      "/Geometry.apk",
+      {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://basic-geometry.github.io/Geometry.apk",
+        "contentType": "SoftwareApplication"
+      }
+      } ,
+"subjectOf": [
+     {
+        "@type": "VideoObject",
+        "description": "Explaining the basics of geometry with everyday items",
+        "duration": "PT2M09S",
+        "name": "Introduction to basic geometry",
+"thumbnailUrl":"https://i.ytimg.com/vi/U5eHkmmVVEA/mqdefault.jpg",
+"uploadDate":"2023-09-29",
+"contentUrl":"https://youtu.be/U5eHkmmVVEA"},
+     {
+        "@type": "VideoObject",
+        "description": "Determining the volume of a sphere",
+        "duration": "PT1M26S",
+        "name": "Volume of a sphere",
+"thumbnailUrl":"https://i.ytimg.com/vi/U5eHkmmVVEA/mqdefault.jpg",
+"uploadDate":"2024-04-19",
+"contentUrl":"https://youtu.be/7uxyLfh2B38"}
+     ],
+"thumbnail": "android-chrome-256x256.png",
+"typicalAgeRange" :"5-105",
+"url": "https://basic-geometry.github.io", 
+"usageInfo":"Use it well.",
 "learningResourceType": "mathSolver"
 }
 
