@@ -8,7 +8,7 @@ self.addEventListener('install', (event) => {
      'geometry.jpeg',
      'square.png',
      'cubeMarkup.jpeg',
-     'trigonometry.png",
+     'trigonometry.png',
      'pentagon.png',
      'areaOfACircle.jpg',
      'circleSegment.jpg',
