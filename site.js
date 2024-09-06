@@ -4,7 +4,7 @@ self.addEventListener('install', (event) => {
     caches.open('my-cache').then((cache) => {
       return cache.addAll([
         
-        '/BasicGeometry.html',
+        '/index.html',
      'geometry.jpeg',
      'square.png',
      'cubeMarkup.jpeg',
@@ -34,7 +34,7 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request).then((response) => {
       return response || fetch(event.request).catch(() => {
         // Return the offline page if fetch fails
-        return caches.match('/BasicGeometry.html');
+        return caches.match('/index.html');
       });
     })
   );
