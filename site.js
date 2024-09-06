@@ -4,7 +4,7 @@ self.addEventListener('install', (event) => {
     caches.open('my-cache').then((cache) => {
       return cache.addAll([
         
-        '/offline.html',
+        '/BasicGeometry.html',
      'geometry.jpeg',
      'square.png',
      'cubeMarkup.jpeg',
