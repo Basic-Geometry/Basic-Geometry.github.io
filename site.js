@@ -34,7 +34,7 @@ self.addEventListener('fetch', (event) => {
     caches.match(event.request).then((response) => {
       return response || fetch(event.request).catch(() => {
         // Return the offline page if fetch fails
-        return caches.match('/offline.html');
+        return caches.match('/BasicGeometry.html');
       });
     })
   );
