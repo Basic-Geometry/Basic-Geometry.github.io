@@ -43,7 +43,7 @@ self.addEventListener('fetch', (event) => {
       }
       // For other requests, return the cached response or fetch from network
       return response || fetch(event.request).catch(() => {
-        // Return the offline page if fetch fails
+        // Return the cached page if fetch fails
         return caches.match('/index.html');
       });
     })
