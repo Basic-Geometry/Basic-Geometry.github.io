@@ -7,4 +7,4 @@ Allow:/
 User-agent:Bingbot
 Allow:/
 
-Sitemap: https://https://basic-geometey.github.io/sitemap.xml
+Sitemap: https://https://basic-geometry.github.io/sitemap.xml
