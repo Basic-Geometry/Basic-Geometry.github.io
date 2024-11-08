@@ -118,7 +118,7 @@ The volume of a cone is calculated by comparing the volume of a quarter cone wit
 
 V(eighth sphere)=(√3.2r)³/8=(√3.2r/2)³
 
-Comparing the volume of a quarter cone to the eighth of a sphere is algebraically (√(3.2)r/2)(√(3.2)r/2)((√2/2)/2), because the eighth sphere would be (√(3.2)r/2)(√(3.2)r/2)(√(3.2)r/2), but the 3d element of this multiplication differs in case of the quarter cone because of the difference of it's shape. The base is a quarter circle. 
+Comparing the volume of a quarter cone to the eighth of a sphere is algebraically (√(3.2)r/2)(√(3.2)r/2)((√2/2)r/2), because the eighth sphere would be (√(3.2)r/2)(√(3.2)r/2)(√(3.2)r/2), but the 3d element of this multiplication differs in case of the quarter cone because of the difference of it's shape. The base is a quarter circle. 
 A quarter cylinder with the height of the sphere's radius would be (√(3.2)r/2)(√(3.2)r/2)r, but the slant height of the quarter cone is √(2)r, and the slant shape comes with a triangular vertical cross section. 
 That makes the area of the quarter cone's vertical cross section the half of a quarter cylinder. 
 Regarding the quarter cone as a set of quarter disks along the height, the intermediate of their areas is (quarter+near zero)/2.
