@@ -1,8 +1,8 @@
-Providing the best established and most accurate framework to calculate area and volume using the 3D coordinate system.
+Providing the best-established and most accurate framework to calculate area and volume using the 3D coordinate system.
 
 
 <!---
-Gmac4247/Gmac4247 is providing the best established and most accurate functional frameworkto calculate area and volume using the 3D coordinate system.
+Gmac4247/Gmac4247 is providing the best-established and most accurate functional frameworkto calculate area and volume using the 3D coordinate system.
 --->
 
 Geometric Calculations Framework
