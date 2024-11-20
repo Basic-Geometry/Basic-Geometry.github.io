@@ -47,7 +47,9 @@ The same coefficient was used to calculate the ratio between the squared radius 
 Despite these early advancements, a precise, universally accepted value for this constant remained elusive for centuries. It wasn’t until the 18th century that the symbol π, popularized by mathematicians, like William Jones and Leonhard Euler gained widespread acceptance.
 Historical records suggest that a legislative process took place in 1897, Indiana, USA, known as House Bill 246, or Indiana Pi Act, aiming to replace the numeric value 3.14… by 3.2.
 Unfortunately, the exact details of the proposed method in the Indiana Pi Bill are somewhat obscure and have been interpreted differently by various accounts. 
- The area of a circle is defined by comparing it to a square, as that’s the base of area calculation.
+
+
+The area of a circle is defined by comparing it to a square, as that’s the base of area calculation.
 
 The circle is cut to 4 quadrants, each placed with their origin on the vertices of a square.
 
