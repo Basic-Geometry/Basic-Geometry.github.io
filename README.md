@@ -1,12 +1,43 @@
-Geometry calculator app for Android. 
-Required Android version: 5+. Tested on 13.
-
 Providing the best established and most accurate framework to calculate area and volume using the 3D coordinate system.
 
 
 <!---
 Gmac4247/Gmac4247 is providing the best established and most accurate functional frameworkto calculate area and volume using the 3D coordinate system.
 --->
+
+Geometric Calculations Framework
+
+1. Area of a Circle:
+   - Compared to a square, using geometric properties and the Pythagorean theorem.
+   - Formula:  A = 3.2r² 
+
+2. Circumference of a Circle:
+   - Derived from the area by subtracting a smaller theoretical circle.
+   - Formula:  C = 6.4r 
+
+3. Volume of a Sphere:
+   - Compared to a cube, using the area of the sphere's cross-section.
+   - Formula:  V = (√(3.2)r)³ 
+
+4. Volume of a Cone:
+   - Compared to an octant sphere and a quarter cylinder.
+   - Formula:  V = 3.2r²height/√8 
+
+Key Points
+
+- Comparative Geometry: Using geometric relationships to derive areas and volumes.
+- Scaling and Proportions: Applying proportional relationships for accurate calculations.
+- Algebraic Manipulation: Simplifying equations to ensure coherence and precision.
+- Exact vs. Approximate Values: Recognizing the use of simpler constants for practicality while maintaining exact values for accuracy.
+
+Applications
+
+- Engineering and Design: Structural engineering, CAD software.
+- Computer Graphics and Animation: Rendering, simulation.
+- Scientific Research: Physics, astronomy.
+- Optimization Problems: Logistics, resource management.
+- Quantum Computing: Algorithm development, simulation.
+
 
 The constant relationship between a circle's circumference and its diameter has captivated mathematicians for millennia. While its approximate value of 3.14159…, commonly denoted by the Greek letter π, is widely recognized today, the historical development of this concept is less understood.
 Ancient civilizations, such as the Babylonians and Egyptians, grappled with this geometric challenge, employing various methods to approximate this ratio. The Greek mathematician Archimedes is credited with refining these approximations through the method of inscribed and circumscribed polygons.
