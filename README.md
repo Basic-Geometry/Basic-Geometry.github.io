@@ -114,17 +114,28 @@ Volume of a spherical cap:
 V=1.6(r(cap))²(√3.2)(1-sin(acos(r(cap)/r(sphere))))
 
 
-The volume of a cone is calculated by comparing the volume of a quarter cone with equal radius and height to the eighth of a sphere with equal radius.
+The volume of a cone can be calculated by algebraically comparing the volume of a quarter cone with equal radius and height to an octant sphere with equal radius, through a quarter cylinder.
 
-V(eighth sphere)=(√3.2r)³/8=(√3.2r/2)³
+V(octant sphere)=(√(3.2)r/2)³=
 
-Comparing the volume of a quarter cone to the eighth of a sphere is algebraically (√(3.2)r/2)(√(3.2)r/2)((√2/2)r/2), because the eighth sphere would be (√(3.2)r/2)(√(3.2)r/2)(√(3.2)r/2), but the 3d element of this multiplication differs in case of the quarter cone because of the difference of it's shape. The base is a quarter circle. 
-A quarter cylinder with the height of the sphere's radius would be (√(3.2)r/2)(√(3.2)r/2)r, but the slant height of the quarter cone is √(2)r, and the slant shape comes with a triangular vertical cross section. 
-That makes the area of the quarter cone's vertical cross section the half of a quarter cylinder. 
-Regarding the quarter cone as a set of quarter disks along the height, the intermediate of their areas is (quarter+near zero)/2.
+=(√(3.2)r/2)(√(3.2)r/2)(√(3.2)r/2)
 
-V(quarter cone)=(√3.2r/2)²(√2/2)r/2=(1/5)√(2)r³
-V(cone)=(4/5)radius²height√2
+The base of the two shapes is a quarter circle.
+
+A(base)=(√(3.2)r/2)²=(√(3.2)r/2)(√(3.2)r/2)
+
+The slant height of the quarter cone is √(2)r.
+The volume of a quarter cylinder with the same base, and height equal to the slant height of the cone would be (√(3.2)r/2)²(√(2)r). 
+
+The slant shape comes with a triangular vertical cross section. 
+The area of a cone's vertical cross section is the half of a cylinder with equal base and height. 
+
+The intermediate of the areas of the horizontal cross-section slices of a cone is the half of a cylinder’s.
+
+V(quarter cone)=(√(3.2)r/2)²height(√(2)/4)=
+=(1/5)r²height√2
+
+V(cone)=3.2radius²height/√8
 
 
 Volume of a frustum cone:
