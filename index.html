@@ -195,7 +195,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2024-11-20",
+"dateModified" :"2024-12-15",
 "description" :"Providing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact formulas. No pi.",
 "headline":"Exact geometry",
@@ -499,7 +499,18 @@ Check Out The Geometry Calculator App!"
     <img class="center-fit" src="square.png" alt="Square" id="square">
     </div>
 <br>
-    <p style="margin:12px;">A=side²</p></div>
+     <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+ <mi>A</mi>
+      <mo>=</mo>
+      <msup>
+        <mi>side</mi>
+        <mn>2</mn>
+      </msup>
+</mrow>
+     </math>
+
+</div>
 <br>
 <br>
 <br>
@@ -511,11 +522,22 @@ Check Out The Geometry Calculator App!"
     <img class="center-fit" src="cubeMarkup.jpeg" alt="Cube" id="cube">
     </div>
 <br>
-    <p style="margin:12px;">V=edge³</p></div>
+     <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>V</mi>
+      <mo>=</mo>
+      <msup>
+        <mi>edge</mi>
+        <mn>3</mn>
+      </msup>
+</mrow>
+    </math>
+           </div>
 <br>
 <br>
 <br>
-<br><div>
+<br>
+       <div>
 <h4 style="font-size:160%;margin:7px">Trigonometry</h4>
 <br>
 <div class="imgbox">
@@ -526,21 +548,90 @@ Check Out The Geometry Calculator App!"
 In a right triangle:<br>
 <br>
 <br>
-sine=opposite/hypotenuse,<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>sine</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>opposite</mi>
+        <mi>hypotenuse</mi>
+      </mfrac>
+</mrow>
+</math>
+
 <br>
 <br>
-cosine=adjacent/hypotenuse,<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>cosine</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>adjacent</mi>
+        <mi>hypotenuse</mi>
+      </mfrac>
+</mrow>
+</math>
+
 <br>
 <br>
-tangent=opposite/adjacent,<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>tangent</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>opposite</mi>
+        <mi>adjacent</mi>
+      </mfrac>
+</mrow>
+</math>
+
 <br>
 <br>
-cotangent=adjacent/opposite
+
+<math xmlns="http://www.w3.org/1998/Math/MathML"> <mrow>
+ <mi>cotangent</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>adjacent</mi>
+        <mi>opposite</mi>
+      </mfrac>
+</mrow>
+</math>
+
 <br>
 <br>
-<br>
-<br>
-sin²+cos²=1²
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<msup>
+<mrow>
+<msub>
+ <mi>leg</mi>
+<mn>1</mn>
+</msub>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+<msup>
+<mrow>
+<msub>
+ <mi>leg</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<mn>2</mn>
+</msup>
+ <mo>=</mo>
+      <msup>
+        <mi>hypotenuse</mi>
+        <mn>2</mn>
+      </mfrac>
+</mrow>
+</math>
+           
 <br>
 <br>
 <br>
@@ -548,12 +639,91 @@ sin²+cos²=1²
 Area of a triangle:
 <br>
 <br>
-A=(base*height)/2=√(S(S-a)(S-b)(S-c))<br><br>
-(S=semi perimeter=(a+b+c)/2)</p>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>A</mi>
+      <mo>=</mo>
+<mfrac>
+<mrow>
+<mi>base</mi>
+<mo>×</mo>
+<mi>height</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<msqrt>
+<mrow>
+<mi>S</mi>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>1</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>2</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>3</mn>
+</msub>
+<mo>)</mo>
+</mrow>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" > <mrow>
+ <mi>S</mi>
+      <mo>=</mo>
+<mi>Semi perimeter</mi>
+      <mo>=</mo>
+<mfrac>
+<mrow>
+<mo>(</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>1</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>2</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>3</mn>
+      </msub>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</math>
+    </p>
 <br>
 <br>
 <br>
-<br><div>
+<br>
+<div>
 <h5 style="font-size:160%;margin:7px;">Area of a regular polygon</h5>
 <br>
 <div class="imgbox">
@@ -561,13 +731,78 @@ A=(base*height)/2=√(S(S-a)(S-b)(S-c))<br><br>
     </div>
 <br>
     <p style="margin:12px;">
-A=n/4*ctg(180°/n)*x²<br><br>
-n=number of sides <br><br>
-x=side length <br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mfrac>
+<mi>n</mi>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo>
+    <mi>ctg</mi>
+    <mo>&#x2061;⁡</mo> 
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mn>180</mn>
+        <mo>&#xB0;</mo>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <mo>)</mo>
+<mo>×</mo>
+<msup>
+        <mi>x</mi>
+        <mn>2</mn>
+</msup>
+</mrow>
+</math>
+
 <br>
 <br>
-Sum of the interior angles of a polygon:<br><br>
-(n-2)180°</p></div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>n</mi>
+      <mo>=</mo>
+   <mi>number of sides</mi>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <mi>side length</mi>
+</mrow>
+</math>
+<br>
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>Sum of the internal angles of a polygon</mi>
+<mo>=</mo>
+<mo>(</mo>
+<mi>n</mi>
+<mo>-</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>×</mo>
+<mrow>
+        <mn>180</mn>
+        <mo>&#xB0;</mo>
+ </mrow>
+</mrow>
+</math>
+
+</p>
+</div>
 <br>
 <br>
 <br>
@@ -593,13 +828,88 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 The ratio between the radius of the circle and the side of the square can be calculated using the Pythagorean theorem.
 <br>
 <br>
-r²=(a/4)²+(2(a/4))²
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<msup>
+ <mi>r</mi>
+ <mn>2</mn>
+</msup>
+<mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+   <mi>side</mi>
+   <mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+ </msup>
+ <mo>+</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mrow>
+<mo>(</mo>
+<mfrac>
+ <mi>side</mi>
+ <mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</math>
+
 <br>
 <br>
-r=(√5)(a/4)
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+ <mrow>
+ <mi>r</mi>
+ <mo>=</mo>
+ <msqrt>
+<mn>5</mn>
+</msqrt>
+<mo>×</mo>
+<mfrac>
+<mi>side</mi>
+<mn>4</mn>
+</mrow>
+</math>
+
 <br>
 <br>
-A=(16/5)r²=3.2r²</p></div>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>Area</mi>
+<mo>=</mo>
+<mfrac>
+<mn>16</mn>
+<mn>5</mn>
+</mfrac>
+<mo>×</mo>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</math>
+       
+</p></div>
 <br>
 <br>
 <br>
@@ -614,11 +924,64 @@ A=(16/5)r²=3.2r²</p></div>
 calculated by subtracting a triangle from a 
 circle slice.<br>
 <br>
-A=acos((r-n)/r)r²-sin(acos((r-n)/r))(r-n)r</p></div>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>A</mi>
+    <mo>=</mo>
+    <mo>arccos</mo>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>r</mi>
+        <mo>-</mo>
+        <mi>n</mi>
+      </mrow>
+      <mi>r</mi>
+    </mfrac>
+    <mo>)</mo>
+<mo>×</mo>
+    <msup>
+      <mi>r</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>-</mo>
+    <mi>sin</mi>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mo>arccos</mo>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>r</mi>
+        <mo>-</mo>
+        <mi>n</mi>
+      </mrow>
+      <mi>r</mi>
+    </mfrac>
+    <mo>)</mo>
+    <mo>)</mo>
+<mo>×</mo>
+    <mo>(</mo>
+    <mrow>
+      <mi>r</mi>
+      <mo>-</mo>
+      <mi>n</mi>
+    </mrow>
+    <mo>)</mo>
+<mo>×</mo>
+    <mi>r</mi>
+  </mrow>
+</math>
+           
+    </p>
+</div>
 <br>
 <br>
 <br>
-<br><div>
+<br>
+<div>
 <h8 style="font-size:160%;margin:7px">Circumference of a circle</h8>
 <br>
 <div class="imgbox">
