@@ -83,7 +83,7 @@ Simplifying further:
 
 Substituting 90° for 1/4:
 
-90−((90−2×Atan(1÷2))÷360)=2×Atan(1÷2)÷360
+|90−((90−2×Atan(1÷2))÷360)|=2×Atan(1÷2)÷360
 
 
 Simplifying further:
