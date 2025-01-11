@@ -1,0 +1,1872 @@
+﻿<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+<meta charset="UTF-8">
+<title>Home of Basic Geometry</title>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="android-chrome" sizes="256x256" href="android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#000000">
+<style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+
+</style>
+    
+    <style>
+           
+                #cookie-notice {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: #f2f2f2;
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                }
+
+
+                #cookie-notice-text {
+                        margin-right: 20px;
+                }
+
+
+                #cookie-notice-buttons {
+                        display: flex;
+                        align-items: center;
+                }
+
+
+                #cookie-notice-buttons button {
+                        margin-left: 10px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        padding: 10px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                }
+
+
+                #cookie-notice-buttons button:hover {
+                        background-color: #3e8e41;
+                }
+           
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="author" content="type=PostalAddress,
+  addressLocality=Szentendre,
+  addressRegion=Hungary,
+  postalCode=2000,
+  streetAddress=Ady Endre way 6A,
+  email=gmac4247@gmail.com,
+  jobTitle=Administrator, 
+  name=Gaal Sandor,
+  telephone=+36305075125,
+  url=https://www.x.com/gmac4247">
+<meta name="description" content="Providing the best-established and most accurate framework to calculate area and volume.">
+<meta name="keywords" content="Accurate geometric calculations, optimized algorithms, engineering design, computer graphics, scientific research, optimization, quantum computing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="type=PostalAddress,
+  addressLocality=Szentendre,
+  addressRegion=Hungary,
+  postalCode=2000,
+  streetAddress=Ady Endre way 6A,
+  email=gmac4247@gmail.com,
+  jobTitle=Administrator, 
+  name=Gaal Sandor,
+  telephone=+36305075125,
+  url=https://www.x.com/gmac4247">
+<meta name="twitter:site" content="basic-geometry.pages.dev">
+<meta name="twitter:title" content="Home of Basic Geometry">
+<meta name="twitter:description" content="Providing the best-established and most accurate framework to calculate area and volume.">
+<meta name="twitter:image" content="android-chrome-256x256.png">
+<meta name="google-site-verification" content="XuP08h4O_UbzZo81VWNHhFn5OW7elz2_cZi17lt3qvA" />
+<meta name="msvalidate.01" content="EA6B8354B9F3C956E862954E97EB8CD0" />
+<script type="application/ld+json" async>
+
+{
+  "@context": "https://schema.org",
+  "@type": "webSite",
+  "name": "Home of Basic Geometry",
+ "about": {
+    "@type": "AboutPage",
+    "name": "About Basic Geometry Formulas",
+    "url": "https://basic-geometry.pages.dev/about"
+  },
+  "alternateName": "Exact Geometry",
+"accessMode" : "mathOnVisual" ,
+"accessibilityHazard" :"none" ,
+"accessibilitySummary" : "View videos, figures and equations with explanation" ,
+"accountablePerson" : {
+"@type" : "Person" ,
+"address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Szentendre",
+    "addressRegion": "Hungary",
+    "postalCode": "2000",
+    "streetAddress": "Ady Endre út 6.A"
+  },
+    "email": "gmac4247@gmail.com",
+    "jobTitle": "Administrator",
+  "name": "Gaál Sándor",
+  "telephone": "+36305075125",
+  "url": "https://www.x.com/gmac4247"
+},
+"author" : {
+"@type" : "Person" ,
+"address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Szentendre",
+    "addressRegion": "Hungary",
+    "postalCode": "2000",
+    "streetAddress": "Ady Endre út 6.A"
+  },
+    "email": "gmac4247@gmail.com",
+    "jobTitle": "Administrator",
+  "name": "Gaál Sándor",
+  "telephone": "+36305075125",
+  "url": "https://www.x.com/gmac4247"
+},
+"contributor" : [
+{
+"@type" : "Person",
+"name": "Adina",
+"role": "Supporter"
+},
+{
+"@type" : "Thing",
+"name": "Microsoft Copilot",
+"role": [
+    "AI language model",
+    "Images generated with the help of Microsoft Copilot"]
+}
+       ],
+"copyrightHolder" : {
+"@type" : "Person" ,
+"address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Szentendre",
+    "addressRegion": "Hungary",
+    "postalCode": "2000",
+    "streetAddress": "Ady Endre út 6.A"
+  },
+    "email": "gmac4247@gmail.com",
+    "jobTitle": "Administrator",
+  "name": "Gaál Sándor",
+  "telephone": "+36305075125",
+  "url": "https://www.x.com/gmac4247"
+},
+"copyrightNotice" :"All rights reserved." ,
+"copyrightYear" :"2020",
+"creator" : {
+"@type" : "Person" ,
+"address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Szentendre",
+    "addressRegion": "Hungary",
+    "postalCode": "2000",
+    "streetAddress": "Ady Endre út 6.A"
+  },
+    "email": "gmac4247@gmail.com",
+    "jobTitle": "Administrator",
+  "name": "Gaál Sándor",
+  "telephone": "+36305075125",
+  "url": "https://www.x.com/gmac4247"
+},
+"dateCreated" :"2019-01-11",
+"datePublished":"2020-01-11",
+"dateModified" :"2025-01-11",
+"description" :"Providing the best-established and most accurate framework to calculate area and volume.",
+"disambiguatingDescription": "Exact formulas. No pi.",
+"headline":"Exact geometry",
+"inLanguage":"en-us",
+"image":[
+     "geometry.jpeg",
+     "trigonometry.png"
+],
+"isFamilyFriendly":"true",
+"keywords":"Accurate geometric calculations, optimized algorithms, engineering design, computer graphics, scientific research, optimization, quantum computing.",
+"learningResourceType": "mathSolver",
+"locationCreated": {
+"@type":"administrativeArea",
+"name" :"Szentendre, Hungary"},
+ "mainEntity" : {"@type": ["MathSolver", "LearningResource"],
+ "name" : "Exact Geometry",
+ "inLanguage":"en-us",
+ "potentialAction": [
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=side default=1",
+     "mathExpression-output": "side^2",
+     "image": "square.png",
+     "eduQuestionType": "equationSolving",
+     "name": "Area of a square"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=edge default=1",
+     "mathExpression-output": "edge^3",    
+     "image": "cubeMarkup.jpeg",
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a cube"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+     "mathExpression-output": 
+     "angleOfRotation/360*3.2*radius^2", 
+     "image": "areaOfACircle.jpg",
+     "eduQuestionType": "equationSolving",
+     "name": "Area of a circle"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+     "mathExpression-output": "angleOfRotation/360*6.4*radius", 
+     "image": "circumference.jpg",
+     "eduQuestionType": "equationSolving",
+     "name": "Circumference of a circle"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1 name=segmentHeight max<[radius]",
+     "mathExpression-output": "Acos((radius-segmentHeight)/radius)*radius^2-Sin(Acos((radius-segmentHeight)/radius))*(radius-segmentHeight)*radius", 
+     "image": "circleSegment.jpg",
+     "eduQuestionType": "equationSolving",
+     "name":  "Area of a circle segment"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+     "mathExpression-output": "angleOfRotation/360*(3.2^(1/2)*radius)^3", 
+     "image": "sphereAndCubeMarkup.jpeg",
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a sphere"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=sphereRadius default=1; name=sphereSliceBottomRadius max<[sphereRadius]",
+     "mathExpression-output": "V=1.6(sphereSliceBottomRadius)²(√3.2)(1-sin(Acos(sphereSliceBottomRadius/sphereRadius)))", 
+     "image": "sphericalCap.jpg",
+     "eduQuestionType": "equationSolving",
+     "name":  "Volume of a spherical cap"
+  },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1 name=height default=1 name=angleOfRotation default=360",
+     "mathExpression-output": "angleOfRotation/360*radius^2*height", 
+     "eduQuestionType": "equationSolving",
+     "name":  "Volume of a cylinder"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1 name=height default=1",
+     "mathExpression-output": "6.4(radius^2+radius*height)", 
+     "eduQuestionType": "equationSolving",
+     "name": "Surface of a cylinder"
+   },
+       
+ {
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1 name=height default=1 name=angleOfRotation default=360",
+     "mathExpression-output": "angleOfRotation/360*3.2*radius^2*height/8^(1/2)", 
+     "image": [
+       "coneAndSphereMarkup.jpeg",
+       "sphereAndCone.jpeg",
+       "octantSphereQuarterCone.jpeg",
+       "coneAndSphereComparison.png"
+       ],
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a cone"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=frustumHeight default=1 name=bottomDiameter default=1 name=topDiameter max<bottomDiameter",
+     "mathExpression-output": "frustumHeight*(4/5*bottomDiameter²(1/(1-topDiameter/bottomDiameter))-4/5*topDiameter²(1/(1-topDiameter/bottomDiameter)-1))/8^(1/2)", 
+     "image": "frustumOfConeMarkup.png",
+     "eduQuestionType": "equationSolving",
+     "name":  "Volume of a frustum cone"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=radius default=1; name=height default=1",
+     "mathExpression-output": "3.2(radius^2+(radius^2+height^2)(radius/(radius^2+height^2)^(1/2)))", 
+     "image": "coneMarkup.jpeg",
+     "eduQuestionType": "equationSolving",
+     "name":"Surface of a cone"
+   },
+
+ {
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=baseArea default=1; name=height default=1",
+     "mathExpression-output": "baseArea*height/8^(1/2)", 
+     "image": [
+       "conePyramidVolumeMarkup.jpeg",
+       "tetraFrame.jpeg"
+       ],
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a pyramid"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=frustumHeight default=1; name=bottomEdge default=1; name=topEdge max<bottomEdge",
+     "mathExpression-output": "frustumHeight(bottomEdge²(1/(1-topEdge/bottomEdge))-topEdge²(1/(1-topEdge/bottomEdge)-1))/8^(1/2)", 
+     "image": "frustumOfPyramidMarkup.png",
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a frustum pyramid"
+   },
+
+{  
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=edge default=1",
+     "mathExpression-output": "edge^3/8", 
+     "image": "tetrahedronMarkup.jpeg",
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a tetrahedron"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=sideLength default=1 name=numberOfSides default=5",
+     "mathExpression-output": "(numberOfSides/4)*ctg(180°/numberOfSides)*sideLength^2", 
+     "image": "pentagon.png",
+     "eduQuestionType": "equationSolving",
+     "name": "Area of a regular polygon"
+}
+
+  ],
+ "subjectOf": 
+ {
+    "@type": "SoftwareApplication",
+    "name": "Basic Geometry Calculator",
+    "operatingSystem": "Android",
+    "applicationCategory": "EducationalApplication",
+    "potentialAction": {
+      "@type": "DownloadAction",
+      "target": {
+        "@type": "EntryPoint",
+       "downloadUrl": "https://basic-geometry.pages.dev/Geometry.apk",
+        "contentType": "application/vnd.android.package-archive"
+      }
+    }
+  },
+    "softwareVersion" : "3.2.0",
+    "url": "https://basic-geometry.pages.dev",
+    "usageInfo": "Simplify your calculations with the user-friendly geometry calculator app for Android. Designed to help you solve problems quickly and accurately, it’s the perfect companion for your studies."
+       },
+"mainEntityOfPage": {
+    "@type": "AboutPage",
+    "name": "About Basic Geometry Formulas",
+    "url": "https://basic-geometry.pages.dev/about"
+  },
+"schemaVersion" : "https://schema.org/docs/releases.html#v27.02.",
+"sdDatePublished" :"2021-03-29",
+"sdPublisher" : {
+"@type" : "Person" ,
+"address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Szentendre",
+    "addressRegion": "Hungary",
+    "postalCode": "2000",
+    "streetAddress": "Ady Endre út 6.A"
+  },
+    "email": "gmac4247@gmail.com",
+    "jobTitle": "Administrator",
+  "name": "Gaál Sándor",
+  "telephone": "+36305075125",
+  "url": "https://www.x.com/gmac4247"
+},
+"subjectOf": 
+    [ 
+ {
+"@type": "VideoObject",
+"description": "Explaining the basics of geometry with everyday items",
+"duration": "PT2M09S",
+"name": "Introduction to basic geometry",
+"thumbnailUrl":"https://i.ytimg.com/vi/U5eHkmmVVEA/mqdefault.jpg",
+"uploadDate":"2023-09-29",
+"contentUrl":"https://youtu.be/U5eHkmmVVEA"
+       },
+ {
+"@type": "VideoObject",
+"description": "Determining the volume of a sphere",
+"duration": "PT1M26S",
+"name": "The sphere experiment",
+"thumbnailUrl":"https://i.ytimg.com/vi/7uxyLfh2B38/mqdefault.jpg",
+"uploadDate":"2024-04-19",
+"contentUrl":"https://youtu.be/7uxyLfh2B38"
+       }
+ ],
+"thumbnail": "android-chrome-256x256.png",
+"typicalAgeRange" :"5-105",
+"url": "https://basic-geometry.pages.dev/", 
+"usageInfo":"Explore the fascinating world of geometry with comprehensive resources and tools. 
+Whether you’re a student, teacher, or enthusiast, you’ll find valuable information and interactive features to enhance your learning experience.
+Check Out The Geometry Calculator App!"
+}
+
+</script>
+</head>
+<body>
+<div id="cookie-notice">
+                <div id="cookie-notice-text">
+                        This website uses cookies to ensure you get the best experience on it.<br>
+                        Love it, or leave it.
+                </div>
+                <div id="cookie-notice-buttons">
+                        <button onclick="document.getElementById('cookie-notice').style.display = 'none';">Accept</button>
+                        <button onclick="document.getElementById('cookie-notice').style.display = 'none';">Decline</button>
+                </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<iframe width="420" height="315" src="https://youtube.com/embed/U5eHkmmVVEA">
+</iframe>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h1 style="font-size:160%;margin:7px">Exact geometry</h1>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="geometry.jpeg"  alt="Geometry">
+</div>
+<br>
+<p style="margin:12px;" >Providing the best-established and most accurate framework to calculate area and volume using the 3D coordinate system.
+</p>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div>
+<h2 style="font-size:160%;margin:7px;">Area of a square</h2>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="square.png" alt="Square" id="square">
+    </div>
+<br>
+    <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+ <mi>A</mi>
+      <mo>=</mo>
+      <msup>
+        <mi>side</mi>
+        <mn>2</mn>
+      </msup>
+</mrow>
+    </math>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h3 style="font-size:160%;margin:7px;">Volume of a cube</h3>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="cubeMarkup.jpeg" alt="Cube" id="cube">
+    </div>
+<br>
+ <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>V</mi>
+      <mo>=</mo>
+      <msup>
+        <mi>edge</mi>
+        <mn>3</mn>
+      </msup>
+</mrow>
+    </math>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h4 style="font-size:160%;margin:7px">Trigonometry</h4>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="trigonometry.png" alt="Trigonometry" id="trigonometry">
+    </div>
+<br>
+<div>
+<p style="margin:12px;">
+In a right triangle:
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>sine</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>opposite</mi>
+        <mi>hypotenuse</mi>
+      </mfrac>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>cosine</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>adjacent</mi>
+        <mi>hypotenuse</mi>
+      </mfrac>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>tangent</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>opposite</mi>
+        <mi>adjacent</mi>
+      </mfrac>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML"> <mrow>
+ <mi>cotangent</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>adjacent</mi>
+        <mi>opposite</mi>
+      </mfrac>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<msup>
+<mrow>
+<msub>
+ <mi>leg</mi>
+<mn>1</mn>
+</msub>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+<msup>
+<mrow>
+<msub>
+ <mi>leg</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+<mn>2</mn>
+</msup>
+ <mo>=</mo>
+<msup>
+<mi>hypotenuse</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<div>
+ <p style="margin:12px;">Area of a triangle:
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>A</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>base</mi>
+<mo>×</mo>
+<mi>height</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<msqrt>
+<mrow>
+<mi>S</mi>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>1</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>2</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>3</mn>
+</msub>
+<mo>)</mo>
+</mrow>
+</msqrt>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" > <mrow>
+ <mi>S</mi>
+      <mo>=</mo>
+<mi>Semi perimeter</mi>
+      <mo>=</mo>
+<mfrac>
+<mrow>
+<mo>(</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>1</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>2</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>3</mn>
+      </msub>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</math>
+ </p>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h5 style="font-size:160%;margin:7px;">Area of a regular polygon</h5>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="pentagon.png" alt="Pentagon" id="pentagon">
+    </div>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mfrac>
+<mi>n</mi>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo>
+    <mi>ctg</mi>
+    <mo>&#x2061;⁡</mo> 
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mn>180</mn>
+        <mo>&#xB0;</mo>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <mo>)</mo>
+<mo>×</mo>
+<msup>
+        <mi>x</mi>
+        <mn>2</mn>
+</msup>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>n</mi>
+      <mo>=</mo>
+   <mi>number of sides</mi>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+ <mi>x</mi>
+ <mo>=</mo>
+ <mi>side length</mi>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>Sum of the internal angles of a polygon</mi>
+<mo>=</mo>
+<mo>(</mo>
+<mi>n</mi>
+<mo>-</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>×</mo>
+<mrow>
+<mn>180</mn>
+<mo>&#xB0;</mo>
+ </mrow>
+</mrow>
+</math>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h6 style="font-size:160%;margin:7px">Area of a circle</h6>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="areaOfACircle.jpg" alt="Circle" id="circle">
+</div>
+<br>
+<p style="margin:12px;" >The area of a circle is defined by comparing it to a square since that is the base of area calculation.
+<br>
+<br>
+The circle is cut to four quadrants, each placed with their origin on the vertices of a square.
+<br>
+<br>
+When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, the uncovered area in the middle equals exactly the sum of the overlapping areas respectively. 
+<br>
+<br>
+The ratio between the ray of the circle and the side of the square can be calculated using the Pythagorean theorem.
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<msup>
+ <mi>r</mi>
+ <mn>2</mn>
+</msup>
+<mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+   <mi>side</mi>
+   <mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+ </msup>
+ <mo>+</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mrow>
+<mo>(</mo>
+<mfrac>
+ <mi>side</mi>
+ <mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</math>
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+ <mrow>
+ <mi>r</mi>
+ <mo>=</mo>
+ <msqrt>
+<mn>5</mn>
+</msqrt>
+<mo>×</mo>
+<mfrac>
+<mi>side</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+</math>
+</p>
+<br>
+<br>
+<p style="margin:12px;"> The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter and a half of the square's sides, and its hypotenuse equal to the radius of the circle. 
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mfrac>
+<mn>16</mn>
+<mn>5</mn>
+</mfrac>
+<mo>×</mo>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <h7 style="font-size:160%;margin:7px">Area of a circle segment</h7>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="circleSegment.jpg" alt="Circle-segment" id="segment">
+    </div>
+<br>
+    <p style="margin:12px;">The area of a circle segment can be 
+calculated by subtracting a triangle from a 
+circle slice.
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>A</mi>
+    <mo>=</mo>
+    <mo>arccos</mo>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>r</mi>
+        <mo>-</mo>
+        <mi>n</mi>
+      </mrow>
+      <mi>r</mi>
+    </mfrac>
+    <mo>)</mo>
+<mo>×</mo>
+    <msup>
+      <mi>r</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>-</mo>
+    <mi>sin</mi>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mo>arccos</mo>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>r</mi>
+        <mo>-</mo>
+        <mi>n</mi>
+      </mrow>
+      <mi>r</mi>
+    </mfrac>
+    <mo>)</mo>
+    <mo>)</mo>
+<mo>×</mo>
+    <mo>(</mo>
+    <mrow>
+      <mi>r</mi>
+      <mo>-</mo>
+      <mi>n</mi>
+    </mrow>
+    <mo>)</mo>
+<mo>×</mo>
+    <mi>r</mi>
+  </mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h8 style="font-size:160%;margin:7px">Circumference of a circle</h8>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="circumference.jpg" alt="Circle" id="circumference">
+    </div>
+<br>
+<p style="margin:12px;">The circumference of a circle can be derived 
+from its area algebraically.
+<br>
+<br>
+The ‘x’ represents the width of the circumference, 
+which is just theoretical, hence a very small 
+number.
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>C</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mo>(</mo>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>-</mo>
+<mn>3.2</mn>
+<mo>×</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mi>r</mi>
+<mo>-</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>)</mo>
+</mrow>
+<mi>x</mi>
+</mfrac>
+<mo>=</mo>
+<mn>6.4</mn>
+<mi>r</mi>
+<mo>-</mo>
+<mn>3.2</mn>
+<mi>x</mi>
+</mrow>
+</math>
+</p>
+<br>
+<p style="margin:12px;"> As x is close to 0,
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<mi>C</mi>
+<mo>=</mo>
+<mn>6.4</mn>
+<mi>r</mi>
+</mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h9 style="font-size:160%;margin:7px;">Volume of a sphere</h9>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="Sphere" id="sphere">
+    </div>
+    <br>
+<p style="margin:12px;">The volume of a sphere is defined by comparing it to a cube, as that's the base of volume calculation.
+<br><br>
+Just as the volume of a cube equals the square root of its cross section cubed - <math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<mi>V</mi>
+<mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<msqrt>
+<mi>Area</mi>
+</msqrt>
+<mo>)</mo>
+</mrow>
+<mn>3</mn>
+</msup>
+</mrow>
+</math> -,
+so is the volume of a sphere equal to the area of its cross section cubed.
+<br><br>
+The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross section.
+<br><br>
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+ <mi>V</mi>
+<mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mo>×</mo>
+<mi>r</mi>
+<mo>)</mo>
+</mrow>
+<mn>3</mn>
+</msup>
+</mrow>
+</math>
+</p>
+<br>
+<br>
+ <iframe width="420" height="315" src="https://youtube.com/embed/7uxyLfh2B38">
+</iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h10 style="font-size:160%;margin:7px;">Volume of a spherical cap
+</h10>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="sphericalCap.jpg" alt="Sphere" id="cap">
+    </div>
+    <br>
+<p style="margin:12px;">Volume of a spherical cap:
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+ <mi>V</mi>
+      <mo>=</mo>
+  <mn>1.6</mn>
+<mo>×</mo>
+ <msup>
+<mrow>
+<msub>
+<mi>r</mi>
+<mi>cap</mi>
+</msub>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>×</mo>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mo>×</mo>
+<mo>(</mo>
+    <mn>1</mn>
+    <mo>-</mo>
+<mi>sin</mi>
+<mo>&#x2061;</mo>
+      <mrow>
+        <mo>(</mo>
+          <mo>arccos</mo>
+    <mo>&#x2061;</mo>
+          <mo>(</mo>
+          <mfrac>
+<msub>
+            <mi>r</mi>
+<mi>cap</mi>
+</msub>
+<msub>
+<mi>r</mi>
+<mi>sphere</mi>
+</msub>
+          </mfrac>
+          <mo>)</mo>
+        <mo>)</mo>
+       <mo>)</mo>
+      </mrow>
+  </mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h11 style="font-size:160%;margin:7px;">Volume of a cone</h11>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone-and-sphere" id="cone">
+</div>
+<br>
+<p style="margin:12px;">The volume of a cone can be calculated by algebraically comparing the volume of a quarter cone with equal radius and height to an octant sphere with equal radius, through a quarter cylinder.
+</p>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="octantSphereQuarterCone.jpeg" alt="Sphere-and-vertical-frustum-cone">
+</div>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msub>
+<mi>V</mi>
+<mi>octant sphere</mi>
+</msub>
+<mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>3</mn>
+</msup>
+<mo>=</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</math>
+<br>
+<br>
+<p style="margin:12px;">The base of the two shapes is a quarter circle.
+</p>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="coneAndSphereComparison.png" alt="Sphere-and-cone-projection">
+</div>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="sphereAndCone.jpeg" alt="Sphere-and-cone">
+</div>
+<br>
+<p style="margin:12px;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msub>
+<mi>A</mi>
+<mi>base</mi>
+</msub>
+<mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>=</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</math>
+<br>
+<br>
+The slant height of the quarter cone is <math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+</math>
+.
+<br>
+The volume of a quarter cylinder with the same base, and height equal to the slant height of the cone would be 
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>×</mo>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+</math>
+. 
+<br>
+<br>
+The slant shape comes with a triangular vertical cross section. 
+<br>
+The area of a cone's vertical cross section is the half of a cylinder's with equal base and height. 
+<br>
+<br>
+The intermediate of the areas of the horizontal cross section slices of a cone is the half of a cylinder’s.
+<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msub>
+<mi>V</mi>
+<mi>quarter cone</mi>
+</msub>
+<mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>×</mo>
+<mi>Height</mi>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+<mn>4</mn>
+</mfrac>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msub>
+<mi>V</mi>
+<mi>cone</mi>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>×</mo>
+<mi>H</mi>
+</mrow>
+<msqrt>
+<mn>8</mn>
+</msqrt>
+</mfrac>
+</mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h12 style="font-size:160%;margin:7px;">Volume of a frustum cone</h12>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="frustumOfConeMarkup.png" alt="Horizontal-frustum-cone">
+    </div>
+<br>
+<p style="margin:12px;">The volume of a frustum cone can be 
+calculated by subtracting the missing tip 
+from the theoretical full cone.<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+     <mrow>
+ <mi>V</mi>
+      <mo>=</mo>
+<mfrac>
+<mrow>
+      <mi>H</mi>
+      <mo>(</mo>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+<mo>×</mo>
+<mfrac>
+<mn>4</mn>
+<mn>5</mn>
+</mfrac>
+<mo>×</mo>
+      <mo>(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+          <mfrac>
+            <mi>t</mi>
+            <mi>b</mi>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>)</mo>
+      <mo>-</mo>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+<mo>×</mo>
+<mfrac>
+<mn>4</mn>
+<mn>5</mn>
+</mfrac>
+<mo>×</mo>
+      <mo>(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+          <mfrac>
+            <mi>t</mi>
+            <mi>b</mi>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>-</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+      <mo>)</mo>
+</mrow>
+      <msqrt>
+        <mn>8</mn>
+      </msqrt>
+      </mfrac>
+</mrow>
+  </math>
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+ <mrow>
+ <mi>H</mi>
+      <mo>=</mo>
+        <mi>frustum height</mi>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+ <mrow>
+ <mi>t</mi>
+   <mo>=</mo>
+   <mi>top diameter</mi>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+ <mrow>
+ <mi>b</mi>
+      <mo>=</mo>
+        <mi>bottom diameter</mi>
+</mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h13 style="font-size:160%;margin:7px;">Surface area of a cone</h13>
+<br>
+<div class="imgbox">
+  <img class="center-fit" src="coneMarkup.jpeg" alt="Cone" id="coneSurface">
+  </div>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msub>
+<mi>A</mi>
+<mi>bottom</mi>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>A</mi>
+<mi>side</mi>
+</msub>
+<mo>=</mo>
+<mn>3.2</mn>
+<mi>r</mi>
+<mo>×</mo>
+<mo>(</mo>
+<mi>r</mi>
+<mo>+</mo>
+<msqrt>
+<mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+<msup>
+<mi>H</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+<mo>)</mo>
+</mrow>
+</math>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h14 style="font-size:160%;margin:7px">Volume of a pyramid</h14>
+<br>
+<div class="imgbox">
+  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="Pyramids" id="pyramid">
+  </div>
+<br>
+<br>
+<div class="imgbox">
+  <img class="center-fit" src="tetraFrame.jpeg" alt="Tetrahedral-frame-on-circular-base" >
+  </div>
+<br>
+<p style="margin:12px;">The volume of a pyramid can be calculated 
+with the same coefficient as the volume of a cone:<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>V</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msub>
+<mi>A</mi>
+<mi>base</mi>
+</msub>
+<mo>×</mo>
+ <mi>H</mi>
+ </mrow>
+<msqrt>
+ <mn>8</mn>
+ </msqrt>
+ </mfrac>
+</mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h15 style="font-size:160%;margin:7px;">Volume of a horizontal frustum pyramid</h15>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="Horizontal-frustum-pyramid">
+    </div>
+<br>
+<p style="margin:12px;">The volume of a frustum pyramid can be 
+calculated by subtracting the missing tip 
+from the theoretical full pyramid.<br>
+<br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+     <mrow>
+ <mi>V</mi>
+      <mo>=</mo>
+<mfrac>
+<mrow>
+      <mi>H</mi>
+      <mo>(</mo>
+      <msup>
+        <mi>b</mi>
+        <mn>2</mn>
+      </msup>
+<mo>×</mo>
+      <mo>(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+          <mfrac>
+            <mi>t</mi>
+            <mi>b</mi>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>)</mo>
+      <mo>-</mo>
+      <msup>
+        <mi>t</mi>
+        <mn>2</mn>
+      </msup>
+<mo>×</mo>
+      <mo>(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+          <mfrac>
+            <mi>t</mi>
+            <mi>b</mi>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>-</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+      <mo>)</mo>
+</mrow>
+      <msqrt>
+        <mn>8</mn>
+      </msqrt>
+      </mfrac>
+</mrow>
+  </math>
+
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>V</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>H</mi>
+<mo>×</mo>
+<mo>(</mo>
+<msup>
+<mi>b</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+<mi>b</mi>
+<mo>×</mo>
+<mi>t</mi>
+<mo>+</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+<mo>)</mo>
+</mrow>
+<msqrt>
+ <mn>8</mn>
+ </msqrt>
+ </mfrac>
+</mrow>
+  </math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+     <mrow>
+ <mi>H</mi>
+      <mo>=</mo>
+        <mi>frustum height</mi>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+ <mrow>
+ <mi>t</mi>
+   <mo>=</mo>
+   <mi>top edge</mi>
+</mrow>
+</math>
+
+<br>
+<br>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+     <mrow>
+ <mi>b</mi>
+      <mo>=</mo>
+        <mi>bottom edge</mi>
+</mrow>
+</math>
+</p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h16 style="font-size:160%;margin:7px">Volume of a tetrahedron</h16>
+<br>
+<div class="imgbox">
+  <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="Tetrahedron" id="tetrahedron">
+  </div>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow>
+ <mi>V</mi>
+    <mo>=</mo>
+<mfrac>
+<mrow>
+    <mo>(</mo>
+    <mfrac>
+      <msqrt>
+        <mn>3</mn>
+      </msqrt>
+      <mn>4</mn>
+    </mfrac>
+    <msup>
+      <mi>edge</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>)</mo>
+    <mo>(</mo>
+<mfrac>
+   <msqrt>
+ <mn>2</mn>
+</msqrt>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mfrac>
+    <mi>edge</mi>
+    <mo>)</mo>
+</mrow>
+          <msqrt>
+        <mn>8</mn>
+      </msqrt>
+    </mfrac>
+ <mo>=</mo>
+<msup>
+<mrow>
+<mo>(</mo>
+    <mfrac>
+      <msqrt>
+        <mn>2</mn>
+      </msqrt>
+      <mn>4</mn>
+    </mfrac>
+    <mo>)</mo>
+</mrow>
+     <mn>2</mn>
+    </msup>
+    <msup>
+      <mi>edge</mi>
+      <mn>3</mn>
+    </msup>
+<mo>=</mo>
+<mfrac>
+<mrow>
+    <msup>
+      <mi>edge</mi>
+      <mn>3</mn>
+    </msup>
+</mrow>
+      <mn>8</mn>
+    </mfrac>
+  </mrow>
+</math>
+<br>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div>
+<h17 style="font-size:160%;margin:7px">Geometry Calculator Android App</h17>
+<br>
+<br>
+  <a style="margin:12px;" href="Geometry.apk" download>Download Geometry.apk - size: 5.5 MB</a>
+<br>
+<br>
+</div>
+<br>
+<br>
+<br>
+<br>
+<footer>
+<a style="margin:6px;" href="about">About</a>
+<br>
+<br>
+<br>
+<p style="margin:12px;">® All rights reserved</p>
+<br>
+<br>
+  <a style="margin:6px;" href="privacy-policy">Do Not Sell My Personal Information</a>
+ <br>
+ <br>
+</footer>
+</body>
+</html>
