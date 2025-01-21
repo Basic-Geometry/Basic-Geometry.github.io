@@ -1,6 +1,3 @@
-User-agent:*
-Disallow: /.github/workflows/
-
 User-agent:Googlebot
 Allow:/
 
