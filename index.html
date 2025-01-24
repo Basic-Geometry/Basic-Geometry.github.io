@@ -195,7 +195,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-01-17",
+"dateModified" :"2025-01-24",
 "description" :"Providing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact formulas. No pi.",
 "headline":"Exact geometry",
@@ -219,7 +219,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=side default=1",
-     "mathExpression-output": "side^2",
+     "mathExpression-output": "Math.pow(side, 2)",
      "image": "square.png",
      "eduQuestionType": "equationSolving",
      "name": "Area of a square"
@@ -229,7 +229,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=edge default=1",
-     "mathExpression-output": "edge^3",    
+     "mathExpression-output": "Math.pow(edge, 3)",    
      "image": "cubeMarkup.jpeg",
      "eduQuestionType": "equationSolving",
      "name": "Volume of a cube"
@@ -240,7 +240,7 @@
      "target": "/",
      "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
      "mathExpression-output": 
-     "angleOfRotation/360*3.2*radius^2", 
+     "angleOfRotation / 360 * 3.2 * Math.pow(radius, 2)", 
      "image": "areaOfACircle.jpg",
      "eduQuestionType": "equationSolving",
      "name": "Area of a circle"
@@ -250,7 +250,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
-     "mathExpression-output": "angleOfRotation/360*6.4*radius", 
+     "mathExpression-output": "angleOfRotation / 360 * 6.4 * radius", 
      "image": "circumference.jpg",
      "eduQuestionType": "equationSolving",
      "name": "Circumference of a circle"
@@ -260,7 +260,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=radius default=1 name=segmentHeight max<[radius]",
-     "mathExpression-output": "Acos((radius-segmentHeight)/radius)*radius^2-Sin(Acos((radius-segmentHeight)/radius))*(radius-segmentHeight)*radius", 
+     "mathExpression-output": "Math.acos((radius-segmentHeight)/radius)*Math.pow(radius, 2)-Math.sin(Math.acos((radius-segmentHeight)/radius))*(radius-segmentHeight)*radius", 
      "image": "circleSegment.jpg",
      "eduQuestionType": "equationSolving",
      "name":  "Area of a circle segment"
@@ -280,7 +280,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=sphereRadius default=1; name=sphereSliceBottomRadius max<[sphereRadius]",
-     "mathExpression-output": "V=1.6(sphereSliceBottomRadius)²(√3.2)(1-sin(Acos(sphereSliceBottomRadius/sphereRadius)))", 
+     "mathExpression-output": "1.6 * Math.pow(sphereSliceBottomRadius, 2) * Math.sqrt(3.2) * (1 - Math.sin(Math.acos(sphereSliceBottomRadius / sphereRadius)))", 
      "image": "sphericalCap.jpg",
      "eduQuestionType": "equationSolving",
      "name":  "Volume of a spherical cap"
@@ -290,7 +290,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=radius default=1 name=height default=1 name=angleOfRotation default=360",
-     "mathExpression-output": "angleOfRotation/360*radius^2*height", 
+     "mathExpression-output": "angleOfRotation / 360 * Math.pow(radius, 2) * height", 
      "eduQuestionType": "equationSolving",
      "name":  "Volume of a cylinder"
    },
@@ -299,7 +299,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=radius default=1 name=height default=1",
-     "mathExpression-output": "6.4(radius^2+radius*height)", 
+     "mathExpression-output": "6.4 * (Math.pow(radius, 2) + radius * height)", 
      "eduQuestionType": "equationSolving",
      "name": "Surface of a cylinder"
    },
@@ -308,7 +308,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=radius default=1 name=height default=1 name=angleOfRotation default=360",
-     "mathExpression-output": "angleOfRotation/360*3.2*radius^2*height/8^(1/2)", 
+     "mathExpression-output": "angleOfRotation / 360 * 3.2 * Math.pow(radius, 2) * height / Math.sqrt(8)", 
      "image": [
        "coneAndSphereMarkup.jpeg",
        "sphereAndConeMarkup.jpeg",
@@ -323,7 +323,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=frustumHeight default=1 name=bottomDiameter default=1 name=topDiameter max<bottomDiameter",
-     "mathExpression-output": "frustumHeight*(4/5*bottomDiameter²(1/(1-topDiameter/bottomDiameter))-4/5*topDiameter²(1/(1-topDiameter/bottomDiameter)-1))/8^(1/2)", 
+     "mathExpression-output": "frustumHeight * (4 / 5 * Math.pow(bottomDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * Math.pow(topDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter) - 1)) / Math.sqrt(8)", 
      "image": "frustumOfConeMarkup.png",
      "eduQuestionType": "equationSolving",
      "name":  "Volume of a frustum cone"
@@ -333,7 +333,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=radius default=1; name=height default=1",
-     "mathExpression-output": "3.2(radius^2+(radius^2+height^2)(radius/(radius^2+height^2)^(1/2)))", 
+     "mathExpression-output": "3.2 * (Math.pow(radius, 2) + (Math.pow(radius, 2) + Math.pow(height, 2)) * (radius / Math.sqrt(Math.pow(radius, 2) + Math.pow(height, 2))))", 
      "image": "coneMarkup.jpeg",
      "eduQuestionType": "equationSolving",
      "name":"Surface of a cone"
@@ -343,7 +343,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=baseArea default=1; name=height default=1",
-     "mathExpression-output": "baseArea*height/8^(1/2)", 
+     "mathExpression-output": "baseArea * height / Math.sqrt(8)", 
      "image": [
        "conePyramidVolumeMarkup.jpeg",
        "tetraFrame.jpeg"
@@ -356,7 +356,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=frustumHeight default=1; name=bottomEdge default=1; name=topEdge max<bottomEdge",
-     "mathExpression-output": "frustumHeight(bottomEdge²(1/(1-topEdge/bottomEdge))-topEdge²(1/(1-topEdge/bottomEdge)-1))/8^(1/2)", 
+     "mathExpression-output": "frustumHeight * (Math.pow(bottomEdge, 2) * (1 / (1 - topEdge / bottomEdge)) - Math.pow(topEdge, 2) * (1 / (1 - topEdge / bottomEdge) - 1)) / Math.sqrt(8)", 
      "image": "frustumOfPyramidMarkup.png",
      "eduQuestionType": "equationSolving",
      "name": "Volume of a frustum pyramid"
@@ -366,7 +366,7 @@
      "@type": "SolveMathAction",
      "target": "/",
      "mathExpression-input": "required name=edge default=1",
-     "mathExpression-output": "edge^3/8", 
+     "mathExpression-output": "Math.pow(edge, 3) / 8", 
      "image": "tetrahedronMarkup.jpeg",
      "eduQuestionType": "equationSolving",
      "name": "Volume of a tetrahedron"
