@@ -74,6 +74,46 @@
                 }
            
         </style>
+         <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .calculator input, .calculator button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .suggestions {
+            margin: 10px 0;
+        }
+        .suggestion-item {
+            cursor: pointer;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        #image {
+            margin: 10px 0;
+            text-align: center;
+        }
+        #image img {
+            max-width: 100%;
+        }
+         </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="author" content="type=PostalAddress,
   addressLocality=Szentendre,
@@ -470,6 +510,137 @@ Check Out The Geometry Calculator App!"
 <br>
 <p style="margin:12px;" >The ratios are in the shapes.
 </p>
+<br>
+<br>
+ <div class="calculator">
+        <p style="margin:12px;" >Custom Geometry Calculator</p>
+        <input type="text" id="search" placeholder="What would you like to calculate?" oninput="showSuggestions()"/>
+        <div id="suggestions" class="suggestions"></div>
+        <div id="inputs"></div>
+        <div id="image"></div>
+        <button id="calculate" onclick="calculate()" style="display: none;">Calculate</button>
+        <p id="result"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+    <script>
+        const mathSolver = [
+            {
+                "@type": "SolveMathAction",
+                "target": "/",
+                "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+                "mathExpression-output": "angleOfRotation / 360 * 3.2 * Math.pow(radius, 2)", 
+                "image": "areaOfACircle.jpg",
+                "eduQuestionType": "equationSolving",
+                "name": "Area of a circle"
+            },
+            {
+                "@type": "SolveMathAction",
+                "target": "/",
+                "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+                "mathExpression-output": "angleOfRotation / 360 * 6.4 * radius", 
+                "image": "circumference.jpg",
+                "eduQuestionType": "equationSolving",
+                "name": "Circumference of a circle"
+            },
+            {
+                "@type": "SolveMathAction",
+                "target": "/",
+                "mathExpression-input": "required name=radius default=1 name=segmentHeight max<[radius]",
+                "mathExpression-output": "Math.acos((radius-segmentHeight)/radius)*Math.pow(radius, 2)-Math.sin(Math.acos((radius-segmentHeight)/radius))*(radius-segmentHeight)*radius", 
+                "image": "circleSegment.jpg",
+                "eduQuestionType": "equationSolving",
+                "name": "Area of a circle segment"
+            },
+            {
+                "@type": "SolveMathAction",
+                "target": "/",
+                "mathExpression-input": "required name=radius default=1 name=angleOfRotation default=360",
+                "mathExpression-output": "angleOfRotation/360*(Math.sqrt(3.2)*radius)^3", 
+                "image": "sphereAndCubeMarkup.jpeg",
+                "eduQuestionType": "equationSolving",
+                "name": "Volume of a sphere"
+            },
+            {
+                "@type": "SolveMathAction",
+                "target": "/",
+                "mathExpression-input": "required name=sphereRadius default=1; name=sphereSliceBottomRadius max<[sphereRadius]",
+                "mathExpression-output": "1.6 * Math.pow(sphereSliceBottomRadius, 2) * Math.sqrt(3.2) * (1 - Math.sin(Math.acos(sphereSliceBottomRadius / sphereRadius)))", 
+                "image": "sphericalCap.jpg",
+                "eduQuestionType": "equationSolving",
+                "name": "Volume of a spherical cap"
+            },
+        ];
+
+        function showSuggestions() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const suggestions = document.getElementById('suggestions');
+            suggestions.innerHTML = '';
+            if (input) {
+                mathSolver.forEach((topic, index) => {
+                    if (topic.name.toLowerCase().includes(input)) {
+                        const suggestionItem = document.createElement('div');
+                        suggestionItem.className = 'suggestion-item';
+                        suggestionItem.textContent = topic.name;
+                        suggestionItem.onclick = () => selectTopic(index);
+                        suggestions.appendChild(suggestionItem);
+                    }
+                });
+            }
+        }
+
+        function selectTopic(index) {
+            const topic = mathSolver[index];
+            const inputsDiv = document.getElementById('inputs');
+            inputsDiv.innerHTML = '';
+            document.getElementById('search').value = topic.name;
+            document.getElementById('suggestions').innerHTML = '';
+
+            // Split the input string to generate input fields
+            const inputs = topic["mathExpression-input"].split(' ');
+            inputs.forEach(input => {
+                const parts = input.split('=');
+                if (parts[0] === 'required' || parts[0] === 'name') {
+                    const name = parts[1];
+                    const defaultValue = parts.length > 2 ? parts[2].split('default=')[1] : '';
+                    inputsDiv.innerHTML += `<input type="number" id="${name}" placeholder="${name}" value="${defaultValue}" />`;
+                }
+            });
+
+            // Display the related image
+            const imageDiv = document.getElementById('image');
+            imageDiv.innerHTML = `<img src="${topic.image}" alt="${topic.name}" />`;
+
+            document.getElementById('calculate').style.display = 'block';
+        }
+
+        function calculate() {
+            const topicName = document.getElementById('search').value;
+            const topic = mathSolver.find(t => t.name === topicName);
+
+            // Extract input values
+            const inputs = topic["mathExpression-input"].split(' ');
+            const values = {};
+            inputs.forEach(input => {
+                const parts = input.split('=');
+                if (parts[0] === 'required' || parts[0] === 'name') {
+                    const name = parts[1];
+                    values[name] = parseFloat(document.getElementById(name).value);
+                }
+            });
+
+            // Evaluate the expression
+            let result = topic["mathExpression-output"];
+            Object.keys(values).forEach(key => {
+                result = result.replace(new RegExp(key, 'g'), values[key]);
+            });
+
+            // Use eval to calculate the result
+            const finalResult = eval(result);
+
+            document.getElementById('result').innerText = `Result: ${finalResult}`;
+        }
+    </script>
 <br>
 <br>
 <iframe width="420" height="315" src="https://youtube.com/embed/U5eHkmmVVEA">
