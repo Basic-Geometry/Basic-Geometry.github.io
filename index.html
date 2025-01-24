@@ -525,6 +525,25 @@ Check Out The Geometry Calculator App!"
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
     <script>
         const mathSolver = [
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=side default=1",
+     "mathExpression-output": "Math.pow(side, 2)",
+     "image": "square.png",
+     "eduQuestionType": "equationSolving",
+     "name": "Area of a square"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=edge default=1",
+     "mathExpression-output": "Math.pow(edge, 3)",    
+     "image": "cubeMarkup.jpeg",
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a cube"
+   },
             {
                 "@type": "SolveMathAction",
                 "target": "/",
@@ -570,6 +589,39 @@ Check Out The Geometry Calculator App!"
                 "eduQuestionType": "equationSolving",
                 "name": "Volume of a spherical cap"
             },
+            
+ {
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=baseArea default=1; name=height default=1",
+     "mathExpression-output": "baseArea * height / Math.sqrt(8)", 
+     "image": [
+       "conePyramidVolumeMarkup.jpeg",
+       "tetraFrame.jpeg"
+       ],
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a pyramid"
+   },
+
+{
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=frustumHeight default=1; name=bottomEdge default=1; name=topEdge max<bottomEdge",
+     "mathExpression-output": "frustumHeight * (Math.pow(bottomEdge, 2) * (1 / (1 - topEdge / bottomEdge)) - Math.pow(topEdge, 2) * (1 / (1 - topEdge / bottomEdge) - 1)) / Math.sqrt(8)", 
+     "image": "frustumOfPyramidMarkup.png",
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a frustum pyramid"
+   },
+
+{  
+     "@type": "SolveMathAction",
+     "target": "/",
+     "mathExpression-input": "required name=edge default=1",
+     "mathExpression-output": "Math.pow(edge, 3) / 8", 
+     "image": "tetrahedronMarkup.jpeg",
+     "eduQuestionType": "equationSolving",
+     "name": "Volume of a tetrahedron"
+   }
         ];
 
         function showSuggestions() {
