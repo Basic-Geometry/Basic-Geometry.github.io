@@ -206,7 +206,8 @@
 "locationCreated": {
 "@type":"administrativeArea",
 "name" :"Szentendre, Hungary"},
- "mainEntity" : {"@type": ["MathSolver", "LearningResource"],
+ "mainEntity" : {
+"@type": ["MathSolver", "LearningResource"],
  "name" : "Exact Geometry",
  "inLanguage":"en-us",
  "potentialAction": [
@@ -366,19 +367,9 @@
      "image": "tetrahedronMarkup.jpeg",
      "eduQuestionType": "equationSolving",
      "name": "Volume of a tetrahedron"
-   },
-
-{
-     "@type": "SolveMathAction",
-     "target": "/",
-     "mathExpression-input": "required name=sideLength default=1 name=numberOfSides default=5",
-     "mathExpression-output": "(numberOfSides/4)*ctg(180°/numberOfSides)*sideLength^2", 
-     "image": "pentagon.png",
-     "eduQuestionType": "equationSolving",
-     "name": "Area of a regular polygon"
-}
-
-  ],
+   }
+  ] 
+},
 "sameAs" : "basic-geometry.pages.dev/",
 "mainEntityOfPage": {
     "@type": "AboutPage",
@@ -443,7 +434,6 @@
 "typicalAgeRange" :"5-105",
 "url": "https://basic-geometry.github.io/", 
 "usageInfo":"Explore the fascinating world of geometry with comprehensive resources and tools. Whether you’re a student, teacher, or enthusiast, you’ll find valuable information and interactive features to enhance your learning experience. Check Out The Geometry Calculator App!"
-}
 }
 </script>
 </head>
