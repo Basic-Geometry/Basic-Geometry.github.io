@@ -153,7 +153,13 @@ A=acos((r-n)/r)r²-sin(acos((r-n)/r))(r-n)r
 
 The circumference of a circle is derived algebraically from its area by subtracting a theoretical circle, with radius shorter than the radius of the actual circle by the theoretical width of the circumference.
 
-'x' represents the width of the circumference, which is just theoretical, hence a very small number.
+The x represents the width of the circumference, which is just theoretical, hence a very small number.
+
+The difference between the shape of the straightened circumference and a quadrilateral is negligible.
+
+The length of two shorter sides of the quadrilateral is x.
+
+The length of the two longer sides is the area of the resulting ring divided by x.
 
 C=(3.2r²-3.2(r-x)²)/x=6.4r-3.2x
 
