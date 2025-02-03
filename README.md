@@ -39,7 +39,7 @@ Applications
 - Quantum Computing: Algorithm development, simulation.
 
 
-How Accurate Are the Conventional Geometry Formulas?
+How Accurate Are The Conventional Geometry Formulas?
 
 Historically, Euclidean geometry has provided a framework for understanding and describing the physical world. It is based on axioms and postulates, leading to well-defined formulas for the calculation of areas and volumes of shapes such as circles and spheres.
 
@@ -57,8 +57,7 @@ While its approximate value of 3.14159…, commonly denoted by the Greek letter 
 
 Ancient civilizations grappled with this geometric challenge, employing various methods to approximate this ratio. 
 
-A Greek mathematician is credited with refining these approximations through the method of inscribed and circumscribed polygons.
-His approach was that the ratio between the perimeter and the diameter of a circle can be estimated by comparing the circumference of the circle to the perimeters of an inscribed and a circumscribed polygon. The polygons can be divided into triangles. The ratio between the legs of the triangles and their hypotenuses can be measured linearly.
+A Greek mathematician is credited with refining these approximations through the method of inscribed and circumscribed polygons. His approach was that the ratio between the perimeter and the diameter of a circle can be estimated by comparing the circumference of the circle to the perimeters of an inscribed and a circumscribed polygon. The polygons can be divided into triangles. The ratio between the legs of the triangles and their hypotenuses can be measured linearly.
 That is where the pi/delta=3.14 notation might originate from.
 This method has several limitations. He tried to increase the accuracy by increasing the number of sides of the polygons. This approach cannot produce an accurate result. 
 
@@ -83,6 +82,12 @@ By focusing on area relationships and direct comparisons between shapes, the fol
 The area of a circle is defined by comparing it to a square, as that’s the base of area calculation.
 
 The circle is cut to 4 quadrants, each placed with their origin on the vertices of a square.
+
+In this arrangement the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square.
+
+The arcs of the quadrants of a circumscribed circle would meet at the center of the square.
+
+The arcs of the quadrants that equal in area to the square intersect right in between these limits on its centerlines.
 
 When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, the uncovered area in the middle equals exactly the sum of the overlapping areas respectively. 
 
