@@ -114,9 +114,9 @@ Simplifying further:
 1÷4−((90−2×Atan(1÷2))÷360)=2×Atan(1÷2)÷360
 
 
-Substituting 90° for 1/4:
+Substituting 90°/360° for 1/4:
 
-|90−((90−2×Atan(1÷2))÷360)|=2×Atan(1÷2)÷360
+90÷360−((90−2×Atan(1÷2))÷360)=2×Atan(1÷2)÷360
 
 
 Simplifying further:
