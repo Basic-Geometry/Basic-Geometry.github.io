@@ -99,8 +99,8 @@ r²=(a/4)²+(2(a/4))²
 r=(√5)(a/4)
 A=(16/5)r²=3.2r²
 
-(√(3.2r))²÷4−((90−2×Atan(1÷2))÷360×3.2r²+2(√3.2r(1÷4×1÷2)÷2))=
-=2(Atan(1÷2)÷360×3.2r²−√3.2r(1÷4×1÷2)÷2)
+(√(3.2r))²÷4−((90−2×Atan(1÷2))÷360×3.2r²+2(√3.2r÷4×√3.2r÷2)÷2))=
+=2(Atan(1÷2)÷360×3.2r²−√3.2r÷4×√3.2r÷2)÷2)
 
 
 Simplifying the original equation:
@@ -140,8 +140,8 @@ I denoted the radius as 1 and the side as √π (√(π*1²)). It's a logical ne
 
 I swap 3.2 for π in the overlap/unfilled equations.
 
-π−((90−2×Atan(1÷2))÷360×π+2(√π(1÷4×1÷2)÷2))=
-8(Atan(1÷2)÷360×π−√π(1÷4×1÷2)÷2) 
+π−((90−2×Atan(1÷2))÷360×π+2(π(1÷4×1÷2)÷2))=
+8(Atan(1÷2)÷360×π−π(1÷4×1÷2)÷2) 
 
 The equation holds true, meaning that the overlaps cancel out the unfilled area, so the area of the circle equals the area of the square with side=r√π. 
 But the square consists of 16 right triangles with legs of side/4 and side/2 and hypotenuse of √5√π÷4~0.991, which equals the radius.
