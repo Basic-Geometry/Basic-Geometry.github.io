@@ -1,4 +1,4 @@
-# Core Geometric System 
+# Core Geometric System ™
 
 Providing the best-established and most accurate framework to calculate area and volume using the 3D coordinate system.
 
