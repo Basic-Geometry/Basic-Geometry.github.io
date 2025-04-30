@@ -57,24 +57,39 @@ While its approximate value of 3.14159…, commonly denoted by the Greek letter 
 
 Ancient civilizations grappled with this geometric challenge, employing various methods to approximate this ratio. 
 
+The Babylonians initially estimated it as 3, later they used 3.125.
+
 A Greek mathematician is credited with refining these approximations through the method of inscribed and circumscribed polygons. His approach was that the ratio between the perimeter and the diameter of a circle can be estimated by comparing the circumference of the circle to the perimeters of an inscribed and a circumscribed polygon. The polygons can be divided into triangles. The ratio between the legs of the triangles and their hypotenuses can be measured linearly.
 That is where the pi/delta=3.14 notation might originate from.
 This method has several limitations. He tried to increase the accuracy by increasing the number of sides of the polygons. This approach cannot produce an accurate result. 
 
-The same coefficient was used to calculate the ratio between the squared radius and the area of a circle.
+Where the perimeter-based estimation went wrong: -aside of that it's just an estimate instead of an exact calculation- 
+
+The in- and circumscribed polygons method seems logical, but there's a catch. It's based on the assumption that the circle maximizes the area with a given circumference. That assumption is false. It's obviously true in the case of an isoperimetric triangle and a square, but it becomes less and less obvious with the increase of the number of the polygon's sides. Until eventually it is not even true. 
+Imagine a side of a polygon with a number of sides approaching infinity. 
+The angles between the side and the diagonals approach a right angle. They never reach a right angle as the diagonals converge towards the center.  If we relate the arc of a corresponding slice of an isoperimetric circle, the length of the arc equals the side in question. So the chord related to the arc is shorter than the side. If we want to place the arc with the chord so that it touches both diagonals, it has to be within the polygon. With the curvature of the arc becoming decreasingly distinctive, it doesn't bulge beyond the side. Eventually it will not even touch the side. Hence the polygon with the same number of sides, which circumscribed the circle is smaller, so its perimeter is shorter than the circle. 
+The perimeter of the circumscribed polygon that was believed to be an overestimate of the circumference was practically an underestimate of it. 
+
+Hence the value of the π lies between two underestimates. 
+
+The same coefficient was used to calculate the ratio between the squared radius and the area of a circle. 
 
 Despite these early advances, a precise, universally accepted value of this constant remained elusive for centuries. 
-With its value believed to be an infinite fraction, it seemed necessary to denote it by a sign in the equations.
 
-It was not until the 18th century that the symbol π, popularized by the mathematicians of the time, gained widespread acceptance.
+With its value believed to be an infinite fraction, it seemed necessary to denote it by a sign in the equations. 
+
+It was not until the 18th century that the symbol π, popularized by the mathematicians of the time, gained widespread acceptance. 
 
 Several complex formulas were introduced by different mathematicians, aimed at more accurately estimating this ratio, based on a theoretical polygon with an infinite number of sides. 
 
-All of the comparison methods mentioned above have one thing in common. They are estimating the perimeters of polygons and do not account for the curved shape of the circle.
+All of the comparison methods mentioned above have one thing in common. They are estimating the perimeters of polygons and do not account for the curved shape of the circle. 
 
-Historical records suggest that a legislative process took place in 1897, Indiana, USA, known as House Bill 246, or Indiana Pi Act, aiming to replace the numeric value 3.14 by 3.2.
+Historical records suggest that a legislative process took place in 1897, Indiana, USA, known as House Bill 246, or Indiana Pi Act, aiming to replace the numeric value 3.14 by 3.2. 
 
 Unfortunately, the exact details of the proposed method in the Indiana Pi Bill are somewhat obscure and have been interpreted differently by various accounts. 
+
+The π is a fundamental constant in the geometry of idealized circles and plays a crucial role in many mathematical theories. 
+My work, however, suggests that when we move from these idealizations to the measurement of real objects, a slightly different constant, 3.2 emerges as more relevant for accurately describing their properties. 
 
 By focusing on area relationships and direct comparisons between shapes, the following method emphasizes a more intuitive and potentially more fundamental understanding of geometric concepts.
 
@@ -177,8 +192,18 @@ V=3.2r²height
 
 The volume of a sphere is defined by comparing it to a cube, as that's the base of volume calculation.
 
-Just as the volume of a cube equals the square root of its cross section cubed - V=(√(A))³ -,
-so is the volume of a sphere equal to the area of its cross section cubed.
+You'll find the formula "V = 4 / 3 × π × r³" widely used for the volume of a sphere, and it's a cornerstone of theoretical geometry. 
+However, my work focuses on the actual volume of physical spheres as determined through direct measurement. 
+My experiments have consistently indicated a different relationship, expressed by the formula V = (√(3.2)r)³, which provides a more accurate result when dealing with real, physical entities. 
+This formula isn't based on abstract geometric ideals alone but on tangible experiments where I've measured the volume of real spheres. 
+These measurements have shown a systematic difference compared to the theoretical predictions based on the "V = 4 / 3 × π × r³” formula, suggesting that the way we mathematically describe volume might need to be reconsidered when applied to physical objects. 
+If you're trying to calculate the volume of a physical ball or sphere for a practical purpose – whether it's for a science experiment, engineering, or any other real-world application – my empirically derived formula offers a result that aligns more closely with what you would measure in the lab.
+
+The "V = 4 / 3 × π × r³” formula was estimated using the exhaustion method. That is a very rough approximation and can produce under- and overestimates. 
+V = (√(3.2)r)³ lies between the two.
+"V = 4 / 3 × π × r³” is an underestimate.
+
+Just as the volume of a cube equals the square root of its cross sectional area cubed - V=(√(A))³ -, the volume of a sphere equals the square root of its cross sectional area cubed. 
 
 The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross section.
 
