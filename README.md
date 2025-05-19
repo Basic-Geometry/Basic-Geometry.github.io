@@ -72,11 +72,11 @@ The perimeter of the circumscribed polygon that was believed to be an overestima
 
 Hence the value of the π lies between two underestimates. 
 
-The same coefficient was used to calculate the ratio between the squared radius and the area of a circle. 
+The same coefficient was used to calculate the ratio between the area and the squared radius of a circle.
 
 Despite these early advances, a precise, universally accepted value of this constant remained elusive for centuries. 
 
-With its value believed to be an infinite fraction, it seemed necessary to denote it by a sign in the equations. 
+Being uncertain about its numeric value and how to calculate it, it was comfortable to denote it by a sign in the equations.
 
 It was not until the 18th century that the symbol π, popularized by the mathematicians of the time, gained widespread acceptance. 
 
@@ -164,7 +164,17 @@ This means that the radius is shorter than it should logically be -one-.
 
 That's a logical error in the "A=πr²" formula; not the model.
 
-π is an approximation; 3.2 is an exact value.
+The π is an approximation; 3.2 is an exact value.
+
+The ratio between the area and the radius of a circle is calculable. 
+
+The ratio between the circumference and the diameter can be calculated from that. 
+
+The coefficient is a real number. 
+
+There's no reason to substitute it with a sign. 
+
+The best practice is writing it as it is.
 
 
 The area of a circle segment can be calculated by subtracting a triangle from a circle slice.
