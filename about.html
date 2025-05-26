@@ -197,7 +197,786 @@
  "inLanguage":"en-us",
  "potentialAction": [
 
+{
+  "@type": "SolveMathAction",
+  "name": "Calculating the area of a circle",
+	"description": "Calculates the exact area of a circle using a refined approach that replaces traditional π-based approximations. This method is based on direct shape relationships, ensuring greater accuracy in real-world measurements.",
+ "target": "https://basic-geometry.github.io/about/",
+ "mathExpression-input": "The radius of the circle, and optionally the angle of rotation in case of a circle slice",
+  "mathExpression-output": 
+   {
+       "@type": "PropertyValue",
+       "name": "The area of the circle",
+        "equation": "angleOfRotation / 360 * 3.2 * radius^2"
+   }, 
+     "image": "areaOfACircle.jpg",
+     "eduQuestionType": "Area calculation",
+	   "stepByStepInstructions": 
+  [
+    {
+      "@type": "HowToStep",
+      "name": "Preparation",
+      "text": "A circle's area is determined by comparing it to a square. ",
+"substeps": 
+     [
+  {
+"name":"Cutting the circle in four",
+"text": "The circle is cut into four equal quadrants"
+    },
+   {
+"name":"Aligning the quadrants to the square",
+"text": "The quadrants are aligned to the square with their origins on the vertices and their arcs inside the square."
+    }
+   ]
+},
+ {
+      "@type": "HowToStep",
+      "name": "Observation",
+      "text": "Observing the spatial relationships",
+"substeps": 
+[
+{
+"name":"Arcs of an inscribed circle",
+"text": "The arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square. "
+    },
+   {
+"name":"Arcs of a circumscribed circle",
+"text": "The arcs of the quadrants of a circumscribed circle would meet at the center of the square."
+    },
+ {
+"name":"Arcs of a matching circle",
+"text": "When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, the uncovered area in the middle equals exactly the sum of the overlapping areas respectively."
+ },
+    {
+      "name": "Relating the Radius to the Side of the Square",
+      "text": "The ratio between the radius of the circle and the side of the square can be calculated by using the Pythagorean theorem.",
+  "equation":"
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\">
 
+<mrow>
+
+<msup>
+
+ <mi>r</mi>
+
+ <mn>2</mn>
+
+</msup>
+
+<mo>=</mo>
+
+<msup>
+
+<mrow>
+
+<mo>(</mo>
+
+<mfrac>
+
+   <mi>side</mi>
+
+   <mn>4</mn>
+
+</mfrac>
+
+<mo>)</mo>
+
+</mrow>
+
+<mn>2</mn>
+
+ </msup>
+
+ <mo>+</mo>
+
+<msup>
+
+<mrow>
+
+<mo>(</mo>
+
+<mn>2</mn>
+
+<mo>×</mo>
+
+<mrow>
+
+<mo>(</mo>
+
+<mfrac>
+
+ <mi>side</mi>
+
+ <mn>4</mn>
+
+</mfrac>
+
+<mo>)</mo>
+
+</mrow>
+
+<mo>)</mo>
+
+</mrow>
+
+<mn>2</mn>
+
+</msup>
+
+</mrow>
+
+</math>"
+
+},
+{      
+"name": "Expressing the radius in terms of the side",
+ "equation": "<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+<mi>r</mi>
+<mo>=</mo>
+<msqrt>
+<mrow>
+<msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+      <mi>side</mi>
+      <mn>4</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+  <msup>
+<mrow>
+<mo>(</mo>
+<mfrac>
+      <mi>side</mi>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+<mo>=</mo>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+<mo>×</mo>
+<mfrac>
+      <mi>side</mi>
+      <mn>4</mn>
+    </mfrac>
+</mrow>
+</math>"
+}
+]
+},
+   {
+      "@type": "HowToStep",
+      "name": "Expressing the Area in Terms of the Radius",
+       "equation": "<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\">
+
+<mrow>
+
+<msub>
+
+<mi>A</mi>
+
+<mi>circle</mi>
+
+</msub>
+
+<mo>=</mo>
+
+<mfrac>
+
+<mn>16</mn>
+
+<mn>5</mn>
+
+</mfrac>
+
+<mo>×</mo>
+
+<msup>
+
+<mi>r</mi>
+
+<mn>2</mn>
+
+</msup>
+
+<mo>=</mo>
+
+<mn>3.2</mn>
+
+<msup>
+
+<mi>r</mi>
+
+<mn>2</mn>
+
+</msup>
+
+</mrow>
+
+</math>"
+    }
+   },
+ {
+"@type": "HowToStep",
+      "name": "Proof",
+      "text": "Proving that the sum of the area of the quadrants equals the area of the square by algebraically equating the uncovered area in the middle with the area of the overlaps",
+"substeps":
+[
+{
+ "name": "Quarter of the uncovered area",
+      "text": "Expressing the quarter of the uncovered area in the middle algebraically",
+"substeps":
+[
+{
+ "name": "Expressing the quarter of the area of the square algebraically",
+        "equation": "
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+ <msub>
+<mi>A</mi>
+<mi>quarter square</mi>
+</msub>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mn>4</mn>
+</mfrac>
+</math>"
+},
+{
+ "name": "Algebraically expressing the area of the two triangles formed by the half and the quarter of the sides and the radius",
+        "equation": "
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+<mn>2</mn>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</math>"
+},
+{
+"name": "Area of the circle slice",
+      "text": "Algebraically expressing the area of the circle slice enclosed by the two triangles", 
+"substeps":
+[
+"name": "Finding the angle of the circle slice",
+    "equation": " 
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+<mi>Angle</mi>
+<mo>=</mo>
+<mn>90°</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mi>Atan</mi>
+ <mo>(</mo>
+<mfrac>
+<mrow>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mfrac>
+ <mo>)</mo>
+<mo>=</mo>
+<mn>90°</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mi>Atan</mi>
+  <mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+ <mo>)</mo>
+</mrow>
+</math>"
+},
+{
+"name": "Expressing the area of the circle slice",
+        "equation": "
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+ <msub>
+<mi>A</mi>
+<mi>circle slice</mi>
+</msub>
+<mo>=</mo>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<mn>90</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+  <mo>)</mo>
+</mrow>
+</math>"
+}
+]
+},
+{
+   "name": "Quarter of the overlaps",
+    "text": "Algebraically expressing the quarter of the overlapping areas", 
+"substeps":
+[
+"name": "Finding the angle of the circle slice",
+       "equation":" 
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+<mi>Angle</mi>
+<mo>=</mo>
+<mi>Atan</mi>
+  <mo>(</mo>
+<mfrac>
+<mrow>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+  <mo>)</mo>
+</mrow>
+</mfrac>
+<mo>=</mo>
+<mi>Atan</mi>
+  <mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+  <mo>)</mo>
+</mrow>
+</math>"
+},
+{
+"name": "Algebraically expressing one eighth of the overlapping area by subtracting a triangle from a circle slice",
+      "text": "
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+<msub>
+<mi>A</mi>
+<mi>overlap</mi>
+</msub>
+<mo>=</mo>
+<mo>(</mo>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</math>"
+}
+],
+{
+    "name": "Comparing the uncovered area to the overlapping areas",
+      "equation": "<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+ <mfrac>
+<mn>3.2</mn>
+<mn>4</mn>
+</mfrac>
+<mo>-</mo>
+<mo>(</mo>
+<mn>3.2</mn>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<mn>90</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+<mo>+</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mn>2</mn>
+<mo>×</mo>
+<mo>(</mo>
+<mn>3.2</mn>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mi>r</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</math>"
+ },
+"name": "Simplifying the original equation",
+        "equation": "
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+ <mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+<mo>-</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<mn>90</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+<mo>+</mo>
+<mfrac>
+<mn>1</mn>
+<mn>8</mn>
+</mfrac>
+<mo>)</mo>
+<mo>=</mo>
+<mrow>
+<mn>2</mn>
+<mo>×</mo>
+<mfrac>
+<mo>(</mo>
+<mrow>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>8</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</math>"
+},
+{
+"name": "Simplifying further",
+       "equation": "
+<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+ <mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+<mo>-</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<mn>90</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+<mo>)</mo>
+<mo>=</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+</mrow>
+</math>"
+},
+{
+"name": "Substituting 90°/360° for 1/4",
+      "equation": "<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+<mfrac>
+<mn>90</mn>
+<mn>360</mn>
+</mfrac>
+<mo>-</mo>
+<mo>(</mo>
+<mfrac>
+<mrow>
+<mn>90</mn>
+<mo>-</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+<mo>)</mo>
+<mo>=</mo>
+<mn>2</mn>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+<mn>360</mn>
+</mfrac>
+</mrow>
+</math>"
+},
+{
+"name": "Simplifying further:",
+      "text": "<math xmlns=\\\"http://www.w3.org/1998/Math/MathML\\\" >
+<mrow>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+<mo>=</mo>
+<mi>atan</mi>
+  <mo>(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+<mo>)</mo>
+</mrow>
+</math>"
+},
+{
+"name": "Simplifying further:",
+       "equation": "<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<mn>1</mn>
+<mo>=</mo>
+<mn>1</mn>
+</mrow>
+</math>"
+}
+]
+}
+]
+},
+	
 {
      "@type": "SolveMathAction",
      "target": "https://basic-geometry.github.io/about/",
