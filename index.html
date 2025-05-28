@@ -232,8 +232,7 @@
 	"name": "Area of a circle",
     "description": "The exact area of a circle based on direct comparison with a square.",
      "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
-	"keywords":"Exact Area of a Circle, Direct Comparison, Quadrants Method, Rigorously Proven",
-	 "target": "https://basic-geometry.github.io/",
+ "target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 A=?",
      "mathExpression-output": "angle of rotation / 360 * 3.2 * Math.pow(radius, 2)",
      "image": "areaOfACircle.jpg",
@@ -245,7 +244,6 @@
        "name":  "Area of a circle segment",
 "description": "The exact area of a circle segment by subtracting a triangle from a circle slice.",
     "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
-	"keywords":"Exact Area of a Circle Segment, Rigorously Proven",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 h=2 A=?",
      "mathExpression-output": "Math.acos((radius-segmentHeight)/radius)*Math.pow(radius, 2)-Math.sin(Math.acos((radius-segmentHeight)/radius))*(radius-segmentHeight)*radius", 
@@ -258,7 +256,6 @@
 "name": "Circumference of a circle",
 "description": "Algebraic derivation of the exact circumference of a circle from its area",
 "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
-	"keywords":"Circumference of a Circle, Algebraic Derivation from the Area, Rigorously Proven",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 C=?", 
      "mathExpression-output": "angle of rotation / 360 * 6.4 * radius",
@@ -271,8 +268,7 @@
 	"name": "Volume of a sphere",
 	 "description": "The exact volume of a sphere by directly comparing it to a cube. Direct shape relationships ensure greater accuracy in real-world measurements.",
     "disambiguatingDescription": "More accurate than the traditional exhaustion method based formula which is a very rough underestimate.",
-	"keywords" : "Direct Comparison, Exact Volume, Rigorously proven",
-  "target": "https://basic-geometry.github.io/",
+	 "target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=3 V=?",
      "mathExpression-output": "angle of rotation / 360 * Math.pow((Math.sqrt(3.2) * radius), 3)", 
      "image": "sphereAndCubeMarkup.jpeg",
@@ -284,8 +280,7 @@
          "name": "Volume of a spherical cap",
         "description": "The volume of a spherical cap based on the radius of the sphere and the cap.",
      "disambiguatingDescription": "More accurate than the conventional formula ",
-	"keywords":"Spherical cap volume",
-	"target": "https://basic-geometry.github.io/",
+"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r1=5 r2=3 V=?",
      "mathExpression-output": "1.6 * Math.pow(sphereSliceBottomRadius, 2) * Math.sqrt(3.2) * (1 - Math.sin(Math.acos(sphereSliceBottomRadius / sphereRadius)))", 
      "image": "sphericalCap.jpg",
@@ -299,7 +294,6 @@
      "name": "Volume of a cone",
 	 "description": "The exact volume of a cone by comparing the volume of a quarter cone to an octant sphere with an equal radius.",
 	"disambiguatingDescription": "Instead of the inaccurate base×height/3 approximation, direct shape relationships ensure greater accuracy in real-world measurements.",
-	"keywords":"Volume of a cone, Octant sphere comparison",
 	"mathExpression-input": "r=5 H=3 V=?",
      "mathExpression-output": "angleOfRotation / 360 * 3.2 * Math.pow(radius, 2) * height / Math.sqrt(8)",
      "image": [
@@ -316,8 +310,7 @@
        "name": "Volume of a frustum cone",
               "description": "The exact volume of a frustum cone based on its top and bottom diameter and height",
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full cone",
-	"keywords": "Frustum cone volume, universal subtraction method",
-  "target": "https://basic-geometry.github.io/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "d1=5 d2=2 h=3 V=?",
      "mathExpression-output": "frustumHeight * (4 / 5 * Math.pow(bottomDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * Math.pow(topDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter) - 1)) / Math.sqrt(8)",
      "image": "frustumOfConeMarkup.png",
@@ -329,8 +322,7 @@
        "name":"Surface area of a cone",
        "description": "The exact surface area of a cone based on its radius and height.",
      "disambiguatingDescription": "Equivalent to the conventional formula, but relies on the real height.",
-	"keywords": "Surface area of a cone based on its radius and height.",
-	 "target": "https://basic-geometry.github.io/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 H=3 A=?",
      "mathExpression-output": "3.2 * (Math.pow(radius, 2) + (Math.pow(radius, 2) + Math.pow(height, 2)) * (radius / Math.sqrt(Math.pow(radius, 2) + Math.pow(height, 2))))", 
      "image": "coneMarkup.jpeg",
@@ -342,8 +334,7 @@
        "name": "Volume of a pyramid",
      "description": "The exact volume of a pyramid based on its bottom area and height using the coefficient of the volume of a cone",
      "disambiguatingDescription": "Instead of the inaccurate base×height/3 approximation, direct shape relationships ensure greater accuracy in real-world measurements.",
-	"keywords":"Pyramid volume, rigorously proven",
-	 "target": "https://basic-geometry.github.io/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "A=5 H=3 V=?",
      "mathExpression-output": "baseArea * height / Math.sqrt(8)", 
      "image": [
@@ -358,7 +349,6 @@
         "name": "Volume of a frustum pyramid",
     "description": "The exact volume of a frustum pyramid based on its top and bottom base area and height",
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full pyramid. Universally applicable",
-	"keywords": "Frustum pyramid volume, universal subtraction method, rigorously proven",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "a=5 b=3 H=2 V=?",
        "mathExpression-output": "frustumHeight * (Math.pow(bottomEdge, 2) * (1 / (1 - topEdge / bottomEdge)) - Math.pow(topEdge, 2) * (1 / (1 - topEdge / bottomEdge) - 1)) / Math.sqrt(8)",
@@ -371,8 +361,7 @@
        "name": "Volume of a tetrahedron",
        "description": "The exact volume of a tetrahedron based on its edge length",
      "disambiguatingDescription": "Based on the base×height/√8 formula, instead of the inaccurate conventional coefficient",
-"keywords": "tetrahedron volume, rigorously proven",
-	"target": "https://basic-geometry.github.io/",
+"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "a=5 V=?",
      "mathExpression-output": "Math.pow(edge, 3) / 8", 
      "image": "tetrahedronMarkup.jpeg",
@@ -485,11 +474,8 @@
 <div>
 <h1 style="font-size:160%;margin:7px">Exact geometry</h1>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
-    <img class="center-fit" src="geometry.jpeg" alt="Geometry">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="An artistic geometric illustration.">
+<div class="imgbox">
+<img class="center-fit" src="geometry.jpeg"  alt="Geometry">
 </div>
 <br>
 <p style="margin:12px;" >Providing the best-established and most accurate framework to calculate area and volume using the 3D coordinate system.
@@ -502,13 +488,10 @@
 <div>
 <h2 style="font-size:160%;margin:7px;">Area of a square</h2>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="square.png" alt="Square" id="square">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="Area of a square">
-    </figure> 
+ </figure> 
 </div>
 <br>
     <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -529,12 +512,9 @@
 <div>
 <h3 style="font-size:160%;margin:7px;">Volume of a cube</h3>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="cubeMarkup.jpeg" alt="Cube" id="cube">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="Volume of a cube">
     </figure> 
 </div>
 <br>
@@ -556,12 +536,9 @@
 <div>
 <h4 style="font-size:160%;margin:7px">Trigonometry</h4>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="trigonometry.png" alt="Trigonometry" id="trigonometry">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="Trigonometric entities">
     </figure> 
 </div>
 <br>
@@ -751,13 +728,10 @@ In a right triangle:
 <div>
 <h5 style="font-size:160%;margin:7px;">Area of a regular polygon</h5>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit"  src="pentagon.png" alt="Pentagon" id="pentagon">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="Area of a regular polygon">
-    </figure> 
+ </figure> 
 </div>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -837,12 +811,9 @@ In a right triangle:
 <div>
 <h6 style="font-size:160%;margin:7px">Area of a circle</h6>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="areaOfACircle.jpg" alt="Circle" id="circle">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The exact area of a circle based on direct comparison with a square.">
     </figure> 
 </div>
 <br>
@@ -947,13 +918,10 @@ The ratio between the ray of the circle and the side of the square can be calcul
 <div>
     <h7 style="font-size:160%;margin:7px">Area of a circle segment</h7>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="circleSegment.jpg" alt="Circle-segment" id="segment">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The exact area of a circle segment by subtracting a triangle from a circle slice">
-    </figure> 
+</figure> 
 </div>
 <br>
     <p style="margin:12px;">The area of a circle segment can be 
@@ -1020,12 +988,9 @@ circle slice.
 <div>
 <h8 style="font-size:160%;margin:7px">Circumference of a circle</h8>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="circumference.jpg" alt="Circle" id="circumference">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="Algebraic derivation of the exact circumference of a circle from its area">
     </figure> 
 </div>
 <br>
@@ -1097,13 +1062,10 @@ number.
 <div>
 <h9 style="font-size:160%;margin:7px;">Volume of a sphere</h9>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="Sphere" id="sphere">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="Area of a square">
-    </figure> 
+</figure> 
 </div>
 <br>
 <p style="margin:12px;">The volume of a sphere is defined by comparing it to a cube, as that's the base of volume calculation.
@@ -1156,13 +1118,10 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 <h10 style="font-size:160%;margin:7px;">Volume of a spherical cap
 </h10>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit"  src="sphericalCap.jpg" alt="Sphere" id="cap">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The volume of a spherical cap based on the radius of the sphere and the cap">
-    </figure> 
+     </figure> 
 </div>
     <br>
 <p style="margin:12px;">Volume of a spherical cap:
@@ -1223,25 +1182,19 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 <div>
 <h11 style="font-size:160%;margin:7px;">Volume of a cone</h11>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone-and-sphere" id="cone">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="comparing the volume of a quarter cone to an octant sphere with an equal radius">
-    </figure> 
+</figure> 
 </div>
 <br>
 <p style="margin:12px;">The volume of a cone can be calculated by algebraically comparing the volume of a quarter cone with equal radius and height to an octant sphere with equal radius, through a quarter cylinder.
 </p>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="octantSphereQuarterCone.jpeg" alt="Sphere-and-vertical-frustum-cone">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="comparing the volume of a quarter cone to an octant sphere with an equal radius">
-    </figure> 
+</figure> 
 </div>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -1310,22 +1263,16 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 <p style="margin:12px;">The base of the two shapes is a quarter circle.
 </p>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="coneAndSphereComparison.png" alt="Sphere-and-cone-projection">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="comparing the volume of a quarter cone to an octant sphere with an equal radius">
     </figure> 
 </div>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="sphereAndConeMarkup.jpeg" alt="Sphere-and-cone">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="comparing the volume of a quarter cone to an octant sphere with an equal radius">
-    </figure> 
+     </figure> 
 </div>
 <br>
 <p style="margin:12px;"><math xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -1498,13 +1445,10 @@ The intermediate of the areas of the horizontal cross section slices of a cone i
 <div>
 <h12 style="font-size:160%;margin:7px;">Volume of a frustum cone</h12>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="frustumOfConeMarkup.png" alt="Horizontal-frustum-cone">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The exact volume of a frustum cone based on its top and bottom diameter and height">
-    </figure> 
+      </figure> 
 </div>
 <br>
 <p style="margin:12px;">The volume of a frustum cone can be 
@@ -1617,12 +1561,9 @@ from the theoretical full cone.<br>
 <div>
 <h13 style="font-size:160%;margin:7px;">Surface area of a cone</h13>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="coneMarkup.jpeg" alt="Cone" id="coneSurface">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The exact surface area of a cone based on its radius and height">
     </figure> 
 </div>
 <br>
@@ -1668,13 +1609,10 @@ from the theoretical full cone.<br>
 <div>
 <h14 style="font-size:160%;margin:7px">Volume of a pyramid</h14>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="Pyramids" id="pyramid">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The exact volume of a pyramid based on its bottom area and height using the coefficient of the volume of a cone">
-    </figure> 
+     </figure> 
 </div>
 <br>
 <br>
@@ -1713,13 +1651,10 @@ with the same coefficient as the volume of a cone:<br>
 <div>
 <h15 style="font-size:160%;margin:7px;">Volume of a horizontal frustum pyramid</h15>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="Horizontal-frustum-pyramid">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The exact volume of a frustum pyramid based on its top and bottom base area and height">
-    </figure> 
+</figure> 
 </div>
 <br>
 <p style="margin:12px;">The volume of a frustum pyramid can be 
@@ -1858,13 +1793,10 @@ from the theoretical full pyramid.<br>
 <div>
 <h16 style="font-size:160%;margin:7px">Volume of a tetrahedron</h16>
 <br>
-<div class="imgbox" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="imgbox">
     <figure>
     <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="Tetrahedron" id="tetrahedron">
-    <meta itemprop="creator" content="Gaál Sándor HU-2000 Szentendre Ady Endre way 6.A">
-    <meta itemprop="copyrightYear" content="2025">
-    <meta itemprop="description" content="The exact volume of a tetrahedron based on its edge length">
-    </figure> 
+     </figure> 
 </div>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
