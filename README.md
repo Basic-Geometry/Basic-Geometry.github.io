@@ -10,24 +10,24 @@ Key Points
 
 - Comparative Geometry: Using geometric relationships to derive areas and volumes.
 - Scaling and Proportions: Applying proportional relationships for accurate calculations.
-- Algebraic Manipulation: Simplifying equations to ensure coherence and precision.
-- Exact vs. Approximate Values: Recognizing the use of simpler constants for practicality while maintaining exact values for accuracy.
+- Algebraic Manipulation: Simplifying equations to ensure consistency and precision.
+- Exact instead of Approximate Values: Prioritizing the use of simpler constants for practicality while maintaining exact values for accuracy.
 
 1. Area of a Circle:
    - Compared to a square, using geometric properties and the Pythagorean theorem.
-   - Formula:  A = 3.2r² 
+   - Formula:  A = 3.2r². 
 
 2. Circumference of a Circle:
    - Derived from the area by subtracting a smaller theoretical circle.
-   - Formula:  C = 6.4r 
+   - Formula:  C = 6.4r. 
 
 3. Volume of a Sphere:
    - Compared to a cube, using the area of the sphere's cross-section.
-   - Formula:  V = (√(3.2)r)³ 
+   - Formula:  V = (√(3.2)r)³. 
 
 4. Volume of a Cone:
    - Compared to an octant sphere and a quarter cylinder.
-   - Formula:  V = 3.2r²height/√8 
+   - Formula:  V = 3.2r²height/√8. 
 
 
 Applications
@@ -53,7 +53,7 @@ Other shapes are more challenging. The ratios are in the shapes; one just has to
 
 The constant relationship between a circle's circumference and its diameter has captivated mathematicians for millennia. 
 
-While its approximate value of 3.14159…, commonly denoted by the Greek letter π, is widely recognized today, the historical development of this concept is less understood.
+While its approximate value of 3.14, commonly denoted by the Greek letter π, is widely recognized today, the historical development of this concept is less understood.
 
 Ancient civilizations grappled with this geometric challenge, employing various methods to approximate this ratio. 
 
@@ -82,7 +82,7 @@ It was not until the 18th century that the symbol π, popularized by the mathema
 
 Several complex formulas were introduced by different mathematicians, aimed at more accurately estimating this ratio, based on a theoretical polygon with an infinite number of sides. 
 
-All of the comparison methods mentioned above have one thing in common. They are estimating the perimeters of polygons and do not account for the curved shape of the circle. 
+All of the above mentioned approximation  methods have one thing in common. They are estimating the perimeters of polygons and do not account for the curved shape of the circle. 
 
 Historical records suggest that a legislative process took place in 1897, Indiana, USA, known as House Bill 246, or Indiana Pi Act, aiming to replace the numeric value 3.14 by 3.2. 
 
