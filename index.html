@@ -94,8 +94,6 @@
 <meta name="twitter:title" content="Home of Basic Geometry">
 <meta name="twitter:description" content="Introducing the best-established and most accurate framework to calculate area and volume.">
 <meta name="twitter:image" content="android-chrome-256x256.png">
-<meta name="google-site-verification" content="XuP08h4O_UbzZo81VWNHhFn5OW7elz2_cZi17lt3qvA" />
-<meta name="msvalidate.01" content="EA6B8354B9F3C956E862954E97EB8CD0" />
 <script type="application/ld+json" async>
 {
   "@context": "https://schema.org",
@@ -104,7 +102,7 @@
  "about": {
     "@type": "AboutPage",
     "name": "About Basic Geometry Formulas",
-    "url": "https://basic-geometry.pages.dev/about"
+    "url": "https://basic-geometry.github.io/about/"
   },
   "alternateName": "Exact Geometry",
 "accessMode" : "mathOnVisual" ,
@@ -215,7 +213,7 @@
      "@type": "SolveMathAction",
        "name": "Area of a square",
 	"description": "The basis of area calculation",
-"target": "https://basic-geometry.pages.dev/",
+"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "a=5 A=?",
      "mathExpression-output": "Math.pow(side, 2)",
      "image": "square.png",
@@ -226,7 +224,7 @@
      "@type": "SolveMathAction",
        "name": "Volume of a cube",
        "description": "The basis of volume calculation",
-     "target": "https://basic-geometry.pages.dev/",
+     "target": "https://basic-geometry.github.io/",
      "mathExpression-input": "a=5 V=?",
      "mathExpression-output": "Math.pow(edge, 3)",    
      "image": "cubeMarkup.jpeg",
@@ -238,7 +236,7 @@
 	"name": "Area of a circle",
      "description": "The exact area of a circle based on direct comparison with a square.",
      "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 A=?",
      "mathExpression-output": "angle of rotation / 360 * 3.2 * Math.pow(radius, 2)",
      "image": "areaOfACircle.jpg",
@@ -250,7 +248,7 @@
        "name":  "Area of a circle segment",
        "description": "The exact area of a circle segment by subtracting a triangle from a circle slice.",
      "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 h=2 A=?",
      "mathExpression-output": "Math.acos((radius-segmentHeight)/radius)*Math.pow(radius, 2)-Math.sin(Math.acos((radius-segmentHeight)/radius))*(radius-segmentHeight)*radius", 
      "image": "circleSegment.jpg",
@@ -262,7 +260,7 @@
 "name": "Circumference of a circle",
 "description": "Algebraic derivation of the exact circumference of a circle from its area",
 "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 C=?", 
      "mathExpression-output": "angle of rotation / 360 * 6.4 * radius",
      "image": "circumference.jpg",
@@ -274,7 +272,7 @@
 	"name": "Volume of a sphere",
 	 "description": "The exact volume of a sphere by directly comparing it to a cube. Direct shape relationships ensure greater accuracy in real-world measurements.",
     "disambiguatingDescription": "More accurate than the traditional exhaustion method based formula which is a very rough underestimate.",
-   "target": "https://basic-geometry.pages.dev/",
+   "target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=3 V=?",
      "mathExpression-output": "angle of rotation / 360 * Math.pow((Math.sqrt(3.2) * radius), 3)", 
      "image": "sphereAndCubeMarkup.jpeg",
@@ -286,7 +284,7 @@
          "name": "Volume of a spherical cap",
         "description": "The volume of a spherical cap based on the radius of the sphere and the cap.",
      "disambiguatingDescription": "More accurate than the conventional formula ",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r1=5 r2=3 V=?",
      "mathExpression-output": "1.6 * Math.pow(sphereSliceBottomRadius, 2) * Math.sqrt(3.2) * (1 - Math.sin(Math.acos(sphereSliceBottomRadius / sphereRadius)))", 
      "image": "sphericalCap.jpg",
@@ -299,7 +297,7 @@
       "name": "Volume of a cone",
 	 "description": "The exact volume of a cone by comparing the volume of a quarter cone to an octant sphere with an equal radius.",
 	"disambiguatingDescription": "Instead of the inaccurate base×height/3 approximation, direct shape relationships ensure greater accuracy in real-world measurements.",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
     "mathExpression-input": "r=5 H=3 V=?",
      "mathExpression-output": "angleOfRotation / 360 * 3.2 * Math.pow(radius, 2) * height / Math.sqrt(8)",
      "image": [
@@ -316,7 +314,7 @@
        "name": "Volume of a frustum cone",
        "description": "The exact volume of a frustum cone based on its top and bottom diameter and height",
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full cone",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "d1=5 d2=2 h=3 V=?",
      "mathExpression-output": "frustumHeight * (4 / 5 * Math.pow(bottomDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * Math.pow(topDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter) - 1)) / Math.sqrt(8)",
      "image": "frustumOfConeMarkup.png",
@@ -328,7 +326,7 @@
        "name":"Surface area of a cone",
        "description": "The exact surface area of a cone based on its radius and height.",
      "disambiguatingDescription": "Equivalent to the conventional formula, but relies on the real height.",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "r=5 H=3 A=?",
      "mathExpression-output": "3.2 * (Math.pow(radius, 2) + (Math.pow(radius, 2) + Math.pow(height, 2)) * (radius / Math.sqrt(Math.pow(radius, 2) + Math.pow(height, 2))))", 
      "image": "coneMarkup.jpeg",
@@ -340,7 +338,7 @@
        "name": "Volume of a pyramid",
      "description": "The exact volume of a pyramid based on its bottom area and height using the coefficient of the volume of a cone",
      "disambiguatingDescription": "Instead of the inaccurate base×height/3 approximation, direct shape relationships ensure greater accuracy in real-world measurements.",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "A=5 H=3 V=?",
      "mathExpression-output": "baseArea * height / Math.sqrt(8)", 
      "image": [
@@ -355,7 +353,7 @@
         "name": "Volume of a frustum pyramid",
     "description": "The exact volume of a frustum pyramid based on its top and bottom base area and height",
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full pyramid. Universally applicable",
-	"target": "https://basic-geometry.pages.dev/",
+	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "a=5 b=3 H=2 V=?",
        "mathExpression-output": "frustumHeight * (Math.pow(bottomEdge, 2) * (1 / (1 - topEdge / bottomEdge)) - Math.pow(topEdge, 2) * (1 / (1 - topEdge / bottomEdge) - 1)) / Math.sqrt(8)",
      "image": "frustumOfPyramidMarkup.png",
@@ -367,14 +365,14 @@
        "name": "Volume of a tetrahedron",
        "description": "The exact volume of a tetrahedron based on its edge length",
      "disambiguatingDescription": "Based on the base×height/√8 formula, instead of the inaccurate conventional coefficient",
-"target": "https://basic-geometry.pages.dev/",
+"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "a=5 V=?",
      "mathExpression-output": "Math.pow(edge, 3) / 8", 
      "image": "tetrahedronMarkup.jpeg",
      "eduQuestionType": "Volume calculation"
    }
   ] ,
-"url": "https://basic-geometry.pages.dev", 
+"url": "https://basic-geometry.github.io/", 
 "usageInfo":"Calculate area and volume with enhanced accuracy using the Core Geometric System ™. This innovative framework provides a practical alternative to traditional methods, rooted in comparative geometry and scaling principles. Learn exact formulas for circles (A = 3.2r^2, C = 6.4r), spheres (V = (√(3.2)r)^3), cones, and more, with applications in engineering, computer graphics, and scientific research.",
 },
 "schemaVersion" : "https://schema.org/docs/releases.html#v28.1.",
@@ -432,17 +430,17 @@
       "@type": "DownloadAction",
       "target": {
         "@type": "EntryPoint",
-       "url": "https://basic-geometry.pages.dev/Geometry.apk",
+       "url": "https://basic-geometry.github.io/Geometry.apk",
         "contentType": "application/vnd.android.package-archive"
       }
        },
-    "url": "https://basic-geometry.pages.dev",
+    "url": "https://basic-geometry.github.io/",
     "usageInfo": "User-friendly geometry calculator app for Android. Designed to help you calculate area and volume quickly and accurately, it’s the perfect companion for your studies. Powered by the Core Geometric System ™."
        }
  ],
 "thumbnail": "android-chrome-256x256.png",
 "typicalAgeRange" :"5-105",
-"url": "https://basic-geometry.pages.dev/", 
+"url": "https://basic-geometry.github.io/", 
 "usageInfo":"Discover the Core Geometric System ™, a groundbreaking framework offering a fresh perspective on calculating area and volume using a 3D coordinate system. Challenging conventional formulas, this system provides empirically-grounded alternatives with a focus on practical accuracy for real-world applications in engineering, design, science, and beyond. Explore exact values and intuitive geometric relationships for circles, spheres, cones, and more."
 }
 </script>
