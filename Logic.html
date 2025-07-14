@@ -1,9 +1,11 @@
 <label for="circle-radius">Circle Radius:</label>
 <input id="circle-radius" type="number" value="1" />
 
-<label for="segment-height">Segment Height:</label>
-<input id="segment-height" type="number" value="0.5" />
+<label for="segment-length">Segment Length:</label>
+<input id="segment-length" type="number" value="0.707" />
 
+<label for="segment-height">Segment Heigth:</label>
+<input id="segment-height" type="number" value="0.707" />
 <script>
   
   
@@ -16,7 +18,7 @@
     return 6.4 * this.radius;
   }
 
-  area() {
+    area() {
     return 3.2 * this.radius ** 2;
   }
     
@@ -26,34 +28,37 @@
         const radius = parseFloat(this.value);
         const circle = new Circle(radius);
         const calculatedArea = document.getElementById(outputId);
-        output.innerText = `Area: ${circle.area().toFixed(2)} units²`;
+        output.innerText = `Area: ${circle.area().toFixed(5)} units²`;
 
         const calculatedCircumference = document.getElementById(outputId);
-        output.innerText = `Circumference: ${circle.circumference().toFixed(2)} units`;
+        output.innerText = `Circumference: ${circle.circumference().toFixed(5)} units`;
       }
     });
     }
 
-  segmentArea(radius, height) {
-    const baseY = this.radius - height;
-    const angle = Trig.queryAcos(baseY / this.radius);
-    const sin = Trig.querySin(angle);
-    return angle * this.radius ** 2 - sin * baseY * this.radius;
+  segmentArea(length, height) {
 
-  
-  document.getElementById('segment-height').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
+    document.getElementById('segment-length').addEventListener('keydown', function (l) {
+    if (l.key === 'Enter') {
+      const length = parseFloat(this.value);
+      
+  document.getElementById('segment-height').addEventListener('keydown', function (h) {
+    if (h.key === 'Enter') {
       const height = parseFloat(this.value);
-      const r = parseFloat(document.getElementById('circle-radius').value) || 1;
-      const c = new Circle(r);
-      const calculatedArea = c.segmentArea(h);
-      document.getElementById('segment-calculatedArea').innerText = `Segment area: ${segmentArea.toFixed(2)} units²`;
+        
+    const angle = Trig.queryAtan(this.height / this.length);
+    
+    return angle / 90 * 3.2 * ((this.height ** 2 + this.length ** 2) / this.height) ** 2 - ((this.height ** 2 + this.length ** 2) / this.height - this.height) * this.length;
+  
+      const circle = new Circle(r);
+      const calculatedArea = circle.segmentArea(h);
+      document.getElementById('segment-calculatedArea').innerText = `Segment area: ${segmentArea.toFixed(5)} units²`;
     }
   });
   }
 }
 
-Circle.fromInput('circle-radius', 'circle-calculatedArea');
+Circle.fromInput('circle-radius', 'circle-calculatedArea', 'circle-calculatedCircumference', 'segment-calculatedArea');
 </script>
 <p id="circle-calculatedArea"></p>
 <p id="circle-calculatedCircumference"></p>
