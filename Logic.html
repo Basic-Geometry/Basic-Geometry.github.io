@@ -1,0 +1,36 @@
+<input id="circle-radius" type="number" value="1" />
+
+<script>
+  
+  
+  export class Circle {
+    
+document.getElementById('circle-radius').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      const radius = parseFloat(this.value);
+  }
+  }
+    
+  const circumference(radius) {
+    return 6.4 * radius;
+  }
+
+  const area(radius) {
+    return 3.2 * radius * radius;
+    const output = document.getElementById('circle-output');
+      output.innerText = `Area: ${area.toFixed(2)} units²`;
+  }
+
+  // segment area 
+  static segmentArea(radius, height) {
+    
+    const baseY = radius - height;
+    const angle = Trig.queryAcos(baseY / radius);
+    const sin = Trig.querySin(angle);
+
+    return angle * radius ** 2 - sin * baseY * radius;
+  }
+  
+  }
+</script>
+<p id="circle-output"></p>
