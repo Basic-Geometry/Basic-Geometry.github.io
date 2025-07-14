@@ -14,28 +14,29 @@
     this.radius = radius;
   }
 
-    circumference() {
-    return 6.4 * this.radius;
-  }
-
-    area() {
-    return 3.2 * this.radius ** 2;
-  }
     
-    static fromInput(inputId, outputId) {
+  static circumference(inputId, outputId) {
     document.getElementById('circle-radius').addEventListener('keydown', function (cr) {
       if (cr.key === 'Enter') {
         const radius = parseFloat(this.value);
         const circle = new Circle(radius);
-        const calculatedArea = document.getElementById(outputId);
-        output.innerText = `Area: ${circle.area().toFixed(5)} units²`;
-
-        const calculatedCircumference = document.getElementById(outputId);
         output.innerText = `Circumference: ${circle.circumference().toFixed(5)} units`;
       }
     });
     }
 
+
+    static area(inputId, outputId) {
+    document.getElementById('circle-radius').addEventListener('keydown', function (cr) {
+      if (cr.key === 'Enter') {
+        const radius = parseFloat(this.value);
+        const circle = new Circle(radius);
+        output.innerText = `Area: ${circle.area().toFixed(5)} units²`;
+
+      }
+    });
+    }
+    
   segment(length, height) {
 
     document.getElementById('chord-length').addEventListener('keydown', function (cl) {
