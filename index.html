@@ -717,6 +717,41 @@ In a right triangle:
 <div>
 <h5 style="font-size:160%;margin:7px;">Area of a regular polygon</h5>
 <br>
+<br>
+<div>
+<label style="margin:12px;" for="side-number">Number of Sides:</label>
+<input id="side-number" type="number" value="3" step="1" />
+<br>
+<label style="margin:12px;" for="side-length">Length of Sides:</label>
+<input id="side-length" type="number" value="1" step="any" />
+	
+<script>
+  function polygonArea(number, length) {
+    const angle = 3.2 / number;
+       const tan = Trig.queryTan(angle));
+        
+    return (number / 4) * (length ** 2) / tan;
+  }
+
+  function updatePolygonArea() {
+    const number = parseFloat(document.getElementById('side-number').value);
+    const length = parseFloat(document.getElementById('side-length').value);
+
+    if (isNaN(number) || isNaN(length)) {
+      document.getElementById('polygon-area').innerText = '';
+      return;
+    }
+
+    document.getElementById('polygon-area').innerText =
+      `Area: ${polygonArea(number, length).toFixed(5)} square units`;
+  }
+
+  document.getElementById('side-number').addEventListener('input', updatePolygonArea);
+  document.getElementById('side-length').addEventListener('input', updatePolygonArea);
+</script>
+<p style="margin:12px;" id="polygon-area"></p>
+</div>
+<br>
 <div class="imgbox">
     <img class="center-fit" src="pentagon.png" alt="Pentagon" id="pentagon">
     </div>
@@ -800,7 +835,7 @@ In a right triangle:
 <br>
 <br>
 <div>
-<label style="margin:12px;" for="circle-radius-a">Circle Radius:</label>
+<label style="margin:12px;" for="circle-radius-a">Radius:</label>
 <input id="circle-radius-a" type="number" value="1" step="any" />
 
 <script>
@@ -816,7 +851,7 @@ In a right triangle:
     }
 
     document.getElementById('circle-area').innerText =
-      `Area: ${circleArea(radius).toFixed(5)} units²`;
+      `Area: ${circleArea(radius).toFixed(5)} square units`;
     });
 </script>
 <p style="margin:12px;" id="circle-area"></p>
@@ -997,7 +1032,7 @@ circle slice.
 <br>
 <br>
 <div>
-<label style="margin:12px;" for="circle-radius-c">Circle Radius:</label>
+<label style="margin:12px;" for="circle-radius-c">Radius:</label>
 <input id="circle-radius-c" type="number" value="1" step="any" />
 
 <script>
@@ -1093,7 +1128,7 @@ number.
 <br>
 <br>
 <div>
-<label style="margin:12px;" for="sphere-radius">Sphere Radius:</label>
+<label style="margin:12px;" for="sphere-radius">Radius:</label>
 <input id="sphere-radius" type="number" value="1" step="any" />
 
 <script>
@@ -1109,7 +1144,7 @@ number.
     }
 
     document.getElementById('sphere-volume').innerText =
-      `Volume: ${sphereVolume(radius).toFixed(5)} units²`;
+      `Volume: ${sphereVolume(radius).toFixed(5)} cubic units`;
     });
 </script>
 <p style="margin:12px;" id="sphere-volume"></p>
@@ -1176,10 +1211,10 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 <br>
 <br>
 <div>
-<label style="margin:12px;" for="cap-radius">Cap Radius:</label>
+<label style="margin:12px;" for="cap-radius">Radius:</label>
 <input id="cap-radius" type="number" value="1" step="any" />
 <br>
-<label style="margin:12px;" for="cap-height">Cap Height:</label>
+<label style="margin:12px;" for="cap-height">Height:</label>
 <input id="cap-height" type="number" value="1" step="any" />
 	
 <script>
@@ -1197,7 +1232,7 @@ The edge length of the cube, which has the same volume as the sphere, equals the
     }
 
     document.getElementById('cap-volume').innerText =
-      `Volume: ${capVolume(radius, height).toFixed(5)} units³`;
+      `Volume: ${capVolume(radius, height).toFixed(5)} cubic units`;
   }
 
   document.getElementById('cap-radius').addEventListener('input', updateCapVolume);
@@ -1247,11 +1282,11 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 <br>
 <br>
 <div>
-<label style="margin:12px;" for="cone-radius">Cone Radius:</label>
-<input id="cone-radius" type="number" value="1" step="any" />
+<label style="margin:12px;" for="cone-radius-v">Radius:</label>
+<input id="cone-radius-v" type="number" value="1" step="any" />
 <br>
-<label style="margin:12px;" for="cone-height">Cone Height:</label>
-<input id="cone-height" type="number" value="1" step="any" />
+<label style="margin:12px;" for="cone-height-v">Height:</label>
+<input id="cone-height-v" type="number" value="1" step="any" />
 	
 <script>
   function coneVolume(radius, height) {
@@ -1259,8 +1294,8 @@ The edge length of the cube, which has the same volume as the sphere, equals the
   }
 
   function updateConeVolume() {
-    const radius = parseFloat(document.getElementById('cone-radius').value);
-    const height = parseFloat(document.getElementById('cone-height').value);
+    const radius = parseFloat(document.getElementById('cone-radius-v').value);
+    const height = parseFloat(document.getElementById('cone-height-v').value);
 
     if (isNaN(radius) || isNaN(height)) {
       document.getElementById('cone-volume').innerText = '';
@@ -1268,11 +1303,11 @@ The edge length of the cube, which has the same volume as the sphere, equals the
     }
 
     document.getElementById('cone-volume').innerText =
-      `Volume: ${coneVolume(radius, height).toFixed(5)} units³`;
+      `Volume: ${coneVolume(radius, height).toFixed(5)} cubic units`;
   }
 
-  document.getElementById('cone-radius').addEventListener('input', updateConeVolume);
-  document.getElementById('cone-height').addEventListener('input', updateConeVolume);
+  document.getElementById('cone-radius-v').addEventListener('input', updateConeVolume);
+  document.getElementById('cone-height-v').addEventListener('input', updateConeVolume);
 </script>
 <p style="margin:12px;" id="cone-volume"></p>
 </div>
@@ -1646,6 +1681,38 @@ from the theoretical full cone.<br>
 <div>
 <h13 style="font-size:160%;margin:7px;">Surface area of a cone</h13>
 <br>
+<br>
+<div>
+<label style="margin:12px;" for="cone-radius-s">Radius:</label>
+<input id="cone-radius-s" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="cone-height-s">Height:</label>
+<input id="cone-height-s" type="number" value="1" step="any" />
+	
+<script>
+  function coneSurface(radius, height) {
+    return 3.2 * radius ** 2 + (radius * Math.sqrt(radius ** 2 + height ** 2));
+  }
+
+  function updateConeSurface() {
+    const radius = parseFloat(document.getElementById('cone-radius-s').value);
+    const height = parseFloat(document.getElementById('cone-height-s').value);
+
+    if (isNaN(radius) || isNaN(height)) {
+      document.getElementById('cone-surface').innerText = '';
+      return;
+    }
+
+    document.getElementById('cone-surface').innerText =
+      `Volume: ${coneSurface(radius, height).toFixed(5)} square units`;
+  }
+
+  document.getElementById('cone-radius-s').addEventListener('input', updateConeSurface);
+  document.getElementById('cone-height-s').addEventListener('input', updateConeSurface);
+</script>
+<p style="margin:12px;" id="cone-surface"></p>
+</div>
+<br>
 <div class="imgbox">
   <img class="center-fit" src="coneMarkup.jpeg" alt="Cone" id="coneSurface">
   </div>
@@ -1730,7 +1797,7 @@ with the same coefficient as the volume of a cone:<br>
 <br>
 <br>
 <div>
-<h15 style="font-size:160%;margin:7px;">Volume of a horizontal frustum pyramid</h15>
+<h15 style="font-size:160%;margin:7px;">Volume of a horizontal square frustum pyramid</h15>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="Horizontal-frustum-pyramid">
