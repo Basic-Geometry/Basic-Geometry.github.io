@@ -1184,26 +1184,24 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 	
 <script>
   function capVolume(radius, height) {
-    return 1.6 * radius ** 2 * Math.sqrt(3.2) * height;
+    return 1.6 * radius * radius * height * Math.sqrt(3.2);
   }
 
-  document.getElementById('cap-radius').addEventListener('input', function () {
-    const radius = parseFloat(this.value);
-    if (isNaN(radius)) {
+  function updateCapVolume() {
+    const radius = parseFloat(document.getElementById('cap-radius').value);
+    const height = parseFloat(document.getElementById('cap-height').value);
+
+    if (isNaN(radius) || isNaN(height)) {
       document.getElementById('cap-volume').innerText = '';
-    return;
+      return;
     }
 
-document.getElementById('cap-height').addEventListener('input', function () {
-    const height = parseFloat(this.value);
-    if (isNaN(height)) {
-      document.getElementById('cap-volume').innerText = '';
-    return;
-    }
-	
     document.getElementById('cap-volume').innerText =
-      `Volume: ${capVolume(radius, height).toFixed(5)} units²`;
-    });
+      `Volume: ${capVolume(radius, height).toFixed(5)} units³`;
+  }
+
+  document.getElementById('cap-radius').addEventListener('input', updateCapVolume);
+  document.getElementById('cap-height').addEventListener('input', updateCapVolume);
 </script>
 <p style="margin:12px;" id="cap-volume"></p>
 </div>
@@ -1250,35 +1248,33 @@ document.getElementById('cap-height').addEventListener('input', function () {
 <br>
 <div>
 <label style="margin:12px;" for="cone-radius">Cone Radius:</label>
-<input id="cap-radius" type="number" value="1" step="any" />
+<input id="cone-radius" type="number" value="1" step="any" />
 <br>
 <label style="margin:12px;" for="cone-height">Cone Height:</label>
-<input id="cap-height" type="number" value="1" step="any" />
+<input id="cone-height" type="number" value="1" step="any" />
 	
 <script>
   function coneVolume(radius, height) {
-    return 3.2 * radius ** 2 * height / Math.sqrt(8);
+    return 3.2 * radius * radius * height / Math.sqrt(8);
   }
 
-  document.getElementById('cone-radius').addEventListener('input', function () {
-    const radius = parseFloat(this.value);
-    if (isNaN(radius)) {
+  function updateConeVolume() {
+    const radius = parseFloat(document.getElementById('cone-radius').value);
+    const height = parseFloat(document.getElementById('cone-height').value);
+
+    if (isNaN(radius) || isNaN(height)) {
       document.getElementById('cone-volume').innerText = '';
-    return;
+      return;
     }
 
-document.getElementById('cone-height').addEventListener('input', function () {
-    const height = parseFloat(this.value);
-    if (isNaN(height)) {
-      document.getElementById('cone-volume').innerText = '';
-    return;
-    }
-	
     document.getElementById('cone-volume').innerText =
-      `Volume: ${coneVolume(radius, height).toFixed(5)} units²`;
-    });
+      `Volume: ${coneVolume(radius, height).toFixed(5)} units³`;
+  }
+
+  document.getElementById('cone-radius').addEventListener('input', updateConeVolume);
+  document.getElementById('cone-height').addEventListener('input', updateConeVolume);
 </script>
-<p style="margin:12px;" id="cap-volume"></p>
+<p style="margin:12px;" id="cone-volume"></p>
 </div>
 <br>
 <div class="imgbox">
