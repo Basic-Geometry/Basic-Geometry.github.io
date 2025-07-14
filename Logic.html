@@ -20,7 +20,8 @@
       if (cr.key === 'Enter') {
         const radius = parseFloat(this.value);
         const circle = new Circle(radius);
-        output.innerText = `Circumference: ${circle.circumference().toFixed(5)} units`;
+        const value = 6.4 * radius;
+        output.innerText = `Circumference: ${circle.circumference.value.toFixed(5)} units`;
       }
     });
     }
@@ -31,7 +32,8 @@
       if (cr.key === 'Enter') {
         const radius = parseFloat(this.value);
         const circle = new Circle(radius);
-        output.innerText = `Area: ${circle.area().toFixed(5)} units²`;
+        const value = 3.2 * radius * radius;
+        output.innerText = `Area: ${circle.area.value.toFixed(5)} units²`;
 
       }
     });
