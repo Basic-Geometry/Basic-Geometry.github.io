@@ -49,15 +49,15 @@
       const angle = Trig.queryAtan(this.height / this.length);
   
       const circle = new Circle(((this.height ** 2 + this.length ** 2) / this.height));
-      const area = circle.area(((this.height ** 2 + this.length ** 2) / this.height)) * angle / 90 - ((this.height ** 2 + this.length ** 2) / this.height - this.height) * this.length;
+      const area = circle.area() * angle / 90 - ((this.height ** 2 + this.length ** 2) / this.height - this.height) * this.length;
       document.getElementById('segment-area').innerText = `Segment area: ${area.toFixed(5)} units²`;
     }
   });
   }
 }
 
-Circle.fromInput('circle-radius', 'circle-calculatedArea', 'circle-calculatedCircumference', 'segment-calculatedArea');
+Circle.fromInput('circle-radius', 'circle-area', 'circle-circumference', 'segment-area');
 </script>
-<p id="circle-calculatedArea"></p>
-<p id="circle-calculatedCircumference"></p>
-<p id="segment-calculatedArea"></p>
+<p id="circle-area"></p>
+<p id="circle-circumference"></p>
+<p id="segment-area"></p>
