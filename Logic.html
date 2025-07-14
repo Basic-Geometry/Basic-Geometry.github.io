@@ -1,67 +1,24 @@
 <label for="circle-radius">Circle Radius:</label>
 <input id="circle-radius" type="number" value="1" />
-
-<label for="chord-length">Chord Length:</label>
-<input id="chord-length" type="number" value="0.707" />
-
-<label for="segment-height">Segment Heigth:</label>
-<input id="segment-height" type="number" value="0.707" />
 <script>
   
   
-  export class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
-
-    
-  static circumference(inputId, outputId) {
-    document.getElementById('circle-radius').addEventListener('keydown', function (cr) {
-      if (cr.key === 'Enter') {
-        const radius = parseFloat(this.value);
-        const circle = new Circle(radius);
-        const value = 6.4 * radius;
-        output.innerText = `Circumference: ${circle.circumference.value.toFixed(5)} units`;
-      }
-    });
-    }
-
-
-    static area(inputId, outputId) {
-    document.getElementById('circle-radius').addEventListener('keydown', function (cr) {
-      if (cr.key === 'Enter') {
-        const radius = parseFloat(this.value);
-        const circle = new Circle(radius);
-        const value = 3.2 * radius * radius;
-        output.innerText = `Area: ${circle.area.value.toFixed(5)} units²`;
-
-      }
-    });
-    }
-    
-  segment(length, height) {
-
-    document.getElementById('chord-length').addEventListener('keydown', function (cl) {
-    if (cl.key === 'Enter') {
-      const length = parseFloat(this.value);
-      
-    document.getElementById('segment-height').addEventListener('keydown', function (sh) {
-    if (sh.key === 'Enter') {
-      const height = parseFloat(this.value);
-        
-      const angle = Trig.queryAtan(this.height / (this.length / 2));
-  
-      const circle = new Circle(radius){
-      const radius = ((this.height ** 2 + (this.length / 2) ** 2) / this.height)};
-      const area = circle.area() * angle / 90 - (radius - this.height) * this.length / 2;
-      document.getElementById('segment-area').innerText = `Segment area: ${area.toFixed(5)} units²`;
-    }
-  });
-  }
+  function circleArea(radius) {
+  return 3.2 * radius * radius;
 }
 
-Circle.fromInput('circle-radius', 'circle-area', 'circle-circumference', 'segment-area');
+document.getElementById('circle-radius').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    const radius = parseFloat(this.value);
+    if (isNaN(radius)) return;
+
+    document.getElementById('circle-area').innerText =
+      `Area: ${circleArea(radius).toFixed(5)} units²`;
+
+}
+});
+    
+circleArea('circle-area');
 </script>
 <p id="circle-area"></p>
-<p id="circle-circumference"></p>
-<p id="segment-area"></p>
+
