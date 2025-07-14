@@ -4,33 +4,37 @@
   
   
   export class Circle {
-    
-document.getElementById('circle-radius').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      const radius = parseFloat(this.value);
-  }
-  }
-    
-  const circumference(radius) {
-    return 6.4 * radius;
+  constructor(radius) {
+    this.radius = radius;
   }
 
-  const area(radius) {
-    return 3.2 * radius * radius;
-    const output = document.getElementById('circle-output');
-      output.innerText = `Area: ${area.toFixed(2)} units²`;
+  circumference() {
+    return 6.4 * this.radius;
   }
 
-  // segment area 
-  static segmentArea(radius, height) {
-    
-    const baseY = radius - height;
-    const angle = Trig.queryAcos(baseY / radius);
+  area() {
+    return 3.2 * this.radius ** 2;
+  }
+
+  segmentArea(height) {
+    const baseY = this.radius - height;
+    const angle = Trig.queryAcos(baseY / this.radius);
     const sin = Trig.querySin(angle);
+    return angle * this.radius ** 2 - sin * baseY * this.radius;
+  }
 
-    return angle * radius ** 2 - sin * baseY * radius;
+  static fromInput(inputId, outputId) {
+    document.getElementById(inputId).addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        const radius = parseFloat(this.value);
+        const circle = new Circle(radius);
+        const output = document.getElementById(outputId);
+        output.innerText = `Area: ${circle.area().toFixed(2)} units²`;
+      }
+    });
   }
-  
-  }
+}
+
+Circle.fromInput('circle-radius', 'circle-output');
 </script>
 <p id="circle-output"></p>
