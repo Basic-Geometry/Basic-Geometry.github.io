@@ -1,4 +1,8 @@
+<label for="circle-radius">Circle Radius:</label>
 <input id="circle-radius" type="number" value="1" />
+
+<label for="segment-height">Segment Height:</label>
+<input id="segment-height" type="number" value="0.5" />
 
 <script>
   
@@ -8,33 +12,49 @@
     this.radius = radius;
   }
 
-  circumference() {
+    circumference() {
     return 6.4 * this.radius;
   }
 
   area() {
     return 3.2 * this.radius ** 2;
   }
-
-  segmentArea(height) {
-    const baseY = this.radius - height;
-    const angle = Trig.queryAcos(baseY / this.radius);
-    const sin = Trig.querySin(angle);
-    return angle * this.radius ** 2 - sin * baseY * this.radius;
-  }
-
-  static fromInput(inputId, outputId) {
+    
+    static fromInput(inputId, outputId) {
     document.getElementById(inputId).addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
         const radius = parseFloat(this.value);
         const circle = new Circle(radius);
-        const output = document.getElementById(outputId);
+        const calculatedArea = document.getElementById(outputId);
         output.innerText = `Area: ${circle.area().toFixed(2)} units²`;
+
+        const calculatedCircumference = document.getElementById(outputId);
+        output.innerText = `Circumference: ${circle.circumference().toFixed(2)} units`;
       }
     });
+    }
+
+  segmentArea(radius, height) {
+    const baseY = this.radius - height;
+    const angle = Trig.queryAcos(baseY / this.radius);
+    const sin = Trig.querySin(angle);
+    return angle * this.radius ** 2 - sin * baseY * this.radius;
+
+  
+  document.getElementById('segment-height').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      const height = parseFloat(this.value);
+      const r = parseFloat(document.getElementById('circle-radius').value) || 1;
+      const c = new Circle(r);
+      const calculatedArea = c.segmentArea(h);
+      document.getElementById('segment-calculatedArea').innerText = `Segment area: ${segmentArea.toFixed(2)} units²`;
+    }
+  });
   }
 }
 
-Circle.fromInput('circle-radius', 'circle-output');
+Circle.fromInput('circle-radius', 'circle-calculatedArea');
 </script>
-<p id="circle-output"></p>
+<p id="circle-calculatedArea"></p>
+<p id="circle-calculatedCircumference"></p>
+<p id="segment-calculatedArea"></p>
