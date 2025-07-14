@@ -186,7 +186,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-06-27",
+"dateModified" :"2025-07-14",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Exact geometry",
@@ -798,6 +798,28 @@ In a right triangle:
 <div>
 <h6 style="font-size:160%;margin:7px">Area of a circle</h6>
 <br>
+<div>
+<label for="circle-radius">Circle Radius:</label>
+<input id="circle-radius" type="number" value="1" />
+
+<p id="circle-area"></p>
+
+<script>
+  function circleArea(radius) {
+    return 3.2 * radius * radius;
+  }
+
+  document.getElementById('circle-radius').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      const radius = parseFloat(this.value);
+      if (isNaN(radius)) return;
+
+      document.getElementById('circle-area').innerText =
+        `Area: ${circleArea(radius).toFixed(5)} units²`;
+    }
+  });
+</script>
+</div>
 <div class="imgbox">
     <img class="center-fit" src="areaOfACircle.jpg" alt="Circle" id="circle">
 </div>
