@@ -799,11 +799,8 @@ In a right triangle:
 <h6 style="font-size:160%;margin:7px">Area of a circle</h6>
 <br>
 <div>
-<label for="circle-radius">Circle Radius:</label>
+<label style="margin:12px;" for="circle-radius">Circle Radius:</label>
 <input id="circle-radius" type="number" value="1" />
-
-<p id="circle-area"></p>
-
 <script>
   function circleArea(radius) {
     return 3.2 * radius * radius;
@@ -819,7 +816,9 @@ In a right triangle:
     }
   });
 </script>
+<p style="margin:12px;" id="circle-area"></p>
 </div>
+<br>
 <div class="imgbox">
     <img class="center-fit" src="areaOfACircle.jpg" alt="Circle" id="circle">
 </div>
@@ -992,6 +991,27 @@ circle slice.
 <br>
 <div>
 <h8 style="font-size:160%;margin:7px">Circumference of a circle</h8>
+<br>
+<div>
+<label style="margin:12px;" for="circle-radius">Circle Radius:</label>
+<input id="circle-radius" type="number" value="1" />
+<script>
+  function circleCircumference(radius) {
+    return 6.4 * radius;
+  }
+
+  document.getElementById('circle-radius').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+      const radius = parseFloat(this.value);
+      if (isNaN(radius)) return;
+
+      document.getElementById('circle-circumference').innerText =
+        `Circumference: ${circleCircumference(radius).toFixed(5)} units`;
+    }
+  });
+</script>
+<p style="margin:12px;" id="circle-circumference"></p>
+</div>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="circumference.jpg" alt="Circle" id="circumference">
