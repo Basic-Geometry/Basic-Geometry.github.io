@@ -806,8 +806,8 @@ In a right triangle:
     return 3.2 * radius * radius;
   }
 
-  document.getElementById('circle-radius').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
+  document.getElementById('circle-radius').addEventListener('keydown', function (ca) {
+    if (ca.key === 'Enter') {
       const radius = parseFloat(this.value);
       if (isNaN(radius)) return;
 
@@ -1000,8 +1000,8 @@ circle slice.
     return 6.4 * radius;
   }
 
-  document.getElementById('circle-radius').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
+  document.getElementById('circle-radius').addEventListener('keydown', function (cc) {
+    if (cc.key === 'Enter') {
       const radius = parseFloat(this.value);
       if (isNaN(radius)) return;
 
