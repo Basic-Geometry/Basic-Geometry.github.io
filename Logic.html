@@ -23,8 +23,8 @@
   }
     
     static fromInput(inputId, outputId) {
-    document.getElementById(inputId).addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
+    document.getElementById('circle-radius').addEventListener('keydown', function (cr) {
+      if (cr.key === 'Enter') {
         const radius = parseFloat(this.value);
         const circle = new Circle(radius);
         const calculatedArea = document.getElementById(outputId);
@@ -36,23 +36,21 @@
     });
     }
 
-  segmentArea(length, height) {
+  segment(length, height) {
 
     document.getElementById('segment-length').addEventListener('keydown', function (l) {
-    if (l.key === 'Enter') {
+    if (sl.key === 'Enter') {
       const length = parseFloat(this.value);
       
-  document.getElementById('segment-height').addEventListener('keydown', function (h) {
-    if (h.key === 'Enter') {
+    document.getElementById('segment-height').addEventListener('keydown', function (h) {
+    if (sh.key === 'Enter') {
       const height = parseFloat(this.value);
         
-    const angle = Trig.queryAtan(this.height / this.length);
-    
-    return angle / 90 * 3.2 * ((this.height ** 2 + this.length ** 2) / this.height) ** 2 - ((this.height ** 2 + this.length ** 2) / this.height - this.height) * this.length;
+      const angle = Trig.queryAtan(this.height / this.length);
   
-      const circle = new Circle(r);
-      const calculatedArea = circle.segmentArea(h);
-      document.getElementById('segment-calculatedArea').innerText = `Segment area: ${segmentArea.toFixed(5)} units²`;
+      const circle = new Circle(((this.height ** 2 + this.length ** 2) / this.height));
+      const area = circle.area(((this.height ** 2 + this.length ** 2) / this.height)) * angle / 90 - ((this.height ** 2 + this.length ** 2) / this.height - this.height) * this.length;
+      document.getElementById('segment-area').innerText = `Segment area: ${area.toFixed(5)} units²`;
     }
   });
   }
