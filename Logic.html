@@ -1,8 +1,8 @@
 <label for="circle-radius">Circle Radius:</label>
 <input id="circle-radius" type="number" value="1" />
 
-<label for="segment-length">Segment Length:</label>
-<input id="segment-length" type="number" value="0.707" />
+<label for="chord-length">Chord Length:</label>
+<input id="chord-length" type="number" value="0.707" />
 
 <label for="segment-height">Segment Heigth:</label>
 <input id="segment-height" type="number" value="0.707" />
@@ -38,18 +38,19 @@
 
   segment(length, height) {
 
-    document.getElementById('segment-length').addEventListener('keydown', function (l) {
-    if (sl.key === 'Enter') {
+    document.getElementById('chord-length').addEventListener('keydown', function (cl) {
+    if (cl.key === 'Enter') {
       const length = parseFloat(this.value);
       
-    document.getElementById('segment-height').addEventListener('keydown', function (h) {
+    document.getElementById('segment-height').addEventListener('keydown', function (sh) {
     if (sh.key === 'Enter') {
       const height = parseFloat(this.value);
         
-      const angle = Trig.queryAtan(this.height / this.length);
+      const angle = Trig.queryAtan(this.height / (this.length / 2));
   
-      const circle = new Circle(((this.height ** 2 + this.length ** 2) / this.height));
-      const area = circle.area() * angle / 90 - ((this.height ** 2 + this.length ** 2) / this.height - this.height) * this.length;
+      const circle = new Circle(radius){
+      const radius = ((this.height ** 2 + (this.length / 2) ** 2) / this.height)};
+      const area = circle.area() * angle / 90 - (radius - this.height) * this.length / 2;
       document.getElementById('segment-area').innerText = `Segment area: ${area.toFixed(5)} units²`;
     }
   });
