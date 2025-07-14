@@ -798,6 +798,7 @@ In a right triangle:
 <div>
 <h6 style="font-size:160%;margin:7px">Area of a circle</h6>
 <br>
+<br>
 <div>
 <label style="margin:12px;" for="circle-radius-a">Circle Radius:</label>
 <input id="circle-radius-a" type="number" value="1" step="any" />
@@ -994,6 +995,7 @@ circle slice.
 <div>
 <h8 style="font-size:160%;margin:7px">Circumference of a circle</h8>
 <br>
+<br>
 <div>
 <label style="margin:12px;" for="circle-radius-c">Circle Radius:</label>
 <input id="circle-radius-c" type="number" value="1" step="any" />
@@ -1089,6 +1091,30 @@ number.
 <div>
 <h9 style="font-size:160%;margin:7px;">Volume of a sphere</h9>
 <br>
+<br>
+<div>
+<label style="margin:12px;" for="sphere-radius">Sphere Radius:</label>
+<input id="sphere-radius" type="number" value="1" step="any" />
+
+<script>
+  function sphereVolume(radius) {
+    return Math.pow(Math.sqrt(3.2) * radius, 3);
+  }
+
+  document.getElementById('sphere-radius').addEventListener('input', function () {
+    const radius = parseFloat(this.value);
+    if (isNaN(radius)) {
+      document.getElementById('sphere-volume').innerText = '';
+    return;
+    }
+
+    document.getElementById('sphere-volume').innerText =
+      `Volume: ${sphereVolume(radius).toFixed(5)} units²`;
+    });
+</script>
+<p style="margin:12px;" id="sphere-volume"></p>
+</div>
+<br>
 <div class="imgbox">
     <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="Sphere" id="sphere">
     </div>
@@ -1148,6 +1174,40 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 <h10 style="font-size:160%;margin:7px;">Volume of a spherical cap
 </h10>
 <br>
+<br>
+<div>
+<label style="margin:12px;" for="cap-radius">Cap Radius:</label>
+<input id="cap-radius" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="cap-height">Cap Height:</label>
+<input id="cap-height" type="number" value="1" step="any" />
+	
+<script>
+  function capVolume(radius, height) {
+    return 1.6 * radius ** 2 * Math.sqrt(3.2) * height;
+  }
+
+  document.getElementById('cap-radius').addEventListener('input', function () {
+    const radius = parseFloat(this.value);
+    if (isNaN(radius)) {
+      document.getElementById('cap-volume').innerText = '';
+    return;
+    }
+
+document.getElementById('cap-height').addEventListener('input', function () {
+    const height = parseFloat(this.value);
+    if (isNaN(height)) {
+      document.getElementById('cap-volume').innerText = '';
+    return;
+    }
+	
+    document.getElementById('cap-volume').innerText =
+      `Volume: ${capVolume(radius, height).toFixed(5)} units²`;
+    });
+</script>
+<p style="margin:12px;" id="cap-volume"></p>
+</div>
+<br>
 <div class="imgbox">
     <img class="center-fit" src="sphericalCap.jpg" alt="Sphere" id="cap">
     </div>
@@ -1186,6 +1246,40 @@ The edge length of the cube, which has the same volume as the sphere, equals the
 <br>
 <div>
 <h11 style="font-size:160%;margin:7px;">Volume of a cone</h11>
+<br>
+<br>
+<div>
+<label style="margin:12px;" for="cone-radius">Cone Radius:</label>
+<input id="cap-radius" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="cone-height">Cone Height:</label>
+<input id="cap-height" type="number" value="1" step="any" />
+	
+<script>
+  function coneVolume(radius, height) {
+    return 3.2 * radius ** 2 * height / Math.sqrt(8);
+  }
+
+  document.getElementById('cone-radius').addEventListener('input', function () {
+    const radius = parseFloat(this.value);
+    if (isNaN(radius)) {
+      document.getElementById('cone-volume').innerText = '';
+    return;
+    }
+
+document.getElementById('cone-height').addEventListener('input', function () {
+    const height = parseFloat(this.value);
+    if (isNaN(height)) {
+      document.getElementById('cone-volume').innerText = '';
+    return;
+    }
+	
+    document.getElementById('cone-volume').innerText =
+      `Volume: ${coneVolume(radius, height).toFixed(5)} units²`;
+    });
+</script>
+<p style="margin:12px;" id="cap-volume"></p>
+</div>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone-and-sphere" id="cone">
