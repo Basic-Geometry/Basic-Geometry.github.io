@@ -637,7 +637,7 @@ const trig = {
 "rad(1.6)": {
   "sin": "1"
   "cos": "0"
-  "tan":  "undefined"
+  "tan":  "0"
   "deg": "90.0"
 },
 
@@ -2234,13 +2234,14 @@ from the theoretical full pyramid.<br>
 	
 <script>
   function test(test1, test2) {
+const test3 = queryTan(test2);
     return  test1 + test2 * test3 ;
   }
 
   function updateTestVolume() {
     const test1 = parseFloat(document.getElementById('test1').value);
     const test2 = parseFloat(document.getElementById('test2').value);
-const test3 = queryTan(1.2);
+
 	  
     if (isNaN(test1) || isNaN(test2)) {
       document.getElementById('test-volume').innerText = '';
