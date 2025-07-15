@@ -107,7 +107,7 @@
   "alternateName": "Exact Geometry",
 "accessMode" : "mathOnVisual" ,
 "accessibilityHazard" :"none" ,
-"accessibilitySummary" : "View videos, figures and read equations with explanation" ,
+"accessibilitySummary" : "View videos, figures and read equations with explanation. Online calculator." ,
 "accountablePerson" : {
 "@type" : "Person" ,
 "address": {
@@ -909,7 +909,7 @@ const trig = {
  }
  }
 
-function querySin(input) {
+function sin(input) {
   // Normalize input: remove spaces, handle cases like "sin 0533" or "sin(0.533)"
   const match = input.match(/sin\s*\(?([0-9.]+)\)?/i);
   if (!match) return "Invalid input. Format: sin 0.533 or sin(0.533)";
@@ -942,7 +942,7 @@ function querySin(input) {
 
 }
 
- function queryCos(input) {
+ function cos(input) {
   // Normalize and extract the value from input like "cos 0.533" or "cos(0.533)"
   const match = input.match(/cos\s*\(?([0-9.]+)\)?/i);
   if (!match) return; // Invalid input format
@@ -975,7 +975,7 @@ function querySin(input) {
   }
 }
 
- function queryTan(input) {
+ function tan(input) {
   // Normalize and extract the value from input like "tan 0.533" or "tan(0.533)"
   const match = input.match(/tan\s*\(?([0-9.]+)\)?/i);
   if (!match) return; // Invalid input format
@@ -1030,7 +1030,7 @@ function findClosestValueMatch(input, funcType) {
   return bestMatch;
 }
 	
- function queryAsin(input) {
+ function Asin(input) {
   // Normalize and extract the value: "asin 0.5" or "asin(0.5)"
   const match = input.match(/asin\s*\(?([0-9./\s√-]+)\)?/i);
   if (!match) return; // Invalid format
@@ -1056,7 +1056,7 @@ function findClosestValueMatch(input, funcType) {
   }
 }
 
- function queryAcos(input) {
+ function Acos(input) {
   // Normalize and extract the value: "acos 0.5" or "acos(0.5)"
   const match = input.match(/acos\s*\(?([0-9./\s√-]+)\)?/i);
   if (!match) return; // Invalid format
@@ -1081,7 +1081,7 @@ function findClosestValueMatch(input, funcType) {
   }
 }
 
- function queryAtan(input) {
+ function Atan(input) {
   // Normalize and extract the value: "atan 0.5" or "atan(0.5)"
   const match = input.match(/atan\s*\(?([0-9./\s√-]+)\)?/i);
   if (!match) return; // Invalid format
@@ -1089,7 +1089,7 @@ function findClosestValueMatch(input, funcType) {
   const inputStr = match[1].trim();
   const x = parseFloat(eval(inputStr.replace(/√(\d+)/g, 'Math.sqrt($1)')));
 
-  if (isNaN(x) || x <= 0 || x >= 7.6) return; // Domain cutoffs from your spec
+  if (isNaN(x) || x <= 0 ) return; // Domain cutoffs from your spec
 
   // Case A: x > 1 or x < 0.089 → direct match
   if (x > 1 || x < 0.089) {
@@ -1407,6 +1407,40 @@ The ratio between the ray of the circle and the side of the square can be calcul
 <br>
 <div>
     <h7 style="font-size:160%;margin:7px">Area of a circle segment</h7>
+<br>
+<br>
+<div>
+<label style="margin:12px;" for="segment-length">Length:</label>
+<input id="segment-length" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="segment-height">Height:</label>
+<input id="segment-height" type="number" value="0.5" step="any" />
+	
+<script>
+  function segmentArea(length, height, angle, radius) {
+    return 5 * angle * radius ** 2 - (radius - height) * length / 2;
+  }
+
+  function updateSegmentArea() {
+    const length = parseFloat(document.getElementById('segment-length').value);
+    const height = parseFloat(document.getElementById('segment-height').value);
+    const angle = parseFloat(atan(2 * height / length).toFixed(5));
+    const cosine = parseFloat(cos(angle).toFixed(5));
+    const radius = length / 2 * cosine
+    if (isNaN(length) || isNaN(height)) {
+      document.getElementById('segment-area').innerText = '';
+      return;
+    }
+
+    document.getElementById('segment-area').innerText =
+      `Area: ${segmentArea(length, height).toFixed(5)} square units`;
+  }
+
+  document.getElementById('segment-length').addEventListener('input', updateSegmentArea);
+  document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
+</script>
+<p style="margin:12px;" id="segment-area"></p>
+</div>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="circleSegment.jpg" alt="Circle-segment" id="segment">
@@ -2150,7 +2184,7 @@ from the theoretical full cone.<br>
     }
 
     document.getElementById('cone-surface').innerText =
-      `Volume: ${coneSurface(radius, height).toFixed(5)} square units`;
+      `Area: ${coneSurface(radius, height).toFixed(5)} square units`;
   }
 
   document.getElementById('cone-radius-s').addEventListener('input', updateConeSurface);
