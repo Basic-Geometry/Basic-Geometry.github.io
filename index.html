@@ -186,7 +186,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-07-14",
+"dateModified" :"2025-07-15",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Exact geometry",
@@ -675,6 +675,7 @@ const trig = {
     const approxVal = trig[closestKey][funcType].value?.approx ?? trig[closestKey][funcType].value;
     return `${funcType}(${closestKey}) ≈ ${approxVal}`;
   }
+ }
  }
 
 function querySin(input) {
