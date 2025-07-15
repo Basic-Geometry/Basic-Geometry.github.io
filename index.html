@@ -2249,7 +2249,8 @@ from the theoretical full pyramid.<br>
   function testQueryAtan() {
     const input = parseFloat(document.getElementById('atan-input').value);
     const output = document.getElementById('atan-output');
-    output.innerText = '';
+    const value = trig[key][funcType]; // ✅ direct access: trig["rad(1.467)"].tan
+	  output.innerText = '';
 
     if (isNaN(input)) {
       output.innerText = 'Invalid input.';
@@ -2260,7 +2261,7 @@ from the theoretical full pyramid.<br>
       const match = findClosestValueMatch(input, 'tan'); // your engine function
       output.innerText += `🔍 Looking for tan ≈ ${input}\n\n`;
       output.innerText += `🗝️ Best match key: ${match.angle}\n`;
-      output.innerText += `📐 Approximated tan: ${match.approx}\n`;
+      output.innerText += `📐 Approximated tan: ${value ?? '⛔ not found'}\n`;
     } catch (err) {
       output.innerText = '⚠️ Error during query:\n' + err.message;
     }
