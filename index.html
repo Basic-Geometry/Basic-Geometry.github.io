@@ -2226,37 +2226,6 @@ from the theoretical full pyramid.<br>
 <br>
 <br>
 <br>
-<label style="margin:12px;" for="test1">test1:</label>
-<input id="test1" type="number" value="1" step="any" />
-<br>
-<label style="margin:12px;" for="test2">test2:</label>
-<input id="test2" type="number" value="1" step="any" />
-	
-<script>
-  function test(test1, test2) {
-const test3 = queryTan(test2);
-    return  test1 + test2 * test3 ;
-  }
-
-  function updateTestVolume() {
-    const test1 = parseFloat(document.getElementById('test1').value);
-    const test2 = parseFloat(document.getElementById('test2').value);
-
-	  
-    if (isNaN(test1) || isNaN(test2)) {
-      document.getElementById('test-volume').innerText = '';
-      return;
-    }
-
-    document.getElementById('test-volume').innerText =
-      `Volume: ${testVolume(test1, test2).toFixed(5)} cubic units`;
-  }
-
-  document.getElementById('test1').addEventListener('input', updateTestVolume);
-  document.getElementById('test2').addEventListener('input', updateTestVolume);
-</script>
-<p style="margin:12px;" id="test-volume"></p>
-</div>
 <div>
 <h17 style="font-size:160%;margin:7px">Geometry Calculator Android App</h17>
 <br>
@@ -2267,6 +2236,34 @@ const test3 = queryTan(test2);
 <br>
 <br>
 <br>
+<h18 style="margin-top:24px;">Test section</h18>
+<label for="atan-input">Enter value (e.g. 2):</label>
+<input type="number" id="atan-input" value="2" step="any" style="margin:8px;" />
+<button onclick="testQueryAtan()">Run Test</button>
+
+<pre id="atan-output" style="padding:12px; background:#eee;"></pre>
+
+<script>
+  function testQueryAtan() {
+    const input = parseFloat(document.getElementById('atan-input').value);
+    const output = document.getElementById('atan-output');
+    output.innerText = '';
+
+    if (isNaN(input)) {
+      output.innerText = 'Invalid input.';
+      return;
+    }
+
+    try {
+      const match = findClosestValueMatch(input, 'tan'); // your engine function
+      output.innerText += `🔍 Looking for tan ≈ ${input}\n\n`;
+      output.innerText += `🗝️ Best match key: ${match.angle}\n`;
+      output.innerText += `📐 Approximated tan: ${match.approx}\n`;
+    } catch (err) {
+      output.innerText = '⚠️ Error during query:\n' + err.message;
+    }
+  }
+</script>
 <footer>
 <p style="margin:12px;">® All rights reserved</p>
 <br>
