@@ -2237,31 +2237,38 @@ from the theoretical full pyramid.<br>
 <br>
 <br>
 <h18 style="margin-top:24px;">Test section</h18>
-<label for="atan-input">Enter value (e.g. 2):</label>
-<input type="number" id="atan-input" value="2" step="any" style="margin:8px;" />
-<button onclick="testQueryAtan()">Run Test</button>
 
-<pre id="atan-output" style="padding:12px; background:#eee;"></pre>
+<button onclick="inspectTrig()">Inspect Trig</button>
+
+<pre id="trig-output" style="padding:12px; background:#eee; margin-top:12px;"></pre>
 
 <script>
-  function testQueryAtan() {
-    const input = parseFloat(document.getElementById('atan-input').value);
-    const output = document.getElementById('atan-output');
+  function inspectTrig() {
+    const output = document.getElementById('trig-output');
     output.innerText = '';
 
-    if (isNaN(input)) {
-      output.innerText = 'Invalid input.';
+    if (typeof trig !== 'object') {
+      output.innerText = '⚠️ Trig object not defined or not accessible.';
       return;
     }
 
-    try {
-      const match = findClosestValueMatch(input, 'tan'); // your engine function
-      output.innerText += `🔍 Looking for tan ≈ ${input}\n\n`;
-      output.innerText += `🗝️ Best match key: ${match.angle}\n`;
-      output.innerText += `📐 Approximated tan: ${match.approx}\n`;
-    } catch (err) {
-      output.innerText = '⚠️ Error during query:\n' + err.message;
+    const keys = Object.keys(trig);
+    if (keys.length === 0) {
+      output.innerText = '⚠️ Trig dataset is empty.';
+      return;
     }
+
+    output.innerText += `✅ Trig dataset loaded.\n\nKeys found:\n`;
+
+    keys.forEach(key => {
+      const entry = trig[key];
+      const sin = entry.sin ?? '⛔ not defined';
+      const tan = entry.tan ?? '⛔ not defined';
+
+      output.innerText += `• ${key}\n`;
+      output.innerText += `   sin: ${typeof sin === 'object' ? JSON.stringify(sin) : sin}\n`;
+      output.innerText += `   tan: ${typeof tan === 'object' ? JSON.stringify(tan) : tan}\n\n`;
+    });
   }
 </script>
 <footer>
