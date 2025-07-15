@@ -1421,21 +1421,25 @@ The ratio between the ray of the circle and the side of the square can be calcul
     return 5 * angle * radius ** 2 - (radius - height) * length / 2;
   }
 
-  function updateSegmentArea() {
-    const length = parseFloat(document.getElementById('segment-length').value);
-    const height = parseFloat(document.getElementById('segment-height').value);
-    const thing = parseFloat(2 * height / length);
-    const angle = parseFloat(atan(this.thing).toFixed(5));
-    const cosine = parseFloat(cos(this.angle).toFixed(5));
-    const radius = length / 2 * cosine
-    if (isNaN(length) || isNaN(height)) {
-      document.getElementById('segment-area').innerText = '';
-      return;
-    }
+function updateSegmentArea() {
+  const length = parseFloat(document.getElementById('segment-length').value);
+  const height = parseFloat(document.getElementById('segment-height').value);
 
-    document.getElementById('segment-area').innerText =
-      `Area: ${segmentArea(length, height).toFixed(5)} square units`;
+  if (isNaN(length) || isNaN(height)) {
+    document.getElementById('segment-area').innerText = '';
+    return;
   }
+
+  const thing = 2 * height / length;
+  const angle = parseFloat(atan(thing).toFixed(5));
+  const cosine = parseFloat(cos(angle).toFixed(5));
+  const radius = length / (2 * cosine);
+
+  const area = segmentArea(length, height, angle, radius);
+
+  document.getElementById('segment-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
 
   document.getElementById('segment-length').addEventListener('input', updateSegmentArea);
   document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
