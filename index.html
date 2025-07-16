@@ -2508,6 +2508,52 @@ from the theoretical full pyramid.<br>
 <br>
 <br>
 <br>
+<h18 style="margin-top:24px;">🧪 CGS Trig Test Tool</h18>
+
+<label for="input-angle">Angle (rad):</label>
+<input id="input-angle" type="text" value="rad(1.467)" style="margin:8px;" />
+<br>
+
+<label for="input-value">Value (e.g. 0.991):</label>
+<input id="input-value" type="number" step="any" value="0.991" style="margin:8px;" />
+<br>
+<button onclick="runTrigTests()">Run Tests</button>
+
+<pre id="trig-output" style="padding:12px; background:#eee; margin-top:12px;"></pre>
+
+<script>
+ 
+
+  function runTrigTests() {
+    const angleInput = document.getElementById("input-angle").value;
+    const valueInput = parseFloat(document.getElementById("input-value").value);
+    const output = document.getElementById("trig-output");
+    output.innerText = "";
+
+    // Regular trig
+    const trigEntry = trig[angleInput];
+    if (!trigEntry) {
+      output.innerText += `⚠️ No entry found for ${angleInput}\n`;
+    } else {
+      output.innerText += `✅ Found trig entry for ${angleInput}\n`;
+      output.innerText += `• sin: ${trigEntry.sin}\n`;
+      output.innerText += `• cos: ${trigEntry.cos}\n`;
+      output.innerText += `• tan: ${trigEntry.tan}\n\n`;
+    }
+
+    // Inverse trig
+    output.innerText += `🔍 Searching inverse matches for ≈ ${valueInput}\n\n`;
+
+    ["sin", "cos", "tan"].forEach(func => {
+      const match = findClosestValueMatch(valueInput, func);
+      if (match) {
+        output.innerText += `atan⟶${func}: ${valueInput} → ${match.angle} [${func}=${match.value}]\n`;
+      } else {
+        output.innerText += `atan⟶${func}: No match found for ${valueInput}\n`;
+      }
+    });
+  }
+</script>
 <footer>
 <p style="margin:12px;">® All rights reserved</p>
 <br>
