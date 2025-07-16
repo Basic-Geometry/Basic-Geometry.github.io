@@ -884,30 +884,25 @@ const trig = {
 
 	// Helper: Finds closest rad(x) match for given function (sin or cos)
 	
- function findClosestRad(value, funcType) {
+function findClosestRad(value) {
   let closestKey = null;
   let minDiff = Infinity;
 
   for (const key in trig) {
-    if (!trig[key][funcType]) continue;
-    const keyMatch = key.match(/rad\(([\d.]+)\)/);
-    if (!keyMatch) continue;
+    const match = key.match(/rad\(([\d.]+)\)/);
+    if (!match) continue;
 
-    const radVal = parseFloat(keyMatch[1]);
-    const diff = Math.abs(radVal - value);
+    const rad = parseFloat(match[1]);
+    const delta = Math.abs(rad - value);
 
-    if (diff < minDiff) {
-      minDiff = diff;
+    if (delta < minDiff) {
+      minDiff = delta;
       closestKey = key;
     }
-  
-
-  if (closestKey) {
-    const approxVal = trig[closestKey][funcType].value;
-    return `${funcType}(${closestKey}) ≈ ${approxVal}`;
   }
- }
- }
+
+  return closestKey ?? null;
+}
 
 function sin(input) {
   // Normalize input: remove spaces, handle cases like "sin 0533" or "sin(0.533)"
