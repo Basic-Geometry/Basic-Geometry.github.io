@@ -1329,7 +1329,7 @@ The ratio between the ray of the circle and the side of the square can be calcul
 	
 <script>
   function segmentArea(length, height, angle, radius) {
-    return 5 * angle * radius ** 2 - (radius - height) * length / 2;
+    return angle * radius ** 2 - (radius - height) * length / 2;
   }
 
 function updateSegmentArea() {
@@ -1342,9 +1342,9 @@ function updateSegmentArea() {
   }
 
   const thing = 2 * height / length;
-  const angle = parseFloat(Atan(thing).toFixed(5));
-  const cosine = parseFloat(cos(angle).toFixed(5));
-  const radius = length / (2 * cosine);
+  const angle = parseFloat(2 * Atan(thing).toFixed(5));
+  const sine = parseFloat(sin(angle).toFixed(5));
+  const radius = length / (2 * sine);
 
   const area = segmentArea(length, height, angle, radius);
 
