@@ -1341,10 +1341,10 @@ function updateSegmentArea() {
     return;
   }
 
-  const thing = 2 * height / length;
-  const angle = parseFloat(2 * Atan(thing).toFixed(5));
+  const ratio = 2 * height / length;
+  const angle = parseFloat((2 * Atan(ratio)).toFixed(5));
   const sine = parseFloat(sin(angle).toFixed(5));
-  const radius = length / (2 * sine);
+  const radius = parseFloat((length / (2 * sine)).toFixed(5));
 
   const area = segmentArea(length, height, angle, radius);
 
