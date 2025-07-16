@@ -962,7 +962,9 @@ function tan(radian) {
     if (trig[reflectedKey]?.tan !== undefined) return trig[reflectedKey].tan;
 
     const fallbackKey = closestRad(reflected);
-return 1 / trig[fallbackKey]?.tan ?? null;
+const reflectedTan = trig[fallbackKey]?.tan ?? null;
+const reciprocal = parseFloat((1 / reflectedTan).toFixed(3));
+return reciprocal 
   }
 
   // 🔹 Case 3: Otherwise, search sin column directly
@@ -1012,7 +1014,7 @@ function Atan(x) {
     const parsed = match.angle.match(/rad\(([\d.]+)\)/);
     if (!parsed) return null;
     const reflected = parseFloat(parsed[1]);
-    reflectedAtan = 1.6 - reflected;
+    const reflectedAtan = parseFloat((1.6 - reflected).toFixed(3));
   }
 
   return reflectedAtan;
