@@ -917,13 +917,13 @@ function sin(radian) {
 
     if (trig[reflectedKey]?.cos !== undefined) return trig[reflectedKey].cos;
 
-    const fallback = closestRad(reflected, "cos");
-    return fallback?.value ?? null;
+    const fallbackKey = closestRad(reflected);
+return trig[fallbackKey]?.cos ?? null;
   }
 
   // 🔹 Case 3: Otherwise, search sin column directly
-  const fallback = closestRad(radian, "sin");
-  return fallback?.value ?? null;
+  const fallbackKey = closestRad(radian);
+return trig[fallbackKey]?.sin ?? null;
 }
 
 function cos(radian) {
@@ -939,16 +939,14 @@ function cos(radian) {
 
     if (trig[reflectedKey]?.sin !== undefined) return trig[reflectedKey].sin;
 
-    const fallback = closestRad(reflected, "sin");
-    return fallback?.value ?? null;
+    const fallbackKey = closestRad(reflected);
+return trig[fallbackKey]?.sin ?? null;
   }
 
   // 🔹 Case 3: Otherwise, search sin column directly
-  const fallback = closestRad(radian, "cos");
-  return fallback?.value ?? null;
+  const fallbackKey = closestRad(radian);
+return trig[fallbackKey]?.cos ?? null;
 }
-
-
 	
 
 function closestValue(input, funcType) {
@@ -972,7 +970,7 @@ function closestValue(input, funcType) {
   return bestMatch;
 }
 
-
+	
  function Atan(input) {
   // Normalize and extract the value: "atan 0.5" or "atan(0.5)"
   const match = input.match(/atan\s*\(?([0-9./\s√-]+)\)?/i);
