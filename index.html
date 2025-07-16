@@ -1002,7 +1002,7 @@ function Asin(x) {
 
   let radian = null;
 
-  if (x >= 0.707 || x < 0.09) {
+  if (x > 0.706 || x < 0.09) {
     // Direct match
     const match = closestValue(x, 'sin');
     if (!match?.angle) return null;
@@ -1026,7 +1026,7 @@ function Acos(x) {
 
   let radian = null;
 
-  if (x > 0.707 && x < 0.995) {
+  if (x < 0.707 || x > 0.995) {
     // Direct match
     const match = closestValue(x, 'cos');
     if (!match?.angle) return null;
