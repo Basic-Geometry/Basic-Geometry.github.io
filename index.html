@@ -998,51 +998,37 @@ function closestValue(input, funcType) {
 }
 
 function Asin(x) {
-  if (typeof x !== 'number' || isNaN(x) || x <= 0 || x > 1) return null;
+  if (typeof x !== 'number' || x <= 0 || x > 1) return null;
 
-  let radian = null;
-
-  if (x > 0.706 || x < 0.09) {
-    // Direct match
+  if (x >= 0.707) {
     const match = closestValue(x, 'sin');
-    if (!match?.angle) return null;
-    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
+    const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
     if (!parsed) return null;
-    radian = parseFloat(parsed[1]);
-  } else {
-    // Reflective zone
-    const match = closestValue(x, 'cos');
-    if (!match?.angle) return null;
-    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
-    if (!parsed) return null;
-    radian = parseFloat(parsed[1]);
+    return parseFloat(parsed[1]);
   }
 
-  return radian;
+  // No reflection — match via cosine
+  const match = closestValue(x, 'cos');
+  const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
+  if (!parsed) return null;
+  return parseFloat(parsed[1]);
 }
 
 function Acos(x) {
-  if (typeof x !== 'number' || isNaN(x) || x <= 0 || x > 1) return null;
+  if (typeof x !== 'number' || x <= 0 || x > 1) return null;
 
-  let radian = null;
-
-  if (x < 0.707 || x > 0.995) {
-    // Direct match
+  if (x >= 0.707) {
     const match = closestValue(x, 'cos');
-    if (!match?.angle) return null;
-    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
+    const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
     if (!parsed) return null;
-    radian = parseFloat(parsed[1]);
-  } else {
-    // Reflective zone
-    const match = closestValue(x, 'sin');
-    if (!match?.angle) return null;
-    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
-    if (!parsed) return null;
-    radian = parseFloat(parsed[1]);
+    return parseFloat(parsed[1]);
   }
 
-  return radian;
+  // No reflection — match via cosine
+  const match = closestValue(x, 'sin');
+  const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
+  if (!parsed) return null;
+  return parseFloat(parsed[1]);
 }
 
 function Atan(x) {
