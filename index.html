@@ -1003,7 +1003,7 @@ export function Atan(x) {
     if (!match?.angle) return null;
     const parsed = match.angle.match(/rad\(([\d.]+)\)/);
     if (!parsed) return null;
-    radian = parseFloat(parsed[1]);
+    reflectedAtan = parseFloat(parsed[1]);
   } else {
     // Reflective zone
     const reciprocal = 1 / x;
@@ -1012,10 +1012,10 @@ export function Atan(x) {
     const parsed = match.angle.match(/rad\(([\d.]+)\)/);
     if (!parsed) return null;
     const reflected = parseFloat(parsed[1]);
-    radian = 1.6 - reflected;
+    reflectedAtan = 1.6 - reflected;
   }
 
-  return radian;
+  return reflectedAtan;
 }
 
 </script>
