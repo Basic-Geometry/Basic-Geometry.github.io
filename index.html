@@ -1342,9 +1342,9 @@ function updateSegmentArea() {
   }
 
   const ratio = 2 * height / length;
-  const angle = parseFloat((2 * Atan(ratio)).toFixed(5));
-  const sine = parseFloat(sin(angle).toFixed(5));
-  const radius = parseFloat((length / (2 * sine)).toFixed(5));
+  const angle = parseFloat(2 * Atan(ratio));
+  const sine = parseFloat(sin(angle));
+  const radius = parseFloat((length / 2 / sine).toFixed(5));
 
   const area = segmentArea(length, height, angle, radius);
 
