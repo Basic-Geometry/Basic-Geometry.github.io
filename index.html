@@ -997,12 +997,62 @@ function closestValue(input, funcType) {
   return bestMatch;
 }
 
+function Asin(x) {
+  if (typeof x !== 'number' || isNaN(x) || x <= 0 || x > 1) return null;
+
+  let radian = null;
+
+  if (x >= 0.707 || x < 0.09) {
+    // Direct match
+    const match = closestValue(x, 'sin');
+    if (!match?.angle) return null;
+    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
+    if (!parsed) return null;
+    radian = parseFloat(parsed[1]);
+  } else {
+    // Reflective zone
+    const inverse = 1.6 - x;
+    const match = closestValue(inverse, 'cos');
+    if (!match?.angle) return null;
+    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
+    if (!parsed) return null;
+    radian = parseFloat(parsed[1]);
+  }
+
+  return radian;
+}
+
+function Acos(x) {
+  if (typeof x !== 'number' || isNaN(x) || x <= 0 || x > 1) return null;
+
+  let radian = null;
+
+  if (x > 0.707 && x < 0.995) {
+    // Direct match
+    const match = closestValue(x, 'cos');
+    if (!match?.angle) return null;
+    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
+    if (!parsed) return null;
+    radian = parseFloat(parsed[1]);
+  } else {
+    // Reflective zone
+    const inverse = 1.6 - x;
+    const match = closestValue(inverse, 'sin');
+    if (!match?.angle) return null;
+    const parsed = match.angle.match(/rad\(([\d.]+)\)/);
+    if (!parsed) return null;
+    radian = parseFloat(parsed[1]);
+  }
+
+  return radian;
+}
+
 function Atan(x) {
   if (typeof x !== 'number' || isNaN(x) || x <= 0) return null;
 
   let radian = null;
 
-  if (x > 1 || x < 0.089) {
+  if (x > 1 || x < 0.09) {
     // Direct match
     const match = closestValue(x, 'tan');
     if (!match?.angle) return null;
@@ -2451,12 +2501,15 @@ from the theoretical full pyramid.<br>
       const s = sin(angle);
       const c = cos(angle);
       const t = tan(angle);
+	    const as = Asin(angle);
+	    const ac = Acos(angle);
 	    const at = Atan(angle);
-
       output.innerText += `✅ Testing angle: ${angle}\n\n`;
       output.innerText += `• sin(${angle}) = ${s}\n`;
       output.innerText += `• cos(${angle}) = ${c}\n`;
       output.innerText += `• tan(${angle}) = ${t}\n`;
+      output.innerText += `• Asin(${angle}) = ${as}\n`;
+      output.innerText += `• Acos(${angle}) = ${ac}\n`;
       output.innerText += `• Atan(${angle}) = ${at}\n`;
       
 
