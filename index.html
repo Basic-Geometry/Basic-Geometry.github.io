@@ -905,6 +905,7 @@ function closestRad(radian) {
 }
 
 function sin(radian) {
+if (typeof radian !== 'number' || isNaN(radian) || radian > 1.6 || radian < 0) return null;
   const radKey = `rad(${radian.toFixed(3)})`;
 
   // 🔹 Case 1: Exact match
@@ -927,6 +928,7 @@ return trig[fallbackKey]?.sin ?? null;
 }
 
 function cos(radian) {
+if (typeof radian !== 'number' || isNaN(radian) || radian > 1.6 || radian < 0) return null;
   const radKey = `rad(${radian.toFixed(3)})`;
 
   // 🔹 Case 1: Exact match
@@ -949,13 +951,14 @@ return trig[fallbackKey]?.cos ?? null;
 }
 
 function tan(radian) {
+if (typeof radian !== 'number' || isNaN(radian) || radian > 1.6 || radian < 0) return null;
   const radKey = `rad(${radian.toFixed(3)})`;
 
   // 🔹 Case 1: Exact match
   if (trig[radKey]?.tan !== undefined) return trig[radKey].tan;
 
   // 🔹 Case 2: Reflective zone: 0 < x < 0.8
-  if (radian > 0 && radian < 0.8) {
+  if (radian > 0.1 && radian < 0.8) {
     const reflected = 1.6 - radian;
     const reflectedKey = `rad(${reflected.toFixed(3)})`;
 
