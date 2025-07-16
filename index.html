@@ -2420,17 +2420,17 @@ from the theoretical full pyramid.<br>
     try {
       const s = sin(angle);
       const c = cos(angle);
-      const t = tan(angle);
+      
 
       output.innerText += `✅ Testing angle: ${angle}\n\n`;
       output.innerText += `• sin(${angle}) = ${s}\n`;
       output.innerText += `• cos(${angle}) = ${c}\n`;
-      output.innerText += `• tan(${angle}) = ${t}\n`;
+      
 
       // Optional: known expectations
       if (angle === 1.066) output.innerText += `🔍 Expected sin ≈ 0.866\n`;
       if (angle === 0.8) output.innerText += `🔍 Expected cos ≈ 0.707\n`;
-      if (angle === 1.467) output.innerText += `🔍 Expected tan ≈ 7.6\n`;
+      
 
     } catch (err) {
       output.innerText = '⚠️ Error during trig function evaluation:\n' + err.message;
