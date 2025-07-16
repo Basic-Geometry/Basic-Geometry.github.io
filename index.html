@@ -998,20 +998,25 @@ function closestValue(input, funcType) {
 }
 
 function Asin(x) {
-  if (typeof x !== 'number' || x <= 0 || x > 1) return null;
+  if (typeof x !== 'number' || isNaN(x) || x <= 0 || x > 1) return null;
 
-  if (x >= 0.707) {
-    const match = closestValue(x, 'sin');
-    const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
-    if (!parsed) return null;
-    return parseFloat(parsed[1]);
+  const isSineZone = x >= 0.707;
+  const sourceFunc = isSineZone ? 'sin' : 'cos';
+
+  const match = closestValue(x, sourceFunc);
+  if (!match?.angle || typeof match.angle !== 'string') {
+    console.warn(`Asin: No angle match found for ${x} in ${sourceFunc}`);
+    return null;
   }
 
-  // No reflection — match via cosine
-  const match = closestValue(x, 'cos');
-  const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
-  if (!parsed) return null;
-  return parseFloat(parsed[1]);
+  const parsed = match.angle.match(/rad\(([\d.]+)\)/);
+  if (!parsed) {
+    console.warn(`Asin: Could not parse radian from "${match.angle}"`);
+    return null;
+  }
+
+  const radian = parseFloat(parsed[1]);
+  return isSineZone ? radian : radian; // no reflection needed
 }
 
 function Acos(x) {
