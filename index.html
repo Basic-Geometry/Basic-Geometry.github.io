@@ -2510,48 +2510,41 @@ from the theoretical full pyramid.<br>
 <br>
 <h18 style="margin-top:24px;">🧪 CGS Trig Test Tool</h18>
 
-<label for="input-angle">Angle (rad):</label>
-<input id="input-angle" type="text" value="rad(1.467)" style="margin:8px;" />
-<br>
+<label for="angle-input">Angle (in radians):</label>
+<input id="angle-input" type="number" step="any" value="1.066" style="margin:8px;" />
+<button onclick="testTrigFunctions()">Test Functions</button>
 
-<label for="input-value">Value (e.g. 0.991):</label>
-<input id="input-value" type="number" step="any" value="0.991" style="margin:8px;" />
-<br>
-<button onclick="runTrigTests()">Run Tests</button>
-
-<pre id="trig-output" style="padding:12px; background:#eee; margin-top:12px;"></pre>
+<pre id="trig-test-output" style="padding:12px; background:#eee; margin-top:12px;"></pre>
 
 <script>
- 
+  function testTrigFunctions() {
+    const angle = parseFloat(document.getElementById('angle-input').value);
+    const output = document.getElementById('trig-test-output');
+    output.innerText = '';
 
-  function runTrigTests() {
-    const angleInput = document.getElementById("input-angle").value;
-    const valueInput = parseFloat(document.getElementById("input-value").value);
-    const output = document.getElementById("trig-output");
-    output.innerText = "";
-
-    // Regular trig
-    const trigEntry = trig[angleInput];
-    if (!trigEntry) {
-      output.innerText += `⚠️ No entry found for ${angleInput}\n`;
-    } else {
-      output.innerText += `✅ Found trig entry for ${angleInput}\n`;
-      output.innerText += `• sin: ${trigEntry.sin}\n`;
-      output.innerText += `• cos: ${trigEntry.cos}\n`;
-      output.innerText += `• tan: ${trigEntry.tan}\n\n`;
+    if (isNaN(angle)) {
+      output.innerText = '⚠️ Invalid angle input.';
+      return;
     }
 
-    // Inverse trig
-    output.innerText += `🔍 Searching inverse matches for ≈ ${valueInput}\n\n`;
+    try {
+      const s = sin(angle);
+      const c = cos(angle);
+      const t = tan(angle);
 
-    ["sin", "cos", "tan"].forEach(func => {
-      const match = findClosestValueMatch(valueInput, func);
-      if (match) {
-        output.innerText += `atan⟶${func}: ${valueInput} → ${match.angle} [${func}=${match.value}]\n`;
-      } else {
-        output.innerText += `atan⟶${func}: No match found for ${valueInput}\n`;
-      }
-    });
+      output.innerText += `✅ Testing angle: ${angle}\n\n`;
+      output.innerText += `• sin(${angle}) = ${s}\n`;
+      output.innerText += `• cos(${angle}) = ${c}\n`;
+      output.innerText += `• tan(${angle}) = ${t}\n`;
+
+      // Optional: known expectations
+      if (angle === 1.066) output.innerText += `🔍 Expected sin ≈ 0.866\n`;
+      if (angle === 0.8) output.innerText += `🔍 Expected cos ≈ 0.707\n`;
+      if (angle === 1.467) output.innerText += `🔍 Expected tan ≈ 7.6\n`;
+
+    } catch (err) {
+      output.innerText = '⚠️ Error during trig function evaluation:\n' + err.message;
+    }
   }
 </script>
 <footer>
