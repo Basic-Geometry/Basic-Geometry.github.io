@@ -1003,7 +1003,7 @@ function Atan(x) {
   } else {
     // Reflective zone (0.089 < x < 1)
     const reciprocal = 1 / x;
-    match = closestValue(reciprocal, 'tan');
+    match = 1.6 - closestValue(reciprocal, 'tan');
   }
 
   if (!match?.angle) return null;
