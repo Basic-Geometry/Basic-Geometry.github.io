@@ -1006,7 +1006,7 @@ function Asin(x) {
     if (!parsed) return null;
     return parseFloat(parsed[1]);
   }
-else
+
   // No reflection — match via cosine
   const match = closestValue(x, 'cos');
   const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
@@ -1023,7 +1023,7 @@ function Acos(x) {
     if (!parsed) return null;
     return parseFloat(parsed[1]);
   }
-else
+	
   // No reflection — match via cosine
   const match = closestValue(x, 'sin');
   const parsed = match?.angle.match(/rad\\(([\d.]+)\\)/);
