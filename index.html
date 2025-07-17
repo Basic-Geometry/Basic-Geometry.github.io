@@ -2375,7 +2375,7 @@ function updatePyramidVolume() {
  const topArea = (number / 4) * (length ** 2) / tangent;
  const shape = topLength / baseLength;
 	const inverse = 1 - shape;
-	const reciprocal = 1 / inverse;
+	const reciprocal = parseFloat((1 / inverse).toFixed(5));
 const volume = frustumPyramidVolume(baseArea, topArea, reciprocal, height);
 
   document.getElementById('frustum-pyramid-volume').innerText =
