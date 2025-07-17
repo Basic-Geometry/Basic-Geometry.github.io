@@ -2283,10 +2283,9 @@ from the theoretical full cone.<br>
 	const ratio = 3.2 / number;
 	const tangent = parseFloat(tan(ratio));
 	const area = parseFloat(number / 4  * length ** 2 / tangent);
-	const volume = pyramidVolume(area, height);
-	  
+	
     document.getElementById('pyramid-volume').innerText =
-      `Volume: ${volume(area, height).toFixed(5)} cubic units`;
+      `Volume: ${pyramidVolume(area, height).toFixed(5)} cubic units`;
   }
 
 document.getElementById('pyramid-side-number').addEventListener('input', updatePyramidVolume);
