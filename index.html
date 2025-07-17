@@ -2166,7 +2166,7 @@ function updateFrustumConeVolume() {
 	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
 	const height = parseFloat(document.getElementById('frustum-cone-height').value);
 
-  if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height)) {
+if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height) || baseRadius === 0 || topRadius === 0) {
     document.getElementById('frustum-cone-volume').innerText = '';
     return;
   }
@@ -2508,10 +2508,10 @@ function updateFrustumPyramidVolume() {
 	const topLength = parseFloat(document.getElementById('frustum-pyramid-top-edge-length').value);
 	const height = parseFloat(document.getElementById('frustum-pyramid-height').value);
 
-  if (isNaN(number) || isNaN(baseLength) || isNaN(topLength) || isNaN(height)) {
+if (isNaN(number) || isNaN(baseLength) || isNaN(topLength) || isNaN(height) || baseLength === 0 || topLength === 0) {
     document.getElementById('frustum-pyramid-volume').innerText = '';
     return;
-  }
+}
 
 if ( number < 3) {
     document.getElementById('frustum-pyramid-volume').innerText = 'It takes at least three sides to form a pyramid.';
