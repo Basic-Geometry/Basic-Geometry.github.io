@@ -2268,25 +2268,28 @@ from the theoretical full cone.<br>
 
 <script>
   function pyramidVolume(area, height) {
-    return area * height / Math.sqrt(8);
+  return area * height / Math.sqrt(8);
+}
+
+function updatePyramidVolume() {
+  const number = parseFloat(document.getElementById('pyramid-side-number').value);
+  const length = parseFloat(document.getElementById('pyramid-side-length').value);
+  const height = parseFloat(document.getElementById('pyramid-height').value);
+
+  if (isNaN(number) || isNaN(length) || isNaN(height)) {
+    document.getElementById('pyramid-volume').innerText = '';
+    return;
   }
 
-  function updatePyramidVolume() {
-	  const number = parseFloat(document.getElementById('pyramid-side-number').value);
-	  const length = parseFloat(document.getElementById('pyramid-side-length').value);
-	  const height = parseFloat(document.getElementById('pyramid-height').value);
-    if (isNaN(number) || isNaN(length) || isNaN(height)) {
-      document.getElementById('pyramid-volume').innerText = '';
-      return;
-    }
+  const ratio = 3.2 / number;
+  const tangent = parseFloat(tan(ratio));
 
-	const ratio = 3.2 / number;
-	const tangent = parseFloat(tan(ratio));
-	const area = parseFloat(number / 4  * length ** 2 / tangent);
-	
-    document.getElementById('pyramid-volume').innerText =
-      `Volume: ${pyramidVolume(area, height).toFixed(5)} cubic units`;
-  }
+  const area = (number / 4) * (length ** 2) / tangent;
+  const volume = pyramidVolume(area, height);
+
+  document.getElementById('pyramid-volume').innerText =
+    `Volume: ${volume.toFixed(5)} cubic units`;
+	  }
 
 document.getElementById('pyramid-side-number').addEventListener('input', updatePyramidVolume);
 document.getElementById('pyramid-side-length').addEventListener('input', updatePyramidVolume);
