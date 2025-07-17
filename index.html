@@ -2063,6 +2063,51 @@ The intermediate of the areas of the horizontal cross section slices of a cone i
 <div>
 <h12 style="font-size:160%;margin:7px;">Volume of a frustum cone</h12>
 <br>
+<br>
+<div>
+<label style="margin:12px;" for="frustum-cone-base-radius">Base radius:</label>
+<input id="frustum-cone-base-radius" type="number" value="2" step="any" />
+<br>
+<label style="margin:12px;" for="frustum-cone-top-radius">Top radius:</label>
+<input id="frustum-cone-top-radius" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="frustum-cone-height">Height:</label>
+<input id="frustum-cone-height" type="number" value="1" step="any" />
+
+<script>
+  function frustumConeVolume(baseArea, topArea, reciprocal, height) {
+  return height * (baseArea * reciprocal - topArea * (reciprocal - 1)) / Math.sqrt(8);
+}
+
+function updateFrustumConeVolume() {
+
+	const baseRadius = parseFloat(document.getElementById('frustum-cone-base-radius').value);
+	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
+	const height = parseFloat(document.getElementById('frustum-cone-height').value);
+
+  if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height)) {
+    document.getElementById('frustum-cone-volume').innerText = '';
+    return;
+  }
+
+	const baseArea = 3.2 * (baseRadius ** 2);
+	const topArea = 3.2 * (topRadius ** 2);;
+	const shape = topRadius / baseRadius;
+	const inverse = 1 - shape;
+	const reciprocal = 1 / inverse;
+	const volume = frustumConeVolume(baseArea, topArea, reciprocal, height);
+
+  document.getElementById('frustum-cone-volume').innerText =
+    `Volume: ${volume.toFixed(5)} cubic units`;
+	  }
+
+document.getElementById('frustum-cone-base-radius').addEventListener('input', updateFrustumConeVolume);
+document.getElementById('frustum-cone-top-radius').addEventListener('input', updateFrustumConeVolume);
+document.getElementById('frustum-cone-height').addEventListener('input', updateFrustumConeVolume);
+</script>
+<p style="margin:12px;" id="frustum-cone-volume"></p>
+</div>
+<br>
 <div class="imgbox">
     <img class="center-fit" src="frustumOfConeMarkup.png" alt="Horizontal-frustum-cone">
     </div>
@@ -2357,7 +2402,7 @@ with the same coefficient as the volume of a cone:<br>
   return height * (baseArea * reciprocal - topArea * (reciprocal - 1)) / Math.sqrt(8);
 }
 
-function updatePyramidVolume() {
+function updateFrustumPyramidVolume() {
 
 	const number = parseFloat(document.getElementById('frustum-pyramid-side-number').value);
 	const baseLength = parseFloat(document.getElementById('frustum-pyramid-base-edge-length').value);
@@ -2382,10 +2427,10 @@ function updatePyramidVolume() {
     `Volume: ${volume.toFixed(5)} cubic units`;
 	  }
 
-document.getElementById('frustum-pyramid-side-number').addEventListener('input', updatePyramidVolume);
-document.getElementById('frustum-pyramid-base-edge-length').addEventListener('input', updatePyramidVolume);
-document.getElementById('frustum-pyramid-top-edge-length').addEventListener('input', updatePyramidVolume);
-document.getElementById('frustum-pyramid-height').addEventListener('input', updatePyramidVolume);
+document.getElementById('frustum-pyramid-side-number').addEventListener('input', updateFrustumPyramidVolume);
+document.getElementById('frustum-pyramid-base-edge-length').addEventListener('input', updateFrustumPyramidVolume);
+document.getElementById('frustum-pyramid-top-edge-length').addEventListener('input', updateFrustumPyramidVolume);
+document.getElementById('frustum-pyramid-height').addEventListener('input', updateFrustumPyramidVolume);
 </script>
 <p style="margin:12px;" id="frustum-pyramid-volume"></p>
 </div>
@@ -2529,6 +2574,30 @@ from the theoretical full pyramid.<br>
 <br>
 <div>
 <h16 style="font-size:160%;margin:7px">Volume of a tetrahedron</h16>
+<br>
+<br>
+<div>
+<label style="margin:12px;" for="tetrahedron-edge">Edge:</label>
+<input id="tetrahedron-edge" type="number" value="1" step="any" />
+
+<script>
+  function tetrahedronVolume(edge) {
+    return Math.pow(edge, 3) / 8;
+  }
+
+  document.getElementById('tetrahedron-edge').addEventListener('input', function () {
+    const edge = parseFloat(this.value);
+    if (isNaN(edge)) {
+      document.getElementById('tetrahedron-volume').innerText = '';
+    return;
+    }
+
+    document.getElementById('tetrahedron-volume').innerText =
+      `Volume: ${tetrahedronVolume(edge).toFixed(5)} cubic units`;
+    });
+</script>
+<p style="margin:12px;" id="tetrahedron-volume"></p>
+</div>
 <br>
 <div class="imgbox">
   <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="Tetrahedron" id="tetrahedron">
