@@ -186,7 +186,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-07-16",
+"dateModified" :"2025-07-17",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Exact geometry",
@@ -1171,6 +1171,43 @@ function Atan(x) {
 <br>
 <div>
 <h5 style="font-size:160%;margin:7px;">Area of a regular polygon</h5>
+<br>
+<br>
+<div>
+<label style="margin:12px;" for="side-number">Number of sides:</label>
+<input id="side-number" type="number" value="5" step="1" />
+<br>
+<label style="margin:12px;" for="side-length">Side length:</label>
+<input id="side-length" type="number" value="1" step="any" />
+	
+<script>
+  function polygonArea(length, number, tan) {
+    return number / 4  * length ** 2 / tan;
+  }
+
+function updatePolygonArea() {
+  const length = parseFloat(document.getElementById('side-length').value);
+  const number = parseFloat(document.getElementById('side-number').value);
+
+  if (isNaN(length) || isNaN(number)) {
+    document.getElementById('polygon-area').innerText = '';
+    return;
+  }
+
+  const ratio = 3.2 / number;
+  const tan = parseFloat(tan(ratio));
+  
+  const area = segmentArea(length, number, ratio, tan);
+
+  document.getElementById('polygon-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
+
+  document.getElementById('side-length').addEventListener('input', updatePolygonArea);
+  document.getElementById('side-number').addEventListener('input', updatePolygonArea);
+</script>
+<p style="margin:12px;" id="polygon-area"></p>
+</div>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="pentagon.png" alt="Pentagon" id="pentagon">
