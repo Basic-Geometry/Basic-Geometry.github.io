@@ -1110,7 +1110,7 @@ function updateTriangleArea() {
 
   // Triangle validity check
   if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
-    document.getElementById('triangle-area').innerText = 'Invalid triangle';
+    document.getElementById('triangle-area').innerText = 'The sum of the length of the two shorter sides has to be larger than the thrid one to form a triangle.';
     return;
   }
 
@@ -1241,6 +1241,11 @@ function updatePolygonArea() {
     return;
   }
 
+	// Polygon validity check
+  if (number < 3) {
+    document.getElementById('polygon-area').innerText = 'It takes at least three sides to form a polygon.';
+    return;
+  }
   const ratio = 3.2 / number;
   const tangent = parseFloat(tan(ratio));
   
@@ -1488,6 +1493,17 @@ function updateSegmentArea() {
     return;
   }
 
+// Segment validity check
+  if ( (2 * height) > length) {
+    document.getElementById('segment-area').innerText = 'A circle-segment is less than half as high as long.';
+    return;
+	  
+  }
+  if ( 2 * height = length) {
+    document.getElementById('segment-area').innerText = 'If it is twice as long as high that is a semi-circle.';
+    return;
+  }
+	
   const ratio = 2 * height / length;
   const angle = parseFloat(2 * Atan(ratio));
   const sine = parseFloat(sin(angle));
@@ -1773,7 +1789,17 @@ The edge length of the cube, which has the same volume as the sphere, equals the
       document.getElementById('cap-volume').innerText = '';
       return;
     }
-
+	  
+// Cap validity check
+if ( height > radius) {
+    document.getElementById('cap-volume').innerText = 'The height of a spherical cap is shorter than its radius.';
+    return;
+}
+	  
+  if ( height = radius) {
+    document.getElementById('cap-volume').innerText = 'If the radius equals the height that is a hemisphere.';
+    return;
+  }
     document.getElementById('cap-volume').innerText =
       `Volume: ${capVolume(radius, height).toFixed(5)} cubic units`;
   }
@@ -2137,6 +2163,10 @@ function updateFrustumConeVolume() {
     return;
   }
 
+if ( topRadius > baseRadius) {
+    document.getElementById('frustum-cone-volume').innerText = 'The larger end is the base.';
+    return;
+}
 	const baseArea = 3.2 * (baseRadius ** 2);
 	const topArea = 3.2 * (topRadius ** 2);;
 	const shape = topRadius / baseRadius;
@@ -2373,6 +2403,11 @@ function updatePyramidVolume() {
     return;
   }
 
+if ( number < 3) {
+    document.getElementById('pyramid-volume').innerText = 'It takes at least three sides to form a pyramid.';
+    return;
+}
+	
   const ratio = 3.2 / number;
   const tangent = tan(ratio);
 
@@ -2461,6 +2496,16 @@ function updateFrustumPyramidVolume() {
     return;
   }
 
+if ( number < 3) {
+    document.getElementById('frustum-pyramid-volume').innerText = 'It takes at least three sides to form a pyramid.';
+    return;
+}
+
+	if ( topLength > baseLength) {
+    document.getElementById('frustum-pyramid-volume').innerText = 'The larger end is the base.';
+    return;
+	}
+	
   const ratio = 3.2 / number;
   const tangent = tan(ratio);
 	const baseArea = (number / 4) * (baseLength ** 2) / tangent;
