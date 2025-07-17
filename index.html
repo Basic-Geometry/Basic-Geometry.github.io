@@ -1111,7 +1111,7 @@ const side3 = parseFloat(document.getElementById('side3').value);
 	const s1 = side2 + side3;
 	const s2 = side1 + side3;
 	const s3 = side1 + side2;
-	const product = parseFloat((s * s1 * s2 * s3).toFixed(5));
+	const product = s * s1 * s2 * s3;
   const area = triangleArea(product);
 
   document.getElementById('triangle-area').innerText =
