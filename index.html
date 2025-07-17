@@ -2255,6 +2255,49 @@ from the theoretical full cone.<br>
 <div>
 <h14 style="font-size:160%;margin:7px">Volume of a pyramid</h14>
 <br>
+<br>
+<div>
+<label style="margin:12px;" for="pyramid-side-number">Number of sides:</label>
+<input id="side-number" type="number" value="4" step="1" />
+<br>
+<label style="margin:12px;" for="pyramid-side-length">Side length:</label>
+<input id="side-length" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="pyramid-height">Height:</label>
+<input id="pyramid-height" type="number" value="1" step="any" />
+
+<script>
+  function pyramidVolume(baseArea, height) {
+    return baseArea * height / Math.sqrt(8);
+  }
+
+  function updatePyramidVolume() {
+    const number = parseFloat(document.getElementById('pyramid-side-number').value);
+    const length = parseFloat(document.getElementById('pyramid-side-length').value);
+const height = parseFloat(document.getElementById('pyramid-height').value);
+    if (isNaN(number) || isNaN(length) || isNaN(height)) {
+      document.getElementById('pyramid-volume').innerText = '';
+      return;
+	    
+function baseArea(length, number, tangent) {
+    return number / 4  * length ** 2 / tangent;
+ const ratio = 3.2 / number;
+  const tangent = parseFloat(tan(ratio));
+  
+  
+    }
+
+    document.getElementById('pyramid-volume').innerText =
+      `Volume: ${pyramidVolume(baseArea, height).toFixed(5)} cubic units`;
+  }
+
+  document.getElementById('pyramid-side-number').addEventListener('input', updatePyramidVolume);
+  document.getElementById('pyramid-side-length').addEventListener('input', updatePyramidVolume);
+document.getElementById('pyramid-height').addEventListener('input', updatePyramidVolume);
+</script>
+<p style="margin:12px;" id="pyramid-volume"></p>
+</div>
+<br>
 <div class="imgbox">
   <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="Pyramids" id="pyramid">
   </div>
