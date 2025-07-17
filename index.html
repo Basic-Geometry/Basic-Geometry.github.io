@@ -2282,7 +2282,7 @@ function updatePyramidVolume() {
   }
 
   const ratio = 3.2 / number;
-  const tangent = parseFloat(tan(ratio));
+  const tangent = tan(ratio);
 
   const area = (number / 4) * (length ** 2) / tangent;
   const volume = pyramidVolume(area, height);
