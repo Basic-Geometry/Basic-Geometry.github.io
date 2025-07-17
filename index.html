@@ -1101,18 +1101,18 @@ function Atan(x) {
 function updateTriangleArea() {
   const side1 = parseFloat(document.getElementById('side1').value);
   const side2 = parseFloat(document.getElementById('side2').value);
-const side3 = parseFloat(document.getElementById('side3').value);
+  const side3 = parseFloat(document.getElementById('side3').value);
   if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
     document.getElementById('triangle-area').innerText = '';
     return;
   }
-
-  const s = side1 + side2 + side3;
-	const s1 = side2 + side3;
-	const s2 = side1 + side3;
-	const s3 = side1 + side2;
+ 
+	const s = (side1 + side2 + side3) / 2;
+	const s1 = s - side1;
+	const s2 = s - side2;
+	const s3 = s - side3;
 	const product = s * s1 * s2 * s3;
-  const area = triangleArea(product);
+	const area = triangleArea(product);
 
   document.getElementById('triangle-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
@@ -1120,7 +1120,7 @@ const side3 = parseFloat(document.getElementById('side3').value);
 
   document.getElementById('side1').addEventListener('input', updateTriangleArea);
   document.getElementById('side2').addEventListener('input', updateTriangleArea);
-document.getElementById('side3').addEventListener('input', updateTriangleArea);
+  document.getElementById('side3').addEventListener('input', updateTriangleArea);
 </script>
 <p style="margin:12px;" id="triangle-area"></p>
 </div>
