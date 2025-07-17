@@ -1094,8 +1094,8 @@ function Atan(x) {
 <input id="side3" type="number" value="1" step="any" />
 	
 <script>
-  function triangleArea(side1, side2, side3, s) {
-    return math.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+  function triangleArea(product) {
+    return math.sqrt(product);
   }
 
 function updateTriangleArea() {
@@ -1107,8 +1107,12 @@ const side3 = parseFloat(document.getElementById('side3').value);
     return;
   }
 
-  const s = side1+side2+side3;
-  const area = triangleArea(side1, side2, side3, s);
+  const s = side1 + side2 + side3;
+	const s1 = side2 + side3;
+	const s2 = side1 + side3;
+	const s3 = side1 + side2;
+	const product = parseFloat((s * s1 * s2 * s3).toFixed(5));
+  const area = triangleArea(product);
 
   document.getElementById('triangle-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
