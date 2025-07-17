@@ -1083,6 +1083,45 @@ function Atan(x) {
  <p style="margin:12px;">Area of a triangle:
 <br>
 <br>
+<div>
+<label style="margin:12px;" for="side1">Side 1:</label>
+<input id="side1" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="side2">Side 2:</label>
+<input id="side2" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="side3">Side 3:</label>
+<input id="side3" type="number" value="1" step="any" />
+	
+<script>
+  function triangleArea(side1, side2, side3, s) {
+    return masth.sqrt(s*(s-side1)*(s-side2)*(s-side3));
+  }
+
+function updateTriangleArea() {
+  const side1 = parseFloat(document.getElementById('side1').value);
+  const side2 = parseFloat(document.getElementById('side2').value);
+const side3 = parseFloat(document.getElementById('side3').value);
+  if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+    document.getElementById('triangle-area').innerText = '';
+    return;
+  }
+
+  const s = side1+side2+side3;
+  const area = triangleArea(side1, side2, side3, s);
+
+  document.getElementById('triangle-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
+
+  document.getElementById('side1').addEventListener('input', updateTriangleArea);
+  document.getElementById('side2').addEventListener('input', updateTriangleArea);
+document.getElementById('side3').addEventListener('input', updateTriangleArea);
+</script>
+<p style="margin:12px;" id="triangle-area"></p>
+</div>
+<br>
+<br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
