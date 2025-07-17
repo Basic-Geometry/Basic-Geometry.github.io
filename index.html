@@ -1181,8 +1181,8 @@ function Atan(x) {
 <input id="side-length" type="number" value="1" step="any" />
 	
 <script>
-  function polygonArea(length, number, tan) {
-    return number / 4  * length ** 2 / tan;
+  function polygonArea(length, number, tangent) {
+    return number / 4  * length ** 2 / tangent;
   }
 
 function updatePolygonArea() {
@@ -1195,9 +1195,9 @@ function updatePolygonArea() {
   }
 
   const ratio = 3.2 / number;
-  const tan = parseFloat(tan(ratio));
+  const tangent = parseFloat(tan(ratio));
   
-  const area = polygonArea(length, number, tan);
+  const area = polygonArea(length, number, tangent);
 
   document.getElementById('polygon-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
