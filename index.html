@@ -1494,7 +1494,17 @@ function updateSegmentArea() {
   }
 	
   const ratio = 2 * height / length;
-  
+	
+  // Segment validity check
+
+  if ( ratio === 1) {
+    document.getElementById('segment-area').innerText = 'If it is twice as long as high that is a semi-circle.';
+    return;
+}
+  if ( ratio > 1) {
+    document.getElementById('segment-area').innerText = 'A circle-segment is less than half as high as long.';
+    return;
+}
 	
   const angle = parseFloat(2 * Atan(ratio));
   const sine = parseFloat(sin(angle));
@@ -1780,7 +1790,18 @@ The edge length of the cube, which has the same volume as the sphere, equals the
       document.getElementById('cap-volume').innerText = '';
       return;
     }
+	  	  
+// Cap validity check
 
+  if ( height === radius) {
+    document.getElementById('cap-volume').innerText = 'If the radius equals the height that is a hemisphere.';
+    return;
+  }
+	  
+if ( height > radius) {
+    document.getElementById('cap-volume').innerText = 'The height of a spherical cap is shorter than its radius.';
+    return;
+  }
 	  
     document.getElementById('cap-volume').innerText =
       `Volume: ${capVolume(radius, height).toFixed(5)} cubic units`;
