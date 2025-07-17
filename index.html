@@ -1095,24 +1095,28 @@ function Atan(x) {
 	
 <script>
   function triangleArea(product) {
-    return math.sqrt(product);
-  }
+  return Math.sqrt(product);
+}
 
 function updateTriangleArea() {
   const side1 = parseFloat(document.getElementById('side1').value);
   const side2 = parseFloat(document.getElementById('side2').value);
   const side3 = parseFloat(document.getElementById('side3').value);
+
   if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
     document.getElementById('triangle-area').innerText = '';
     return;
   }
- 
-	const s = (side1 + side2 + side3) / 2;
-	const s1 = s - side1;
-	const s2 = s - side2;
-	const s3 = s - side3;
-	const product = s * s1 * s2 * s3;
-	const area = triangleArea(product);
+
+  // Triangle validity check
+  if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
+    document.getElementById('triangle-area').innerText = 'Invalid triangle';
+    return;
+  }
+
+  const s = (side1 + side2 + side3) / 2;
+  const product = s * (s - side1) * (s - side2) * (s - side3);
+  const area = triangleArea(product);
 
   document.getElementById('triangle-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
