@@ -1197,7 +1197,7 @@ function updatePolygonArea() {
   const ratio = 3.2 / number;
   const tan = parseFloat(tan(ratio));
   
-  const area = segmentArea(length, number, tan);
+  const area = polygonArea(length, number, tan);
 
   document.getElementById('polygon-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
