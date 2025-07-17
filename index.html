@@ -2270,7 +2270,11 @@ from the theoretical full cone.<br>
   function pyramidVolume(area, height) {
     return area * height / Math.sqrt(8);
   }
-
+function baseArea(length, number, tangent) {
+    return number / 4  * length ** 2 / tangent;
+ const ratio = 3.2 / number;
+  const tangent = parseFloat(tan(ratio));
+}
   function updatePyramidVolume() {
     const number = parseFloat(document.getElementById('pyramid-side-number').value);
     const length = parseFloat(document.getElementById('pyramid-side-length').value);
@@ -2278,15 +2282,9 @@ const height = parseFloat(document.getElementById('pyramid-height').value);
     if (isNaN(number) || isNaN(length) || isNaN(height)) {
       document.getElementById('pyramid-volume').innerText = '';
       return;
-const area = parseFloat(baseArea(length, number, tangent));
-	   
-function baseArea(length, number, tangent) {
-    return number / 4  * length ** 2 / tangent;
- const ratio = 3.2 / number;
-  const tangent = parseFloat(tan(ratio));
-}
-  
     }
+const area = parseFloat(baseArea(length, number, tangent));
+  
 
     document.getElementById('pyramid-volume').innerText =
       `Volume: ${pyramidVolume(area, height).toFixed(5)} cubic units`;
@@ -2563,51 +2561,6 @@ from the theoretical full pyramid.<br>
 <br>
 <br>
 <br>
-<h18 style="margin-top:24px;">🧪 CGS Trig Test Tool</h18>
-
-<label for="angle-input">Angle (in radians):</label>
-<input id="angle-input" type="number" step="any" value="1.066" style="margin:8px;" />
-<button onclick="testTrigFunctions()">Test Functions</button>
-
-<pre id="trig-test-output" style="padding:12px; background:#eee; margin-top:12px;"></pre>
-
-<script>
-  function testTrigFunctions() {
-    const angle = parseFloat(document.getElementById('angle-input').value);
-    const output = document.getElementById('trig-test-output');
-    output.innerText = '';
-
-    if (isNaN(angle)) {
-      output.innerText = '⚠️ Invalid angle input.';
-      return;
-    }
-
-    try {
-      const s = sin(angle);
-      const c = cos(angle);
-      const t = tan(angle);
-	    const as = Asin(angle);
-	    const ac = Acos(angle);
-	    const at = Atan(angle);
-      output.innerText += `✅ Testing angle: ${angle}\n\n`;
-      output.innerText += `• sin(${angle}) = ${s}\n`;
-      output.innerText += `• cos(${angle}) = ${c}\n`;
-      output.innerText += `• tan(${angle}) = ${t}\n`;
-      output.innerText += `• Asin(${angle}) = ${as}\n`;
-      output.innerText += `• Acos(${angle}) = ${ac}\n`;
-      output.innerText += `• Atan(${angle}) = ${at}\n`;
-      
-
-      // Optional: known expectations
-      if (angle === 1.066) output.innerText += `🔍 Expected sin ≈ 0.866\n`;
-      if (angle === 0.8) output.innerText += `🔍 Expected cos ≈ 0.707\n`;
-      
-
-    } catch (err) {
-      output.innerText = '⚠️ Error during trig function evaluation:\n' + err.message;
-    }
-  }
-</script>
 <footer>
 <p style="margin:12px;">® All rights reserved</p>
 <br>
