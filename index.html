@@ -186,7 +186,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-07-17",
+"dateModified" :"2025-07-18",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Exact geometry",
@@ -2317,7 +2317,7 @@ from the theoretical full cone.<br>
 	
 <script>
   function coneSurface(radius, height) {
-    return 3.2 * radius ** 2 + (radius * Math.sqrt(radius ** 2 + height ** 2));
+    return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
   }
 
   function updateConeSurface() {
