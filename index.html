@@ -1501,12 +1501,6 @@ function updateSegmentArea() {
     document.getElementById('segment-area').innerText = '';
     return;
 	}
-
-  if ( ratio === 1) {
-    document.getElementById('segment-area').innerText =
-    `Area of semi-circle: ${area.toFixed(5)} square units`;
-	return;
-  }
 	
   if ( ratio > 1) {
     document.getElementById('segment-area').innerText = 'A circle-segment is less than half as high as long.';
@@ -1520,6 +1514,12 @@ function updateSegmentArea() {
 
   const area = segmentArea(length, height, angle, radius);
 
+  if ( ratio === 1) {
+    document.getElementById('segment-area').innerText =
+    `Area of semi-circle: ${area.toFixed(5)} square units`;
+	return;
+  }
+	
   document.getElementById('segment-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
 }
