@@ -1241,14 +1241,15 @@ function updatePolygonArea() {
     return;
   }
 
-	// Polygon validity check
+// Polygon validity check
+	
   if (number < 3) {
     document.getElementById('polygon-area').innerText = 'It takes at least three sides to form a polygon.';
     return;
   }
+	
   const ratio = 3.2 / number;
   const tangent = parseFloat(tan(ratio));
-  
   const area = polygonArea(length, number, tangent);
 
   document.getElementById('polygon-area').innerText =
@@ -1354,6 +1355,7 @@ function updatePolygonArea() {
 
   document.getElementById('circle-radius-a').addEventListener('input', function () {
     const radius = parseFloat(this.value);
+	  
     if (isNaN(radius)) {
       document.getElementById('circle-area').innerText = '';
     return;
@@ -1704,6 +1706,7 @@ number.
 
   document.getElementById('sphere-radius').addEventListener('input', function () {
     const radius = parseFloat(this.value);
+	  
     if (isNaN(radius)) {
       document.getElementById('sphere-volume').innerText = '';
     return;
@@ -2195,10 +2198,6 @@ if ( topRadius === baseRadius) {
     `Volume: ${volume.toFixed(5)} cubic units`;
 }
 	
-  document.getElementById('frustum-cone-volume').innerText =
-    `Volume: ${volume.toFixed(5)} cubic units`;
-	  }
-
 document.getElementById('frustum-cone-base-radius').addEventListener('input', updateFrustumConeVolume);
 document.getElementById('frustum-cone-top-radius').addEventListener('input', updateFrustumConeVolume);
 document.getElementById('frustum-cone-height').addEventListener('input', updateFrustumConeVolume);
@@ -2436,7 +2435,7 @@ if ( number < 3) {
 
   document.getElementById('pyramid-volume').innerText =
     `Volume: ${volume.toFixed(5)} cubic units`;
-	  }
+}
 
 document.getElementById('pyramid-side-number').addEventListener('input', updatePyramidVolume);
 document.getElementById('pyramid-base-edge-length').addEventListener('input', updatePyramidVolume);
