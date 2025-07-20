@@ -1502,17 +1502,18 @@ function updateSegmentArea() {
     return;
 	}
 
-  if ( ratio > 1) {
-    document.getElementById('segment-area').innerText = 'A circle-segment is less than half as high as long.';
-    return;
-}
-
   if ( ratio === 1) {
     document.getElementById('segment-area').innerText =
     `Area of semi-circle: ${area.toFixed(5)} square units`;
 	return;
   }
 	
+  if ( ratio > 1) {
+    document.getElementById('segment-area').innerText = 'A circle-segment is less than half as high as long.';
+    return;
+}
+
+
   const angle = parseFloat(2 * Atan(ratio));
   const sine = parseFloat(sin(angle));
   const radius = parseFloat((length / 2 / sine).toFixed(5));
