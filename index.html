@@ -888,7 +888,7 @@ if (typeof radian !== 'number' || isNaN(radian) || radian > 1.6 || radian < 0) r
   // 🔹 Case 1: Exact match
   if (trig[radKey]?.sin !== undefined) return trig[radKey].sin;
 
-  // 🔹 Case 2: 0.8 > x  → Use cosine reflection
+  // 🔹 Case 2: 0.8 > x → Use cosine reflection
   if (radian < 0.8) {
     const reflected = 1.6 - radian;
     const reflectedKey = `rad(${reflected.toFixed(3)})`;
