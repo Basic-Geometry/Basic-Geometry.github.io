@@ -186,7 +186,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-07-21",
+"dateModified" :"2025-07-22",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Exact geometry",
@@ -1033,7 +1033,7 @@ function Atan(x) {
 
   let radian = null;
 
-  if (x > 1 || x < 0.09) {
+  if (x > 1) {
     // Direct match
     const match = closestValue(x, 'tan');
     if (!match?.angle) return null;
