@@ -1472,15 +1472,14 @@ function updateSegmentArea() {
     return;
   }
 	
-  const ratio = 2 * height / length;
+  const ratio = parseFloat((2 * height / length).toFixed(5));
 	
   // Segment validity check
 
-  if (ratio < 0.11 || ratio > 1) {
-    document.getElementById('segment-area').innerText = 'The ratio is out of range';
-    return;
-	}
-
+  if (!(ratio >= 0.11 && ratio <= 1)) {
+  document.getElementById('segment-area').innerText = 'The ratio is out of range';
+  return;
+  }
 
   const angle = parseFloat(2 * Atan(ratio));
   const sine = parseFloat(sin(angle));
