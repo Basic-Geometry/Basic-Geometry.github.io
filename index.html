@@ -1476,10 +1476,6 @@ function updateSegmentArea() {
 	
   // Segment validity check
 
-if (ratio < 0.11 || ratio > 1) {
-  document.getElementById('segment-area').innerText = 'The ratio is out of range';
-  return;
-}
 
   const angle = parseFloat(2 * Atan(ratio));
   const sine = parseFloat(sin(angle));
