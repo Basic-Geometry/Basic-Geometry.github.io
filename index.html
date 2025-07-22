@@ -706,7 +706,7 @@ const trig = {
   "sin": 0.99,
   "cos": 0.141,
   "tan": 7.026,
-  "deg": 81.9
+  "deg": 81.90
 },
 
 "rad(1.44)": {
@@ -909,7 +909,7 @@ const trig = {
   "sin": 0.78,
   "cos": 0.625,
   "tan": 1.248,
-  "deg": 51.3
+  "deg": 51.30
 },
 
 "rad(0.88)": {
@@ -1081,7 +1081,7 @@ function Asin(x) {
 
   let radian = null;
 
-  if (x >= 0.707) {
+  if (x >= 0.7071) {
     // Direct match via sine
     const match = closestValue(x, 'sin');
     if (!match?.angle) return null;
@@ -1106,7 +1106,7 @@ function Acos(x) {
 
   let radian = null;
 
-  if (x <= 0.707) {
+  if (x <= 0.7071) {
     // Direct match via cosine
     const match = closestValue(x, 'cos');
     if (!match?.angle) return null;
