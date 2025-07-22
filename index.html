@@ -1593,7 +1593,7 @@ function updateSegmentArea() {
     return;
 	}
 
-  if (ratio < 0.11 || ratio > 1) {
+  if (ratio > 1) {
     document.getElementById('segment-area').innerText = 'This ratio is out of range';
     return;
   }
