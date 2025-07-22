@@ -964,7 +964,7 @@ function closestValue(input, funcType) {
     const value = trig[key][funcType];
     if (typeof value !== 'number') continue;
 
-    const joker = Math.abs(value - input);
+    const difference = Math.abs(value - input);
     if (difference < minDiff) {
       minDiff = difference;
       bestMatch = {
