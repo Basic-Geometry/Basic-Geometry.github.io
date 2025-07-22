@@ -1476,7 +1476,7 @@ function updateSegmentArea() {
 	
   // Segment validity check
 
-  if (ratio < (1/9)) {
+  if ((length / height) > 18) {
     document.getElementById('segment-area').innerText = 'Out of range';
     return;
 	}
