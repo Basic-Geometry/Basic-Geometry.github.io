@@ -1476,12 +1476,12 @@ function updateSegmentArea() {
 	
   // Segment validity check
 
-  if ( ratio < 0.11) {
-    document.getElementById('segment-area').innerText = '';
+  if (ratio < (1/9)) {
+    document.getElementById('segment-area').innerText = 'Out of range';
     return;
 	}
 	
-  if ( ratio > 1) {
+  if (ratio > 1) {
     document.getElementById('segment-area').innerText = 'A circle-segment is less than half as high as long.';
     return;
 }
