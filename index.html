@@ -966,7 +966,7 @@ function closestValue(input, funcType) {
 
     const joker = Math.abs(value - input);
     if (joker < minDiff) {
-      minDiff = joker;
+      minDiff = difference;
       bestMatch = {
         angle: key,  // We're using this key as the input (the angle) that produced the value
         value: value
@@ -1476,7 +1476,7 @@ function updateSegmentArea() {
 	
   // Segment validity check
 
-  if ( ratio === 0) {
+  if ( ratio < 0.11) {
     document.getElementById('segment-area').innerText = '';
     return;
 	}
