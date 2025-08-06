@@ -186,7 +186,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-07-22",
+"dateModified" :"2025-08-06",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Exact geometry",
@@ -209,17 +209,32 @@
  "inLanguage":"en-us",
 "keywords":"Exact Formulas, Area of a Circle, Circumference of a Circle, Volume of a Sphere, Volume of a Cone, Volume of a Pyramid, Volume of a Tetrahedron, Volume of a Frustum", 
 "potentialAction": [
-{
-     "@type": "SolveMathAction",
-       "name": "Area of a square",
-	"description": "The basis of area calculation",
-"target": "https://basic-geometry.github.io/",
-     "mathExpression-input": "a=5 A=?",
-     "mathExpression-output": "Math.pow(side, 2)",
-     "image": "square.png",
-     "eduQuestionType": "Area calculation"
-   },
 
+{
+  "@type": "SolveMathAction",
+  "name": "Area of a square",
+  "description": "The basis of area calculation",
+  "target": "https://basic-geometry.github.io/",
+  "mathExpression-input": "a=5 A=?",
+  "mathExpression-output": {
+    "@type": "GeometryShape",
+    "name": "rectangle",
+    "dimensions": "2",
+    "constructors": ["width", "length"],
+    "area": "width * length",
+    "specialCase": {
+      "@type": "GeometryShape",
+      "name": "square",
+      "constructor": "side",
+      "area": "Math.pow(side, 2)",
+      "related": ["triangle", "cube", "rectangle"]
+    },
+    "related": ["square", "cuboid", "triangle"]
+  },
+  "image": "square.png",
+  "eduQuestionType": "Area calculation"
+}
+	
 {
      "@type": "SolveMathAction",
        "name": "Volume of a cube",
