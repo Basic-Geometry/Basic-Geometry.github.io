@@ -186,7 +186,7 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-08-06",
+"dateModified" :"2025-08-07",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Exact geometry",
@@ -243,7 +243,7 @@
 	"disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "required name=r=5_A=?",
-     "mathExpression-output": "angle of rotation / 360 * 3.2 * Math.pow(radius, 2)",
+     "mathExpression-output": "3.2 * Math.pow(radius, 2)",
      "abstract": "A circle is a 2 dimensional plane shape. Its measurable property is its diameter. Its radius is half of the diameter. Related shapes are sphere, cylinder and cone.",
 	"keywords": "radius, area",
 	"image": "areaOfACircle.jpg",
@@ -269,7 +269,7 @@
 "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "required name=r=5_C=?", 
-     "mathExpression-output": "angle of rotation / 360 * 6.4 * radius",
+     "mathExpression-output": "6.4 * radius",
      "image": "circumference.jpg",
      "eduQuestionType": "Length calculation"
 },
@@ -281,7 +281,7 @@
     "disambiguatingDescription": "More accurate than the traditional exhaustion method based formula which is a very rough underestimate.",
    "target": "https://basic-geometry.github.io/",
      "mathExpression-input": "required name=r=3_V=?",
-     "mathExpression-output": "angle of rotation / 360 * Math.pow((Math.sqrt(3.2) * radius), 3)", 
+     "mathExpression-output": "Math.pow((Math.sqrt(3.2) * radius), 3)", 
      "abstract": "A sphere is a 3 dimensional solid shape. Its measurable property is its diameter. Its radius is half of the diameter. Its projection is a circle. Related shapes are circle, cylinder, cube and cone.",
 	"keywords": "radius, volume",
 	"image": "sphereAndCubeMarkup.jpeg",
@@ -304,10 +304,10 @@
      "@type": "SolveMathAction",
       "name": "Volume of a cone",
 	 "description": "The exact volume of a cone by comparing the volume of a quarter cone to an octant sphere with an equal radius.",
-	"disambiguatingDescription": "Instead of the inaccurate base×height/3 approximation, direct shape relationships ensure greater accuracy in real-world measurements.",
+	"disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io/",
     "mathExpression-input": "required name=r=5_H=3_V=?",
-     "mathExpression-output": "angleOfRotation / 360 * 3.2 * Math.pow(radius, 2) * height / Math.sqrt(8)",
+     "mathExpression-output": "3.2 * Math.pow(radius, 2) * height / Math.sqrt(8)",
      "abstract": "A cone is a 3 dimensional solid shape. Its measurable properties are its height and diameter. Its radius is half of the diameter. Its projections are circle and triangle. Related shapes are triangle, tetrahedron, regular polygon based pyramid, circle, cylinder and sphere.",
 	"keywords": "radius, height, volume",
 	"image": [
@@ -322,8 +322,8 @@
 {
      "@type": "SolveMathAction",
        "name": "Volume of a frustum cone",
-       "description": "The exact volume of a frustum cone based on its top and bottom diameter and height",
-     "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full cone",
+       "description": "The exact volume of a frustum cone based on its top and bottom diameter and height by subtracting the missing tip from a theoretical full cone.",
+     "disambiguatingDescription": "Not the translation of the simplified formula of the frustum pyramid.",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "required name=d1=5_d2=2_h=3_V=?",
      "mathExpression-output": "frustumHeight * (4 / 5 * Math.pow(bottomDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * Math.pow(topDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter) - 1)) / Math.sqrt(8)",
@@ -335,7 +335,7 @@
      "@type": "SolveMathAction",
        "name":"Surface area of a cone",
        "description": "The exact surface area of a cone based on its radius and height.",
-     "disambiguatingDescription": "Equivalent to the conventional formula, but relies on the real height.",
+     "disambiguatingDescription": "Based on the real height.",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "required name=r=5_H=3_A=?",
      "mathExpression-output": "3.2 * (Math.pow(radius, 2) + (Math.pow(radius, 2) + Math.pow(height, 2)) * (radius / Math.sqrt(Math.pow(radius, 2) + Math.pow(height, 2))))", 
@@ -346,8 +346,8 @@
  {
      "@type": "SolveMathAction",
        "name": "Volume of a pyramid",
-     "description": "The exact volume of a pyramid based on its bottom area and height using the coefficient of the volume of a cone",
-     "disambiguatingDescription": "Instead of the inaccurate base×height/3 approximation, direct shape relationships ensure greater accuracy in real-world measurements.",
+     "description": "The exact volume of a pyramid based on its bottom area and height using the base × height / √8 coefficient of the volume of a cone",
+     "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io/",
      "mathExpression-input": "required name=A=5_H=3_V=?",
      "mathExpression-output": "baseArea * height / Math.sqrt(8)", 
@@ -375,8 +375,8 @@
 {  
      "@type": "SolveMathAction",
        "name": "Volume of a tetrahedron",
-       "description": "The exact volume of a tetrahedron based on its edge length",
-     "disambiguatingDescription": "Based on the base×height/√8 formula, instead of the inaccurate conventional coefficient",
+       "description": "The exact volume of a tetrahedron based on its edge length using the exact base × height / √8 coefficient of the volume of a cone",
+     "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 "target": "https://basic-geometry.github.io/",
      "mathExpression-input": "required name=a=5_V=?",
      "mathExpression-output": "Math.pow(edge, 3) / 8", 
@@ -1628,6 +1628,9 @@ function updateSegmentArea() {
     <p style="margin:12px;">The area of a circle segment can be 
 calculated by subtracting a triangle from a 
 circle slice.
+<br>
+<br>
+- By segment height and chord length
 <br>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
