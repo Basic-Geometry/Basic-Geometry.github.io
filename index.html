@@ -216,10 +216,7 @@
   "description": "The basis of area calculation",
   "target": "https://basic-geometry.github.io",
   "mathExpression-input": "required square_side=5_Area=?",
-  "mathExpression-output": {
-	"ascii": "area = side * side = side²"
-	"code": "area = Math.pow(side, 2)",
-	},
+  "mathExpression-output": "area = side * side = side^2",
   "abstract": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Its area equals width * length. Related shapes are triangle, cube, cuboid and rectangle. A square is a special case of a rectangle with equal width and length. Related shapes are square, cuboid and triangle.",
   "keywords": "side, length, area",
   "image": "square.png",
@@ -232,9 +229,7 @@
        "description": "The basis of volume calculation",
      "target": "https://basic-geometry.github.io",
      "mathExpression-input": "required cube_edge=5_Volume=?",
-     "mathExpression-output":  {
-	"ascii": "volume = edge * edge * edge = edge³"
-	"code":"Math.pow(edge, 3)",    
+     "mathExpression-output": "volume = edge * edge * edge = edge^3",  
        "abstract": "A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. Its volume is width * length * height. Its projections are rectangle, rectangle and rectangle. Related shapes are regular polygon based block, square, cube and rectangle. A cube is a special case of a cuboid. Its measurable property is its edge length. Its projections are square, square and square. Related shapes are sphere, square and cuboid.",
   "keywords": "edge, length, volume",
      "image": "cubeMarkup.jpeg",
@@ -248,7 +243,7 @@
 	"disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required circle_radius=5_Area=?",
-     "mathExpression-output": "3.2 * Math.pow(radius, 2)",
+     "mathExpression-output": "3.2 * radius^2",
      "abstract": "A circle is a 2 dimensional plane shape. Its measurable property is its diameter. Its radius is half of the diameter. Related shapes are sphere, cylinder and cone.",
 	"keywords": "radius, area",
 	"image": "areaOfACircle.jpg",
@@ -262,7 +257,7 @@
      "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required segment_radius=5_height=2_Area=?",
-     "mathExpression-output": "Math.acos((radius-segmentHeight)/radius)*Math.pow(radius, 2)-Math.sin(Math.acos((radius-segmentHeight)/radius))*(radius-segmentHeight)*radius", 
+     "mathExpression-output": "Acos((radius-segmentHeight) / radius) * radius^2 - sin(Acos((radius-segmentHeight)/radius)) * (radius-segmentHeight) * radius", 
      "image": "circleSegment.jpg",
      "eduQuestionType": "Area calculation"
    },
@@ -286,7 +281,7 @@
     "disambiguatingDescription": "More accurate than the traditional 4 × π × r³ / 3 formula.",
 "target": "https://basic-geometry.github.io",
      "mathExpression-input": "required sphere_radius=3_Volume=?",
-     "mathExpression-output": "Math.pow((Math.sqrt(3.2) * radius), 3)", 
+     "mathExpression-output": "((sqrt(3.2) * radius)^3", 
      "abstract": "A sphere is a 3 dimensional solid shape. Its measurable property is its diameter. Its radius is half of the diameter. Its projection is a circle. Related shapes are circle, cylinder, cube and cone.",
 	"keywords": "radius, volume",
 	"image": "sphereAndCubeMarkup.jpeg",
@@ -300,7 +295,7 @@
      "disambiguatingDescription": "More accurate than the conventional formula ",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required cap_radius=5_height=3_Volume=?",
-     "mathExpression-output": "1.6 * Math.pow(r, 2) * Math.sqrt(3.2) * height", 
+     "mathExpression-output": "1.6 * radius^2 * sqrt(3.2) * height", 
      "image": "sphericalCap.jpg",
      "eduQuestionType": "Volume calculation"
   },
@@ -312,7 +307,7 @@
 	"disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io",
     "mathExpression-input": "required cone_radius=5_height=3_Volume=?",
-     "mathExpression-output": "3.2 * Math.pow(radius, 2) * height / Math.sqrt(8)",
+     "mathExpression-output": "3.2 * radius^2 * height / sqrt(8)",
      "abstract": "A cone is a 3 dimensional solid shape. Its measurable properties are its height and diameter. Its radius is half of the diameter. Its projections are circle and triangle. Related shapes are triangle, tetrahedron, regular polygon based pyramid, circle, cylinder and sphere.",
 	"keywords": "radius, height, volume",
 	"image": [
@@ -331,7 +326,7 @@
      "disambiguatingDescription": "Not the translation of the simplified formula of the frustum pyramid.",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required bottomDiameter=5_topDiameter=2_frustumHeight=3_Volume=?",
-     "mathExpression-output": "frustumHeight * (4 / 5 * Math.pow(bottomDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * Math.pow(topDiameter, 2) * (1 / (1 - topDiameter / bottomDiameter) - 1)) / Math.sqrt(8)",
+     "mathExpression-output": "frustumHeight * (4 / 5 * bottomDiameter^2 * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * topDiameter^2 * (1 / (1 - topDiameter / bottomDiameter) - 1)) / sqrt(8)",
      "image": "frustumOfConeMarkup.png",
      "eduQuestionType": "Volume calculation"
    },
@@ -343,7 +338,7 @@
      "disambiguatingDescription": "Based on the real height.",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required cone_radius=5_height=3_Area=?",
-     "mathExpression-output": "3.2 * (Math.pow(radius, 2) + (Math.pow(radius, 2) + Math.pow(height, 2)) * (radius / Math.sqrt(Math.pow(radius, 2) + Math.pow(height, 2))))", 
+     "mathExpression-output": "3.2 * radius * (radius + sqrt(radius^2 +height^2))", 
      "image": "coneMarkup.jpeg",
      "eduQuestionType": "Area calculation"
    },
@@ -355,7 +350,7 @@
      "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required pyramid_baseArea=5_height=3_Volume=?",
-     "mathExpression-output": "baseArea * height / Math.sqrt(8)", 
+     "mathExpression-output": "baseArea * height / sqrt(8)", 
      "abstract": "A regular pyramid is a 3 dimensional solid shape. Its measurable properties are its number and length of the sides of its base and its height. Its projections are polygon and triangle. Related shapes are regular polygon, regular polygon based block, tetrahedron, cone and triangle.",
 	"keywords": "base, height, volume",
 	"image": [
@@ -372,7 +367,7 @@
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full pyramid. Universally applicable",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required bottomEdge=5_topEdge=3_frustumHeight=2_Volume=?",
-       "mathExpression-output": "frustumHeight * (Math.pow(bottomEdge, 2) * (1 / (1 - topEdge / bottomEdge)) - Math.pow(topEdge, 2) * (1 / (1 - topEdge / bottomEdge) - 1)) / Math.sqrt(8)",
+       "mathExpression-output": "frustumHeight * (bottomEdge^2 * (1 / (1 - topEdge / bottomEdge)) - topEdge^2 * (1 / (1 - topEdge / bottomEdge) - 1)) / sqrt(8)",
      "image": "frustumOfPyramidMarkup.png",
      "eduQuestionType": "Volume calculation"
    },
@@ -384,7 +379,7 @@
      "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 "target": "https://basic-geometry.github.io",
      "mathExpression-input": "required edge=5_Volume=?",
-     "mathExpression-output": "Math.pow(edge, 3) / 8", 
+     "mathExpression-output": "edge^3 / 8", 
      "abstract": "A tetrahedron is a 3 dimensional solid shape. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
 	"keywords": "edge, length, volume",
 	"image": "tetrahedronMarkup.jpeg",
@@ -1849,8 +1844,8 @@ the volume of a sphere equals the cubic value of the square root of its cross se
 <math xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
  <mi>V</mi>
-      <mo>=</mo>
-      <msup>
+<mo>=</mo>
+<msup>
 <mrow>
 <mo>(</mo>
 <msqrt>
@@ -1860,8 +1855,8 @@ the volume of a sphere equals the cubic value of the square root of its cross se
 <mi>r</mi>
 <mo>)</mo>
 </mrow>
-        <mn>3</mn>
-      </msup>
+<mn>3</mn>
+</msup>
 </mrow>
 </math>
 
