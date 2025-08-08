@@ -216,7 +216,10 @@
   "description": "The basis of area calculation",
   "target": "https://basic-geometry.github.io",
   "mathExpression-input": "required square_side=5_Area=?",
-  "mathExpression-output": "area=Math.pow(side, 2)",
+  "mathExpression-output": {
+	"ascii": "area = side * side = side²"
+	"code": "area = Math.pow(side, 2)",
+	},
   "abstract": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Its area equals width * length. Related shapes are triangle, cube, cuboid and rectangle. A square is a special case of a rectangle with equal width and length. Related shapes are square, cuboid and triangle.",
   "keywords": "side, length, area",
   "image": "square.png",
@@ -229,7 +232,9 @@
        "description": "The basis of volume calculation",
      "target": "https://basic-geometry.github.io",
      "mathExpression-input": "required cube_edge=5_Volume=?",
-     "mathExpression-output": "Math.pow(edge, 3)",    
+     "mathExpression-output":  {
+	"ascii": "volume = edge * edge * edge = edge³"
+	"code":"Math.pow(edge, 3)",    
        "abstract": "A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. Its volume is width * length * height. Its projections are rectangle, rectangle and rectangle. Related shapes are regular polygon based block, square, cube and rectangle. A cube is a special case of a cuboid. Its measurable property is its edge length. Its projections are square, square and square. Related shapes are sphere, square and cuboid.",
   "keywords": "edge, length, volume",
      "image": "cubeMarkup.jpeg",
@@ -1828,7 +1833,7 @@ number.
 <mrow>
 <mo>(</mo>
 <msqrt>
-<mi>Area</mi>
+<mi>Cross Sectional Area</mi>
 </msqrt>
 <mo>)</mo>
 </mrow>
@@ -1841,6 +1846,28 @@ number.
 the volume of a sphere equals the cubic value of the square root of its cross sectional area.
 <br>
 <br>
+<math xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+ <mi>V</mi>
+      <mo>=</mo>
+      <msup>
+<mrow>
+<mo>(</mo>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mo>×</mo>
+<mi>r</mi>
+<mo>)</mo>
+</mrow>
+        <mn>3</mn>
+      </msup>
+</mrow>
+</math>
+
+<br>
+<br>
+	
 The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross section.
 <br>
 <br>
