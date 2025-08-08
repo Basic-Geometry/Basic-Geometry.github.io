@@ -1310,53 +1310,11 @@ function updateTriangleArea() {
 <div>
 <h5 style="font-size:160%;margin:7px;">Area of a regular polygon</h5>
 <br>
-<br>
-<div>
-<label style="margin:12px;" for="side-number">Number of sides:</label>
-<input id="side-number" type="number" value="5" step="1" />
-<br>
-<label style="margin:12px;" for="side-length">Side length:</label>
-<input id="side-length" type="number" value="1" step="any" />
-	
-<script>
-  function polygonArea(length, number, tangent) {
-    return number / 4  * length ** 2 / tangent;
-  }
-
-function updatePolygonArea() {
-  const length = parseFloat(document.getElementById('side-length').value);
-  const number = parseFloat(document.getElementById('side-number').value);
-
-  if (isNaN(length) || isNaN(number)) {
-    document.getElementById('polygon-area').innerText = '';
-    return;
-  }
-
-// Polygon validity check
-	
-  if (number < 3) {
-    document.getElementById('polygon-area').innerText = 'It takes at least three sides to form a polygon.';
-    return;
-  }
-	
-  const ratio = 3.2 / number;
-  const tangent = parseFloat(tan(ratio));
-  const area = polygonArea(length, number, tangent);
-
-  document.getElementById('polygon-area').innerText =
-    `Area: ${area.toFixed(5)} square units`;
-}
-
-  document.getElementById('side-length').addEventListener('input', updatePolygonArea);
-  document.getElementById('side-number').addEventListener('input', updatePolygonArea);
-</script>
-<p style="margin:12px;" id="polygon-area"></p>
-</div>
-<br>
 <div class="imgbox">
     <img class="center-fit" src="pentagon.png" alt="Pentagon" id="pentagon">
     </div>
 <br>
+<div>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 <mi>A</mi>
@@ -1406,10 +1364,55 @@ function updatePolygonArea() {
  <mi>side length</mi>
 </mrow>
 </math>
-
+</div>
 <br>
 <br>
+<div>
+<p style="margin:12px;">Calculator</p>
+<br>
+<br>
+<label style="margin:12px;" for="side-number">Number of sides:</label>
+<input id="side-number" type="number" value="5" step="1" />
+<br>
+<label style="margin:12px;" for="side-length">Side length:</label>
+<input id="side-length" type="number" value="1" step="any" />
+	
+<script>
+  function polygonArea(length, number, tangent) {
+    return number / 4  * length ** 2 / tangent;
+  }
 
+function updatePolygonArea() {
+  const length = parseFloat(document.getElementById('side-length').value);
+  const number = parseFloat(document.getElementById('side-number').value);
+
+  if (isNaN(length) || isNaN(number)) {
+    document.getElementById('polygon-area').innerText = '';
+    return;
+  }
+
+// Polygon validity check
+	
+  if (number < 3) {
+    document.getElementById('polygon-area').innerText = 'It takes at least three sides to form a polygon.';
+    return;
+  }
+	
+  const ratio = 3.2 / number;
+  const tangent = parseFloat(tan(ratio));
+  const area = polygonArea(length, number, tangent);
+
+  document.getElementById('polygon-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
+
+  document.getElementById('side-length').addEventListener('input', updatePolygonArea);
+  document.getElementById('side-number').addEventListener('input', updatePolygonArea);
+</script>
+<p style="margin:12px;" id="polygon-area"></p>
+</div>
+<br>
+<div>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>Sum of the internal angles of a polygon</mi>
@@ -1426,6 +1429,7 @@ function updatePolygonArea() {
  </mrow>
 </mrow>
 </math>
+</div>
 </div>
 <br>
 <br>
