@@ -198,13 +198,13 @@
 },
 "dateCreated" :"2019-01-11",
 "datePublished":"2020-01-11",
-"dateModified" :"2025-08-11",
+"dateModified" :"2025-08-12",
 "description" : "Introducing the best-established and most accurate framework to calculate area and volume.",
 "disambiguatingDescription": "Exact, empirically grounded and rigorously proven formulas over the conventional approximations.",
 "headline":"Introducing the Core Geometric System ™",
 "image":[
      "geometry.jpeg",
-     "trigonometry.png",
+     
 	"equityFigure.jpg"
 ],
 "inLanguage":"en-us",
@@ -229,8 +229,8 @@
 "target": "https://basic-geometry.github.io",
  "mathExpression-input": "required square_side=5_Area=?",
   "mathExpression-output": "area = side * side = side^2",
-   "about": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Related shapes are triangle, cube, cuboid and rectangle. A square is a type of a rectangle with equal width and length. Related shapes are square, cuboid and triangle.",
-  "abstract": " The area of a square equals the square value of its side length.",
+   "about": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Related shapes are square, triangle, cuboid and cube. A square is a special case of a rectangle with equal width and length.",
+  "abstract": "The area of a rectangle equals the multiplied product of its width and length. If the width of the rectangle is equal to its length, that is a square with area equal to the square value of its side length.",
 	"educationalLevel": "basic",
 	"keywords": "side, length, area",
     "image": "square.png",
@@ -244,14 +244,29 @@
      "target": "https://basic-geometry.github.io",
           "mathExpression-input": "required cube_edge=5_Volume=?",
      "mathExpression-output": "volume = edge * edge * edge = edge^3",  
-        "about": "A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. Its volume is width * length * height. Its projections are rectangle, rectangle and rectangle. Related shapes are regular polygon based block, square, cube and rectangle. A cube is a special case of a cuboid. Its measurable property is its edge length. Its projections are square, square and square. Related shapes are sphere, square and cuboid.",
-  "abstract": " The volume of a cube equals the cubic value of its edge length.",
+        "about": "A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. Its projections are rectangle, rectangle and rectangle. Related shapes are regular polygon based block, square, cube and rectangle. A cube is a special case of a cuboid with equal width, length and height. Its projections are square, square and square.",
+  "abstract": "The volume of a cuboid equals width * length * height. If its width, length and height are equal, that is a cube with a volume equal to the cubic value of its edge length.",
 	"educationalLevel": "basic",
 	"keywords": "edge, length, volume",
      "image": "cubeMarkup.jpeg",
      "eduQuestionType": "Volume calculation"
    },
 
+{
+     "@type": "SolveMathAction",
+       "name": "Area of a triangle",
+	"description": "Comparing the area of a triangle to a rectangle to express its area in terms of a square.",
+"target": "https://basic-geometry.github.io",
+ "mathExpression-input": "required triangle_base=5_height=2_Area=?",
+  "mathExpression-output": "area = base * height / 2",
+   "about": "A triangle is a 2 dimensional plane shape. Its measurable properties are the length of its sides. Related shapes are regular polygon, rectangle and pyramid.",
+  "abstract": "The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle. Multiplying the base of a triangle by its height gives a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.",
+	"educationalLevel": "basic",
+	"keywords": "side, length, height, area",
+    "image": "trigonometry.png",
+     "eduQuestionType": "Area calculation"
+   },
+	
 {
      "@type": "SolveMathAction",
 	"name": "Area of a circle",
@@ -1233,7 +1248,11 @@ function Atan(x) {
 </script>
 </div>
 <div>
- <p style="margin:12px;">Multiplying the base by the height of a triangle gives a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle. 
+ <p style="margin:12px;">The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and lengt equal to the height of the triangle.
+<br>
+Multiplying the base of a triangle by its height gives a rectangle with an area exactly the double of the triangle. 
+<br>
+The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle. 
 <br>
 <br>
 The area of a triangle can also be calculated by the length of its sides.
