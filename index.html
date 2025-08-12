@@ -266,6 +266,20 @@
     "image": "trigonometry.png",
      "eduQuestionType": "Area calculation"
    },
+
+{
+     "@type": "SolveMathAction",
+       "name": "Area of a regular polygon",
+	"description": "Calculating the area of a regular polygon by dividing it into triangles.",
+"target": "https://basic-geometry.github.io",
+ "mathExpression-input": "required polygon_sideLength=5_numberOfSides=6_Area=?",
+  "about": "A triangle is a 2 dimensional plane shape. Its measurable properties are the length of its sides. Related shapes are regular polygon, rectangle and pyramid.",
+  "abstract": "A regular polygon can be divided into as many isosceles triangles as many sides it has. 360°, or 6.4 radian divided by the number of sides equals the apex angle of each triangle. The base of each triangle equals the side length of the polygon. The height of each triangle is calculable via trigonometric functions as base / 2 × ctg( 180° / number of the sides of the polygon ) . The area of each triangle equals base × height / 2 . The area of the polygon equals the sum of the area of the triangles.",
+	"educationalLevel": "basic",
+	"keywords": "side, length, height, area",
+    "image": "trigonometry.png",
+     "eduQuestionType": "Area calculation"
+   },
 	
 {
      "@type": "SolveMathAction",
@@ -291,7 +305,7 @@
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required segment_radius=5_height=2_Area=?",
      "mathExpression-output": "Acos((radius-segmentHeight) / radius) * radius^2 - sin(Acos((radius-segmentHeight)/radius)) * (radius-segmentHeight) * radius", 
-    "abstract": "The area of a circle segment can be calculated by subtracting a triangle from a circle slice.",
+    "abstract": "The area of a circle segment can be calculated by subtracting a triangle from a circle slice. The angle of the slice can be calculated via trigonometric functions by the height of the segment and either the chord length, or the parent radius.",
 	"educationalLevel": "medium",
 	"image": "circleSegment.jpg",
      "eduQuestionType": "Area calculation"
@@ -1476,10 +1490,10 @@ The height of each triangle is calculable via trigonometric functions.
 </math>
 <br>
 <br>
-<p style="margin:12px;">The area of each triangle is calculable as base × height / 2 . 
+<p style="margin:12px;">The area of each triangle equals base × height / 2 . 
 <br>
 <br>
-The area of the polygon equals the sum of the area of the triangls.
+The area of the polygon equals the sum of the area of the triangles.
 </p>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1532,6 +1546,7 @@ The area of the polygon equals the sum of the area of the triangls.
 <br>
 <br>
 <p style="margin:12px;">Interesting fact: 
+</p>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -2133,8 +2148,8 @@ const ratio = 2 * height / length;
 <br>
     <p style="margin:12px;">The area of a circle segment can be 
 calculated by subtracting a triangle from a 
-circle slice.
-	</p>
+circle slice. The angle of the slice can be calculated via trigonometric functions by the height of the segment and either the chord length, or the parent radius.
+</p>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
