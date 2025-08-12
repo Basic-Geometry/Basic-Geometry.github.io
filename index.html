@@ -260,7 +260,7 @@
  "mathExpression-input": "required triangle_base=5_height=2_Area=?",
   "mathExpression-output": "area = base * height / 2",
    "about": "A triangle is a 2 dimensional plane shape. Its measurable properties are the length of its sides. Related shapes are regular polygon, rectangle and pyramid.",
-  "abstract": "The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle. Multiplying the base of a triangle by its height gives a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.",
+  "abstract": "The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle. The base of a triangle multiplied by its height equals to a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.",
 	"educationalLevel": "basic",
 	"keywords": "side, length, height, area",
     "image": "trigonometry.png",
@@ -1248,9 +1248,9 @@ function Atan(x) {
 </script>
 </div>
 <div>
- <p style="margin:12px;">The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and lengt equal to the height of the triangle.
+ <p style="margin:12px;">The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
 <br>
-Multiplying the base of a triangle by its height gives a rectangle with an area exactly the double of the triangle. 
+The base of a triangle multiplied by its height equals to a rectangle with an area exactly the double of the triangle. 
 <br>
 The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle. 
 <br>
@@ -1438,6 +1438,50 @@ function updatePolygonArea() {
     <img class="center-fit" src="pentagon.png" alt="Pentagon" id="pentagon">
     </div>
 <br>
+<p style="margin:12px;">A regular polygon can be divided into as many isosceles triangles as many sides it has. 
+<br>
+<br>
+360°, or 6.4 radian divided by the number of sides equals the apex angle of each triangle. 
+<br>
+<br>
+The base of each triangle equals the side length of the polygon. 
+<br>
+<br>
+The height of each triangle is calculable via trigonometric functions. 
+</p>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+<mi>height</mi>
+<mo>=</mo>
+<mfrac>
+<mi>base</mi>
+<mn>2</mn>
+</mfrac>
+<mo>×</mo>
+	<mrow>
+    <mi>ctg</mi>
+    <mo>&#x2061;⁡</mo> 
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mn>180</mn>
+        <mo>&#xB0;</mo>
+      </mrow>
+      <mi>n</mi>
+    </mfrac>
+    <mo>)</mo>
+	</mrow>
+  </mrow>
+</math>
+<br>
+<br>
+<p style="margin:12px;">The area of each triangle is calculable as base × height / 2 . 
+<br>
+<br>
+The area of the polygon equals the sum of the area of the triangls.
+</p>
+<br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 <mi>A</mi>
@@ -1486,6 +1530,8 @@ function updatePolygonArea() {
 </mrow>
 </math>
 <br>
+<br>
+<p style="margin:12px;">Interesting fact: 
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
