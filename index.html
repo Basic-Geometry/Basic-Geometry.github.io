@@ -385,7 +385,7 @@
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required bottomDiameter=5_topDiameter=2_frustumHeight=3_Volume=?",
      "mathExpression-output": "frustumHeight * (4 / 5 * bottomDiameter^2 * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * topDiameter^2 * (1 / (1 - topDiameter / bottomDiameter) - 1)) / sqrt(8)",
-       "abstract": "The volume of a frustum cone can be calculated by subtracting the missing tip from the theoretical full cone. The height of the theoretical full cone equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full cone would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
+       "abstract": "The volume of a frustum cone can be calculated by subtracting the missing tip from a theoretical full cone. The height of the theoretical full cone equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full cone would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
 	"educationalLevel": "advanced",
 	"image": "frustumOfConeMarkup.png",
      "eduQuestionType": "Volume calculation"
@@ -432,7 +432,7 @@
 	"target": "https://basic-geometry.github.io",
 "mathExpression-input": "required bottomArea=5_topArea=3_frustumHeight=2_Volume=?",
        "mathExpression-output": "frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / sqrt(8)",
-         "abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from the theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) . The volume of a square frustum pyramid can be calculated with a simplified formula.",
+         "abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) . The volume of a square frustum pyramid can be calculated with a simplified formula.",
 	"educationalLevel": "advanced",
 	"image": "frustumOfPyramidMarkup.png",
      "eduQuestionType": "Volume calculation"
@@ -447,7 +447,7 @@
      "mathExpression-input": "required edge=5_Volume=?",
      "mathExpression-output": "edge^3 / 8", 
    "about": "A tetrahedron is a 3 dimensional solid shape. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
-	"abstract": "The volume of a tetrahedron can be calculated as pyramid with fixed proportions. The base of a tetrahedron is an equilateral triangle. The area of an equilateral triangle equals side / 2 × √(side^2 - (side / 2)^2) = side / 2 × √(side^2 - side^2 / 4) = side / 2 × √((3/4)side^2) = side / 2 × √(3) / 2 × side = side^2 × √(3) / 4 . ",
+	"abstract": "A tetrahedron is a special case of a pyramid. Its volume can be calculated as pyramid with fixed proportions. The base of a tetrahedron is an equilateral triangle. The area of an equilateral triangle equals side / 2 × √(side^2 - ( side / 2 )^2) = side / 2 × √(side^2 - side^2 / 4) = side / 2 × √(( 3 / 4 )side^2) = side / 2 × side × √(3) / 2 = side^2 × √(3) / 4 . The height of the tetrahedron equals √(( edge × √(3) / 2 )^2 − ( ( edge × √(3) / 2 ) / 3 )^2 ) = √( edge^2 × ( 3 / 4 - 3 / 36 ) ) = √( edge^2 × ( 27 / 36 - 3 / 36 ) ) = √( edge^2 × ( 24 / 36 ) ) = √( 2 / 3 ) × edge. The base of a tetrahedron multiplied by its height equals ( edge^2 × √( 3 / 4 ) ) × ( edge × √( 2 / 3 ) ) = edge^3 × √(2) / 4 . The volume of a pyramid equals base × height × √(2) / 4 . ( √(2) / 4 )^2 = 2 / 16 = 1 / 8 .",
 	"educationalLevel": "advanced",
 	"keywords": "edge, length, volume",
 	"image": "tetrahedronMarkup.jpeg",
@@ -2037,8 +2037,10 @@ The ratio between the radius of the circle and the side of the square is calcula
     </mfrac>
 <mo>)</mo>
 </mrow>
+<mrow>
 <mn>360</mn>
 <mo>&#xB0;</mo>
+</mrow>
 </mfrac>
 <mo>)</mo>
 <mo>=</mo>
@@ -2054,8 +2056,10 @@ The ratio between the radius of the circle and the side of the square is calcula
     </mfrac>
 <mo>)</mo>
 </mrow>
+<mrow>
 <mn>360</mn>
 <mo>&#xB0;</mo>
+</mrow>
 </mfrac>
 </mrow>
 </math>
@@ -3038,7 +3042,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
     <img class="center-fit" src="frustumOfConeMarkup.png" alt="Horizontal-frustum-cone">
     </div>
 <br>
-<p style="margin:12px;">The volume of a frustum cone can be calculated by subtracting the missing tip from the theoretical full cone.
+<p style="margin:12px;">The volume of a frustum cone can be calculated by subtracting the missing tip from a theoretical full cone.
 <br>
 <br>
 The height of the theoretical full cone can be calculated by the frustum height and the ratio between the top and bottom areas.
@@ -3380,7 +3384,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </div>
 <br>
 <br>
-<p style="margin:12px;">The volume of a frustum pyramid can be calculated by subtracting the missing tip from the theoretical full pyramid. 
+<p style="margin:12px;">The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. 
 <br>
 <br>
 The height of the theoretical full pyramid can be calculated by the frustum height and the ratio between the top and bottom areas.
@@ -3546,6 +3550,37 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
   <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="Tetrahedron" id="tetrahedron">
   </div>
 <br>
+<p style="margin:12px;">
+A tetrahedron is a special case of a pyramid. 
+<br>
+<br>
+Its volume can be calculated as pyramid with fixed proportions. 
+<br>
+<br>
+The base of a tetrahedron is an equilateral triangle. 
+<br>
+The area of an equilateral triangle equals side / 2 × √(side^2 - ( side / 2 )^2) = side / 2 × √(side^2 - side^2 / 4) = side / 2 × √(( 3 / 4 )side^2) = side / 2 × side × √(3) / 2 = side^2 × √(3) / 4 . 
+<br>
+<br>
+The height of the tetrahedron equals √(( edge × √(3) / 2 )^2 − ( ( edge × √(3) / 2 ) / 3 )^2 ) = 
+<br>
+√( edge^2 × ( 3 / 4 - 3 / 36 ) ) = 
+<br>
+√( edge^2 × ( 27 / 36 - 3 / 36 ) ) = 
+<br>
+√( edge^2 × ( 24 / 36 ) ) = 
+<br>
+√( 2 / 3 ) × edge. 
+<br>
+<br>
+The base of a tetrahedron multiplied by its height equals ( edge^2 × √( 3 / 4 ) ) × ( edge × √( 2 / 3 ) ) = edge^3 × √(2) / 4 . 
+<br>
+<br>
+The volume of a pyramid equals base × height × √(2) / 4 . 
+<br>
+<br>
+( √(2) / 4 )^2 = 2 / 16 = 1 / 8 
+</p>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
  <mi>V</mi>
