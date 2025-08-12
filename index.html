@@ -287,7 +287,7 @@
 "mathExpression-input": "required circle_radius=5_Area=?",
      "mathExpression-output": "3.2 * radius^2",
   "about": "A circle is a 2 dimensional plane shape. Its measurable property is its diameter. Its radius is half of the diameter. Related shapes are sphere, cylinder and cone.",
-	"abstract": "The area of a circle is defined by comparing it to a square since that is the base of area calculation. The circle can be cut into four quadrants, each placed with their origin on the vertices of a square. In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square. The arcs of the quadrants of a circumscribed circle would meet at the center of the square. The arcs of the quadrants that equal in area to the square intersect right in between these limits on its centerlines. The ratio between the radius of the circle and the side of the square is calculable. The radius equals √(5) * side / 4. The quarter of the uncovered area in the middle equals (√3.2r)²÷4−((90−2×Atan(1÷2))÷360×3.2r²+2(√3.2r÷4×√3.2r÷2)÷2)) . An overlapping area equals 2(Atan(1÷2)÷360×3.2r²−(√3.2r÷4×√3.2r÷2)÷2) . Dividing both sides by 3.2r²: 1÷4−((90−2×Atan(1÷2))÷360+(1÷8))=2(Atan(1÷2)÷360−(1÷8)÷2) . Simplifying further: 1÷4−((90−2×Atan(1÷2))÷360)=2×Atan(1÷2)÷360 . Substituting 90°/360° for 1/4: 90÷360−((90−2×Atan(1÷2))÷360)=2×Atan(1÷2)÷360 . Simplifying further: Atan(1÷2) = Atan(1÷2) . Which is equivalent to 1 = 1. When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, the uncovered area in the middle equals exactly the sum of the overlapping areas respectively. The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle. The area of the circle equals 4 * radius / √(5))^2 = 16 / 5 × r^2 .",
+	"abstract": "The area of a circle is defined by comparing it to a square since that is the base of area calculation. The circle can be cut into four quadrants, each placed with their origin on the vertices of a square. In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square. The arcs of the quadrants of a circumscribed circle would meet at the center of the square. The arcs of the quadrants that equal in area to the square intersect right in between these limits on its centerlines. The ratio between the radius of the circle and the side of the square is calculable. The radius equals √(5) * side / 4. The quarter of the uncovered area in the middle equals (√3.2r)^2 ÷ 4 − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360 × 3.2r^2 + 2(√(3.2)r ÷ 4 × √(3.2)r ÷ 2) ÷ 2)) . An overlapping area equals 2(Atan(1 ÷ 2) ÷ 360° × 3.2r^2 − (√(3.2)r ÷ 4 × √(3.2)r ÷ 2) ÷ 2) . Dividing both sides by 3.2r^2 : 1 ÷ 4−((90° − 2 × Atan(1 ÷ 2)) ÷ 360° + (1 ÷ 8)) = 2(Atan(1 ÷ 2) ÷ 360° − (1 ÷ 8) ÷ 2) . Simplifying further: 1 ÷ 4 − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360°) = 2 × Atan(1 ÷ 2) ÷ 360° . Substituting 90° / 360° for 1 / 4: 90° ÷ 360° − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360°)=2 × Atan(1 ÷ 2) ÷ 360° . Simplifying further: Atan(1÷2) = Atan(1÷2) . Which is equivalent to 1 = 1. When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, the uncovered area in the middle equals exactly the sum of the overlapping areas respectively. The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle. The area of the circle equals 4 * radius / √(5))^2 = 16 / 5 × r^2 .",
 	"educationalLevel": "advanced",
 	"keywords": "radius, area",
 	  "image": [
@@ -413,7 +413,7 @@
 	"target": "https://basic-geometry.github.io",
           "mathExpression-input": "required pyramid_baseArea=5_height=3_Volume=?",
      "mathExpression-output": "baseArea * height / sqrt(8)", 
-      "about": "A regular pyramid is a 3 dimensional solid shape. Its measurable properties are its number and length of the sides of its base and its height. Its projections are polygon and triangle. Related shapes are regular polygon, regular polygon based block, tetrahedron, cone and triangle.",
+      "about": "A pyramid is a 3 dimensional solid shape. Its measurable properties are its number and length of the sides of its base and its height. Its projections are polygon and triangle. Related shapes are regular polygon, regular polygon based block, tetrahedron, cone and triangle.",
 	"abstract": "The volume of a pyramid can be calculated with the same base × height / √(8) coefficient as a cone.",
 	"educationalLevel": "advanced",
 	"keywords": "base, height, volume",
@@ -430,9 +430,9 @@
     "description": "Calculating the exact volume of a frustum pyramid by its top and bottom area and height",
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full pyramid. Universally applicable",
 	"target": "https://basic-geometry.github.io",
-"mathExpression-input": "required bottomEdge=5_topEdge=3_frustumHeight=2_Volume=?",
-       "mathExpression-output": "frustumHeight * (bottomEdge^2 * (1 / (1 - topEdge / bottomEdge)) - topEdge^2 * (1 / (1 - topEdge / bottomEdge) - 1)) / sqrt(8)",
-         "abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from the theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
+"mathExpression-input": "required bottomArea=5_topArea=3_frustumHeight=2_Volume=?",
+       "mathExpression-output": "frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / sqrt(8)",
+         "abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from the theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) . The volume of a square frustum pyramid can be calculated with a simplified formula.",
 	"educationalLevel": "advanced",
 	"image": "frustumOfPyramidMarkup.png",
      "eduQuestionType": "Volume calculation"
@@ -447,7 +447,9 @@
      "mathExpression-input": "required edge=5_Volume=?",
      "mathExpression-output": "edge^3 / 8", 
    "about": "A tetrahedron is a 3 dimensional solid shape. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
-	"abstract": "The volume of a tetrahedron can be calculated as pyramid with fixed proportions.",
+	"abstract": "The volume of a tetrahedron can be calculated as pyramid with fixed proportions. 
+	The base of a tetrahedron is an equilateral triangle. 
+	The area of an equilateral triangle equals side / 2 × √(side^2 - (side / 2)^2) = side / 2 × √(side^2 - side^2 / 4) = side / 2 × √((3/4)side^2) = side / 2 × √(3) / 2 × side = side^2 × √(3) / 4 . ",
 	"educationalLevel": "advanced",
 	"keywords": "edge, length, volume",
 	"image": "tetrahedronMarkup.jpeg",
@@ -1762,6 +1764,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mfrac>
 <mrow>
 <mn>90</mn>
+<mo>&#xB0;</mo>
 <mo>-</mo>
 <mn>2</mn>
 <mo>×</mo>
@@ -1774,6 +1777,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 <mo>+</mo>
 <mn>2</mn>
@@ -1833,6 +1837,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 <mo>-</mo>
 <mfrac>
@@ -1881,6 +1886,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mfrac>
 <mrow>
 <mn>90</mn>
+<mo>&#xB0;</mo>
 <mo>-</mo>
 <mn>2</mn>
 <mo>×</mo>
@@ -1893,6 +1899,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 <mo>+</mo>
 <mfrac>
@@ -1917,6 +1924,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 <mo>-</mo>
 <mfrac>
@@ -1949,6 +1957,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mfrac>
 <mrow>
 <mn>90</mn>
+<mo>&#xB0;</mo>
 <mo>-</mo>
 <mn>2</mn>
 <mo>×</mo>
@@ -1961,6 +1970,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 <mo>)</mo>
 <mo>=</mo>
@@ -1977,25 +1987,33 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 </mrow>
 </math>
 <br>
 <br>
-<p style="margin:12px;">Substituting 90°/360° for 1/4 :
+<p style="margin:12px;">Substituting 90° / 360° for 1 / 4 :
 </p>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <mfrac>
+<mrow>
 <mn>90</mn>
+<mo>&#xB0;</mo>
+</mrow>
+<mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
 </mfrac>
 <mo>-</mo>
 <mo>(</mo>
 <mfrac>
 <mrow>
 <mn>90</mn>
+<mo>&#xB0;</mo>
 <mo>-</mo>
 <mn>2</mn>
 <mo>×</mo>
@@ -2008,6 +2026,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 <mo>)</mo>
 <mo>=</mo>
@@ -2024,6 +2043,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>)</mo>
 </mrow>
 <mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 </mrow>
 </math>
