@@ -447,9 +447,7 @@
      "mathExpression-input": "required edge=5_Volume=?",
      "mathExpression-output": "edge^3 / 8", 
    "about": "A tetrahedron is a 3 dimensional solid shape. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
-	"abstract": "The volume of a tetrahedron can be calculated as pyramid with fixed proportions. 
-	The base of a tetrahedron is an equilateral triangle. 
-	The area of an equilateral triangle equals side / 2 × √(side^2 - (side / 2)^2) = side / 2 × √(side^2 - side^2 / 4) = side / 2 × √((3/4)side^2) = side / 2 × √(3) / 2 × side = side^2 × √(3) / 4 . ",
+	"abstract": "The volume of a tetrahedron can be calculated as pyramid with fixed proportions. The base of a tetrahedron is an equilateral triangle. The area of an equilateral triangle equals side / 2 × √(side^2 - (side / 2)^2) = side / 2 × √(side^2 - side^2 / 4) = side / 2 × √((3/4)side^2) = side / 2 × √(3) / 2 × side = side^2 × √(3) / 4 . ",
 	"educationalLevel": "advanced",
 	"keywords": "edge, length, volume",
 	"image": "tetrahedronMarkup.jpeg",
@@ -1763,8 +1761,10 @@ The ratio between the radius of the circle and the side of the square is calcula
 <mo>×</mo>
 <mfrac>
 <mrow>
-<mn>90°</mn>
+<mn>90</mn>
+<mo>&#xB0;</mo>
 <mo>-</mo>
+<mrow>
 <mn>2</mn>
 <mo>×</mo>
 <mi>Atan</mi>
@@ -1775,7 +1775,9 @@ The ratio between the radius of the circle and the side of the square is calcula
     </mfrac>
 <mo>)</mo>
 </mrow>
-<mn>360°</mn>
+</mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
 </mfrac>
 <mo>+</mo>
 <mn>2</mn>
@@ -3292,7 +3294,7 @@ with the same coefficient as the volume of a cone.
 <br>
 <br>
 <div>
-<h16 style="font-size:160%;margin:7px;">Volume of a horizontal square frustum pyramid</h16>
+<h16 style="font-size:160%;margin:7px;">Volume of a horizontal frustum pyramid</h16>
 <br>
 <br>
 <div>
@@ -3364,9 +3366,6 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <p style="margin:12px;" id="frustum-pyramid-volume"></p>
 </div>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="Horizontal-frustum-pyramid">
-    </div>
 <br>
 <p style="margin:12px;">The volume of a frustum pyramid can be calculated by subtracting the missing tip from the theoretical full pyramid. 
 <br>
@@ -3382,10 +3381,8 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
 <mrow>
       <mi>H</mi>
       <mo>(</mo>
-      <msup>
-        <mi>b</mi>
-        <mn>2</mn>
-      </msup>
+      
+        <mi>bottom area</mi>
 <mo>×</mo>
       <mo>(</mo>
       <mfrac>
@@ -3394,17 +3391,14 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
           <mn>1</mn>
           <mo>-</mo>
           <mfrac>
-            <mi>t</mi>
-            <mi>b</mi>
+            <mi>top area</mi>
+            <mi>bottom area</mi>
           </mfrac>
         </mrow>
       </mfrac>
       <mo>)</mo>
       <mo>-</mo>
-      <msup>
-        <mi>t</mi>
-        <mn>2</mn>
-      </msup>
+        <mi>top area</mi>
 <mo>×</mo>
       <mo>(</mo>
       <mfrac>
@@ -3413,8 +3407,8 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
           <mn>1</mn>
           <mo>-</mo>
           <mfrac>
-            <mi>t</mi>
-            <mi>b</mi>
+            <mi>top area</mi>
+            <mi>bottom area</mi>
           </mfrac>
         </mrow>
       </mfrac>
@@ -3430,6 +3424,14 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
 </mrow>
   </math>
 <br>
+<br>
+<p style="margin:12px;">The volume of a square frustum pyramid can be calculated via a simplified formula. 
+<br>
+</p>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="Horizontal-frustum-pyramid">
+    </div>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
