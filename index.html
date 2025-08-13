@@ -75,12 +75,12 @@
         }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="author" content="name=Gaál Sándor">
+<meta name="author" content="Gaál Sándor">
 <meta name="description" content="Introducing the Core Geometric System™, the best-established and most accurate framework to calculate area and volume.">
 <meta name="keywords" content="Core Geometric Systems, Accurate Geometric Calculations, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="url=https://www.x.com/gmac4247">
-<meta name="twitter:site" content="url=https://gmac4247.github.io">
+<meta name="twitter:creator" content="@gmac4247">
+<meta name="twitter:site" content="https://basic-geometry.github.io">
 <meta name="twitter:title" content="Home of Basic Geometry">
 <meta name="twitter:description" content="Introducing the Core Geometric System™, the best-established and most accurate framework to calculate area and volume.">
 <meta name="twitter:image" content="android-chrome-256x256.png">
@@ -95,7 +95,7 @@
  "about": {
     "@type": "AboutPage",
     "name": "About Basic Geometry Formulas",
-    "url": "https://gmac4247.github.io/about"
+    "url": "https://basic-geometry.github.io/about"
   },
   "alternateName": "Exact Geometry",
 "accessMode" : "mathOnVisual" ,
@@ -206,7 +206,7 @@
      "@type": "SolveMathAction",
        "name": "Area of a square",
 	"description": "The basis of area calculation",
-"target": "https://gmac4247.github.io",
+"target": "https://basic-geometry.github.io",
  "mathExpression-input": "required square_side=5_Area=?",
   "mathExpression-output": "area = side * side = side^2",
    "about": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Related shapes are square, triangle, cuboid and cube. A square is a special case of a rectangle with equal width and length.",
@@ -221,7 +221,7 @@
      "@type": "SolveMathAction",
        "name": "Volume of a cube",
        "description": "The basis of volume calculation",
-     "target": "https://gmac4247.github.io",
+     "target": "https://basic-geometry.github.io",
           "mathExpression-input": "required cube_edge=5_Volume=?",
      "mathExpression-output": "volume = edge * edge * edge = edge^3",  
         "about": "A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. Its projections are rectangle, rectangle and rectangle. Related shapes are regular polygon based block, square, cube and rectangle. A cube is a special case of a cuboid with equal width, length and height. Its projections are square, square and square.",
@@ -236,7 +236,7 @@
      "@type": "SolveMathAction",
        "name": "Area of a triangle",
 	"description": "Comparing the area of a triangle to a rectangle to express its area in terms of a square.",
-"target": "https://gmac4247.github.io",
+"target": "https://basic-geometry.github.io",
  "mathExpression-input": "required triangle_base=5_height=2_Area=?",
   "mathExpression-output": "area = base * height / 2",
    "about": "A triangle is a 2 dimensional plane shape. Its measurable properties are the length of its sides. Related shapes are regular polygon, rectangle and pyramid.",
@@ -251,7 +251,7 @@
      "@type": "SolveMathAction",
        "name": "Area of a regular polygon",
 	"description": "Calculating the area of a regular polygon by dividing it into triangles.",
-"target": "https://gmac4247.github.io",
+"target": "https://basic-geometry.github.io",
  "mathExpression-input": "required polygon_sideLength=5_numberOfSides=6_Area=?",
   "mathExpression-output": "area = numberOfSides / 4 * ctg(180° / numberOfSides) / sideLength^2",
 	"about": "A regular polygon is a 2 dimensional plane shape. Its measurable properties are the number and the length of its sides. Related shapes are triangle and pyramid.",
@@ -267,7 +267,7 @@
 	"name": "Area of a circle",
      "description": "The exact area of a circle based on direct comparison with a square.",
      "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
 "mathExpression-input": "required circle_radius=5_Area=?",
      "mathExpression-output": "3.2 * radius^2",
   "about": "A circle is a 2 dimensional plane shape. Its measurable property is its diameter. Its radius is half of the diameter. Related shapes are sphere, cylinder and cone.",
@@ -286,7 +286,7 @@
        "name":  "Area of a circle segment",
 "description": "The exact area of a circle segment by subtracting a triangle from a circle slice.",
    "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required segment_radius=5_height=2_Area=?",
      "mathExpression-output": "Acos((radius-segmentHeight) / radius) * radius^2 - sin(Acos((radius-segmentHeight)/radius)) * (radius-segmentHeight) * radius", 
     "abstract": "The area of a circle segment can be calculated by subtracting a triangle from a circle slice. The angle of the slice can be calculated via trigonometric functions by the height of the segment and either the chord length, or the parent radius.",
@@ -300,7 +300,7 @@
 "name": "Circumference of a circle",
      "description": "Algebraic derivation of the exact circumference of a circle from its area",
 "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
 "mathExpression-input": "required circle_radius=5_Circumference=?", 
      "mathExpression-output": "6.4 * radius",
     "abstract": "The circumference of a circle can be derived algebraically from its area by subtracting a theoretical circle, with radius shorter than the radius of the actual circle by the theoretical width of the circumference. The x represents the width of the circumference, which is just theoretical, hence a very small number. The difference between the shape of the straightened circumference and a quadrilateral is negligible. The length of two shorter sides of the quadrilateral is x. The length of the two longer sides is the area of the resulting ring divided by x. C=(3.2r²-3.2(r-x)²)/x=6.4r-3.2x . As x is close to 0, C=6.4r .",
@@ -314,7 +314,7 @@
 	"name": "Volume of a sphere",
 	 "description": "The exact volume of a sphere by directly comparing it to a cube.",
     "disambiguatingDescription": "More accurate than the traditional 4 × π × r³ / 3 estimate.",
-"target": "https://gmac4247.github.io",
+"target": "https://basic-geometry.github.io",
     "mathExpression-input": "required cone_radius=5_height=3_Volume=?",
      "mathExpression-output": "3.2 * radius^2 * height / sqrt(8)",
     "about": "A sphere is a 3 dimensional solid shape. Its measurable property is its diameter. Its radius is half of the diameter. Its projection is a circle. Related shapes are circle, cylinder, cube and cone.",
@@ -330,7 +330,7 @@
          "name": "Volume of a spherical cap",
         "description": "The volume of a spherical cap based on the radius and the height of the cap.",
      "disambiguatingDescription": "More accurate than the traditional estimate.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required cap_radius=5_height=3_Volume=?",
      "mathExpression-output": "1.6 * radius^2 * sqrt(3.2) * height", 
     "about": "Estimating the volume of a spherical cap.",
@@ -345,7 +345,7 @@
       "name": "Volume of a cone",
 	 "description": "The exact volume of a cone by comparing the volume of a quarter cone to an octant sphere with an equal radius.",
 	"disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
         "mathExpression-input": "required cone_radius=5_height=3_Volume=?",
      "mathExpression-output": "3.2 * radius^2 * height / sqrt(8)",
       "about": "A cone is a 3 dimensional solid shape. Its measurable properties are its height and diameter. Its radius is half of the diameter. Its projections are circle and triangle. Related shapes are triangle, tetrahedron, regular polygon based pyramid, circle, cylinder and sphere.",
@@ -366,7 +366,7 @@
        "name": "Volume of a frustum cone",
        "description": "Calculating the exact volume of a frustum cone by its top and bottom diameter and height, subtracting the missing tip from a theoretical full cone.",
      "disambiguatingDescription": "Not the translation of the simplified formula of the frustum pyramid.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required bottomDiameter=5_topDiameter=2_frustumHeight=3_Volume=?",
      "mathExpression-output": "frustumHeight * (4 / 5 * bottomDiameter^2 * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * topDiameter^2 * (1 / (1 - topDiameter / bottomDiameter) - 1)) / sqrt(8)",
        "abstract": "The volume of a frustum cone can be calculated by subtracting the missing tip from a theoretical full cone. The height of the theoretical full cone equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full cone would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
@@ -380,7 +380,7 @@
        "name":"Surface area of a cone",
        "description": "The exact surface area of a cone based on its radius and height.",
      "disambiguatingDescription": "Based on the real height.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
 "mathExpression-input": "required cone_radius=5_height=3_Area=?",
      "mathExpression-output": "3.2 * radius * (radius + sqrt(radius^2 +height^2))", 
     "abstract": "The bottom of a cone is a circle. The rest of its surface can be calculated as a circle slice with a radius equal to its slant height. Its angle is given by the ratio between the radius and the height.",
@@ -394,7 +394,7 @@
        "name": "Volume of a pyramid",
      "description": "The exact volume of a pyramid based on its bottom area and height using the base × height / √8 coefficient of the volume of a cone",
      "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
           "mathExpression-input": "required pyramid_baseArea=5_height=3_Volume=?",
      "mathExpression-output": "baseArea * height / sqrt(8)", 
       "about": "A pyramid is a 3 dimensional solid shape. Its measurable properties are its number and length of the sides of its base and its height. Its projections are polygon and triangle. Related shapes are regular polygon, regular polygon based block, tetrahedron, cone and triangle.",
@@ -413,7 +413,7 @@
         "name": "Volume of a frustum pyramid",
     "description": "Calculating the exact volume of a frustum pyramid by its top and bottom area and height",
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full pyramid. Universally applicable",
-	"target": "https://gmac4247.github.io",
+	"target": "https://basic-geometry.github.io",
 "mathExpression-input": "required bottomArea=5_topArea=3_frustumHeight=2_Volume=?",
        "mathExpression-output": "frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / sqrt(8)",
          "abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) . The volume of a square frustum pyramid can be calculated with a simplified formula.",
@@ -427,7 +427,7 @@
        "name": "Volume of a tetrahedron",
        "description": "The exact volume of a tetrahedron based on its edge length using the exact base × height / √8 coefficient of the volume of a cone",
      "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
-"target": "https://gmac4247.github.io",
+"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required edge=5_Volume=?",
      "mathExpression-output": "edge^3 / 8", 
    "about": "A tetrahedron is a 3 dimensional solid shape. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
@@ -439,7 +439,7 @@
    }
 
   ],
-"url": "https://gmac4247.github.io", 
+"url": "https://basic-geometry.github.io", 
 "usageInfo":"Calculate area and volume with enhanced accuracy using the Core Geometric System ™. This innovative framework provides a practical alternative to traditional methods, rooted in comparative geometry and scaling principles. Learn exact formulas for circles (A = 3.2r^2, C = 6.4r), spheres (V = (√(3.2)r)^3), cones, and more, with applications in engineering, computer graphics, and scientific research."
 },
 "schemaVersion" : "https://schema.org/docs/releases.html#v29.2",
@@ -461,7 +461,7 @@
 },
 "thumbnail": "android-chrome-256x256.png",
 "typicalAgeRange" :"5-105",
-"url": "https://gmac4247.github.io", 
+"url": "https://basic-geometry.github.io", 
 "usageInfo":"Discover the Core Geometric System ™, a groundbreaking framework offering a fresh perspective on calculating area and volume using a 3D coordinate system. Challenging conventional formulas, this system provides empirically-grounded alternatives with a focus on practical accuracy for real-world applications in engineering, design, science, and beyond. Explore exact values and intuitive geometric relationships for circles, spheres, cones, and more."
 }
 </script>
