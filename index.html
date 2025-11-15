@@ -501,7 +501,7 @@
 </div>
 <br>
 <div>
-<strong style="margin:12px;" >The Basic Geometry Curriculum 
+<strong style="margin:12px;" >The Basic Geometry Curriculum with Copilot 
 </strong>
 <br>
 <br>
@@ -510,7 +510,14 @@
     <img class="center-fit" src="geometry.jpeg"  alt="Geometry">
 </div>
 <br>
-<p style="margin:12px;"><b>Key Points:</b>
+<p style="margin:12px;">
+This curriculum can be used as standalone, but it is primarily designed to be expandable. For deeper explanations, visualizations, historical context, and interactive practice, we recommend using Copilot — your AI companion for learning.  
+<br>
+Ask Copilot to explore any topic on this page. It adapts to your pace, your questions, and your curiosity.
+<br>
+<br>
+<br>
+<b>Key Points:</b>
 <br>
 <br>
 <br>
@@ -2217,10 +2224,10 @@ These values are exact, rational, and logically derived. They can be verified nu
 The area of a circle is defined by comparing it to a square since that is the base of area calculation.
 </strong>
 <br>
+<br>
 <div class="imgbox">
     <img class="center-fit" src="areaOfACircle.jpg" alt="figure-Circle-area=3.2r²" id="circle">
 </div>
-<br>
 <br>
 <p style="margin:12px;">The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
 <br>
@@ -2778,61 +2785,6 @@ The quadrant method proves that the area of a circle equals exactly 3.2 × radiu
 <section>
     <p style="font-size:160%;font-weight:bold;margin:7px">Area of a circle segment</p>
 <br>
-<div>
-<label style="margin:12px;" for="segment-length">Length:</label>
-<input id="segment-length" type="number" value="2" step="any" />
-<br>
-<label style="margin:12px;" for="segment-height">Height:</label>
-<input id="segment-height" type="number" value="1" step="any" />
-	
-<script>
-  function segmentArea(length, height, angle, radius) {
-    return angle * radius ** 2 - (radius - height) * length / 2;
-  }
-
-function updateSegmentArea() {
-  const length = parseFloat(document.getElementById('segment-length').value);
-  const height = parseFloat(document.getElementById('segment-height').value);
-
-  if (isNaN(length) || isNaN(height) || height === 0) {
-    document.getElementById('segment-area').innerText = '';
-    return;
-  }
-
-const ratio = 2 * height / length;
-	
-  // Segment validity check
-
-  if ( ratio === 0) {
-    document.getElementById('segment-area').innerText = '';
-    return;
-	}
-
-  if (ratio < 0.11 || ratio > 1) {
-    document.getElementById('segment-area').innerText = 'This ratio is out of range';
-    return;
-  }
-	
-  const angle = parseFloat(2 * Atan(ratio));
-  const sine = parseFloat(sin(angle));
-  const radius = parseFloat((length / 2 / sine).toFixed(5));
-  const area = segmentArea(length, height, angle, radius);
-
-  if ( ratio === 1) {
-    document.getElementById('segment-area').innerText =
-    `Area of semi-circle: ${area.toFixed(5)} square units`;
-	return;
-  }
-	
-  document.getElementById('segment-area').innerText =
-    `Area: ${area.toFixed(5)} square units`;
-}
-
-  document.getElementById('segment-length').addEventListener('input', updateSegmentArea);
-  document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
-</script>
-<p style="margin:12px;" id="segment-area"></p>
-</div>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="circleSegment.jpg" alt="figure-Circle-segment" id="segment">
@@ -2895,14 +2847,70 @@ The angle of the slice can be calculated via trigonometric functions by the heig
     <mi>r</mi>
   </mrow>
 </math>
+<br>
+<br>
+<div>
+<label style="margin:12px;" for="segment-length">Length:</label>
+<input id="segment-length" type="number" value="2" step="any" />
+<br>
+<label style="margin:12px;" for="segment-height">Height:</label>
+<input id="segment-height" type="number" value="1" step="any" />
+	
+<script>
+  function segmentArea(length, height, angle, radius) {
+    return angle * radius ** 2 - (radius - height) * length / 2;
+  }
+
+function updateSegmentArea() {
+  const length = parseFloat(document.getElementById('segment-length').value);
+  const height = parseFloat(document.getElementById('segment-height').value);
+
+  if (isNaN(length) || isNaN(height) || height === 0) {
+    document.getElementById('segment-area').innerText = '';
+    return;
+  }
+
+const ratio = 2 * height / length;
+	
+  // Segment validity check
+
+  if ( ratio === 0) {
+    document.getElementById('segment-area').innerText = '';
+    return;
+	}
+
+  if (ratio < 0.11 || ratio > 1) {
+    document.getElementById('segment-area').innerText = 'This ratio is out of range';
+    return;
+  }
+	
+  const angle = parseFloat(2 * Atan(ratio));
+  const sine = parseFloat(sin(angle));
+  const radius = parseFloat((length / 2 / sine).toFixed(5));
+  const area = segmentArea(length, height, angle, radius);
+
+  if ( ratio === 1) {
+    document.getElementById('segment-area').innerText =
+    `Area of semi-circle: ${area.toFixed(5)} square units`;
+	return;
+  }
+	
+  document.getElementById('segment-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
+
+  document.getElementById('segment-length').addEventListener('input', updateSegmentArea);
+  document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
+</script>
+<p style="margin:12px;" id="segment-area"></p>
+</div>
 </section>
-<br>
-<br>
 <br>
 <br>
 <section>
 <strong>The circumference of a circle can be derived 
 from its area algebraically.</strong>
+<br>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="circumference.jpg" alt="figure-Circumference=6.4r" id="circumference">
@@ -3053,10 +3061,10 @@ In calculus terms:
 <br>
 <br>
 <section>
-<strong>Proof</strong>
+<p style="margin:12px;"><strong>Proof</strong>
 <br>
 <br>
-<p style="margin:12px;">Expand the term (r - x)²:
+Expand the term (r - x)²:
 </p>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3270,6 +3278,7 @@ These are two aspects of that.
 <section>
 <strong style="font-size:160%;margin:7px;">Volume of a sphere</strong>
 <br>
+<br>
 <div class="imgbox">
     <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="figure-Sphere-volume=(√(3.2)r)³" id="sphere">
     </div>
@@ -3374,8 +3383,40 @@ If you're trying to calculate the volume of a physical ball or sphere for a prac
 <br>
 <br>
 <br>
-<div>
+<section>
 <strong style="font-size:160%;margin:7px;">Volume of a spherical cap</strong>
+<br>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="sphericalCap.jpg" alt="figure-Spherical-cap" id="cap">
+    </div>
+    <br>
+<p style="margin:12px;">One dimension of the volume of sphere formula can be modified to calculate the volume of a spherical cap as a distorted hemisphere.
+</p>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+ <mi>V</mi>
+      <mo>=</mo>
+  <mn>1.6</mn>
+<mo>×</mo>
+ <msup>
+<mrow>
+<msub>
+<mi>r</mi>
+<mi>cap</mi>
+</msub>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>×</mo>
+<msqrt>
+<mn>3.2</mn>
+</msqrt>
+<mo>×</mo>
+<mi>h</mi>
+  </mrow>
+</math>
 <br>
 <br>
 <div>
@@ -3422,42 +3463,12 @@ if ( height === radius) {
 <p style="margin:12px;" id="cap-volume"></p>
 </div>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="sphericalCap.jpg" alt="figure-Spherical-cap" id="cap">
-    </div>
-    <br>
-<p style="margin:12px;">One dimension of the volume of sphere formula can be modified to calculate the volume of a spherical cap as a distorted hemisphere.
-</p>
-<br>
-<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
-<mrow>
- <mi>V</mi>
-      <mo>=</mo>
-  <mn>1.6</mn>
-<mo>×</mo>
- <msup>
-<mrow>
-<msub>
-<mi>r</mi>
-<mi>cap</mi>
-</msub>
-</mrow>
-<mn>2</mn>
-</msup>
-<mo>×</mo>
-<msqrt>
-<mn>3.2</mn>
-</msqrt>
-<mo>×</mo>
-<mi>h</mi>
-  </mrow>
-</math>
-</div>
+</section>
 <br>
 <br>
 <br>
 <br>
-<div>
+<section>
 <p style="margin:12px;">The conventional formula for the surface area of a sphere was developed from the " volume = 4 / 3 × π × radius³ " formula.
 </p>
 <br>
@@ -3485,45 +3496,14 @@ if ( height === radius) {
 </div>
 <a style="margin:12px;" class="rounded-button" href="privacy-policy">Contact</a>
 </div>
-</div>
+</section>
 <br>
 <br>
 <br>
 <br>
-<div>
+<section>
 <strong style="font-size:160%;margin:7px;">Volume of a cone</strong>
 <br>
-<br>
-<div>
-<label style="margin:12px;" for="cone-radius-v">Radius:</label>
-<input id="cone-radius-v" type="number" value="1" step="any" />
-<br>
-<label style="margin:12px;" for="cone-height-v">Height:</label>
-<input id="cone-height-v" type="number" value="1" step="any" />
-	
-<script>
-  function coneVolume(radius, height) {
-    return 3.2 * radius * radius * height / Math.sqrt(8);
-  }
-
-  function updateConeVolume() {
-    const radius = parseFloat(document.getElementById('cone-radius-v').value);
-    const height = parseFloat(document.getElementById('cone-height-v').value);
-
-    if (isNaN(radius) || isNaN(height)) {
-      document.getElementById('cone-volume').innerText = '';
-      return;
-    }
-
-    document.getElementById('cone-volume').innerText =
-      `Volume: ${coneVolume(radius, height).toFixed(5)} cubic units`;
-  }
-
-  document.getElementById('cone-radius-v').addEventListener('input', updateConeVolume);
-  document.getElementById('cone-height-v').addEventListener('input', updateConeVolume);
-</script>
-<p style="margin:12px;" id="cone-volume"></p>
-</div>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone-volume-from-sphere=base×height/√8" id="cone">
@@ -3768,67 +3748,43 @@ The intermediate of the areas of the horizontal cross section slices of a cone i
 </div>
 <br>
 <br>
-<br>
-<br>
 <div>
-<strong style="font-size:160%;margin:7px;">Volume of a frustum cone</strong>
+<label style="margin:12px;" for="cone-radius-v">Radius:</label>
+<input id="cone-radius-v" type="number" value="1" step="any" />
 <br>
-<br>
-<div>
-<label style="margin:12px;" for="frustum-cone-base-radius">Base radius:</label>
-<input id="frustum-cone-base-radius" type="number" value="2" step="any" />
-<br>
-<label style="margin:12px;" for="frustum-cone-top-radius">Top radius:</label>
-<input id="frustum-cone-top-radius" type="number" value="1" step="any" />
-<br>
-<label style="margin:12px;" for="frustum-cone-height">Height:</label>
-<input id="frustum-cone-height" type="number" value="1" step="any" />
-
+<label style="margin:12px;" for="cone-height-v">Height:</label>
+<input id="cone-height-v" type="number" value="1" step="any" />
+	
 <script>
-  function frustumConeVolume(baseArea, topArea, reciprocal, height) {
-  return height * (baseArea * reciprocal - topArea * (reciprocal - 1)) / Math.sqrt(8);
-}
-
-function updateFrustumConeVolume() {
-
-	const baseRadius = parseFloat(document.getElementById('frustum-cone-base-radius').value);
-	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
-	const height = parseFloat(document.getElementById('frustum-cone-height').value);
-
-  if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height) || baseRadius === 0 || topRadius === 0) {
-    document.getElementById('frustum-cone-volume').innerText = '';
-    return;
+  function coneVolume(radius, height) {
+    return 3.2 * radius * radius * height / Math.sqrt(8);
   }
 
-if ( topRadius > baseRadius) {
-    document.getElementById('frustum-cone-volume').innerText = 'Let the larger end be the base.';
-    return;
-}
-	
-	const baseArea = 3.2 * (baseRadius ** 2);
-	const topArea = 3.2 * (topRadius ** 2);
-	const cylinderVolume = baseArea * height;
-	const shape = topRadius / baseRadius;
-	const inverse = 1 - shape;
-	const reciprocal = 1 / inverse;
-	const volume = frustumConeVolume(baseArea, topArea, reciprocal, height);
+  function updateConeVolume() {
+    const radius = parseFloat(document.getElementById('cone-radius-v').value);
+    const height = parseFloat(document.getElementById('cone-height-v').value);
 
-if ( topRadius === baseRadius) {
-    document.getElementById('frustum-cone-volume').innerText = 
-	`Volume of cylinder: ${cylinderVolume.toFixed(5)} cubic units`;
-    return;
-}
-	
-  document.getElementById('frustum-cone-volume').innerText =
-    `Volume: ${volume.toFixed(5)} cubic units`;
-	  }
+    if (isNaN(radius) || isNaN(height)) {
+      document.getElementById('cone-volume').innerText = '';
+      return;
+    }
 
-document.getElementById('frustum-cone-base-radius').addEventListener('input', updateFrustumConeVolume);
-document.getElementById('frustum-cone-top-radius').addEventListener('input', updateFrustumConeVolume);
-document.getElementById('frustum-cone-height').addEventListener('input', updateFrustumConeVolume);
+    document.getElementById('cone-volume').innerText =
+      `Volume: ${coneVolume(radius, height).toFixed(5)} cubic units`;
+  }
+
+  document.getElementById('cone-radius-v').addEventListener('input', updateConeVolume);
+  document.getElementById('cone-height-v').addEventListener('input', updateConeVolume);
 </script>
-<p style="margin:12px;" id="frustum-cone-volume"></p>
+<p style="margin:12px;" id="cone-volume"></p>
 </div>
+<br>
+<br>
+<br>
+<br>
+<section>
+<strong style="font-size:160%;margin:7px;">Volume of a frustum cone</strong>
+<br>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="frustumOfConeMarkup.png" alt="figure-Horizontal-frustum-cone">
@@ -3941,40 +3897,68 @@ The height of the theoretical full cone can be calculated by the frustum height 
 </div>
 <br>
 <br>
-<br>
-<br>
 <div>
+<label style="margin:12px;" for="frustum-cone-base-radius">Base radius:</label>
+<input id="frustum-cone-base-radius" type="number" value="2" step="any" />
+<br>
+<label style="margin:12px;" for="frustum-cone-top-radius">Top radius:</label>
+<input id="frustum-cone-top-radius" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="frustum-cone-height">Height:</label>
+<input id="frustum-cone-height" type="number" value="1" step="any" />
+
+<script>
+  function frustumConeVolume(baseArea, topArea, reciprocal, height) {
+  return height * (baseArea * reciprocal - topArea * (reciprocal - 1)) / Math.sqrt(8);
+}
+
+function updateFrustumConeVolume() {
+
+	const baseRadius = parseFloat(document.getElementById('frustum-cone-base-radius').value);
+	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
+	const height = parseFloat(document.getElementById('frustum-cone-height').value);
+
+  if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height) || baseRadius === 0 || topRadius === 0) {
+    document.getElementById('frustum-cone-volume').innerText = '';
+    return;
+  }
+
+if ( topRadius > baseRadius) {
+    document.getElementById('frustum-cone-volume').innerText = 'Let the larger end be the base.';
+    return;
+}
+	
+	const baseArea = 3.2 * (baseRadius ** 2);
+	const topArea = 3.2 * (topRadius ** 2);
+	const cylinderVolume = baseArea * height;
+	const shape = topRadius / baseRadius;
+	const inverse = 1 - shape;
+	const reciprocal = 1 / inverse;
+	const volume = frustumConeVolume(baseArea, topArea, reciprocal, height);
+
+if ( topRadius === baseRadius) {
+    document.getElementById('frustum-cone-volume').innerText = 
+	`Volume of cylinder: ${cylinderVolume.toFixed(5)} cubic units`;
+    return;
+}
+	
+  document.getElementById('frustum-cone-volume').innerText =
+    `Volume: ${volume.toFixed(5)} cubic units`;
+	  }
+
+document.getElementById('frustum-cone-base-radius').addEventListener('input', updateFrustumConeVolume);
+document.getElementById('frustum-cone-top-radius').addEventListener('input', updateFrustumConeVolume);
+document.getElementById('frustum-cone-height').addEventListener('input', updateFrustumConeVolume);
+</script>
+<p style="margin:12px;" id="frustum-cone-volume"></p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<section>
 <p style="font-size:160%;font-weight:bold;margin:7px;">Surface area of a cone</p>
 <br>
-<div>
-<label style="margin:12px;" for="cone-radius-s">Radius:</label>
-<input id="cone-radius-s" type="number" value="1" step="any" />
-<br>
-<label style="margin:12px;" for="cone-height-s">Height:</label>
-<input id="cone-height-s" type="number" value="1" step="any" />
-<script>
-  function coneSurface(radius, height) {
-    return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
-  }
-
-  function updateConeSurface() {
-    const radius = parseFloat(document.getElementById('cone-radius-s').value);
-    const height = parseFloat(document.getElementById('cone-height-s').value);
-
-    if (isNaN(radius) || isNaN(height)) {
-      document.getElementById('cone-surface').innerText = '';
-      return;
-    }
-
-    document.getElementById('cone-surface').innerText =
-      `Volume: ${coneSurface(radius, height).toFixed(5)} square units`;
-  }
-
-  document.getElementById('cone-radius-s').addEventListener('input', updateConeSurface);
-  document.getElementById('cone-height-s').addEventListener('input', updateConeSurface);
-</script>
-<p style="margin:12px;" id="cone-surface"></p>
-</div>
 <br>
 <div class="imgbox">
   <img class="center-fit" src="coneMarkup.jpeg" alt="figure-Cone-surface" id="coneSurface">
@@ -4014,13 +3998,76 @@ The height of the theoretical full cone can be calculated by the frustum height 
 <mo>)</mo>
 </mrow>
 </math>
+<div>
+<br>
+<br>
+<label style="margin:12px;" for="cone-radius-s">Radius:</label>
+<input id="cone-radius-s" type="number" value="1" step="any" />
+<br>
+<label style="margin:12px;" for="cone-height-s">Height:</label>
+<input id="cone-height-s" type="number" value="1" step="any" />
+<script>
+  function coneSurface(radius, height) {
+    return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
+  }
+
+  function updateConeSurface() {
+    const radius = parseFloat(document.getElementById('cone-radius-s').value);
+    const height = parseFloat(document.getElementById('cone-height-s').value);
+
+    if (isNaN(radius) || isNaN(height)) {
+      document.getElementById('cone-surface').innerText = '';
+      return;
+    }
+
+    document.getElementById('cone-surface').innerText =
+      `Volume: ${coneSurface(radius, height).toFixed(5)} square units`;
+  }
+
+  document.getElementById('cone-radius-s').addEventListener('input', updateConeSurface);
+  document.getElementById('cone-height-s').addEventListener('input', updateConeSurface);
+</script>
+<p style="margin:12px;" id="cone-surface"></p>
 </div>
 <br>
 <br>
 <br>
 <br>
-<div>
+<section>
 <strong style="font-size:160%;margin:7px">Volume of a pyramid</strong>
+<br>
+<br>
+<div class="imgbox">
+  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="figure-Pyramids-volume=base×height/√8" id="pyramid">
+  </div>
+<br>
+<div class="imgbox">
+  <img class="center-fit" src="tetraFrame.jpeg" alt="figure-Tetrahedral-frame-on-circular-base" >
+  </div>
+<br>
+<p style="margin:12px;">The volume of a pyramid can be calculated 
+with the same coefficient as the volume of a cone.
+</p>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>V</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msub>
+<mi>A</mi>
+<mi>base</mi>
+</msub>
+<mo>×</mo>
+ <mi>H</mi>
+ </mrow>
+<msqrt>
+ <mn>8</mn>
+ </msqrt>
+ </mfrac>
+</mrow>
+</math>
 <br>
 <br>
 <div>
@@ -4063,45 +4110,73 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 </script>
 <p style="margin:12px;" id="pyramid-volume"></p>
 </div>
+</section>
 <br>
-<div class="imgbox">
-  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="figure-Pyramids-volume=base×height/√8" id="pyramid">
-  </div>
 <br>
-<div class="imgbox">
-  <img class="center-fit" src="tetraFrame.jpeg" alt="figure-Tetrahedral-frame-on-circular-base" >
-  </div>
 <br>
-<p style="margin:12px;">The volume of a pyramid can be calculated 
-with the same coefficient as the volume of a cone.
+<br>
+<section>
+<p style="font-size:160%;font-weight:bold;margin:7px;">Volume of a horizontal frustum pyramid</p>
+<br>
+<br>
+<p style="margin:12px;">The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. 
+<br>
+<br>
+The height of the theoretical full pyramid can be calculated by the frustum height and the ratio between the top and bottom areas.
 </p>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
-<mrow>
-<mi>V</mi>
-<mo>=</mo>
+     <mrow>
+ <mi>V</mi>
+      <mo>=</mo>
 <mfrac>
 <mrow>
-<msub>
-<mi>A</mi>
-<mi>base</mi>
-</msub>
+      <mi>H</mi>
+	<mo>×</mo>
+      <mo>(</mo>
+      
+        <mi>bottom area</mi>
 <mo>×</mo>
- <mi>H</mi>
- </mrow>
-<msqrt>
- <mn>8</mn>
- </msqrt>
- </mfrac>
+      <mo>(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+          <mfrac>
+            <mi>top area</mi>
+            <mi>bottom area</mi>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>)</mo>
+      <mo>-</mo>
+        <mi>top area</mi>
+<mo>×</mo>
+      <mo>(</mo>
+      <mfrac>
+        <mn>1</mn>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+          <mfrac>
+            <mi>top area</mi>
+            <mi>bottom area</mi>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>-</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+      <mo>)</mo>
 </mrow>
-</math>
-</div>
+      <msqrt>
+        <mn>8</mn>
+      </msqrt>
+      </mfrac>
+</mrow>
+  </math>
 <br>
-<br>
-<br>
-<br>
-<div>
-<p style="font-size:160%;font-weight:bold;margin:7px;">Volume of a horizontal frustum pyramid</p>
 <br>
 <div>
 <label style="margin:12px;" for="frustum-pyramid-side-number">Number of sides:</label>
@@ -4171,65 +4246,6 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </script>
 <p style="margin:12px;" id="frustum-pyramid-volume"></p>
 </div>
-<br>
-<br>
-<p style="margin:12px;">The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. 
-<br>
-<br>
-The height of the theoretical full pyramid can be calculated by the frustum height and the ratio between the top and bottom areas.
-</p>
-<br>
-<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
-     <mrow>
- <mi>V</mi>
-      <mo>=</mo>
-<mfrac>
-<mrow>
-      <mi>H</mi>
-	<mo>×</mo>
-      <mo>(</mo>
-      
-        <mi>bottom area</mi>
-<mo>×</mo>
-      <mo>(</mo>
-      <mfrac>
-        <mn>1</mn>
-        <mrow>
-          <mn>1</mn>
-          <mo>-</mo>
-          <mfrac>
-            <mi>top area</mi>
-            <mi>bottom area</mi>
-          </mfrac>
-        </mrow>
-      </mfrac>
-      <mo>)</mo>
-      <mo>-</mo>
-        <mi>top area</mi>
-<mo>×</mo>
-      <mo>(</mo>
-      <mfrac>
-        <mn>1</mn>
-        <mrow>
-          <mn>1</mn>
-          <mo>-</mo>
-          <mfrac>
-            <mi>top area</mi>
-            <mi>bottom area</mi>
-          </mfrac>
-        </mrow>
-      </mfrac>
-      <mo>-</mo>
-      <mn>1</mn>
-      <mo>)</mo>
-      <mo>)</mo>
-</mrow>
-      <msqrt>
-        <mn>8</mn>
-      </msqrt>
-      </mfrac>
-</mrow>
-  </math>
 <br>
 <br>
 <p style="margin:12px;">The volume of a square frustum pyramid can be calculated via a simplified formula. 
@@ -4303,36 +4319,14 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
         <mi>bottom edge</mi>
 </mrow>
 </math>
-</div>
+</section>
 <br>
 <br>
 <br>
 <br>
-<div>
+<section>
 <p style="font-size:160%;font-weight:bold;margin:7px">Volume of a tetrahedron</p>
 <br>
-<div>
-<label style="margin:12px;" for="tetrahedron-edge">Edge:</label>
-<input id="tetrahedron-edge" type="number" value="1" step="any" />
-
-<script>
-  function tetrahedronVolume(edge) {
-    return Math.pow(edge, 3) / 8;
-  }
-
-  document.getElementById('tetrahedron-edge').addEventListener('input', function () {
-    const edge = parseFloat(this.value);
-    if (isNaN(edge)) {
-      document.getElementById('tetrahedron-volume').innerText = '';
-    return;
-    }
-
-    document.getElementById('tetrahedron-volume').innerText =
-      `Volume: ${tetrahedronVolume(edge).toFixed(5)} cubic units`;
-    });
-</script>
-<p style="margin:12px;" id="tetrahedron-volume"></p>
-</div>
 <br>
 <div class="imgbox">
   <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="figure-Tetrahedron-volume=edge³/8" id="tetrahedron">
@@ -4621,7 +4615,29 @@ The base of a tetrahedron is an equilateral triangle.
   </mrow>
 </math>
 <br>
+<br>
+<label style="margin:12px;" for="tetrahedron-edge">Edge:</label>
+<input id="tetrahedron-edge" type="number" value="1" step="any" />
+
+<script>
+  function tetrahedronVolume(edge) {
+    return Math.pow(edge, 3) / 8;
+  }
+
+  document.getElementById('tetrahedron-edge').addEventListener('input', function () {
+    const edge = parseFloat(this.value);
+    if (isNaN(edge)) {
+      document.getElementById('tetrahedron-volume').innerText = '';
+    return;
+    }
+
+    document.getElementById('tetrahedron-volume').innerText =
+      `Volume: ${tetrahedronVolume(edge).toFixed(5)} cubic units`;
+    });
+</script>
+<p style="margin:12px;" id="tetrahedron-volume"></p>
 </div>
+</section>
 <br>
 <br>
 <br>
