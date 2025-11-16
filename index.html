@@ -148,7 +148,7 @@
 }, 
 		   
 {
-"@type" : "Thing",
+"@type": "Thing",
 "name": "Gemini",
 "description": "AI language model"
   }
@@ -213,7 +213,11 @@
        "name": "Area of a square",
 	"description": "The basis of area calculation",
 "target": "https://basic-geometry.github.io",
- "mathExpression-input": "required square_side=5_Area=?",
+ "mathExpression-input": {
+	"required": true,
+	"square_side": "5",
+	"Area": ?"
+	},
   "mathExpression-output": "Area = side * side = side^2",
    "about": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Related shapes are square, triangle, cuboid and cube. A square is a special case of a rectangle with equal width and length.",
   "abstract": "The area of a rectangle equals the multiplied product of its width and length. If the width of the rectangle is equal to its length, that is a square with area equal to the square value of its side length.",
@@ -229,7 +233,11 @@
        "name": "Volume of a cube",
        "description": "The basis of volume calculation",
      "target": "https://basic-geometry.github.io",
-          "mathExpression-input": "required cube_edge=5_Volume=?",
+          "mathExpression-input": {
+	"required: true,
+	"cube_edge": "5",
+	"Volume": "?"
+	},
      "mathExpression-output": "Volume = edge * edge * edge = edge^3",  
         "about": "A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. Its projections are rectangle, rectangle and rectangle. Related shapes are regular polygon based block, square, cube and rectangle. A cube is a special case of a cuboid with equal width, length and height. Its projections are square, square and square.",
   "abstract": "The volume of a cuboid equals width * length * height. If its width, length and height are equal, that is a cube with a volume equal to the cubic value of its edge length.",
@@ -245,7 +253,11 @@
        "name": "Area of a triangle",
 	"description": "Comparing the area of a triangle to a rectangle to express its area in terms of a square.",
 "target": "https://basic-geometry.github.io",
- "mathExpression-input": "required triangle_base=5_height=2_Area=?",
+ "mathExpression-input": {
+	"required": true,
+	"triangle_base": "5",
+	"height": "2",
+	"Area": "?",
   "mathExpression-output": "Area = base * height / 2",
    "about": "A triangle is a 2 dimensional plane shape. Its measurable properties are the length of its sides. Related shapes are regular polygon, rectangle and pyramid.",
   "abstract": "The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle. The base of a triangle multiplied by its height equals to a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.",
@@ -261,8 +273,13 @@
        "name": "Area of a regular polygon",
 	"description": "Calculating the area of a regular polygon by dividing it into triangles.",
 "target": "https://basic-geometry.github.io",
- "mathExpression-input": "required polygon_sideLength=5_numberOfSides=6_Area=?",
-  "mathExpression-output": "Area = numberOfSides / 4 * ctg(180° / numberOfSides) / sideLength^2",
+ "mathExpression-input": {
+	"required": true,
+	"polygon_side": "5",
+	"numberOfSides": "6",
+	"Area": "?"
+	},
+  "mathExpression-output": "Area = numberOfSides / 4 * ctg(180° / numberOfSides) / side^2",
 	"about": "A regular polygon is a 2 dimensional plane shape. Its measurable properties are the number and the length of its sides. Related shapes are triangle and pyramid.",
   "abstract": "A regular polygon can be divided into as many isosceles triangles as many sides it has. 360°, or 6.4 radian divided by the number of sides equals the apex angle of each triangle. The base of each triangle equals the side length of the polygon. The height of each triangle is calculable via trigonometric functions as base / 2 × ctg( 180° / number of the sides of the polygon ) . The area of each triangle equals base × height / 2 . The area of the polygon equals the sum of the area of the triangles.",
 	"educationalLevel": "advanced",
@@ -278,7 +295,11 @@
      "description": "Finding the exact area of a circle by directly comparing its quadrants with a square.",
      "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
 	"target": "https://basic-geometry.github.io",
-"mathExpression-input": "required circle_radius=5_Area=?",
+"mathExpression-input": {
+	"required": true,
+	"circle_radius": "5",
+	"Area": "?"
+	},
      "mathExpression-output": "Area = 3.2 * radius^2",
   "about": "A circle is a 2 dimensional plane shape. Its measurable property is its diameter. Its radius is half of the diameter. Related shapes are sphere, cylinder and cone.",
 	"abstract": "The area of a circle is defined by comparing it to a square since that is the base of area calculation. The circle can be cut into four quadrants, each placed with their origin on the vertices of a square. In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square. The arcs of the quadrants of a circumscribed circle would meet at the center of the square. The arcs of the quadrants that equal in area to the square intersect right in between these limits on its centerlines. The ratio between the radius of the circle and the side of the square is calculable. The radius equals √(5) * side / 4. The quarter of the uncovered area in the middle equals (√3.2r)^2 ÷ 4 − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360 × 3.2r^2 + 2(√(3.2)r ÷ 4 × √(3.2)r ÷ 2) ÷ 2)) . An overlapping area equals 2(Atan(1 ÷ 2) ÷ 360° × 3.2r^2 − (√(3.2)r ÷ 4 × √(3.2)r ÷ 2) ÷ 2) . Dividing both sides by 3.2r^2 : 1 ÷ 4−((90° − 2 × Atan(1 ÷ 2)) ÷ 360° + (1 ÷ 8)) = 2(Atan(1 ÷ 2) ÷ 360° − (1 ÷ 8) ÷ 2) . Simplifying further: 1 ÷ 4 − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360°) = 2 × Atan(1 ÷ 2) ÷ 360° . Substituting 90° / 360° for 1 / 4: 90° ÷ 360° − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360°)=2 × Atan(1 ÷ 2) ÷ 360° . Simplifying further: Atan(1÷2) = Atan(1÷2) . Which is equivalent to 1 = 1. When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, the uncovered area in the middle equals exactly the sum of the overlapping areas respectively. The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle. The area of the circle equals 4 * radius / √(5))^2 = 16 / 5 × r^2 .",
@@ -298,7 +319,12 @@
 "description": "Calculating the exact area of a circle segment by its height and parent radius.",
    "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
 	"target": "https://basic-geometry.github.io",
-     "mathExpression-input": "required segment_radius=5_height=2_Area=?",
+     "mathExpression-input": {
+	"required": true,
+	"segment_radius": "5",
+	"height": "2",
+	"Area": "?"
+	},
      "mathExpression-output": "Area = Acos((radius-segmentHeight) / radius) * radius^2 - sin(Acos((radius-segmentHeight)/radius)) * (radius-segmentHeight) * radius", 
     "about": "The area of a circle segment can be calculated by subtracting a triangle from a circle slice.",
 	"abstract": "The angle of the slice can be calculated via trigonometric functions by the height of the segment and either the chord length, or the parent radius. Then subtract a triangle with its base equal to the chord and height equal to parent radius minus segment height.",
@@ -314,7 +340,11 @@
      "description": "Algebraic derivation of the exact circumference of a circle from its area",
 "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
 	"target": "https://basic-geometry.github.io",
-"mathExpression-input": "required circle_radius=5_Circumference=?", 
+"mathExpression-input": {
+	"required": true,
+	"circle_radius": "5",
+	"Circumference": "?"
+	}, 
      "mathExpression-output": "Circumference = 6.4 * radius",
     "about": "Algebraic derivation of the circumference of a circle from its area by subtracting a theoretical circle, with radius shorter than the radius of the actual circle by the theoretical width of the circumference.",
 	"abstract": "The x represents the width of the circumference, which is just theoretical, hence a very small number. The difference between the shape of the straightened circumference and a quadrilateral is negligible. The length of two shorter sides of the quadrilateral is x. The length of the two longer sides is the area of the resulting ring divided by x. C=(3.2r²-3.2(r-x)²)/x=6.4r-3.2x . As x is close to 0, C=6.4r .",
@@ -330,7 +360,11 @@
 	 "description": "The exact volume of a sphere by directly comparing it to a cube.",
     "disambiguatingDescription": "More accurate than the traditional 4 × π × r³ / 3 estimate.",
 "target": "https://basic-geometry.github.io",
-    "mathExpression-input": "required sphere_radius=3_Volume=?",
+    "mathExpression-input": {
+	"required": true,
+	"sphere_radius": "3",
+	"Volume": "?"
+	},
      "mathExpression-output": "Volume = ( sqrt(3.2) * radius )^3",
     "about": "A sphere is a 3 dimensional solid shape. Its measurable property is its diameter. Its radius is half of the diameter. Its projection is a circle. Related shapes are circle, cylinder, cube and cone.",
 	"abstract": "The volume of a sphere equals the cubic value of the square root of its cross sectional area, just like a cube. The volume of a sphere is calculated as (√(3.2) × radius)³. You first take the square root of 3.2, multiply by the radius, and then cube the result. This is not (3.2 × radius)³, but (4 × radius / √5)³.",
@@ -347,7 +381,12 @@
         "description": "The volume of a spherical cap based on the radius and the height of the cap.",
      "disambiguatingDescription": "More accurate than the traditional estimate.",
 	"target": "https://basic-geometry.github.io",
-     "mathExpression-input": "required cap_radius=5_height=3_Volume=?",
+     "mathExpression-input": {
+	"required": true,
+	"cap_radius": "5",
+	"height": "3",
+	"Volume": "?"
+	},
      "mathExpression-output": "Volume = 1.6 * radius^2 * sqrt(3.2) * height", 
     "about": "Calculating the volume of a spherical cap as a distorted hemisphere.",
 	"abstract": "One dimension of the volume of sphere formula can be modified to calculate the volume of a spherical cap as a distorted hemisphere.",
@@ -363,7 +402,12 @@
 	 "description": "The exact volume of a cone by comparing the volume of a quarter cone to an octant sphere with an equal radius.",
 	"disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io",
-        "mathExpression-input": "required cone_radius=5_height=3_Volume=?",
+        "mathExpression-input": {
+	"required": true,
+	"cone_radius": "5",
+	"height": "3",
+	"Volume": ?"
+	},
      "mathExpression-output": "Volume = 3.2 * radius^2 * height / sqrt(8)",
       "about": "A cone is a 3 dimensional solid shape. Its measurable properties are its height and diameter. Its radius is half of the diameter. Its projections are circle and triangle. Related shapes are triangle, tetrahedron, regular polygon based pyramid, circle, cylinder and sphere.",
 	"abstract": "The volume of a cone can be calculated by algebraically comparing the volume of a quarter cone with equal radius and height to an octant sphere with equal radius, through a quarter cylinder. V(octant sphere)=(√(3.2)r/2)³=(√(3.2)r/2)(√(3.2)r/2)(√(3.2)r/2) . The base of the two shapes is a quarter circle. A(base)=(√(3.2)r/2)²=(√(3.2)r/2)(√(3.2)r/2)The slant height of the quarter cone is √(2)r.The volume of a quarter cylinder with the same base, and height equal to the slant height of the cone would be (√(3.2)r/2)²(√(2)r). The slant shape comes with a triangular vertical cross section. The area of a cone's vertical cross section is the half of a cylinder with equal base and height. The intermediate of the areas of the horizontal cross-section slices of a cone is the half of a cylinder’s. V(quarter cone)=(√(3.2)r/2)²height(√(2)/4)=(1/5)r²height√2 .V(cone)=3.2radius²height/√8 .",
@@ -385,7 +429,13 @@
        "description": "Calculating the exact volume of a frustum cone by its top and bottom diameter and height, subtracting the missing tip from a theoretical full cone.",
      "disambiguatingDescription": "Not the translation of the simplified formula of the frustum pyramid.",
 	"target": "https://basic-geometry.github.io",
-     "mathExpression-input": "required bottomDiameter=5_topDiameter=2_frustumHeight=3_Volume=?",
+     "mathExpression-input": {
+	"required": true,
+	"bottomDiameter": "5",
+	"topDiameter": "2",
+	"frustumHeight": "3",
+	"Volume": "?"
+	},
      "mathExpression-output": "Volume = frustumHeight * (4 / 5 * bottomDiameter^2 * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * topDiameter^2 * (1 / (1 - topDiameter / bottomDiameter) - 1)) / sqrt(8)",
      "about": "A horizontal frustum of a cone is like a cone without an identical shaped tip.",
 	"abstract": "The volume of a frustum cone can be calculated by subtracting the missing tip from a theoretical full cone. The height of the theoretical full cone equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full cone would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
@@ -401,7 +451,12 @@
        "description": "The exact surface area of a cone based on its radius and height.",
      "disambiguatingDescription": "Based on the real height.",
 	"target": "https://basic-geometry.github.io",
-"mathExpression-input": "required cone_radius=5_height=3_Area=?",
+"mathExpression-input": 
+	"required": true,
+	"cone_radius": "5",
+	"height": "3",
+	"Area": "?"
+	},
      "mathExpression-output": "Area = 3.2 * radius * (radius + sqrt(radius^2 +height^2))", 
     "about": "The bottom of a cone is a circle. The rest of its surface can be calculated as a circle slice.",
 	"abstract": "The radius of the circle slice equals the slant height of the cone. Its angle is given by the ratio between the radius and the height of the cone. Calculate the area of the circle slice and add the bottom circle if required.",
@@ -417,7 +472,12 @@
      "description": "The exact volume of a pyramid based on its bottom area and height using the base × height / √8 coefficient of the volume of a cone",
      "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io",
-          "mathExpression-input": "required pyramid_baseArea=5_height=3_Volume=?",
+          "mathExpression-input": {
+	"required": true,
+	"pyramid_baseArea": "5",
+	"height": "3",
+	"Volume": "?"
+	},
      "mathExpression-output": "Volume = baseArea * height / sqrt(8)", 
       "about": "A pyramid is a 3 dimensional solid shape. Its measurable properties are its number and length of the sides of its base and its height. Its projections are polygon and triangle. Related shapes are regular polygon, regular polygon based block, tetrahedron, cone and triangle.",
 	"abstract": "The volume of a pyramid can be calculated with the same base × height / √(8) coefficient as a cone.",
@@ -437,7 +497,12 @@
     "description": "Calculating the exact volume of a frustum pyramid by its top and bottom area and height",
      "disambiguatingDescription": "The formula subtracts the missing tip from a theoretical full pyramid. Universally applicable",
 	"target": "https://basic-geometry.github.io",
-"mathExpression-input": "required bottomArea=5_topArea=3_frustumHeight=2_Volume=?",
+"mathExpression-input": {
+	"required": true,
+	"bottomArea": "5",
+	"topArea": "3",
+	"frustumHeight": "2",
+	"Volume": "?",
        "mathExpression-output": "Volume = frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / sqrt(8)",
          "about": "A horizontal frustum of a pyramid is like a pyramid without an identical shaped tip.",
 	"abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) . The volume of a square frustum pyramid can be calculated with a simplified formula.",
@@ -453,7 +518,11 @@
        "description": "The exact volume of a tetrahedron based on its edge length using the exact base × height / √8 coefficient of the volume of a cone",
      "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 "target": "https://basic-geometry.github.io",
-     "mathExpression-input": "required edge=5_Volume=?",
+     "mathExpression-input": {
+	"required": true,
+	"edge": "5",
+	"Volume": "?"
+	},
      "mathExpression-output": "Volume = edge^3 / 8", 
    "about": "A tetrahedron is a 3 dimensional solid shape. It is a special case of a pyramid. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
 	"abstract": "The volume of a tetrahedron can be calculated as a pyramid with fixed proportions. The base of a tetrahedron is an equilateral triangle. The area of the equilateral triangle equals edge / 2 × √(edge^2 - ( edge / 2 )^2) = edge / 2 × √(edge^2 - edge^2 / 4) = edge / 2 × √(( 3 / 4 )edge^2) = edge / 2 × edge × √(3) / 2 = edge^2 × √(3) / 4 . The height of the tetrahedron equals √(( edge × √(3) / 2 )^2 − ( ( edge × √(3) / 2 ) / 3 )^2 ) = √( edge^2 × ( 3 / 4 - 3 / 36 ) ) = √( edge^2 × ( 27 / 36 - 3 / 36 ) ) = √( edge^2 × ( 24 / 36 ) ) = √( 2 / 3 ) × edge. The base of a tetrahedron multiplied by its height equals ( edge^2 × √( 3 / 4 ) ) × ( edge × √( 2 / 3 ) ) = edge^3 × √(2) / 4 . The volume of a pyramid equals base × height × √(2) / 4 . ( √(2) / 4 )^2 = 2 / 16 = 1 / 8 .",
@@ -516,7 +585,7 @@
 </div>
 <article>
 <section>
-<h1 style="font-size:150%;margin:7px">Introducing The Core Geometric System ™</h4>
+<h1 style="font-size:140%;margin:7px">Introducing The Core Geometric System ™</h4>
 <br>
 <br>
 <div class="imgbox">
@@ -589,7 +658,7 @@ Ask Copilot to explore any topic on this page. It adapts to your pace, your ques
 <br>
 <section>
 <details>
-<summary>1. Numbers</summary>
+<summary><b>1. Numbers</b></summary>
 <table border="1" cellpadding="8" cellspacing="0">
   <thead>
     <tr>
@@ -628,10 +697,9 @@ Ask Copilot to explore any topic on this page. It adapts to your pace, your ques
 </section>
 <br>
 <br>
-<br>
 <section>
 <details>
-<summary>2. Mathematical operations</summary>
+<summary><b>2. Mathematical operations</b></summary>
 <br>
 <br>
 <section>
@@ -759,10 +827,9 @@ Example #2:
 </section>
 <br>
 <br>
-<br>
 <section>
 <details>
-<summary>3. Powers</summary>
+<summary><b>3. Powers</b></summary>
 <br>
 <br>
 <p style="margin:12px;">Raising a number or unit of measurement to a power means multiplying it by itself.
@@ -878,10 +945,9 @@ A cube is a special case of a cuboid with equal width, length and height.
 </section>
 <br>
 <br>
-<br>
 <section>
 <details>
-<summary>4. Fractions</summary>
+<summary><b>4. Fractions</b></summary>
 <br>
 <br>
 <p style="margin:12px;">Fractions are results of division, some are non-whole numbers.
@@ -1037,10 +1103,9 @@ Example:
 </section>
 <br>
 <br>
-<br>
 <section>
 <details>
-<summary>5. Numeric systems</summary>
+<summary><b>5. Numeric systems</b></summary>
 <br>
 <br>
 <p style="margin:12px;">Example #1 - The year 2025 in the decimal system with Arab numerals</p>
@@ -1149,9 +1214,9 @@ Example #2 - The year 2025 in the binary system:</p>
 </section>
 <br>
 <br>
-<br>
 <section>
-<b style="margin:7px;">6. Geometry</b>
+<b style="margin:12px;">6. Geometry</b>
+<br>
 <br>
 <br>
 <section>
@@ -3739,7 +3804,7 @@ if ( height === radius) {
 The area of a cone's vertical cross section is the half of a cylinder's with equal base and height. 
 <br>
 <br>
-The intermediate of the areas of the horizontal cross section slices of a cone is the half of a cylinder’s.
+The mean of the areas of the horizontal cross section slices of a cone is the half of a cylinder’s.
 </p>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -3836,6 +3901,220 @@ The intermediate of the areas of the horizontal cross section slices of a cone i
 </script>
 <p style="margin:12px;" id="cone-volume"></p>
 </div>
+<br>
+<br>
+<section>
+<details>
+  <summary>
+	<strong>
+The volume of a cone or pyramid is conventionally approximated as base × height / 3.</strong></summary>
+<p style="margin:12px;">The conventional approximation was likely estimated based on two observations. 
+<br>
+<br>
+One is that the area of the mid-height cross section of a regular pyramid — of which's apex can be connected to the midpoint of the base with a perpendicular line — is exactly a quarter of a circumscribed solid's with the same base and height. 
+<br>
+That makes the ratio between the mid-height cross-sectional area of the pyramid, and the difference between the mid-height cross-sectional areas of the circumscribed solid and the pyramid 1 : 3 .
+</p>
+<br>
+<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<mrow>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mo>:</mo>
+<mrow>
+<mo>(</mo>
+<mn>1</mn>
+<mo>-</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mo>:</mo>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mn>4</mn>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>-</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mo>:</mo>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mn>3</mn>
+<mn>4</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>=</mo>
+<mrow>
+<mn>1</mn>
+<mo>:</mo>
+<mn>3</mn>
+</mrow>
+</mrow>
+</math>
+<br>
+<br>
+<p style="margin:12px;">That is a logical consequence of its equilateral triangular cross-section.
+<br>
+<br>
+The same is true for a cone. 
+<br>
+<br>
+Can this ratio be generalized for the overall volume of any cone and pyramid? 
+<br>
+<br>
+No. Because it's not true in case of most other shapes.
+<br>
+<br>
+<br>
+The other idea is the cube dissection. 
+</p>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="cubeDissection.jpeg" alt="Cube-dissection" id="dissection">
+</div>
+<br>
+<p style="margin:12px;">A common method aiming to prove the pyramid volume formula ( V = base × height / 3 ) involves dissecting a cube into three pyramids. Here’s how it’s typically presented:
+<br>
+<br>
+Take a cube with an edge length of ( e ).
+<br>
+<br>
+Volume of the cube: V = the cubic value of e.
+<br>
+<br>
+Imagine dividing the cube into three square pyramids, each with:
+<br>
+<br>
+- Base: One face of the cube, so the base area is the square value of e .
+<br>
+<br>
+- Height: The edge of the cube, ( e ), since the apex of each pyramid is the cube’s vertex opposite the base, depending on the dissection. 
+<br>
+<br>
+A common dissection:
+<br>
+<br>
+Choose one vertex of the cube as the apex.
+<br>
+<br>
+Form three pyramids, each with this apex and a base on one of the three faces adjacent to that vertex.
+<br>
+<br>
+Each pyramid has a base area of the square value of e, and height ( e ) (the distance from the apex to the base plane). 
+<br>
+<br>
+Volume of each pyramid: V(pyramid) = ( square value of e ) × e, divided by 3 = the cubic value of e divided by 3.
+<br>
+<br>
+Since there are three pyramids, their total volume is: 3 × ( ( cubic value of e ) divided by 3 ) = the cubic value of e.
+<br>
+<br>
+This equals the cube’s volume, suggesting the one third factor is correct.
+<br>
+<br>
+The Vertex Problem is a critical flaw in this dissection when applied to a real, physical cube:
+<br>
+<br>
+Vertex Assignment: 
+<br>
+<br>
+When we cut the cube into three pyramids sharing a common vertex as the apex, the geometry seems clean in theory. But if you physically slice the cube, you have to decide where that vertex belongs:
+<br>
+<br>
+The cube has 8 vertices, each pyramid has 5. Three pyramids have 3 × 5 = 15 in total.
+<br>
+<br>
+Each vertex is a point that can't be split into 3 points. The other way around, 3 points can't be merged into 1 without distortion. 
+<br>
+If we dissect the cube, we need to designate each shared vertex to be a part of either one pyramid, or another. 
+<br>
+<br>
+Consequence: 
+<br>
+<br>
+The volume of each pyramid is exactly a third of the cube, but with a base smaller than the square value of e, and height shorter than e.
+<br>
+<br>
+Their bases and heights are slightly adjusted due to the vertex assignment, undermining the proof’s simplicity.
+<br>
+<br>
+<br>
+If the solid pyramids'
+<br>
+<br>
+- base is the square value of e,
+<br>
+<br>
+and their 
+<br>
+<br>
+- height is e,
+<br>
+<br>
+then the volume of each pyramid has to be larger than 1 / 3 × base × height, because 3 such pyramids can't form a cube with the same edge length, because their vertices and faces can't occupy the same space simultaneously.
+<br>
+<br>
+The vertices are the most obvious examples, but the same is true for the edges, the diagonals and the inner faces. 
+<br>
+<br>
+Applied correctly, the cube dissection proves that the volume of a cone or a pyramid has to be larger than base × height / 3.
+<br>
+<br>
+The fact that the vertices of the 3 pyramids can't be merged into a single point without distortion proves that the so-called "calculus-based proofs" of the conventional formula are invalid. 
+<br>
+Also it's not just about the vertices, but the edges and the inner faces, too.
+<br>
+<br>
+While 1 / 3 is a reasonable approximation, the exact ratio is 1 / √8.</p>
+</details>
+</section>	
 </section>
 <br>
 <br>
@@ -4684,222 +4963,6 @@ The base of a tetrahedron is an equilateral triangle.
 </script>
 <p style="margin:12px;" id="tetrahedron-volume"></p>
 </div>
-</section>
-<br>
-<br>
-<br>
-<br>
-<section>
-<details>
-  <summary>
-	<strong>
-The volume of a cone or pyramid is conventionally approximated as base × height / 3.</strong></summary>
-<p style="margin:12px;">The conventional approximation was likely estimated based on two observations. 
-<br>
-<br>
-One is that the area of the mid-height cross section of a regular pyramid — of which's apex can be connected to the midpoint of the base with a perpendicular line — is exactly a quarter of a circumscribed solid's with the same base and height. 
-<br>
-That makes the ratio between the mid-height cross-sectional area of the pyramid, and the difference between the mid-height cross-sectional areas of the circumscribed solid and the pyramid 1 : 3 .
-</p>
-<br>
-<math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
-<mrow>
-<mrow>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>1</mn>
-<mn>4</mn>
-</mfrac>
-<mo>)</mo>
-</mrow>
-<mo>:</mo>
-<mrow>
-<mo>(</mo>
-<mn>1</mn>
-<mo>-</mo>
-<mrow>
-<mfrac>
-<mn>1</mn>
-<mn>4</mn>
-</mfrac>
-</mrow>
-<mo>)</mo>
-</mrow>
-</mrow>
-<mo>=</mo>
-<mrow>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>1</mn>
-<mn>4</mn>
-</mfrac>
-<mo>)</mo>
-</mrow>
-<mo>:</mo>
-<mrow>
-<mo>(</mo>
-<mrow>
-<mfrac>
-<mn>4</mn>
-<mn>4</mn>
-</mfrac>
-</mrow>
-<mo>-</mo>
-<mrow>
-<mfrac>
-<mn>1</mn>
-<mn>4</mn>
-</mfrac>
-</mrow>
-<mo>)</mo>
-</mrow>
-</mrow>
-<mo>=</mo>
-<mrow>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>1</mn>
-<mn>4</mn>
-</mfrac>
-<mo>)</mo>
-</mrow>
-<mo>:</mo>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>3</mn>
-<mn>4</mn>
-</mfrac>
-<mo>)</mo>
-</mrow>
-</mrow>
-<mo>=</mo>
-<mrow>
-<mn>1</mn>
-<mo>:</mo>
-<mn>3</mn>
-</mrow>
-</mrow>
-</math>
-<br>
-<br>
-<p style="margin:12px;">That is a logical consequence of its equilateral triangular cross-section.
-<br>
-<br>
-The same is true for a cone. 
-<br>
-<br>
-Can this ratio be generalized for the overall volume of any cone and pyramid? 
-<br>
-<br>
-No. Because it's not true in case of most other shapes.
-<br>
-<br>
-<br>
-The other idea is the cube dissection. 
-</p>
-<br>
-<div class="imgbox">
-    <img class="center-fit" src="cubeDissection.jpeg" alt="Cube-dissection" id="dissection">
-</div>
-<br>
-<p style="margin:12px;">A common method aiming to prove the pyramid volume formula ( V = base × height / 3 ) involves dissecting a cube into three pyramids. Here’s how it’s typically presented:
-<br>
-<br>
-Take a cube with an edge length of ( e ).
-<br>
-<br>
-Volume of the cube: V = the cubic value of e.
-<br>
-<br>
-Imagine dividing the cube into three square pyramids, each with:
-<br>
-<br>
-- Base: One face of the cube, so the base area is the square value of e .
-<br>
-<br>
-- Height: The edge of the cube, ( e ), since the apex of each pyramid is the cube’s vertex opposite the base, depending on the dissection. 
-<br>
-<br>
-A common dissection:
-<br>
-<br>
-Choose one vertex of the cube as the apex.
-<br>
-<br>
-Form three pyramids, each with this apex and a base on one of the three faces adjacent to that vertex.
-<br>
-<br>
-Each pyramid has a base area of the square value of e, and height ( e ) (the distance from the apex to the base plane). 
-<br>
-<br>
-Volume of each pyramid: V(pyramid) = ( square value of e ) × e, divided by 3 = the cubic value of e divided by 3.
-<br>
-<br>
-Since there are three pyramids, their total volume is: 3 × ( ( cubic value of e ) divided by 3 ) = the cubic value of e.
-<br>
-<br>
-This equals the cube’s volume, suggesting the one third factor is correct.
-<br>
-<br>
-The Vertex Problem is a critical flaw in this dissection when applied to a real, physical cube:
-<br>
-<br>
-Vertex Assignment: 
-<br>
-<br>
-When we cut the cube into three pyramids sharing a common vertex as the apex, the geometry seems clean in theory. But if you physically slice the cube, you have to decide where that vertex belongs:
-<br>
-<br>
-The cube has 8 vertices, each pyramid has 5. Three pyramids have 3 × 5 = 15 in total.
-<br>
-<br>
-Each vertex is a point that can't be split into 3 points. The other way around, 3 points can't be merged into 1 without distortion. 
-<br>
-If we dissect the cube, we need to designate each shared vertex to be a part of either one pyramid, or another. 
-<br>
-<br>
-Consequence: 
-<br>
-<br>
-The volume of each pyramid is exactly a third of the cube, but with a base smaller than the square value of e, and height shorter than e.
-<br>
-<br>
-Their bases and heights are slightly adjusted due to the vertex assignment, undermining the proof’s simplicity.
-<br>
-<br>
-<br>
-If the solid pyramids'
-<br>
-<br>
-- base is the square value of e,
-<br>
-<br>
-and their 
-<br>
-<br>
-- height is e,
-<br>
-<br>
-then the volume of each pyramid has to be larger than 1 / 3 × base × height, because 3 such pyramids can't form a cube with the same edge length, because their vertices and faces can't occupy the same space simultaneously.
-<br>
-<br>
-The vertices are the most obvious examples, but the same is true for the edges, the diagonals and the inner faces. 
-<br>
-<br>
-Applied correctly, the cube dissection proves that the volume of a cone or a pyramid has to be larger than base × height / 3.
-<br>
-<br>
-The fact that the vertices of the 3 pyramids can't be merged into a single point without distortion proves that the so-called "calculus-based proofs" of the conventional formula are invalid. 
-<br>
-Also it's not just about the vertices, but the edges and the inner faces, too.
-<br>
-<br>
-While 1 / 3 is a reasonable approximation, it's worth noting that it is not the exact ratio.</p>
-</details>
 </section>
 </section>
 </section>
