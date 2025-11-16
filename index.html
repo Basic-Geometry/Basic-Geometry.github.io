@@ -216,7 +216,7 @@
  "mathExpression-input": {
 	"required": true,
 	"square_side": "5",
-	"Area": ?"
+	"Area": "?"
 	},
   "mathExpression-output": "Area = side * side = side^2",
    "about": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Related shapes are square, triangle, cuboid and cube. A square is a special case of a rectangle with equal width and length.",
@@ -257,7 +257,8 @@
 	"required": true,
 	"triangle_base": "5",
 	"height": "2",
-	"Area": "?",
+	"Area": "?"
+	},
   "mathExpression-output": "Area = base * height / 2",
    "about": "A triangle is a 2 dimensional plane shape. Its measurable properties are the length of its sides. Related shapes are regular polygon, rectangle and pyramid.",
   "abstract": "The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle. The base of a triangle multiplied by its height equals to a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.",
@@ -406,7 +407,7 @@
 	"required": true,
 	"cone_radius": "5",
 	"height": "3",
-	"Volume": ?"
+	"Volume": "?"
 	},
      "mathExpression-output": "Volume = 3.2 * radius^2 * height / sqrt(8)",
       "about": "A cone is a 3 dimensional solid shape. Its measurable properties are its height and diameter. Its radius is half of the diameter. Its projections are circle and triangle. Related shapes are triangle, tetrahedron, regular polygon based pyramid, circle, cylinder and sphere.",
@@ -451,7 +452,7 @@
        "description": "The exact surface area of a cone based on its radius and height.",
      "disambiguatingDescription": "Based on the real height.",
 	"target": "https://basic-geometry.github.io",
-"mathExpression-input": 
+"mathExpression-input": {
 	"required": true,
 	"cone_radius": "5",
 	"height": "3",
@@ -502,7 +503,8 @@
 	"bottomArea": "5",
 	"topArea": "3",
 	"frustumHeight": "2",
-	"Volume": "?",
+	"Volume": "?"
+	},
        "mathExpression-output": "Volume = frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / sqrt(8)",
          "about": "A horizontal frustum of a pyramid is like a pyramid without an identical shaped tip.",
 	"abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) . The volume of a square frustum pyramid can be calculated with a simplified formula.",
