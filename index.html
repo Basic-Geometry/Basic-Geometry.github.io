@@ -512,33 +512,10 @@
 <br>
 <nav>
 <ol>	
-<li><a style="margin:7px;" href="#circle-area>">Area of a Circle</a></li>
-<br>
-<p style="margin:12px;">Compared to a square, using geometric properties and the Pythagorean theorem.
-<br>
-Formula:  A = 3.2 × ( square value of the radius ). 
-</p>
-<br>
-<li><a style="margin:7px;" href="#circumference>">Circumference of a Circle</a></li>
-<br>
-<p style="margin:12px;">Derived from the area by subtracting a smaller theoretical circle.
-<br>
-Formula:  C = 6.4 × radius. 
-</p>
-<br>
-<li><a style="margin:7px;" href="#sphere-volume>">Volume of a Sphere</a></li>
-<br>
-<p style="margin:12px;">Compared to a cube, using the area of the sphere's cross-section.
-<br>
-Formula:  V = " cubic value of ( square root ( 3.2 ) × radius ) ". 
-</p>
-<br>
-<li><a style="margin:7px;" href="#cone-volume>">Volume of a Cone</a></li>
-<br>
-<p style="margin:12px;">Compared to an octant sphere and a quarter cylinder.
-<br>
-Formula:  V = 3.2 × ( square value of the radius ) × height, divided by √8 .
-</p>
+<li><a style="margin:7px;" href="#circle>">Area of a circle compared to a square, using geometric properties and the Pythagorean theorem. Formula:  A = 3.2 × ( square value of the radius )</a></li>
+<li><a style="margin:7px;" href="#circumference>">Circumference of a circle derived from the area by subtracting a smaller theoretical circle. Formula:  C = 6.4 × radius</a></li>
+<li><a style="margin:7px;" href="#sphere>">Volume of a sphere compared to a cube, using the area of the sphere's cross-section. Formula:  V = cubic value of ( square root ( 3.2 ) × radius )</a></li>
+<li><a style="margin:7px;" href="#cone">Volume of a Cone Compared to an octant sphere and a quarter cylinder. Formula:  V = 3.2 × ( square value of the radius ) × height, divided by √8</a></li>
 </ol>
 </nav>
 <br>
@@ -1070,7 +1047,6 @@ The result of raising to a fraction is a root.
 <section id="square">
 <h3 style="margin:7px;">Area of a square</h3>
 <br>
-<br>
 <div class="imgbox">
     <img class="center-fit" src="square.png" alt="figure-Square">
     </div>
@@ -1106,7 +1082,6 @@ A square is a special case of a rectangle with equal width and length.
 <section id="cube">
 <h3 style="margin:7px;">Volume of a cube</h3>
 <br>
-<br>
 <div class="imgbox">
     <img class="center-fit" src="cubeMarkup.jpeg" alt="figure-Cube">
     </div>
@@ -1140,6 +1115,7 @@ A cube is a special case of a cuboid with equal width, length and height.
 </details>
 </section>
 <br>
+<br>
 <section>
 <h3 style="margin:7px;">5. Geometry</h3>
 <br>
@@ -1147,7 +1123,6 @@ A cube is a special case of a cuboid with equal width, length and height.
 <div>
 <section id="trigonometry">
 <h3 style="margin:7px;">Trigonometry</h3>
-<br>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="trigonometry.png" alt="figure-Trigonometry">
@@ -1861,13 +1836,13 @@ The area of a triangle can also be calculated by the length of its sides.
 <br>
 <div>
 <label style="margin:12px;" for="side1">Side 1:</label>
-<input id="side1" type="number" value="1" step="any" />
+<input id="side1" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="side2">Side 2:</label>
-<input id="side2" type="number" value="1" step="any" />
+<input id="side2" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="side3">Side 3:</label>
-<input id="side3" type="number" value="1" step="any" />
+<input id="side3" type="number" value="1" step="any">
 	
 <script>
   function triangleArea(product) {
@@ -2009,10 +1984,10 @@ The area of the polygon equals the sum of the area of the triangles.
 <br>
 <div>
 <label style="margin:12px;" for="side-number">Number of sides:</label>
-<input id="side-number" type="number" value="5" step="1" />
+<input id="side-number" type="number" value="5" step="1">
 <br>
 <label style="margin:12px;" for="side-length">Side length:</label>
-<input id="side-length" type="number" value="1" step="any" />
+<input id="side-length" type="number" value="1" step="any">
 	
 <script>
   function polygonArea(length, number, tangent) {
@@ -2079,7 +2054,6 @@ function updatePolygonArea() {
 The area of a circle is defined by comparing it to a square since that is the base of area calculation.
 </h3>
 <br>
-<br>
 <div class="imgbox">
     <img class="center-fit" src="areaOfACircle.jpg" alt="figure-Circle-area=3.2r²">
 </div>
@@ -2093,7 +2067,7 @@ In this layout the arcs of the quadrants of an inscribed circle would meet at th
 The arcs of the quadrants of a circumscribed circle would meet at the center of the square.
 <br>
 <br>
-The arcs of the quadrants that equal in area to the square intersect right in between these limits on its centerlines.
+<strong>The arcs of the quadrants that equal in area to the square intersect at the quarters on its centerlines.</strong>
 <br>
 <br>
 The ratio between the radius of the circle and the side of the square is calculable.
@@ -2238,7 +2212,7 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 <br>
 <div>
 <label style="margin:12px;" for="circle-radius-a">Radius:</label>
-<input id="circle-radius-a" type="number" value="1" step="any" />
+<input id="circle-radius-a" type="number" value="1" step="any">
 <script>
   function circleArea(radius) {
     return 3.2 * radius * radius;
@@ -2707,10 +2681,10 @@ The angle of the slice can be calculated via trigonometric functions by the heig
 <br>
 <div>
 <label style="margin:12px;" for="segment-length">Length:</label>
-<input id="segment-length" type="number" value="2" step="any" />
+<input id="segment-length" type="number" value="2" step="any">
 <br>
 <label style="margin:12px;" for="segment-height">Height:</label>
-<input id="segment-height" type="number" value="1" step="any" />
+<input id="segment-height" type="number" value="1" step="any">
 	
 <script>
   function segmentArea(length, height, angle, radius) {
@@ -2895,7 +2869,7 @@ In calculus terms:
 <br>
 <div>
 <label style="margin:12px;" for="circle-radius-c">Radius:</label>
-<input id="circle-radius-c" type="number" value="1" step="any" />
+<input id="circle-radius-c" type="number" value="1" step="any">
 <script>
   function circleCircumference(radius) {
     return 3.2 * radius * 2;
@@ -3131,7 +3105,7 @@ Historical records suggest that ancient Babylonians initially calculated it as 3
 <br>
 <br>
 <section>
-<h5 style="margin:12px;">Archimedes and the Polygonal Trap</h5>
+<h4 style="margin:12px;">Archimedes and the Polygonal Trap</h4>
 <br>
 <br>
 <p style="margin:12px;">The Greek Archimedes’ method for estimating the π is often celebrated as a foundational triumph of geometric reasoning.
@@ -3174,7 +3148,7 @@ Similarly, the area formula A = πr² is not a direct result of calculus. It’s
 <br>
 <br>
 <section>
-<h5 style="margin:12px;">The Symbol π: A Linguistic Shortcut</h5>
+<h4 style="margin:12px;">The Symbol π: A Linguistic Shortcut</h4>
 <br>
 <br>
 <p style="margin:12px;">The symbol π was introduced because the estimate ratio—approximately 3.14159…—is an infinite fraction. Since we can’t write all its digits, we needed a symbol. But this symbol has taken on a life of its own.
@@ -3189,7 +3163,7 @@ It was not until the 18th century that the symbol π, popularized by the mathema
 <br>
 <br>
 <section>
-<h5 style="margin:12px;">∫ Calculus: Summary, Not Source</h5>
+<h4 style="margin:12px;">∫ Calculus: Summary, Not Source</h4>
 <br>
 <br>
 <p style="margin:12px;">Several complex formulas were introduced by different mathematicians, aimed at more accurately estimating this ratio, based on a theoretical polygon with an infinite number of sides. 
@@ -3239,7 +3213,7 @@ It can be exact with exact limits and basic operations, but if those are given t
 <br>
 <br>
 <section>
-<h5 style="margin:12px;">φ The Golden Ratio</h5>
+<h4 style="margin:12px;">φ The Golden Ratio</h4>
 <br>
 <br>
 <p style="margin:12px;">Some relate the numeric value of 3.14… to the so-called “golden ratio” of ( √5 + 1 ) / 2.
@@ -3276,7 +3250,7 @@ The golden ratio of ( √5 + 1 ) / 2 is irrelevant to the definition of these pr
 <br>
 <br>
 <section>
-<h5 style="margin:12px;">A Rational Alternative: 3.2</h5>
+<h4 style="margin:12px;">A Rational Alternative: 3.2</h4>
 <br>
 <br>
 <p style="margin:12px;">Historical records suggest that a legislative process took place in 1897, Indiana, USA, known as House Bill 246 ( sometimes listed as 264 ), or Indiana Pi Act, aiming to replace the numeric value 3.14 by 3.2.
@@ -3314,8 +3288,7 @@ These are two aspects of that.
 <br>
 <section id="sphere">
 <h3 style="margin:7px;">The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.
-</strong>
-<br>
+</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="figure-Sphere-volume=(√(3.2)r)³">
@@ -3368,7 +3341,7 @@ These are two aspects of that.
 <br>
 <div>
 <label style="margin:12px;" for="sphere-radius">Radius:</label>
-<input id="sphere-radius" type="number" value="1" step="any" />
+<input id="sphere-radius" type="number" value="1" step="any">
 <script>
   function sphereVolume(radius) {
     return Math.pow(Math.sqrt(3.2) * radius, 3);
@@ -3431,7 +3404,6 @@ If you're trying to calculate the volume of a physical ball or sphere for a prac
 <br>
 <h3 style="margin:7px;">SURFACE AREA OF A SPHERE</h3>
 <br>
-<br>
 <div class="imgbox">
     <img class="center-fit" src="sphereSurface.jpeg" alt="sphere-surface-illustration">
 <br>
@@ -3453,7 +3425,6 @@ The real formula for the surface area of a sphere is available for 3.2 billion U
 <br>
 <section id="cap">
 <h3 style="margin:7px;">Volume of a spherical cap</h3>
-<br>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="sphericalCap.jpg" alt="figure-Spherical-cap">
@@ -3489,10 +3460,10 @@ The real formula for the surface area of a sphere is available for 3.2 billion U
 <br>
 <div>
 <label style="margin:12px;" for="cap-radius">Radius:</label>
-<input id="cap-radius" type="number" value="1" step="any" />
+<input id="cap-radius" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="cap-height">Height:</label>
-<input id="cap-height" type="number" value="1" step="any" />
+<input id="cap-height" type="number" value="1" step="any">
 	
 <script>
   function capVolume(radius, height) {
@@ -3539,7 +3510,6 @@ if ( height === radius) {
 <div>
 <section id="cone">
 <h3 style="margin:7px;">Volume of a cone</h3>
-<br>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone-volume-from-sphere=base×height/√8">
@@ -3783,10 +3753,10 @@ The mean of the areas of the horizontal cross section slices of a cone is the ha
 <br>
 <div>
 <label style="margin:12px;" for="cone-radius-v">Radius:</label>
-<input id="cone-radius-v" type="number" value="1" step="any" />
+<input id="cone-radius-v" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="cone-height-v">Height:</label>
-<input id="cone-height-v" type="number" value="1" step="any" />
+<input id="cone-height-v" type="number" value="1" step="any">
 	
 <script>
   function coneVolume(radius, height) {
@@ -4037,7 +4007,6 @@ While 1 / 3 is a reasonable approximation, the exact ratio is 1 / √8.</p>
 <section id="frustum-cone">
 <h3 style="margin:7px;">Volume of a frustum cone</h3>
 <br>
-<br>
 <div class="imgbox">
     <img class="center-fit" src="frustumOfConeMarkup.png" alt="figure-Horizontal-frustum-cone">
     </div>
@@ -4145,13 +4114,13 @@ The height of the theoretical full cone can be calculated by the frustum height 
 <br>
 <div>
 <label style="margin:12px;" for="frustum-cone-base-radius">Base radius:</label>
-<input id="frustum-cone-base-radius" type="number" value="2" step="any" />
+<input id="frustum-cone-base-radius" type="number" value="2" step="any">
 <br>
 <label style="margin:12px;" for="frustum-cone-top-radius">Top radius:</label>
-<input id="frustum-cone-top-radius" type="number" value="1" step="any" />
+<input id="frustum-cone-top-radius" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="frustum-cone-height">Height:</label>
-<input id="frustum-cone-height" type="number" value="1" step="any" />
+<input id="frustum-cone-height" type="number" value="1" step="any">
 
 <script>
   function frustumConeVolume(baseArea, topArea, reciprocal, height) {
@@ -4207,7 +4176,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <h3 style="margin:7px;">Surface area of a cone</h3>
 <br>
 <div class="imgbox">
-  <img class="center-fit" src="coneMarkup.jpeg" alt="figure-Cone-surface" id="coneSurface">
+  <img class="center-fit" src="coneMarkup.jpeg" alt="figure-Cone-surface">
   </div>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -4248,10 +4217,10 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <div>
 <label style="margin:12px;" for="cone-radius-s">Radius:</label>
-<input id="cone-radius-s" type="number" value="1" step="any" />
+<input id="cone-radius-s" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="cone-height-s">Height:</label>
-<input id="cone-height-s" type="number" value="1" step="any" />
+<input id="cone-height-s" type="number" value="1" step="any">
 <script>
   function coneSurface(radius, height) {
     return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
@@ -4280,12 +4249,11 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <br>
 <br>
-<section>
-<strong style="font-size:160%;margin:7px">Volume of a pyramid</strong>
-<br>
+<section id="pyramid">
+<h3 style="margin:7px">Volume of a pyramid</h3>
 <br>
 <div class="imgbox">
-  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="figure-Pyramids-volume=base×height/√8" id="pyramid">
+  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="figure-Pyramids-volume=base×height/√8">
   </div>
 <br>
 <div class="imgbox">
@@ -4319,13 +4287,13 @@ with the same coefficient as the volume of a cone.
 <br>
 <div>
 <label style="margin:12px;" for="pyramid-side-number">Number of sides:</label>
-<input id="pyramid-side-number" type="number" value="4" step="1" />
+<input id="pyramid-side-number" type="number" value="4" step="1">
 <br>
 <label style="margin:12px;" for="pyramid-base-edge-length">Base edge length:</label>
-<input id="pyramid-base-edge-length" type="number" value="1" step="any" />
+<input id="pyramid-base-edge-length" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="pyramid-height">Height:</label>
-<input id="pyramid-height" type="number" value="1" step="any" />
+<input id="pyramid-height" type="number" value="1" step="any">
 
 <script>
   function pyramidVolume(baseArea, height) {
@@ -4362,8 +4330,8 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br>
 <br>
 <br>
-<section>
-<p style="font-size:160%;font-weight:bold;margin:7px;">Volume of a horizontal frustum pyramid</p>
+<section id="frustum-pyramid">
+<h3 style="margin:7px;">Volume of a horizontal frustum pyramid</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="figure-Horizontal-frustum-pyramid">
@@ -4429,16 +4397,16 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
 <br>
 <div>
 <label style="margin:12px;" for="frustum-pyramid-side-number">Number of sides:</label>
-<input id="frustum-pyramid-side-number" type="number" value="4" step="1" />
+<input id="frustum-pyramid-side-number" type="number" value="4" step="1">
 <br>
 <label style="margin:12px;" for="frustum-pyramid-base-edge-length">Base edge length:</label>
-<input id="frustum-pyramid-base-edge-length" type="number" value="2" step="any" />
+<input id="frustum-pyramid-base-edge-length" type="number" value="2" step="any">
 <br>
 <label style="margin:12px;" for="frustum-pyramid-top-edge-length">Top edge length:</label>
-<input id="frustum-pyramid-top-edge-length" type="number" value="1" step="any" />
+<input id="frustum-pyramid-top-edge-length" type="number" value="1" step="any">
 <br>
 <label style="margin:12px;" for="frustum-pyramid-height">Height:</label>
-<input id="frustum-pyramid-height" type="number" value="1" step="any" />
+<input id="frustum-pyramid-height" type="number" value="1" step="any">
 
 <script>
   function frustumPyramidVolume(baseArea, topArea, reciprocal, height) {
@@ -4498,8 +4466,8 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br>
 <br>
 <section>
-<p style="margin:12px;">The volume of a square frustum pyramid can be calculated via a simplified formula.
-</p>
+<h3 style="margin:7px;">The volume of a square frustum pyramid can be calculated via a simplified formula.
+</h3>
 <br>
 <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML" >
      <mrow>
@@ -4565,7 +4533,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br>
 <br>
 <section>
-<p style="font-size:160%;font-weight:bold;margin:7px">Volume of a tetrahedron</p>
+<h3 style="margin:7px">Volume of a tetrahedron</h3>
 <br>
 <div class="imgbox">
   <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="figure-Tetrahedron-volume=edge³/8" id="tetrahedron">
@@ -4858,7 +4826,7 @@ The base of a tetrahedron is an equilateral triangle.
 <br>
 <div>
 <label style="margin:12px;" for="tetrahedron-edge">Edge:</label>
-<input id="tetrahedron-edge" type="number" value="1" step="any" />
+<input id="tetrahedron-edge" type="number" value="1" step="any">
 
 <script>
   function tetrahedronVolume(edge) {
