@@ -568,22 +568,8 @@
 <br>
 <h4 style="margin:7px">Algebraic Manipulation</h4>
 <p style="margin:12px"><strong>Simplifying equations to ensure consistency and precision.
-</strong></p>
-</section>
-<br>
-<br>
-<br>
-<section>
-<h2 style="margin:7px">The Basic Geometry Curriculum</h2>
-<br>
-<p style="margin:12px;">
-This curriculum can be used as standalone, but the basic math part is designed to be expandable. For deeper explanations, visualizations, historical context, and interactive practice, we recommend using Copilot — your AI companion for learning.  
-<br>
-Ask Copilot to explore any topic on this page. It adapts to your pace, your questions, and your curiosity.
-<br>
-<br>
-<br>
-<h2 style="margin:7px">Modules:</h2>
+</strong>
+</p>
 <br>
 <br>
 <section id="math">
@@ -1102,7 +1088,7 @@ The result of raising to a fraction is a root.
 A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Its area equals width × length.
 <br>
 <br>
-A square is a special type of a rectangle with equal width and length.
+A square is a rectangle with equal width and length.
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -1136,7 +1122,7 @@ A square is a special type of a rectangle with equal width and length.
 <p style="margin:12px">A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. The volume of a cuboid is a simple multiplication of the edges, width × length × height. The cubic root of the product of the edges is the edge length of the theoretical cube that has the same volume as the cuboid. 
 <br>
 <br>
-A cube is a special type of a cuboid with equal width, length and height.
+A cube is a cuboid with equal width, length and height.
 </p>
 <br>
  <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3112,14 +3098,12 @@ In calculus terms:
 </div>
 <br>
 <br>
-<br>
 <p style="margin:12px">
-Irrational or not, with an infinitesimally small thickness the circumference technically equals 6.4 × radius.
+The length of the circumference approaches 6.4 × radius as its thickness approaces 0.
 <br>
 <br>
 It can be verified physically by wrapping a piece of paper around a round object, or placing the paper in a cylindrical tube, making sure that its ends touch without overlapping, and measuring both the diameter and the length of the straightened piece of paper.</p>
 </section>
-<br>
 <br>
 <section id="π">
 <details>
@@ -3151,16 +3135,12 @@ Some think 'Standard Geometry' means accepting the π. But the π is actually an
 <br>
 <div>
 <details>
-<summary style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. 
+<summary style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. But that method itself introduced compounding errors.
 </summary>
+<br>
+<br>
 <p style="margin:12px">
-But that method itself introduced compounding errors.
-<br>
-<br>
-The definition of an inscribed polygon is that both its perimeter and area are smaller than the circle. The properties of a circumscribed polygon are larger.
-<br>
-<br>
-He didn't have accurate measuring tools, so he used pure logic. He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
+Instead of measuring tools, so he used geometric logic. He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
 <br>
 <br>
 However, this method relies on a massive assumption: That a polygon with enough sides approaches a circle.
@@ -3188,6 +3168,9 @@ This seems obvious when comparing a triangle or a square to a circle. An isoperi
 <br>
 <br>
 Here is where Archimedes' logic snaps.
+<br>
+<br>
+The definition of an inscribed polygon is that both its perimeter and area are smaller than the circle. The properties of a circumscribed polygon are larger.
 <br>
 <br>
 When the circle’s area and circumference is calculated with the constant 3.2, it becomes clear that the area of an isoperimetric 14‑gon is actually larger than the circle’s. A flat angle encloses the area differently than the curve. This flips the script: the polygon can enclose more area even with the same perimeter. As the number of sides increases the effect is stronger, so the isoperimetric polygon behaves like a circumscribed figure despite having equal perimeter. This overlooked disproportion shows that polygons do not approach the circle “in every sense” — above 13 sides, the comparison underestimates the circle.
@@ -3279,13 +3262,16 @@ Modern calculus summarizes these approximations with elegant notation, such as:
 </math>
 <br>
 <p style="margin:12px">
-<strong>But this is not a magical formula—it’s a symbolic summary of prior assumptions.</strong>There are at least a dozen different calculus methods out there, but each and every one of those are solved through basic operations. Each notation should correspond to a real, logical property of the circle. Yet upon inspection, inconsistencies emerge. The formula doesn’t derive the circumference from first principles; it assumes it. 
+<strong>But this is not a magical formula—it’s a symbolic summary of prior assumptions.</strong>
+<br>
+<br>
+There are at least a dozen different calculus methods out there, but each and every one of those are solved through basic operations. Each notation should correspond to a real, logical property of the circle. Yet upon inspection, inconsistencies emerge. The formula doesn’t derive the circumference from first principles; it assumes it. 
 <br>
 <br>
 The classical polygon-based approach to approximate a circle’s circumference relies on inscribed and circumscribed polygons, calculated using trigonometric functions aligned to π. But this alignment is problematic if π itself is the quantity under investigation.
 <br>
 <br>
-Calculus can be a useful mathematical tool, but calling it exact is a bold statement. 
+Calculus may be a useful mathematical tool, but calling it exact is a bold statement. 
 <br>
 <br>
 It can be exact with exact limits and certain operations, but if those are given then they can be calculated directly without calculus.
@@ -4626,7 +4612,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
   </div>
 <br>
 <p style="margin:12px">
-A tetrahedron is a special type of a pyramid. 
+A tetrahedron is a type of pyramid. 
 <br>
 <br>
 Its volume can be calculated as a pyramid with fixed proportions. 
