@@ -586,16 +586,18 @@ Ask Copilot to explore any topic on this page. It adapts to your pace, your ques
 <h2 style="margin:7px">Modules:</h2>
 <br>
 <br>
-<section>
-<h3 style="margin:7px">1. Basic mathematics:</h3>
+<section id="math">
+<details>
+<summary><h2 style="margin:7px">Basic mathematics:</h2>
+</summary>
 <br>
 <br>
 <section>
 <details>
-<summary><h3 style="margin:7px">a. Numbers and numeric systems</h3></summary>
+<summary><h3 style="margin:7px">1. Numbers and numeric systems</h3></summary>
 <br>
 <br>
-<section><h4 style="margin:12px">Numbers</h4>
+<section id="numbers"><h3 style="margin:12px">Numbers</h3>
 <br>
 <table>
   <thead>
@@ -636,8 +638,8 @@ Ask Copilot to explore any topic on this page. It adapts to your pace, your ques
 <br>
 <br>
 <br>
-<section>
-<h4 style="margin:12px">Numeric systems</h4>
+<section id="numeric_systems">
+<h3 style="margin:12px">Numeric systems</h3>
 <br>
 <br>
 <p style="margin:12px">Example #1 - The year 2025 in the decimal system with Arab numerals</p>
@@ -746,12 +748,12 @@ Example #2 - The year 2025 in the binary system:</p>
 </details>
 </section>
 <br>
-<section>
+<section id="operations">
 <details>
-<summary><h3 style="margin:7px">b. Mathematical operations</h3></summary>
+<summary><h3 style="margin:7px">2. Mathematical operations</h3></summary>
 <br>
 <br>
-<section>
+<section id="equity">
 <h4 style="margin:12px">= The equity symbol</h4>
 <br>
 <br>
@@ -767,7 +769,7 @@ Example #2 - The year 2025 in the binary system:</p>
 <br>
 <br>
 <br>
-<section>
+<section id="addition">
 <h4 style="margin:12px">➕ Addition</h4>
 <br>
 <br>
@@ -790,7 +792,7 @@ Example #2:
 <br>
 <br>
 <br>
-<section>
+<section id="subtraction">
 <h4 style="margin:12px">➖ Subtraction</h4>
 <br>
 <br>
@@ -816,7 +818,7 @@ Example #2:
 <br>
 <br>
 <br>
-<section>
+<section id="multiplication">
 <h4 style="margin:12px">✖️ Multiplication</h4>
 <br>
 <br>
@@ -847,7 +849,7 @@ Example #2:
 <br>
 <br>
 <br>
-<section>
+<section id="division">
 <h4 style="margin:12px">➗ Division</h4>
 <br>
 <br>
@@ -878,9 +880,9 @@ Example #2:
 </details>
 </section>
 <br>
-<section>
+<section id="fractions">
 <details>
-<summary><h3 style="margin:7px">c. Fractions</h3></summary>
+<summary><h3 style="margin:7px">3. Fractions</h3></summary>
 <br>
 <br>
 <p style="margin:12px">Fractions are results of division, some are non-whole numbers.
@@ -1043,7 +1045,7 @@ Example:
 <br>
 <section>
 <details>
-<summary><h3 style="margin:7px">d. Powers</h3></summary>
+<summary><h3 style="margin:7px">4. Powers</h3></summary>
 <br>
 <br>
 <p style="margin:12px">Raising a number or unit of measurement to a power means multiplying it by itself.
@@ -1081,16 +1083,16 @@ The result of raising to a fraction is a root.
 <br>
 <br>
 <br>
-<section>
+<section id="area_and_volume">
 <h3 style="margin:7px">The 2nd and the 3rd power manifesting in geometry</h3>
 <br>
 <br>
-<p style="margin:12px"> Setting the square and the cube as the basis of the area and the volume calculation is well established and straightforward. Regardless of the shape of the measured object, the unit of measurement of the area is square units and the volume can be expressed in cubic units. 
+<p style="margin:12px">Setting the square and the cube as the basis of the area and the volume calculation is well established and straightforward. Regardless of the shape of the measured object, the unit of measurement of the area is square units and the volume can be expressed in cubic units. 
 </p>
 <br>
 <br>
 <section id="square">
-<h4 style="margin:7px">Area of a square</h4>
+<h3 style="margin:7px">Area of a square</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="square.png" alt="figure-Square">
@@ -1125,7 +1127,7 @@ A square is a special type of a rectangle with equal width and length.
 <br>
 <br>
 <section id="cube">
-<h4 style="margin:7px">Volume of a cube</h4>
+<h3 style="margin:7px">Volume of a cube</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="cubeMarkup.jpeg" alt="figure-Cube">
@@ -1159,11 +1161,12 @@ A cube is a special type of a cuboid with equal width, length and height.
 </section>
 </details>
 </section>
+</details>
 </section>
 <br>
 <br>
-<section>
-<h3 style="margin:7px">2. Geometry</h3>
+<section id="geometry">
+<h2 style="margin:7px">Geometry</h2>
 <br>
 <br>
 <div>
@@ -1791,7 +1794,7 @@ function Atan(x) {
 <br>
 <br>
 <section id="triangle">
-<h4 style="margin:7px">Area of a triangle</h4>
+<h3 style="margin:7px">Area of a triangle</h3>
 <br>
 <p style="margin:12px">The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
 <br>
@@ -1935,7 +1938,7 @@ function updateTriangleArea() {
 <br>
 <br>
 <section id="polygon">
-<h4 style="margin:7px">Area of a regular polygon</h4>
+<h3 style="margin:7px">Area of a regular polygon</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="pentagon.png" alt="figure-Polygon-area">
@@ -2100,9 +2103,9 @@ function updatePolygonArea() {
 <br>
 <div>
 <section id="circle">
-<h4 style="margin:7px">
+<h3 style="margin:7px">
 The area of a circle is defined by comparing it to a square since that is the base of area calculation.
-</h4>
+</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="areaOfACircle.jpg" alt="figure-Circle-area=3.2r²">
@@ -2284,9 +2287,14 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 </div>
 <br>
 <br>
-<section>
+<p style="margin:12px">It can be verified via physical measurements by cutting a circle and a square with the given proportions from a sheet of paper and weighing them.
+</p>
+<br>
+<br>
+	<section id="circle_area_proof">
 <details>
-  <summary><h4 style="margin:7px">Proof</h4></summary>
+  <summary><h4 style="margin:7px">By tiling the quadrant model to well identifiable sections, we can algebraically prove that the uncovered area equals exactly the sum of the overlapping sections only if the arcs intersect at the quarters of the centerline.
+</h4></summary>
 <br>
 <br>
 <div class="imgbox">
@@ -2656,9 +2664,6 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 <br>
 <br>
 This is an identity; not tautology.
-<br>
-<br>
-By tiling the quadrant model to well identifiable sections, we algebraically prove that the uncovered area equals exactly the sum of the overlapping sections only if the arcs intersect at the quarters of the centerline.
 </p>
 </details>
 </section>
@@ -2668,7 +2673,7 @@ By tiling the quadrant model to well identifiable sections, we algebraically pro
 <br>
 <br>
 <section id="circle-segment">
-    <h4 style="margin:7px">Area of a circle segment</h4>
+    <h3 style="margin:7px">Area of a circle segment</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="circleSegment.jpg" alt="figure-Circle-segment">
@@ -2793,7 +2798,7 @@ const ratio = 2 * height / length;
 <br>
 <br>
 <section id="circumference">
-<h4 style="margin:7px">The circumference of a circle can be derived from its area algebraically.</h4>
+<h3 style="margin:7px">The circumference of a circle can be derived from its area algebraically.</h3>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="circumference.jpg" alt="figure-Circumference=6.4r">
@@ -2845,106 +2850,14 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <mi>x</mi>
 </mfrac>
 </mrow>
-<mo>=</mo>
-  <mrow>
-      <mn>6.4</mn>
-      <mi>r</mi>
-      <mo>-</mo>
-      <mn>3.2</mn>
-      <mi>x</mi>
-  </mrow>
 </mrow>
 </math>
 <br>
-<br>
-<br>
-<p style="margin:12px">
-As x is close to 0:
-</p>
-<br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
-<mrow>
-<mi>C</mi>
-<mo>=</mo>
-<mn>6.4</mn>
-<mi>r</mi>
-</mrow>
-</math>
-<br>
-<br>
-<br>
-<p style="margin:12px">
-In calculus terms:
-</p>
-<br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
-    <mrow>
-        <mi>C</mi>
-    <mo>=</mo>
-        <munder>
-      <mo>lim</mo>
-      <mrow>
-        <mi>x</mi>
-        <mo>→</mo>
-        <mn>0</mn>
-      </mrow>
-    </munder>
-        <mfrac>
-            <mrow>
-        <mn>3.2</mn> 
-        <mo>(</mo> 
-        <msup>
-          <mi>r</mi>
-          <mn>2</mn> 
-        </msup>
-        <mo>-</mo> 
-        <msup>
-          <mrow>
-            <mo>(</mo> 
-            <mi>r</mi>
-            <mo>-</mo>
-            <mi>x</mi>
-            <mo>)</mo>
-          </mrow>
-          <mn>2</mn>
-        </msup>
-        <mo>)</mo>
-      </mrow>
-      <mi>x</mi>
-    </mfrac>
-    <mo>=</mo>
-    <mn>6.4</mn>
-    <mi>r</mi>
-  </mrow>
-</math>
 <br>
 <br>
 <div>
-<label style="margin:12px" for="circle-radius-c">Radius:</label>
-<input id="circle-radius-c" type="number" value="1" step="any">
-<script>
-  function circleCircumference(radius) {
-    return 3.2 * radius * 2;
-  }
-
-  document.getElementById('circle-radius-c').addEventListener('input', function () {
-    const radius = parseFloat(this.value);
-    if (isNaN(radius)) {
-      document.getElementById('circle-circumference').innerText = '';
-    return;
-    }
-
-    document.getElementById('circle-circumference').innerText =
-      `Circumference: ${circleCircumference(radius).toFixed(5)} units`;
-    });
-</script>
-<p style="margin:12px" id="circle-circumference"></p>
-</div>
-<br>
-<br>
-<section>
 <details>
-  <summary><h5 style="margin:7px">Proof</h5></summary>
+  <summary><h4 style="margin:7px">Expand</h4></summary>
 <p style="margin:12px">Expand the term (r - x)²:
 </p>
 <br>
@@ -3027,7 +2940,7 @@ In calculus terms:
           <msup>
             <mi>r</mi>
             <mn>2</mn>
-          </msup>
+			 </msup>
           <mo>-</mo>
           <mn>3.2</mn>
           <msup>
@@ -3098,7 +3011,7 @@ In calculus terms:
 </math>
 <br>
 <br>
-<br>
+<br> 
 <p style="margin:12px">Cancel out the x in the numerator and denominator:
 </p>
 <br>
@@ -3125,17 +3038,99 @@ As x is close to 0,
 <mn>6.4</mn>
 <mi>r</mi>
 </mrow>
+</math>			  
+</details>
+</div>
+<br>
+<br>	
+<p style="margin:12px">As x is close to 0:
+</p>
+<br>
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>C</mi>
+<mo>=</mo>
+<mn>6.4</mn>
+<mi>r</mi>
+</mrow>
 </math>
 <br>
 <br>
 <br>
 <p style="margin:12px">
-Irrational or not, with an infinitesimally small thickness the circumference practically equals 6.4 × radius.
+In calculus terms:
+</p>
+<br>
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow>
+        <mi>C</mi>
+    <mo>=</mo>
+        <munder>
+      <mo>lim</mo>
+      <mrow>
+        <mi>x</mi>
+        <mo>→</mo>
+        <mn>0</mn>
+      </mrow>
+    </munder>
+        <mfrac>
+            <mrow>
+        <mn>3.2</mn> 
+        <mo>(</mo> 
+        <msup>
+          <mi>r</mi>
+          <mn>2</mn> 
+        </msup>
+        <mo>-</mo> 
+        <msup>
+          <mrow>
+            <mo>(</mo> 
+            <mi>r</mi>
+            <mo>-</mo>
+            <mi>x</mi>
+            <mo>)</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
+        <mo>)</mo>
+      </mrow>
+      <mi>x</mi>
+    </mfrac>
+  </mrow>
+</math>
+<br>
+<br>
+<div>
+<label style="margin:12px" for="circle-radius-c">Radius:</label>
+<input id="circle-radius-c" type="number" value="1" step="any">
+<script>
+  function circleCircumference(radius) {
+    return 3.2 * radius * 2;
+  }
+
+  document.getElementById('circle-radius-c').addEventListener('input', function () {
+    const radius = parseFloat(this.value);
+    if (isNaN(radius)) {
+      document.getElementById('circle-circumference').innerText = '';
+    return;
+    }
+
+    document.getElementById('circle-circumference').innerText =
+      `Circumference: ${circleCircumference(radius).toFixed(5)} units`;
+    });
+</script>
+<p style="margin:12px" id="circle-circumference"></p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="margin:12px">
+Irrational or not, with an infinitesimally small thickness the circumference technically equals 6.4 × radius.
 <br>
 <br>
 It can be verified via physical measurements by wrapping a piece of paper around a round object, or placing the paper in a cylindrical tube, making sure that its ends touch without overlapping, and measuring both the diameter and the length of the straightened piece of paper.</p>
-</details>
-</section>
 </section>
 <br>
 <br>
@@ -3144,9 +3139,6 @@ It can be verified via physical measurements by wrapping a piece of paper around
   <summary><h4 style="margin:7px">While the approximate value of 3.14159…, commonly denoted by the Greek letter π, is widely recognized today, the historical development of this concept is less understood.</h4></summary>
 <p style="margin:12px">
 For centuries, the circle has been a symbol of mathematical elegance—and π its most iconic constant. But beneath the surface of tradition lies a deeper question: Are the formulas we use truly derived from geometric logic, or are they inherited approximations dressed in symbolic authority?
-<br>
-<br>
-Some think 'Standard Geometry' means accepting the π. But the π is actually an approximation derived from limits (getting closer and closer forever).
 <br>
 <br>
 The constant relationship between a circle's circumference and its diameter has captivated mathematicians for millennia.
@@ -3161,44 +3153,45 @@ Historical records suggest that ancient Babylonians initially calculated it as 3
 <br>
 <br>
 <section id="Archimedes">
+<p style="margin:12px">Some think 'Standard Geometry' means accepting the π. But the π is actually an approximation derived from limits (getting closer and closer forever).
+</p>
+<br>
 <h4 style="margin:12px">Archimedes and the Illusion of Limits</h4>
 <br>
 <br>
 <p style="margin:12px">The Greek Archimedes’ method for estimating the π is often celebrated as a foundational triumph of geometric reasoning.
-<br>
-<br>
-He approximated the circle using inscribed and circumscribed polygons. 
 </p>
+<br>
 <div>
 <details>
-  <summary style="margin:12px">But that method itself introduced compounding errors.
+<summary style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. 
 </summary>
-<br>
-<p style="margin:12px">He didn't have accurate measuring tools, so he used pure logic. He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. It is a beautiful piece of geometry. 
-<br>
-<br>
-However, this method relies on a massive assumption: That a polygon with enough sides becomes a circle.
+<p style="margin:12px">
+But that method itself introduced compounding errors.
 <br>
 <br>
-The method is founded on the principle of sandwiching the circle, requiring the circle to enclose the maximum area for a fixed perimeter.
+The definition of an inscribed polygon is that both its perimeter and area are smaller than the circle. The properties of a circumscribed polygon are larger.
+<br>
+<br>
+He didn't have accurate measuring tools, so he used pure logic. He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
+<br>
+<br>
+However, this method relies on a massive assumption: That a polygon with enough sides approaches a circle.
 <br>
 <br>
 Observing how the difference between the two polygonal perimeters — one inside the circle, one outside — became smaller, Archimedes likely believed that as the number of sides increased, the difference between the perimeters of the inscribed and circumscribed polygons would converge toward zero, approaching the circumference of the circle.
 <br>
 <br>
-But that assumption ignores a crucial geometric reality: as the number of sides increases the internal angles flatten toward 180°, — it is 180° - 360° / 96 = 176.25° in the case of a 96-gon — nearing a straight line rather than a curve, and the polygon no longer reflects the circle’s curvature. 
+While that is true for the length, that assumption ignores a crucial geometric reality: as the number of sides increases the internal angles flatten toward 180°, — it is 180° - 360° / 96 = 176.25° in the case of a 96-gon — nearing a straight line rather than a curve, and the polygon no longer reflects the circle’s curvature. 
 <br>
 <br>
 In contrast, polygons with internal angles in the range between 150° and 160°, such as the 13- to 16-gon, preserve a meaningful bend that better reflects circularity. 
 <br>
 <br>
-The Paradox: How could a shape made of thousands of tiny straight lines ever truly become a curve? A line segment, no matter how short, is fundamentally different from a curve.
+A line segment, no matter how short, is fundamentally different from a curve. Conventional math ignores this qualitative difference, assuming that 'close enough' is the same as 'equal'.
 <br>
 <br>
-Conventional math ignores this qualitative difference, assuming that 'close enough' is the same as 'equal'.
-<br>
-<br>
-They assume that more sides mean closer resemblance to a circle, hence the circle encloses the maximum possible area for a given perimeter ( isoperimetric theorem ). 
+They assume that more sides mean closer resemblance to a circle, hence the circle encloses the maximum possible area for a given perimeter (isoperimetric theorem). 
 <br>
 <br>
 This seems obvious when comparing a triangle or a square to a circle. An isoperimetric triangle has the smallest area, the square is larger, and so on. From this pattern, it was assumed that the trend continues indefinitely — that a polygon with an infinite number of sides would resemble a circle perfectly, with its area approaching from below.
@@ -3207,10 +3200,10 @@ This seems obvious when comparing a triangle or a square to a circle. An isoperi
 <b>The 14-Gon Paradox (The Logical Break)</b>
 <br>
 <br>
-Here is where the conventional logic actually snaps.
+Here is where Archimedes' logic snaps.
 <br>
 <br>
-When the circle’s area and circumference is calculated with the constant 3.2, it becomes clear that the area of an isoperimetric 14‑gon is actually larger than the circle’s. This flips the script: the polygon can enclose more area even with the same perimeter. As the number of sides increases the effect is stronger, so the isoperimetric polygon behaves like a circumscribed figure despite having equal perimeter. This overlooked disproportion shows that polygons do not approach the circle “in every sense” — above 13 sides, the comparison underestimates the circle.
+When the circle’s area and circumference is calculated with the constant 3.2, it becomes clear that the area of an isoperimetric 14‑gon is actually larger than the circle’s. A flat angle encloses the area differently than the curve. This flips the script: the polygon can enclose more area even with the same perimeter. As the number of sides increases the effect is stronger, so the isoperimetric polygon behaves like a circumscribed figure despite having equal perimeter. This overlooked disproportion shows that polygons do not approach the circle “in every sense” — above 13 sides, the comparison underestimates the circle.
 <br>
 <br>
 Archimedes pushed his method far beyond this curve-aligned threshold — and the result was a recursive underestimate. The perimeter of the circumscribed polygon that he believed to be an overestimate of the circumference was practically an underestimate of it. 
@@ -3222,34 +3215,14 @@ Thus his final result of 3.14... lies between two underestimates.
 The traditional method of exhaustion fails not due to rounding errors, but due to a fundamental divergence of shape that invalidates its own geometric ordering.
 <br>
 <br>
-The polygon method attempts to define the perfect circle using an imperfect, flawed limit. This destroys the basic geometric ordering (A(in)  A(Circle)  A(circ)) that the method is based on, proving it is unsuitable for determining the true circle constant.
+The polygon method attempts to define the perfect circle using an imperfect, flawed limit. This destroys the basic geometric ordering that the method is based on, proving it is unsuitable for determining the true circumference to diameter ratio of a circle.
 <br>
 <br>
-What we’re left with is not a proof, but a layered approximation — one that has shaped centuries of geometry, but now deserves a closer, more rational reexamination.
+What we’re left with is not a proof, but a flawed approximation — one that has shaped centuries of geometry, but now deserves a closer, more rational reexamination.
 <br>
 <br>
-<strong>The classical polygon-based approach to approximating a circle’s circumference relies on inscribed and circumscribed polygons, calculated using trigonometric functions aligned to π. But this alignment is problematic if π itself is the quantity under investigation.</strong>
 <br>
 <br>
-The equal distance polygon method upgrades the classical approach by replacing inherited assumptions with geometric conditions — and aligns the approximation process with the true nature of the circle.
-<br>
-<br>
-We begin with a strong geometric foundation: the area of a circle is exactly 3.2r². This gives us reason to suspect that the true circumference is 6.4r, not 2πr. To test this, we reframe the polygon approximation method.
-<br>
-<br>
-Rather than treating inscribed and circumscribed polygons separately and relying on assumptions about how their perimeter gaps behave as the number of sides increases, we introduce a creative and grounded condition: equal distance between the polygon’s sides, vertices, and the circle’s arc.
-<br>
-<br>
-This equidistance constraint allows us to calculate perimeters for polygons of various side counts (triangle, square, hexagon, 14-gon, 96-gon), each tuned to balance deviation symmetrically. The results show that:
-<br>
-<br>
-- Perimeters are not proportional to the number of sides.
-<br>
-<br>
-- The 14-gon already approximates the circle remarkably well.
-<br>
-<br>
-- The 96-gon converges precisely to a circumference of 6.4, confirming the area-based ratio.
 </p>
 <br>
 </details>
@@ -3280,7 +3253,7 @@ It was not until the 18th century that the symbol π, popularized by the mathema
 <h4 style="margin:12px">∫ Calculus: Summary, Not Source</h4>
 <br>
 <br>
-<p style="margin:12px">Several complex formulas were introduced by different mathematicians, aimed at more accurately estimating this ratio, based on a theoretical polygon with an infinite number of sides. 
+<p style="margin:12px">Several complex formulas were introduced by different mathematicians, aimed at more accurately estimating this ratio, based on theoretical polygons with an infinite number of sides. 
 <br>
 <br>
 All of the above mentioned approximation methods have two things in common: 
@@ -3315,13 +3288,16 @@ Modern calculus summarizes these approximations with elegant notation, such as:
 </math>
 <br>
 <p style="margin:12px">
-<strong>But this is not a magical formula—it’s a symbolic summary of prior assumptions.</strong> Each notation should correspond to a real, logical property of the circle. Yet upon inspection, inconsistencies emerge. The formula doesn’t derive the circumference from first principles; it assumes it. 
+<strong>But this is not a magical formula—it’s a symbolic summary of prior assumptions.</strong>There are at least a dozen different calculus methods out there, but each and every one of those are solved through basic operations. Each notation should correspond to a real, logical property of the circle. Yet upon inspection, inconsistencies emerge. The formula doesn’t derive the circumference from first principles; it assumes it. 
+<br>
+<br>
+The classical polygon-based approach to approximate a circle’s circumference relies on inscribed and circumscribed polygons, calculated using trigonometric functions aligned to π. But this alignment is problematic if π itself is the quantity under investigation.
 <br>
 <br>
 Calculus can be a useful mathematical tool, but calling it exact is a bold statement. 
 <br>
 <br>
-It can be exact with exact limits and basic operations, but if those are given then they can be calculated directly without calculus.
+It can be exact with exact limits and certain operations, but if those are given then they can be calculated directly without calculus.
 </p>
 </section>
 <br>
