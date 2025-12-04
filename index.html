@@ -2595,8 +2595,9 @@ The ratio between the radius of the circle and the side of the square is calcula
 <p style="margin:12px">Which is equivalent to 1 = 1 .
 <br>
 <br>
-Note: This is an identity; not tautology.
+Gap equals overlap. This is an identity; not tautology. 
 </p>
+<br>
 </details>
 </section>
 <p style="margin:12px">
@@ -3133,7 +3134,6 @@ Some think 'Standard Geometry' means accepting the π. But the π is actually an
 <details>
 <summary style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. But that method itself introduced compounding errors.
 </summary>
-<br>
 <p style="margin:12px">
 He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
 <br>
@@ -3152,29 +3152,21 @@ In contrast, polygons with internal angles in the range between 150° and 160°,
 <br>
 A line segment, no matter how short, is fundamentally different from a curve. Conventional math ignores this qualitative difference, assuming that 'close enough' is the same as 'equal'.
 <br>
-<br>
 They assume that more sides mean closer resemblance to a circle, hence the circle encloses the maximum possible area for a given perimeter (isoperimetric theorem). 
-<br>
 <br>
 This seems obvious when comparing a triangle or a square to a circle. An isoperimetric triangle has the smallest area, the square is larger, and so on. From this pattern, it was assumed that the trend continues indefinitely — that a polygon with an infinite number of sides would resemble a circle perfectly, with its area approaching from below.
 <br>
 <br>
-<b>The 14-Gon Paradox (The Logical Break)</b>
-<br>
-<br>
-Here is where Archimedes' logic snaps.
+This is where Archimedes' logic snaps.
 <br>
 <br>
 The definition of an inscribed polygon is that both its perimeter and area are smaller than the circle. The properties of a circumscribed polygon are larger.
 <br>
 <br>
-When the circle’s area and circumference is calculated with the constant 3.2, it becomes clear that the area of an isoperimetric 14‑gon is actually larger than the circle’s. A flat angle encloses the area differently than the curve. This flips the script: the polygon can enclose more area even with the same perimeter. As the number of sides increases the effect is stronger, so the isoperimetric polygon behaves like a circumscribed figure despite having equal perimeter. This overlooked disproportion shows that polygons do not approach the circle “in every sense” — above 13 sides, the comparison underestimates the circle.
+When the circle’s area and circumference is calculated with the constant 3.2, it becomes clear that the area of an isoperimetric 14‑gon is actually larger than the circle’s. A flat angle encloses the area differently than the curve. This flips the script: the polygon can enclose more area even with the same perimeter. As the number of sides increases the effect is stronger, so the isoperimetric polygon behaves like a circumscribed figure despite having equal perimeter. This overlooked disproportion shows that polygons do not approach the circle in every sense — above 13 sides, the comparison underestimates the circle.
 <br>
 <br>
-Archimedes pushed his method far beyond this curve-aligned threshold — and the result was a recursive underestimate. The perimeter of the circumscribed polygon that he believed to be an overestimate of the circumference was practically an underestimate of it. 
-<br>
-<br>
-Thus his final result of 3.14... lies between two underestimates. 
+Archimedes pushed his method far beyond this curve-aligned threshold — and the result was a recursive underestimate. 
 <br>
 <br>
 The traditional method of exhaustion fails not due to rounding errors, but due to a fundamental divergence of shape that invalidates its own geometric ordering.
@@ -3188,11 +3180,32 @@ Another overlooked aspect of that method is the assumption that as the perimeter
 <br>
 Analyzing the gaps of an isoperimetric equilateral triangle reveals that the ratio between the gaps flips compared to the in- and circumscribed triangles.
 <br>
-While the number of sides is the smallest, the perimeter is equal to the circumference, yet the ratio flipped.
+While the number of sides is only 3, the perimeter is equal to the circumference, yet the ratio flipped.
 <br>
 <br>
 The polygon method attempts to define the perfect circle using imperfect, flawed limits. This destroys the basic geometric ordering that the method is based on, proving it is unsuitable for determining the true circumference to diameter ratio of a circle.
 </p>
+<br>
+<details>
+  <summary><h4 style="margin:7px">To analyze it further anyway, my equal distance polygon method upgrades the classical approach by replacing inherited assumptions with geometric conditions — and aligns the approximation process with the true nature of the circle.
+  </h4></summary>
+<p style="margin:12px">
+We begin with a strong geometric foundation: the area of a circle is exactly 3.2r². This gives us reason to suspect that the true circumference is 6.4r, not 2πr. To test this, we reframe the polygon approximation method.
+<br>
+Rather than treating inscribed and circumscribed polygons separately and relying on assumptions about how their perimeter gaps behave as the number of sides increases, we introduce a creative and grounded condition: equal distance between the polygon’s sides, vertices, and the circle’s arc.
+<br>
+This equidistance constraint allows us to calculate perimeters for polygons of various side counts (triangle, square, hexagon, 14-gon, 96-gon), each tuned to balance deviation symmetrically. The results show that:
+<br>
+<br>
+- Perimeters are not proportional to the number of sides.
+<br>
+<br>
+- The 14-gon already approximates the circle remarkably well.
+<br>
+<br>
+- The 96-gon converges precisely to a circumference of 6.4, confirming the area-based ratio.
+</p>
+</details>
 <br>
 </details>
 </div>
