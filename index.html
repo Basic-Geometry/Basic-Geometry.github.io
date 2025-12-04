@@ -497,7 +497,7 @@
 "thumbnail": "android-chrome-256x256.png",
 "typicalAgeRange": "5-105",
 "url": "https://basic-geometry.github.io", 
-"usageInfo": "Discover the Core Geometric System ™, a groundbreaking framework offering a fresh perspective on calculating area and volume using the 3D coordinate system. Introducing exact, empirically grounded and logically consistent formulas instead of the flawed conventional approximations."
+"usageInfo": "Exact, grounded and logically consistent formulas instead of the conventional approximations. AI can't differentiate lexical knowledge from real logic."
 }
 </script>
 </head>
@@ -2100,13 +2100,13 @@ The area of a circle is defined by comparing it to a square since that is the ba
 <p style="margin:12px">The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
 <br>
 <br>
-In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square. 
+In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square, leaving some of the square uncovered. 
 <br>
 <br>
-The arcs of the quadrants of a circumscribed circle would meet at the center of the square.
+The arcs of the quadrants of a circumscribed circle would overlap, and meet at the center of the square, covering it all.
 <br>
 <br>
-<strong>The arcs of the quadrants that equal in area to the square intersect at the quarters on its centerlines.</strong>
+<strong>The arcs of the quadrants of the circle that equals in area to the square intersect right in between those limits, at the quarters on its centerlines.</strong>
 <br>
 <br>
 The ratio between the radius of the circle and the side of the square is calculable.
@@ -2219,66 +2219,10 @@ The ratio between the radius of the circle and the side of the square is calcula
 </mrow>
 </math>
 <br>
-<br>	
-<p style="margin:12px">
-The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle. 
-</p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
-<mrow>
-<mi>A</mi>
-<mo>=</mo>
-<mrow>
-<mfrac>
-<mn>16</mn>
-<mn>5</mn>
-</mfrac>
-<mo>×</mo>
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
-</mrow>
-<mo>=</mo>
-<mn>3.2</mn>
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
-</mrow>
-</math>
-<br>
-<br>
-<div>
-<label style="margin:12px" for="circle-radius-a">Radius:</label>
-<input id="circle-radius-a" type="number" value="1" step="any">
-<script>
-  function circleArea(radius) {
-    return 3.2 * radius * radius;
-  }
-
-  document.getElementById('circle-radius-a').addEventListener('input', function () {
-    const radius = parseFloat(this.value);
-	  
-    if (isNaN(radius)) {
-      document.getElementById('circle-area').innerText = '';
-    return;
-    }
-
-    document.getElementById('circle-area').innerText =
-      `Area: ${circleArea(radius).toFixed(5)} square units`;
-    });
-</script>
-<p style="margin:12px" id="circle-area"></p>
-</div>
-<br>
-<br>
-<p style="margin:12px">It can be verified physically by cutting a circle and a square with the given proportions from a sheet of paper and weighing them.
-</p>
-<br>
-	<section id="circle_area_proof">
+<section id="circle_area_proof">
 <details>
-  <summary><h4 style="margin:7px">By tiling the quadrant model to well identifiable sections, we can algebraically prove that the uncovered area equals exactly the sum of the overlapping sections only if the arcs intersect at the quarters of the centerline.
+  <summary><h4 style="margin:7px">When the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.
 </h4></summary>
 <br>
 <div class="imgbox">
@@ -2369,6 +2313,7 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
+<mrow>
 <mn>2</mn>
 <mo>×</mo>
 <mo>(</mo>
@@ -2419,6 +2364,7 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
+</mrow>
 </mrow>
 </math>
 <br>
@@ -2587,7 +2533,7 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
     <mfrac>
       <mn>1</mn>
       <mn>2</mn>
-    </mfrac>
+	</mfrac>
 <mo>)</mo>
 </mrow>
 <mrow>
@@ -2651,6 +2597,59 @@ This is an identity; not tautology.
 </p>
 </details>
 </section>
+<br>
+<br>
+<p style="margin:12px">
+The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle. 
+</p>
+<br>
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mi>A</mi>
+<mo>=</mo>
+<mrow>
+<mfrac>
+<mn>16</mn>
+<mn>5</mn>
+</mfrac>
+<mo>×</mo>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>=</mo>
+<mn>3.2</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</math>
+<br>
+<br>
+<div>
+<label style="margin:12px" for="circle-radius-a">Radius:</label>
+<input id="circle-radius-a" type="number" value="1" step="any">
+<script>
+  function circleArea(radius) {
+    return 3.2 * radius * radius;
+  }
+
+  document.getElementById('circle-radius-a').addEventListener('input', function () {
+    const radius = parseFloat(this.value);
+	  
+    if (isNaN(radius)) {
+      document.getElementById('circle-area').innerText = '';
+    return;
+    }
+
+    document.getElementById('circle-area').innerText =
+      `Area: ${circleArea(radius).toFixed(5)} square units`;
+    });
+</script>
+<p style="margin:12px" id="circle-area"></p>
+</div>
 </section>
 <br>
 <br>
@@ -3132,15 +3131,13 @@ Some think 'Standard Geometry' means accepting the π. But the π is actually an
 <br>
 <p style="margin:12px">The Greek Archimedes’ method for estimating the π is often celebrated as a foundational triumph of geometric reasoning.
 </p>
-<br>
 <div>
 <details>
 <summary style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. But that method itself introduced compounding errors.
 </summary>
 <br>
-<br>
 <p style="margin:12px">
-Instead of measuring tools, so he used geometric logic. He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
+He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
 <br>
 <br>
 However, this method relies on a massive assumption: That a polygon with enough sides approaches a circle.
@@ -3346,6 +3343,41 @@ That makes the arc value of 360° = 6.4radian, and trigonometric functions that 
 <br>
 <br>
 These are two aspects of that.
+<br>
+<br>
+Another aspect is the cognitive risk of flawed geometric axioms.
+<br>
+<br>
+The central concern arises from the potential cognitive harm caused by teaching the approximate, irrational constant π as an absolute truth in foundational geometry.
+<br>
+<br>
+<br>
+<b>1. The Flawed Foundation</b>
+<br>
+<br>
+The Problematic Axiom: The conventional geometric curriculum requires students to accept that the constant for circle area (A = πr²) is both exact and unreachable/irrational, because it is derived from the error-prone polygon approximation method (Archimedes).
+<br>
+<br>
+The Proposed Solution (CGS): The Core Geometric System™ (CGS) provides a logically self-consistent alternative where the area constant is the rational number 3.2 (A = 3.2r²), derived from an algebraically proven Area Balance Axiom with the square.
+<br>
+<br>
+<br>
+<b>2. The Cognitive and Pedagogical Impact</b>
+<br>
+<br>
+The warning is that teaching the inconsistency of π as a fundamental truth may negatively affect a student's cognitive development:
+<br>
+<br>
+Creates Cognitive Dissonance: It forces the brain's pattern-recognition systems to accept a conflict: an "absolute" constant that is fundamentally imperfect and inconsistent with the true basis of area (the square).
+<br>
+<br>
+Hinders Logical Consistency: It teaches students that in mathematics, the search for perfect, elegant logical consistency can be abandoned in favor of memorizing an approximate rule.
+<br>
+<br>
+Inhibits Whole-Brain Synchronization: It potentially creates a disconnect between the brain's visual/spatial centers (which recognize the geometric imperfection) and its analytical centers (which are forced to accept the numerical approximation), leading to poor integration of geometric understanding.
+<br>
+<br>
+The final conclusion is that adopting a consistent, rational constant like 3.2 offers a path to a more coherent and structurally sound foundation for geometric thought, thereby avoiding the introduction of this fundamental logical flaw into developing minds.
 </p>
 </section>
 </details>
