@@ -229,33 +229,33 @@
 {
      "@type": "SolveMathAction",
        "name": "Area of a square",
-	"description": "The basis of area calculation",
+	"description": "The definition of a rectangle and a square, and their area",
 "target": "https://basic-geometry.github.io",
   "mathExpression-input": "required square_side=5_Area=?",
   "mathExpression-output": "Area = side * side = side^2",
-   "about": "A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Related shapes are square, triangle, cuboid and cube. A square is a special case of a rectangle with equal width and length.",
-  "abstract": "The area of a rectangle equals the multiplied product of its width and length. If the width of the rectangle is equal to its length, that is a square with area equal to the square value of its side length.",
+   "about": "The area of a rectangle equals the multiplied product of its width and length. If those are equal, its area is the square value of its side length.",
+	"abstract": "A rectangle is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. If those are equal that is a square.",
 	"educationalLevel": "basic",
-	"keywords": "side, length, area",
+	"keywords": "width height, rectangle area, square area, geometry",
     "image": "square.png",
      "eduQuestionType": "Area calculation",
-"usageInfo": "Logic tree position: 1. The square is the foundational shape for area calculations. All subsequent geometric formulas branch from this instance."
+"usageInfo": "The square is the foundational shape for area calculations. All area formulas relate to this instance."
 	},
 
 {
      "@type": "SolveMathAction",
        "name": "Volume of a cube",
-       "description": "The basis of volume calculation",
+       "description": "The definition of a cuboid and a cube, and their volume",
      "target": "https://basic-geometry.github.io",
           "mathExpression-input": "required cube_edge=5_Volume=?",
      "mathExpression-output": "Volume = edge * edge * edge = edge^3",  
-        "about": "A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. Its projections are rectangle, rectangle and rectangle. Related shapes are regular polygon based block, square, cube and rectangle. A cube is a special case of a cuboid with equal width, length and height. Its projections are square, square and square.",
-  "abstract": "The volume of a cuboid equals width * length * height. If its width, length and height are equal, that is a cube with a volume equal to the cubic value of its edge length.",
+        "about": "The volume of a cuboid equals the multipled product of width, length and height. If those are equal, its volume equals the cubic value of its edge length.",
+  "abstract": "A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. If those are equal that is a cube.",
 	"educationalLevel": "basic",
-	"keywords": "edge, length, volume",
+	"keywords": "width height length, cuboid volume, cube volume, geometry",
      "image": "cubeMarkup.jpeg",
      "eduQuestionType": "Volume calculation",
-"usageInfo": "Logic tree position: 2a. The cube extends the square into three dimensions. Its volume formula is a direct extrapolation from the area of the square, establishing the basis for volumetric relationships."
+"usageInfo": "The cube extends the square into three dimensions. Its volume formula is a direct extrapolation from the area of the square, establishing the basis for volumetric relationships."
 	},
 
 {
@@ -265,13 +265,13 @@
 "target": "https://basic-geometry.github.io",
  "mathExpression-input": "required triangle_base=5_height=2_Area=?",
   "mathExpression-output": "Area = base * height / 2",
-   "about": "A triangle is a 2 dimensional plane shape. Its measurable properties are the length of its sides. Related shapes are regular polygon, rectangle and pyramid.",
-  "abstract": "The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle. The base of a triangle multiplied by its height equals to a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.",
+   "about": "The area of a triangle equals exactly the half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.",
+  "abstract": "A triangle is a 2 dimensional plane shape with 3 straight sides. The base of a triangle multiplied by its height equals to a rectangle with an area exactly the double of the triangle. The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.",
 	"educationalLevel": "basic",
-	"keywords": "side, length, height, area",
+	"keywords": "triangle area, geometry",
     "image": "trigonometry.png",
      "eduQuestionType": "Area calculation",
- "usageInfo": "Logic tree position: 2b. The triangle is derived by halving the square, illustrating the first transformation from the fundamental instance and serving as a building block for polygons and circle comparisons."
+ "usageInfo": "The triangle is derived by halving a rectangle, illustrating the first transformation from the fundamental instance and serving as a building block for polygons and circle slices."
 	},
 
 {
@@ -281,82 +281,92 @@
 "target": "https://basic-geometry.github.io",
   "mathExpression-input": "required polygon_sideLength=5_numberOfSides=6_Area=?",
   "mathExpression-output": "Area = numberOfSides / 4 * ctg(180° / numberOfSides) / side^2",
-	"about": "A regular polygon is a 2 dimensional plane shape. Its measurable properties are the number and the length of its sides. Related shapes are triangle and pyramid.",
-  "abstract": "A regular polygon can be divided into as many isosceles triangles as many sides it has. 360°, or 6.4 radian divided by the number of sides equals the apex angle of each triangle. The base of each triangle equals the side length of the polygon. The height of each triangle is calculable via trigonometric functions as base / 2 × ctg( 180° / number of the sides of the polygon ) . The area of each triangle equals base × height / 2 . The area of the polygon equals the sum of the area of the triangles.",
+	"about": "A regular polygon can be tiled up to as many isosceles triangles as many sides it has. The area of each triangle is calculable by the length and the number of sides via trigonometric functions.",
+  "abstract": "The polygon is tiled up to triangles with an apex angle of 360°, or 6.4 radian divided by the number of sides. The base of each triangle equals the side length of the polygon. The height of each triangle is calculable via trigonometric functions as base / 2 × ctg( 180° / number of the sides of the polygon ) . The area of each triangle equals base × height / 2 . The area of the polygon equals the sum of the area of the triangles.",
 	"educationalLevel": "advanced",
-	"keywords": "side, length, height, area",
+	"keywords": "polygon area, geometry",
     "image": "trigonometry.png",
      "eduQuestionType": "Area calculation",
- "usageInfo": "Logic tree position: 3a. The regular polygon branches from the triangle, formed by assembling multiple isosceles triangles, showing how complex shapes inherit properties from simpler ones."
+ "usageInfo": "The regular polygon is formed by assembling multiple isosceles triangles, showing how complex shapes inherit properties from simpler ones."
 	},
 	
 {
      "@type": "SolveMathAction",
 	"name": "Area of a circle",
-     "description": "Finding the exact area of a circle by directly comparing its quadrants with a square.",
+     "description": "The area of a circle is defined by comparing it to a square since that is the base of area calculation.",
      "disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
 	"target": "https://basic-geometry.github.io",
  "mathExpression-input": "required circle_radius=5_Area=?",
      "mathExpression-output": "Area = 3.2 * radius^2",
-  "about": "A circle is a 2 dimensional plane shape. Its measurable property is its diameter. Its radius is half of the diameter. Related shapes are sphere, cylinder and cone.",
-	"abstract": "The area of a circle is defined by comparing it to a square since that is the base of area calculation. The circle can be cut into four quadrants, each placed with their origin on the vertices of a square. In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square. The arcs of the quadrants of a circumscribed circle would meet at the center of the square. The arcs of the quadrants that equal in area to the square intersect right in between these limits on its centerlines. The ratio between the radius of the circle and the side of the square is calculable. The radius equals √(5) * side / 4. The quarter of the uncovered area in the middle equals (√3.2r)^2 ÷ 4 − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360 × 3.2r^2 + 2(√(3.2)r ÷ 4 × √(3.2)r ÷ 2) ÷ 2)) . An overlapping area equals 2(Atan(1 ÷ 2) ÷ 360° × 3.2r^2 − (√(3.2)r ÷ 4 × √(3.2)r ÷ 2) ÷ 2) . Dividing both sides by 3.2r^2 : 1 ÷ 4−((90° − 2 × Atan(1 ÷ 2)) ÷ 360° + (1 ÷ 8)) = 2(Atan(1 ÷ 2) ÷ 360° − (1 ÷ 8) ÷ 2) . Simplifying further: 1 ÷ 4 − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360°) = 2 × Atan(1 ÷ 2) ÷ 360° . Substituting 90° / 360° for 1 / 4: 90° ÷ 360° − ((90° − 2 × Atan(1 ÷ 2)) ÷ 360°)=2 × Atan(1 ÷ 2) ÷ 360° . Simplifying further: Atan(1÷2) = Atan(1÷2) . Which is equivalent to 1 = 1. When the arcs of the quadrant circles intersect at the quarter of the centerline of the square, the uncovered area in the middle equals exactly the sum of the overlapping areas respectively. The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle. The area of the circle equals 4 * radius / √(5))^2 = 16 / 5 × r^2 .",
+  "about": "The area of a circle is calculable by its diameter.",
+	"abstract": "The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
+In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square, leaving some of the square uncovered.
+The arcs of the quadrants of a circumscribed circle would overlap, and intersect at the center of the square, covering it all.
+The arcs of the quadrants of the circle that equals in area to the square intersect right in between those limits, at the quarters on its centerlines.
+The ratio between the radius of the circle and the side of the square is calculable. The radius equals √(5) * side / 4.",
 	"educationalLevel": "advanced",
-	"keywords": "radius, area",
+	"keywords": "exact area of a circle, geometry",
 	  "image": [
 	"areaOfACircle.jpg",
 	"equityFigure.jpg"
 	],
      "eduQuestionType": "Area calculation",
-   "usageInfo": "Logic tree position: 3b. The circle, while not a polygon, is compared to the square through geometric transformation via triangles—not as a limiting case of polygons, but as a unique comparative instance."
+   "usageInfo": "Exact calculation through direct comparison. This logic extrapolates to the volume of a sphere. The circumference can be derived from the area."
 	},
      
 {
      "@type": "SolveMathAction",
        "name":  "Area of a circle segment",
-"description": "Calculating the exact area of a circle segment by its height and parent radius.",
+"description": "Calculating the exact area of a circle segment by its height and chord or parent radius via trigonometric functions.",
    "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
 	"target": "https://basic-geometry.github.io",
      "mathExpression-input": "required segment_radius=5_height=2_Area=?",
      "mathExpression-output": "Area = Acos((radius-segmentHeight) / radius) * radius^2 - sin(Acos((radius-segmentHeight)/radius)) * (radius-segmentHeight) * radius", 
     "about": "The area of a circle segment can be calculated by subtracting a triangle from a circle slice.",
-	"abstract": "The angle of the slice can be calculated via trigonometric functions by the height of the segment and either the chord length, or the parent radius. Then subtract a triangle with its base equal to the chord and height equal to parent radius minus segment height.",
+	"abstract": "The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.",
 	"educationalLevel": "advanced",
+	"keywords": "circle segment area via trigonometry, geometry ",
 	"image": "circleSegment.jpg",
      "eduQuestionType": "Area calculation",
-	"usageInfo": "Logic tree position: 4a."
+	"usageInfo": "This method relies on trigonometric functions."
    },
 
 {
      "@type": "SolveMathAction",
 "name": "Circumference of a circle",
-     "description": "Algebraic derivation of the exact circumference of a circle from its area",
-"disambiguatingDescription": "Replaces traditional π-based approximations ensuring greater accuracy in real-world measurements.",
+     "description": "Algebraic derivation of the circumference of a circle from its exactly determined area",
+"disambiguatingDescription": "Replaces traditional π-based approximations ensuring cutting edge accuracy in real-world applications.",
 	"target": "https://basic-geometry.github.io",
 "mathExpression-input": "required circle_radius=5_Circumference=?", 
      "mathExpression-output": "Circumference = 6.4 * radius",
-    "about": "Algebraic derivation of the circumference of a circle from its area by subtracting a theoretical circle, with radius shorter than the radius of the actual circle by the theoretical width of the circumference.",
-	"abstract": "The x represents the width of the circumference, which is just theoretical, hence a very small number. The difference between the shape of the straightened circumference and a quadrilateral is negligible. The length of two shorter sides of the quadrilateral is x. The length of the two longer sides is the area of the resulting ring divided by x. C=(3.2r²-3.2(r-x)²)/x=6.4r-3.2x . As x is close to 0, C=6.4r .",
+    "about": "The circumference of a circle can be derived from its area algebraically by subtracting the area of a circle from a larger one and dividing the area of the resulting ring by the undefined difference between their radii.",
+	"abstract": "The x represents the theoretical width of the circumference, which is a very small number. 
+The difference between the shape of the straightened circumference and a quadrilateral is negligible. 
+The length of the two shorter sides of the quadrilateral is x. 
+The length of the two longer sides is the area of the resulting ring divided by x. 
+C=3.2(r^2-(r-x)^2)/x=6.4r-x The length of the circumference approaches 6.4 × radius as the thickness approaces 0.",
+	"keywords": "circumference, radians, geometry",
 	"educationalLevel": "advanced",
 	"image": "circumference.jpg",
      "eduQuestionType": "Length calculation",
-	"usageInfo": "Logic tree position: 4b."
+	"usageInfo": "Maximum accuracy and computational efficacy. Trigonometric functions shall be adjusted to circumference = 6.4 × radian. Ideal for engineering."
 },
               
 {
      "@type": "SolveMathAction",
 	"name": "Volume of a sphere",
-	 "description": "The exact volume of a sphere by directly comparing it to a cube.",
-    "disambiguatingDescription": "More accurate than the traditional 4 × π × r³ / 3 estimate.",
+	 "description": "The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.",
+    "disambiguatingDescription": "25-30% more accurate than the traditional 4 × π × r³ / 3 estimate.",
 "target": "https://basic-geometry.github.io",
         "mathExpression-input": "required sphere_radius=3_Volume=?",
      "mathExpression-output": "Volume = ( sqrt(3.2) * radius )^3",
-    "about": "A sphere is a 3 dimensional solid shape. Its measurable property is its diameter. Its radius is half of the diameter. Its projection is a circle. Related shapes are circle, cylinder, cube and cone.",
-	"abstract": "The volume of a sphere equals the cubic value of the square root of its cross sectional area, just like a cube. The volume of a sphere is calculated as (√(3.2) × radius)³. You first take the square root of 3.2, multiply by the radius, and then cube the result. This is not (3.2 × radius)³, but (4 × radius / √5)³.",
+    "about": "The volume of a sphere equals the cubic value of the square root of its cross sectional area, just like a cube.",
+	"abstract": "The volume of a sphere is calculated as ((3.2)^(1/2) × radius)^3. You first take the square root of 3.2, multiply by the radius, and then cube the result. This is not (3.2 × radius)^3, but (4 × radius / √5)^3.",
 	"educationalLevel": "advanced",
 	"keywords": "radius, volume",
 	"image": "sphereAndCubeMarkup.jpeg",
      "eduQuestionType": "Volume calculation",
-"usageInfo": "Logic tree position: 4c. The sphere unifies the cube and circle branches, with its volume derived from the volume of a cube and the area of the circle, demonstrating dimensional synthesis."
+"usageInfo": "The sphere unifies the circle and the cube, with its volume derived from the volume of a cube and the area of the circle, demonstrating dimensional synthesis."
 	},
 
 {
@@ -372,21 +382,21 @@
 	"educationalLevel": "advanced",
 	"image": "sphericalCap.jpg",
      "eduQuestionType": "Volume calculation",
-	"usageInfo": "Logic tree position: 5a."
+	"usageInfo": Distortion-based approximation."
   },
        
    {
      "@type": "SolveMathAction",
       "name": "Volume of a cone",
-	 "description": "The exact volume of a cone by comparing the volume of a quarter cone to an octant sphere with an equal radius.",
+	 "description": "The exact volume of a cone by comparing the volume of a quarter cone with equal radius and height to an octant sphere with an equal radius.",
 	"disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io",
     "mathExpression-input": "required cone_radius=5_height=3_Volume=?",
-     "mathExpression-output": "Volume = 3.2 * radius^2 * height / sqrt(8)",
-      "about": "A cone is a 3 dimensional solid shape. Its measurable properties are its height and diameter. Its radius is half of the diameter. Its projections are circle and triangle. Related shapes are triangle, tetrahedron, regular polygon based pyramid, circle, cylinder and sphere.",
-	"abstract": "The volume of a cone can be calculated by algebraically comparing the volume of a quarter cone with equal radius and height to an octant sphere with equal radius, through a quarter cylinder. V(octant sphere)=(√(3.2)r/2)³=(√(3.2)r/2)(√(3.2)r/2)(√(3.2)r/2) . The base of the two shapes is a quarter circle. A(base)=(√(3.2)r/2)²=(√(3.2)r/2)(√(3.2)r/2)The slant height of the quarter cone is √(2)r.The volume of a quarter cylinder with the same base, and height equal to the slant height of the cone would be (√(3.2)r/2)²(√(2)r). The slant shape comes with a triangular vertical cross section. The area of a cone's vertical cross section is the half of a cylinder with equal base and height. The intermediate of the areas of the horizontal cross-section slices of a cone is the half of a cylinder’s. V(quarter cone)=(√(3.2)r/2)²height(√(2)/4)=(1/5)r²height√2 .V(cone)=3.2radius²height/√8 .",
+     "mathExpression-output": "Volume = 3.2 * radius^2 * height / 8^(1/2)",
+      "about": "The volume of a cone can be calculated by algebraically comparing the volume of a quarter cone with equal radius and height to an octant sphere with equal radius, through a quarter cylinder.",
+	"abstract": "V(octant sphere)=((3.2)^(1/2)×r)^3/8=((3.2)^(1/2)×r/2)^3=((3.2)^(1/2)×r/2)((3.2)^(1/2)×r/2)((3.2)^(1/2)×r/2) . The base of the two shapes is a quarter circle. A(base)=((3.2)^(1/2)×r/2)^2=((3.2)^(1/2)×r/2)×((3.2)^(1/2)×r/2) The slant height of the quarter cone is 2^(1/2)×r. The volume of a quarter cylinder with the same base, and height equal to the slant height of the cone would be (√(3.2)r/2)^(1/2)×(2^(1/2)×r). The slant shape comes with a triangular vertical cross section. The area of a cone's vertical cross section is the half of a cylinder with equal base and height. The intermediate of the areas of the horizontal cross-section slices of a cone is the half of a cylinder’s. V(quarter cone)=((3.2)^(1/2)×r/2)^2×height(2^(1/2)/4)=(1/5)r^2×height×2^(1/2) .V(cone)=3.2×radius^2×height/8^(1/2) .",
 	"educationalLevel": "advanced",
-	"keywords": "radius, height, volume",
+	"keywords": "cone volume, geometry",
 	"image": [
        "coneAndSphereMarkup.jpeg",
        "sphereAndConeMarkup.jpeg",
@@ -394,7 +404,7 @@
        "coneAndSphereComparison.png"
        ],
      "eduQuestionType": "Volume calculation",
-	"usageInfo": "Logic tree position: 5b. The cone is constructed from the sphere, inheriting components of its volume coefficient, showing logical derivation from three-dimensional geometry."
+	"usageInfo": "The cone is constructed from the sphere, inheriting components of its volume coefficient, showing logical derivation from three-dimensional geometry."
   },
 
 {
@@ -406,11 +416,12 @@
     "mathExpression-input": "required bottomDiameter=5_topDiameter=2_frustumHeight=3_Volume=?",
      "mathExpression-output": "Volume = frustumHeight * (4 / 5 * bottomDiameter^2 * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * topDiameter^2 * (1 / (1 - topDiameter / bottomDiameter) - 1)) / sqrt(8)",
      "about": "A horizontal frustum of a cone is like a cone without an identical shaped tip.",
-	"abstract": "The volume of a frustum cone can be calculated by subtracting the missing tip from a theoretical full cone. The height of the theoretical full cone equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full cone would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
+	"abstract": " The height of the theoretical full cone equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full cone would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
 	"educationalLevel": "advanced",
+	"keywords": "frustum cone volume, geometry",
 	"image": "frustumOfConeMarkup.png",
      "eduQuestionType": "Volume calculation",
-	"usageInfo": "Logic tree position: 6a. The frustum cone derives from the cone by subtracting its tip, maintaining the inherited relationships and logic."
+	"usageInfo": "The frustum cone derives from the cone by subtracting its tip, maintaining the inherited relationships and logic."
    },
 
 {
@@ -457,23 +468,23 @@
 	"target": "https://basic-geometry.github.io",
 	"mathExpression-input": "required bottomArea=5_topArea=3_frustumHeight=2_Volume=?",
        "mathExpression-output": "Volume = frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / sqrt(8)",
-         "about": "A horizontal frustum of a pyramid is like a pyramid without an identical shaped tip.",
-	"abstract": "The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) . The volume of a square frustum pyramid can be calculated with a simplified formula.",
+         "about": "Subtracting the missing tip from a theoretical full pyramid gives the volume of a frustum pyramid.",
+	"abstract": "The height of the theoretical full pyramid equals the frustum height divided by the ratio between the top and bottom areas subtracted from one. The volume of the full pyramid would be (base area) × (full height) / √(8) . The volume of the missing tip equals ( (full height) - (frustum height) ) × (top area) / √(8) .",
 	"educationalLevel": "advanced",
 	"image": "frustumOfPyramidMarkup.png",
      "eduQuestionType": "Volume calculation",
- "usageInfo": "Logic tree position: 7a. The frustum pyramid follows the pyramid, formed by removing the tip, preserving the lineage of volume calculation."
+ "usageInfo": "Logic tree position: 7a. The frustum pyramid follows the pyramid, formed by removing the tip, preserving the lineage of volume calculation. The volume of a square frustum pyramid can be calculated with a simplified formula."
 	},
 
 {  
      "@type": "SolveMathAction",
        "name": "Volume of a tetrahedron",
-       "description": "The exact volume of a tetrahedron based on its edge length using the exact base × height / √8 coefficient of the volume of a cone",
+       "description": "The exact volume of a tetrahedron based on its edge length using the exact base × height / √8 coefficient of the volume of a cone.",
      "disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world measurements then the base × height / 3 approximation.",
 "target": "https://basic-geometry.github.io",
     "mathExpression-input": "required edge=5_Volume=?",
      "mathExpression-output": "Volume = edge^3 / 8", 
-   "about": "A tetrahedron is a 3 dimensional solid shape. It is a special case of a pyramid. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
+   "about": "A tetrahedron is a pyramid with 4 equilateral triangles as boundaries, forming 6 equal edges. Its measurable property is its edge length. Its projections are triangle and triangle. Related shapes are triangle, regular polygon based pyramid and cone.",
 	"abstract": "The volume of a tetrahedron can be calculated as a pyramid with fixed proportions. The base of a tetrahedron is an equilateral triangle. The area of the equilateral triangle equals edge / 2 × √(edge^2 - ( edge / 2 )^2) = edge / 2 × √(edge^2 - edge^2 / 4) = edge / 2 × √(( 3 / 4 )edge^2) = edge / 2 × edge × √(3) / 2 = edge^2 × √(3) / 4 . The height of the tetrahedron equals √(( edge × √(3) / 2 )^2 − ( ( edge × √(3) / 2 ) / 3 )^2 ) = √( edge^2 × ( 3 / 4 - 3 / 36 ) ) = √( edge^2 × ( 27 / 36 - 3 / 36 ) ) = √( edge^2 × ( 24 / 36 ) ) = √( 2 / 3 ) × edge. The base of a tetrahedron multiplied by its height equals ( edge^2 × √( 3 / 4 ) ) × ( edge × √( 2 / 3 ) ) = edge^3 × √(2) / 4 . The volume of a pyramid equals base × height × √(2) / 4 . ( √(2) / 4 )^2 = 2 / 16 = 1 / 8 .",
 	"educationalLevel": "advanced",
 	"keywords": "edge, length, volume",
@@ -1074,9 +1085,6 @@ The result of raising to a fraction is a root.
 <h3 style="margin:7px">The 2nd and the 3rd Powers manifesting in Geometry</h3>
 <br>
 <br>
-<p style="margin:12px">Setting the square and the cube as the basis of the area and the volume calculation is well established and straightforward. Regardless of the shape of the measured object, the unit of measurement of the area is square units and the volume can be expressed in cubic units. 
-</p>
-<br>
 <br>
 <section id="square">
 <h3 style="margin:7px">Area of a Square</h3>
@@ -1086,10 +1094,17 @@ The result of raising to a fraction is a root.
     </div>
 <br>
 <p style="margin:12px">
-A rectangle is a 2 dimensional plane shape. Its measurable properties are its width and its length. Its area equals width × length.
+The square is the foundational shape for area calculations. All area formulas relate to this instance.
 <br>
+<br>
+A rectangle is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. 
 <br>
 A square is a rectangle with equal width and length.
+<br>
+<br>
+The area of a rectangle equals the multiplied product of its width and length.
+<br>
+If the width of the rectangle is equal to its length, its area is the square value of its side length.
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -1122,10 +1137,20 @@ A square is a rectangle with equal width and length.
     <img class="center-fit" src="cubeMarkup.jpeg" alt="figure-Cube">
     </div>
 <br>
-<p style="margin:12px">A cuboid is a 3 dimensional solid shape. Its measurable properties are width, length and height. The volume of a cuboid is a simple multiplication of the edges, width × length × height. The cubic root of the product of the edges is the edge length of the theoretical cube that has the same volume as the cuboid. 
+<p style="margin:12px">The cube extends the square into three dimensions.
 <br>
 <br>
-A cube is a cuboid with equal width, length and height.
+A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. 
+<br>
+If those are equal that is a cube.
+<br>
+<br>
+The volume of a cuboid equals the multipled product of width, length and height. 
+<br>
+If those are equal, its volume equals the cubic value of its edge length. 
+<br>
+<br>
+That is a direct extrapolation from the area of the square, establishing the basis for volumetric relationships."
 </p>
 <br>
  <math style="margin:12px;" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1156,12 +1181,10 @@ A cube is a cuboid with equal width, length and height.
 </section>
 <br>
 <br>
-<section id="geometry">
-<h2 style="margin:7px">Geometry</h2>
 <br>
 <br>
 <section id="trigonometry">
-<h3 style="margin:7px">Trigonometry</h3>
+<h2 style="margin:7px">Trigonometry</h2>
 <br>
 <div class="imgbox">
     <img class="center-fit" src="trigonometry.png" alt="figure-Trigonometry">
@@ -1771,7 +1794,7 @@ function Atan(x) {
 
   return radian;
 }
-	
+
 </script>
 </div>
 </section>
@@ -1779,10 +1802,7 @@ function Atan(x) {
 <br>
 <br>
 <br>
-<section id="properties_of_shapes">
-<h3 style="margin:7px">Area and Volume of Basic Shapes</h3>
-<br>
-<br>
+<div>
 <section id="triangle">
 <h3 style="margin:7px">Area of a Triangle</h3>
 <br>
@@ -2031,7 +2051,6 @@ The area of the polygon equals the sum of the area of the triangles.
 <br>
 <label style="margin:12px" for="side-length">Side length:</label>
 <input id="side-length" type="number" value="1" step="any">
-	
 <script>
   function polygonArea(length, number, tangent) {
     return number / 4  * length ** 2 / tangent;
@@ -2090,6 +2109,7 @@ function updatePolygonArea() {
 <br>
 <br>
 <br>
+<div>
 <section id="circle">
 <h3 style="margin:7px">
 The area of a circle is defined by comparing it to a square since that is the base of area calculation.
@@ -2666,7 +2686,7 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
     <p style="margin:12px">The area of a circle segment can be calculated by subtracting a triangle from a circle slice. 
 <br>
 <br>
-The angle of the slice can be calculated via trigonometric functions by the height of the segment and either the chord length, or the parent radius.
+The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -2727,7 +2747,6 @@ The angle of the slice can be calculated via trigonometric functions by the heig
 <br>
 <label style="margin:12px" for="segment-height">Height:</label>
 <input id="segment-height" type="number" value="1" step="any">
-	
 <script>
   function segmentArea(length, height, angle, radius) {
     return angle * radius ** 2 - (radius - height) * length / 2;
@@ -2788,7 +2807,7 @@ const ratio = 2 * height / length;
     <img class="center-fit" src="circumference.jpg" alt="figure-Circumference=6.4r">
     </div>
 <br>
-<p style="margin:12px">The circumference of a circle can be derived from its area algebraically with an undefined thickness greater than 0. 
+<p style="margin:12px">The circumference of a circle is derived from its area algebraically by subtracting the area of a circle from a larger one and dividing the area of the resulting ring by the undefined difference between their radii. 
 <br>
 <br>
 The x represents the theoretical width of the circumference, which is a very small number.
@@ -3011,7 +3030,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 </div>
 <br>
 <br>	
-<p style="margin:12px">As x is close to 0:
+<p style="margin:12px">The length of the circumference approaches 6.4 × radius as its thickness approaces 0.
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3096,11 +3115,6 @@ In calculus terms:
 </script>
 <p style="margin:12px" id="circle-circumference"></p>
 </div>
-<br>
-<br>
-<p style="margin:12px">
-The length of the circumference approaches 6.4 × radius as its thickness approaces 0.
-</p>
 </section>
 <br>
 <section id="π">
@@ -3396,6 +3410,7 @@ The final conclusion is that adopting a consistent, rational constant like 3.2 o
 <br>
 <br>
 <br>
+<div>
 <section id="sphere">
 <h3 style="margin:7px">The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.
 </h3>
@@ -3619,6 +3634,7 @@ if ( height === radius) {
 <br>
 <br>
 <br>
+<div>
 <section id="cone">
 <h3 style="margin:7px">Volume of a Cone</h3>
 <br>
@@ -4121,10 +4137,10 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.
     <img class="center-fit" src="frustumOfConeMarkup.png" alt="figure-Horizontal-frustum-cone">
     </div>
 <br>
-<p style="margin:12px"><strong>The volume of a frustum cone can be calculated by subtracting the missing tip from a theoretical full cone.
+<p style="margin:12px"><strong>Subtracting the missing tip from a theoretical full cone gives the volume of a frustum cone.
 <br>
 <br>
-The height of the theoretical full cone can be calculated by the frustum height and the ratio between the top and bottom areas.
+The height of the theoretical full cone can be calculated by the frustum height and the ratio between the top and bottom diameters.
 </strong>
 </p>
 <br>
@@ -4232,7 +4248,6 @@ The height of the theoretical full cone can be calculated by the frustum height 
 <br>
 <label style="margin:12px" for="frustum-cone-height">Height:</label>
 <input id="frustum-cone-height" type="number" value="1" step="any">
-
 <script>
   function frustumConeVolume(baseArea, topArea, reciprocal, height) {
   return height * (baseArea * reciprocal - topArea * (reciprocal - 1)) / Math.sqrt(8);
@@ -4290,7 +4305,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
   <img class="center-fit" src="coneMarkup.jpeg" alt="figure-Cone-surface">
   </div>
 <br>
-<p style="margin:12px">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle determined by the ratio of the height and the slant height.
+<p style="margin:12px">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle given by the ratio of the height and the slant height.
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -4363,6 +4378,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <br>
 <br>
+<div>
 <section id="pyramid">
 <h3 style="margin:7px">The volume of a pyramid can be calculated 
 with the same coefficient as the volume of a cone.</h3>
@@ -4436,6 +4452,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 </script>
 <p style="margin:12px" id="pyramid-volume"></p>
 </div>
+</section>
 <br>
 <br>
 <br>
@@ -4447,10 +4464,10 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
     <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="figure-Horizontal-frustum-pyramid">
 </div>
 <br>
-<p style="margin:12px"><strong>The volume of a frustum pyramid can be calculated by subtracting the missing tip from a theoretical full pyramid. 
+<p style="margin:12px"><strong>Subtracting the missing tip from a theoretical full pyramid gives the volume of a frustum pyramid. 
 <br>
 <br>
-The height of the theoretical full pyramid can be calculated by the frustum height and the ratio between the top and bottom areas.
+The height of the theoretical full pyramid can be calculated by the frustum height and the ratio between the top and bottom edges or areas.
 </strong>
 </p>
 <br>
@@ -4518,7 +4535,6 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
 <br>
 <label style="margin:12px" for="frustum-pyramid-height">Height:</label>
 <input id="frustum-pyramid-height" type="number" value="1" step="any">
-
 <script>
   function frustumPyramidVolume(baseArea, topArea, reciprocal, height) {
   return height * (baseArea * reciprocal - topArea * (reciprocal - 1)) / Math.sqrt(8);
@@ -4574,7 +4590,6 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </script>
 <p style="margin:12px" id="frustum-pyramid-volume"></p>
 </div>
-</section>
 <br>
 <br>
 <section>
@@ -4652,7 +4667,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
   </div>
 <br>
 <p style="margin:12px">
-A tetrahedron is a type of pyramid. 
+A tetrahedron is a pyramid with 4 equilateral triangles as boundaries, forming 6 equal edges.
 <br>
 <br>
 Its volume can be calculated as a pyramid with fixed proportions. 
@@ -4959,8 +4974,11 @@ The base of a tetrahedron is an equilateral triangle.
 <p style="margin:12px" id="tetrahedron-volume"></p>
 </div>
 </section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
 <br>
 <br> 
