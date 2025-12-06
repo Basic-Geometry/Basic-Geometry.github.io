@@ -404,7 +404,7 @@ C=3.2(r^2-(r-x)^2)/x=6.4r-x The length of the circumference approaches 6.4 × ra
    {
      "@type": "SolveMathAction",
       "name": "Volume of a cone",
-	 "description": "The exact volume of a cone by comparing the volume of a quarter cone with equal radius and height to an octant sphere with an equal radius.",
+	 "description": "The exact volume of a cone by comparing the volume of a quarter cone with equal radius and height to an octant sphere with an equal radius through a quadrant cylinder.",
 	"disambiguatingDescription": "Direct shape relationships ensure greater accuracy in real-world applications then the traditional base × height / 3 approximation.",
 	"target": "https://basic-geometry.github.io",
     "mathExpression-input": "required cone_radius=5_height=3_Volume=?",
@@ -486,7 +486,7 @@ C=3.2(r^2-(r-x)^2)/x=6.4r-x The length of the circumference approaches 6.4 × ra
     "mathExpression-input": "required edge=5_Volume=?",
      "mathExpression-output": "Volume = edge^3 / 8", 
    "about": "A tetrahedron is a pyramid with 4 equilateral triangles as boundaries, forming 6 equal edges. Its measurable property is its edge length.",
-	"abstract": "The volume of a tetrahedron can be calculated as a pyramid with fixed proportions. The base of a tetrahedron is an equilateral triangle. The area of the equilateral triangle equals edge / 2 × √(edge^2 - ( edge / 2 )^2) = edge / 2 × √(edge^2 - edge^2 / 4) = edge / 2 × √(( 3 / 4 )edge^2) = edge / 2 × edge × √(3) / 2 = edge^2 × √(3) / 4 . The height of the tetrahedron equals √(( edge × √(3) / 2 )^2 − ( ( edge × √(3) / 2 ) / 3 )^2 ) = √( edge^2 × ( 3 / 4 - 3 / 36 ) ) = √( edge^2 × ( 27 / 36 - 3 / 36 ) ) = √( edge^2 × ( 24 / 36 ) ) = √( 2 / 3 ) × edge. The base of a tetrahedron multiplied by its height equals ( edge^2 × √( 3 / 4 ) ) × ( edge × √( 2 / 3 ) ) = edge^3 × √(2) / 4 . The volume of a pyramid equals base × height × √(2) / 4 . ( √(2) / 4 )^2 = 2 / 16 = 1 / 8 .",
+	"abstract": "The volume of a tetrahedron is calculated as a pyramid with fixed proportions. The base of a tetrahedron is an equilateral triangle. The area of the equilateral triangle equals edge / 2 × √(edge^2 - ( edge / 2 )^2) = edge / 2 × √(edge^2 - edge^2 / 4) = edge / 2 × √(( 3 / 4 )edge^2) = edge / 2 × edge × √(3) / 2 = edge^2 × √(3) / 4 . The height of the tetrahedron equals √(( edge × √(3) / 2 )^2 − ( ( edge × √(3) / 2 ) / 3 )^2 ) = √( edge^2 × ( 3 / 4 - 3 / 36 ) ) = √( edge^2 × ( 27 / 36 - 3 / 36 ) ) = √( edge^2 × ( 24 / 36 ) ) = √( 2 / 3 ) × edge. The base of a tetrahedron multiplied by its height equals ( edge^2 × √( 3 / 4 ) ) × ( edge × √( 2 / 3 ) ) = edge^3 × √(2) / 4 . The volume of a pyramid equals base × height × √(2) / 4 . ( √(2) / 4 )^2 = 2 / 16 = 1 / 8 .",
 	"educationalLevel": "advanced",
 	"keywords": "edge, length, volume",
 	"image": "tetrahedronMarkup.jpeg",
@@ -1094,14 +1094,14 @@ The result of raising to a fraction is a root.
 <h3 itemprop="name" style="margin:7px">Area of a Square</h3>
 <br>
 <figure class="imgbox">
-    <img class="center-fit" src="square.png" alt="Area=side×side=side²">
+    <img class="center-fit" src="square.png" alt="A square is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. Area = side × side = side²">
 </figure>
 <br>
 <p itemprop="description" style="margin:12px">
 The square is the foundational shape for area calculations. All area formulas relate to this instance.
 <br>
 <br>
-A rectangle is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. 
+A rectangle is a 2 dimensional plane shape with 2 equal perpendicular pairs of parallel straight sides. 
 <br>
 A square is a rectangle with equal width and length.
 <br>
@@ -1136,9 +1136,9 @@ If the width of the rectangle is equal to its length, its area is the square val
 <section itemscope itemtype="http://schema.org/CreativeWork" id="volume">
 <h3 itemprop="name" style="margin:7px">Volume of a Cube</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="cubeMarkup.jpeg" alt="figure-Cube">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="cubeMarkup.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
+    </figure>
 <br>
 <p itemprop="description" style="margin:12px">The cube extends the square into three dimensions.
 <br>
@@ -1190,9 +1190,9 @@ That is a direct extrapolation from the area of the square, establishing the bas
 <section itemscope itemtype="http://schema.org/CreativeWork" id="trigonometry" itemref="division">
 <h2 itemprop="name" style="margin:7px">Trigonometry</h2>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="trigonometry.png" alt="figure-Trigonometry">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="trigonometry.png" alt="Trigonometric identities in a right triangle">
+    </figure>
 <br>
 <p itemprop="description" style="margin:12px">
 In a right triangle:</p>
@@ -1954,9 +1954,9 @@ function updateTriangleArea() {
 <section itemscope itemtype="http://schema.org/CreativeWork" id="polygon">
 <h3 itemprop="name" style="margin:7px">Area of a regular Polygon</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="pentagon.png" alt="figure-Polygon-area">
-</div>
+<figure class="imgbox">
+    <img class="center-fit" src="pentagon.png" alt="A regular polygon can be divided into as many isosceles triangles as many sides it has. Area = (number of sides) / 4 × ctg( 180° / (number of sides) ) × (side length)²">
+</figure>
 <br>
 <p itemprop="description" style="margin:12px">A regular polygon can be divided into as many isosceles triangles as many sides it has. 
 <br>
@@ -2119,9 +2119,9 @@ function updatePolygonArea() {
 The area of a circle is defined by comparing it to a square since that is the base of area calculation.
 </h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="areaOfACircle.jpg" alt="figure-Circle-area=3.2r²">
-</div>
+<figure class="imgbox">
+    <img class="center-fit" src="areaOfACircle.jpg" alt="The circle is cut into four quadrants, each placed with their origin on the vertices of a square. The arcs of the quadrants of the circle that equals in area to the square intersect at the quarters on its centerlines. The ratio between the radius of the circle and the side of the square is calculable. r = side × √5 / 4 Area = 3.2r²">
+</figure>
 <br>
 <p itemprop="description" style="margin:12px">The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
 <br>
@@ -2132,10 +2132,10 @@ In this layout the arcs of the quadrants of an inscribed circle would meet at th
 The arcs of the quadrants of a circumscribed circle would overlap, and intersect at the center of the square, covering it all.
 <br>
 <br>
-<strong>The arcs of the quadrants of the circle that equals in area to the square intersect right in between those limits, at the quarters on its centerlines.</strong>
+<strong>The arcs of the quadrants of the circle that equals in area to the square intersect right in between those limits, at the quarters on its centerlines.
 <br>
 <br>
-The ratio between the radius of the circle and the side of the square is calculable.
+The ratio between the radius of the circle and the side of the square is calculable.</strong>
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -2251,9 +2251,9 @@ The ratio between the radius of the circle and the side of the square is calcula
   <summary><h4 itemprop="description" style="margin:7px">When the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.
 </h4></summary>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="equityFigure.jpg" alt="figure-square-circle-area-equity">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="equityFigure.jpg" alt="Circle area = 3.2r²">
+    </figure>
 <br>
 <p itemprop="description" style="margin:12px">Quarter of the uncovered area in the middle:
 </p>
@@ -2683,9 +2683,9 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 <section itemscope itemtype="http://schema.org/CreativeWork" id="circumference">
 <h3 itemprop="name" style="margin:7px">Circumference of a Circle</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="circumference.jpg" alt="figure-Circumference=6.4r">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="circumference.jpg" alt="The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii. Circumference = 6.4r">
+    </figure>
 <br>
 <p itemprop="description" style="margin:12px">The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii. 
 <br>
@@ -3297,9 +3297,9 @@ The final conclusion is that adopting a consistent, rational constant like 3.2 o
 <section itemscope itemtype="http://schema.org/CreativeWork" id="circle-segment">
     <h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="circleSegment.jpg" alt="figure-Circle-segment">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="circleSegment.jpg" alt="The area of a circle segment can be calculated by subtracting a triangle from a circle slice. Area = Acos(( r - n ) / r ) × r² - sin( Acos(( r - n ) / r ) × ( r - n ) × r">
+    </figure>
 <br>
     <p itemprop="description" style="margin:12px">The area of a circle segment can be calculated by subtracting a triangle from a circle slice. 
 <br>
@@ -3420,9 +3420,9 @@ const ratio = 2 * height / length;
 <section itemscope itemtype="http://schema.org/CreativeWork" id="cone-surface">
 <h3 itemprop="name" style="margin:7px">Surface Area of a Cone</h3>
 <br>
-<div class="imgbox">
-  <img class="center-fit" src="coneMarkup.jpeg" alt="figure-Cone-surface">
-  </div>
+<figure class="imgbox">
+  <img class="center-fit" src="coneMarkup.jpeg" alt="The surface area of a cone is calculated as a circle slice with a radius equal to the slant height. Area = 3.2r × ( r + √( r² + H² )">
+  </figure>
 <br>
 <p itemprop="description" style="margin:12px">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle given by the ratio between the height and the slant height.
 </p>
@@ -3503,9 +3503,9 @@ const ratio = 2 * height / length;
 <h3 itemprop="name" style="margin:7px">The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.
 </h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="figure-Sphere-volume=(√(3.2)r)³">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross-section. Volume = ( √ ( 3.2 ) × r )³">
+    </figure>
 <br>
 <p itemprop="description" style="margin:12px"><strong>The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.
 </strong>
@@ -3563,7 +3563,7 @@ const ratio = 2 * height / length;
 
   document.getElementById('sphere-radius').addEventListener('input', function () {
     const radius = parseFloat(this.value);
-	  
+
     if (isNaN(radius)) {
       document.getElementById('sphere-volume').innerText = '';
     return;
@@ -3642,9 +3642,9 @@ The formula for the real surface area of a sphere is available for 3.2 billion U
 <section itemscope itemtype="http://schema.org/CreativeWork" id="cap">
 <h3 itemprop="name" style="margin:7px">Volume of a Spherical Cap</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="sphericalCap.jpg" alt="figure-Spherical-cap">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="sphericalCap.jpg" alt="One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere. V = 1.6 × (cap radius) × h × 4 / √5²">
+    </figure>
     <br>
 <p itemprop="description" style="margin:12px">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.
 </p>
@@ -3727,16 +3727,16 @@ if ( height === radius) {
 <h3 itemprop="name" style="margin:7px">Volume of a Cone</h3>
 <br>
 <div class="imgbox">
-    <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone-volume-from-sphere=base×height/√8">
+    <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone volume from sphere = base × height / √8">
 </div>
 <br>
 <p itemprop="description" style="margin:12px"><strong>The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.
 </strong>
 </p>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="octantSphereQuarterCone.jpeg" alt="figure-Sphere-and-vertical-frustum-cone">
-</div>
+<figure class="imgbox">
+    <img class="center-fit" src="octantSphereQuarterCone.jpeg" alt="The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.">
+</figure>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
@@ -3804,13 +3804,13 @@ if ( height === radius) {
 <p itemprop="description" style="margin:12px">The base of the two shapes is a quadrant circle.
 </p>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="coneAndSphereComparison.png" alt="figure-Sphere-and-cone-projection">
-</div>
+<figure class="imgbox">
+    <img class="center-fit" src="coneAndSphereComparison.png" alt="The base of the two shapes is a quadrant circle.">
+</figure>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="sphereAndConeMarkup.jpeg" alt="figure-Sphere-and-cone">
-</div>
+<figure class="imgbox">
+    <img class="center-fit" src="sphereAndConeMarkup.jpeg" alt="The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder. Volume = base × height / √8">
+</figure>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
@@ -4114,9 +4114,9 @@ No. Because it's not true in case of most other shapes.
 <section itemscope itemtype="http://schema.org/CreativeWork" id="cube-dissection">
 <h3 itemprop="name" style="margin:12px">The other idea is the cube dissection.</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="cubeDissection.jpeg" alt="Cube-dissection">
-</div>
+<figure class="imgbox">
+    <img class="center-fit" src="cubeDissection.jpeg" alt="Cube dissection">
+</figure>
 <br>
 <p itemprop="description" style="margin:12px">A common method aiming to prove the pyramid volume formula ( V = base × height / 3 ) involves dissecting a cube into three pyramids. Here’s how it’s typically presented:
 <br>
@@ -4221,9 +4221,9 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.
 <section itemscope itemtype="http://schema.org/CreativeWork" id="frustum-cone">
 <h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="frustumOfConeMarkup.png" alt="figure-Horizontal-frustum-cone">
-    </div>
+<figure class="imgbox">
+    <img class="center-fit" src="frustumOfConeMarkup.png" alt="Subtracting the missing tip from a theoretical full cone gives the volume of a frustum cone. Volume = frustumHeight * (4 / 5 * bottomDiameter^2 * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * topDiameter^2 * (1 / (1 - topDiameter / bottomDiameter) - 1)) / √8"">
+    </figure>
 <br>
 <p itemprop="description" style="margin:12px"><strong>Subtracting the missing tip from a theoretical full cone gives the volume of a frustum cone.
 <br>
@@ -4390,13 +4390,13 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <h3 itemprop="description" style="margin:7px">The volume of a pyramid can be calculated 
 with the same coefficient as the volume of a cone.</h3>
 <br>
-<div class="imgbox">
-  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="figure-Pyramids-volume=base×height/√8">
-  </div>
+<figure class="imgbox">
+  <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="The volume of a pyramid can be calculated with the same coefficient as the volume of a cone. Volume = base × height / √8">
+  </figure>
 <br>
-<div class="imgbox">
-  <img class="center-fit" src="tetraFrame.jpeg" alt="figure-Tetrahedral-frame-on-circular-base" >
-  </div>
+<figure class="imgbox">
+  <img class="center-fit" src="tetraFrame.jpeg" alt="The volume of a pyramid can be calculated with the same coefficient as the volume of a cone. Volume = base × height / √8">
+  </figure>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -4467,9 +4467,9 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <section itemscope itemtype="http://schema.org/CreativeWork" id="frustum-pyramid">
 <h3 itemprop="name" style="margin:7px">Volume of a horizontal Frustum Pyramid</h3>
 <br>
-<div class="imgbox">
-    <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="figure-Horizontal-frustum-pyramid">
-</div>
+<figure class="imgbox">
+    <img class="center-fit" src="frustumOfPyramidMarkup.png" alt="Subtracting the missing tip from a theoretical full pyramid gives the volume of a frustum pyramid. Volume = frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / √8">
+</figure>
 <br>
 <p itemprop="description" style="margin:12px"><strong>Subtracting the missing tip from a theoretical full pyramid gives the volume of a frustum pyramid. 
 <br>
@@ -4669,15 +4669,15 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <section itemscope itemtype="http://schema.org/CreativeWork" id="tetrahedron">
 <h3 itemprop="name" style="margin:7px">Volume of a Tetrahedron</h3>
 <br>
-<div class="imgbox">
-  <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="figure-Tetrahedron-volume=edge³/8">
-  </div>
+<fogure class="imgbox">
+  <img class="center-fit" src="tetrahedronMarkup.jpeg" alt="The volume of a tetrahedron is calculated as a pyramid with an equilateral triangle base and fixed proportions. Volume = edge³ / 8">
+  </figure>
 <br>
 <p itemprop="description" style="margin:12px">
 A tetrahedron is a pyramid with 4 equilateral triangles as boundaries, forming 6 equal edges.
 <br>
 <br>
-Its volume can be calculated as a pyramid with an equilateral triangle base and fixed proportions. 
+Its volume is calculated as a pyramid with an equilateral triangle base and fixed proportions. 
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
