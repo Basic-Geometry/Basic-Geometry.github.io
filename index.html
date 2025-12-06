@@ -313,23 +313,6 @@ The ratio between the radius of the circle and the side of the square is calcula
      "eduQuestionType": "Area calculation",
    "usageInfo": "Exact calculation through direct comparison. This logic extrapolates to the volume of a sphere. The circumference can be derived from the area."
 	},
-     
-{
-     "@type": "SolveMathAction",
-       "name":  "Area of a circle segment",
-"description": "Calculating the exact area of a circle segment by its height and chord or parent radius via trigonometric functions.",
-   "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
-	"target": "https://basic-geometry.github.io",
-     "mathExpression-input": "required segment_radius=5_height=2_Area=?",
-     "mathExpression-output": "Area = Acos((radius-segmentHeight) / radius) * radius^2 - sin(Acos((radius-segmentHeight)/radius)) * (radius-segmentHeight) * radius", 
-    "about": "The area of a circle segment can be calculated by subtracting a triangle from a circle slice.",
-	"abstract": "The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.",
-	"educationalLevel": "advanced",
-	"keywords": "circle segment area via trigonometry, geometry ",
-	"image": "circleSegment.jpg",
-     "eduQuestionType": "Area calculation",
-	"usageInfo": "This method relies on trigonometric functions."
-   },
 
 {
      "@type": "SolveMathAction",
@@ -351,6 +334,39 @@ C=3.2(r^2-(r-x)^2)/x=6.4r-x The length of the circumference approaches 6.4 × ra
      "eduQuestionType": "Length calculation",
 	"usageInfo": "Maximum accuracy and computational efficacy. Trigonometric functions shall be adjusted to circumference = 6.4 × radian. Ideal engineering. Full compatibility with navigation instrumens scaled to 64*10^n."
 },
+	
+{
+     "@type": "SolveMathAction",
+       "name":  "Area of a circle segment",
+"description": "Calculating the exact area of a circle segment by its height and chord or parent radius via trigonometric functions.",
+   "disambiguatingDescription": "Equivalent to the conventional method, but relies on trigonometric functions.",
+	"target": "https://basic-geometry.github.io",
+     "mathExpression-input": "required segment_radius=5_height=2_Area=?",
+     "mathExpression-output": "Area = Acos((radius-segmentHeight) / radius) * radius^2 - sin(Acos((radius-segmentHeight)/radius)) * (radius-segmentHeight) * radius", 
+    "about": "The area of a circle segment can be calculated by subtracting a triangle from a circle slice.",
+	"abstract": "The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.",
+	"educationalLevel": "advanced",
+	"keywords": "circle segment area via trigonometry, geometry ",
+	"image": "circleSegment.jpg",
+     "eduQuestionType": "Area calculation",
+	"usageInfo": "This method relies on trigonometric functions."
+   },
+
+{
+     "@type": "SolveMathAction",
+       "name":"Surface area of a cone",
+       "description": "The exact surface area of a cone calculated by its radius and height.",
+	"target": "https://basic-geometry.github.io",
+	"mathExpression-input": "required cone_radius=5_height=3_Area=?",
+     "mathExpression-output": "Area = 3.2 * radius * (radius + sqrt(radius^2 +height^2))", 
+    "about": "The bottom of a cone is a circle. The rest of its surface can be calculated as a circle slice.",
+	"abstract": "The radius of the circle slice equals the slant height of the cone. Its angle is given by the ratio between the radius and the height of the cone. Calculate the area of the circle slice and add the bottom circle if required.",
+	"educationalLevel": "advanced",
+	"keywords": "cone surface, geometry",
+	"image": "coneMarkup.jpeg",
+     "eduQuestionType": "Area calculation",
+	"usageInfo": "The surface area of a cone can be calculated as a circle and sclices."
+   },
               
 {
      "@type": "SolveMathAction",
@@ -423,22 +439,6 @@ C=3.2(r^2-(r-x)^2)/x=6.4r-x The length of the circumference approaches 6.4 × ra
 	"image": "frustumOfConeMarkup.png",
      "eduQuestionType": "Volume calculation",
 	"usageInfo": "The frustum cone derives from the cone by subtracting its tip, maintaining the inherited relationships and logic."
-   },
-
-{
-     "@type": "SolveMathAction",
-       "name":"Surface area of a cone",
-       "description": "The exact surface area of a cone calculated by its radius and height.",
-	"target": "https://basic-geometry.github.io",
-	"mathExpression-input": "required cone_radius=5_height=3_Area=?",
-     "mathExpression-output": "Area = 3.2 * radius * (radius + sqrt(radius^2 +height^2))", 
-    "about": "The bottom of a cone is a circle. The rest of its surface can be calculated as a circle slice.",
-	"abstract": "The radius of the circle slice equals the slant height of the cone. Its angle is given by the ratio between the radius and the height of the cone. Calculate the area of the circle slice and add the bottom circle if required.",
-	"educationalLevel": "advanced",
-	"keywords": "cone surface, geometry",
-	"image": "coneMarkup.jpeg",
-     "eduQuestionType": "Area calculation",
-	"usageInfo": "The surface area of a cone can be calculated as a circle and sclices."
    },
 
  {
@@ -1952,7 +1952,7 @@ function updateTriangleArea() {
 <br>
 <br>
 <br>
-<section  itemscope itemtype="http://schema.org/CreativeWork" id="polygon">
+<section itemscope itemtype="http://schema.org/CreativeWork" id="polygon">
 <h3 itemprop="name" style="margin:7px">Area of a regular Polygon</h3>
 <br>
 <div class="imgbox">
@@ -2681,130 +2681,6 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="circle-segment">
-    <h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
-<br>
-<div class="imgbox">
-    <img class="center-fit" src="circleSegment.jpg" alt="figure-Circle-segment">
-    </div>
-<br>
-    <p itemprop="description" style="margin:12px">The area of a circle segment can be calculated by subtracting a triangle from a circle slice. 
-<br>
-<br>
-The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.
-</p>
-<br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>A</mi>
-    <mo>=</mo>
-    <mo>arccos</mo>
-    <mo>&#x2061;</mo>
-    <mo>(</mo>
-    <mfrac>
-      <mrow>
-        <mi>r</mi>
-        <mo>-</mo>
-        <mi>n</mi>
-      </mrow>
-      <mi>r</mi>
-    </mfrac>
-    <mo>)</mo>
-<mo>×</mo>
-    <msup>
-      <mi>r</mi>
-      <mn>2</mn>
-    </msup>
-    <mo>-</mo>
-    <mi>sin</mi>
-    <mo>&#x2061;</mo>
-    <mo>(</mo>
-    <mo>arccos</mo>
-    <mo>&#x2061;</mo>
-    <mo>(</mo>
-    <mfrac>
-      <mrow>
-        <mi>r</mi>
-        <mo>-</mo>
-        <mi>n</mi>
-      </mrow>
-      <mi>r</mi>
-    </mfrac>
-    <mo>)</mo>
-    <mo>)</mo>
-<mo>×</mo>
-    <mo>(</mo>
-    <mrow>
-      <mi>r</mi>
-      <mo>-</mo>
-      <mi>n</mi>
-    </mrow>
-    <mo>)</mo>
-<mo>×</mo>
-    <mi>r</mi>
-  </mrow>
-</math>
-<br>
-<br>
-<div>
-<label style="margin:12px" for="segment-length">Length:</label>
-<input id="segment-length" type="number" value="2" step="any">
-<br>
-<label style="margin:12px" for="segment-height">Height:</label>
-<input id="segment-height" type="number" value="1" step="any">
-<script>
-  function segmentArea(length, height, angle, radius) {
-    return angle * radius ** 2 - (radius - height) * length / 2;
-  }
-
-function updateSegmentArea() {
-  const length = parseFloat(document.getElementById('segment-length').value);
-  const height = parseFloat(document.getElementById('segment-height').value);
-
-  if (isNaN(length) || isNaN(height) || height === 0) {
-    document.getElementById('segment-area').innerText = '';
-    return;
-  }
-
-const ratio = 2 * height / length;
-	
-  // Segment validity check
-
-  if ( ratio === 0) {
-    document.getElementById('segment-area').innerText = '';
-    return;
-	}
-
-  if (ratio < 0.11 || ratio > 1) {
-    document.getElementById('segment-area').innerText = 'This ratio is out of range';
-    return;
-  }
-	
-  const angle = parseFloat(2 * Atan(ratio));
-  const sine = parseFloat(sin(angle));
-  const radius = parseFloat((length / 2 / sine).toFixed(5));
-  const area = segmentArea(length, height, angle, radius);
-
-  if ( ratio === 1) {
-    document.getElementById('segment-area').innerText =
-    `Area of semi-circle: ${area.toFixed(5)} square units`;
-	return;
-  }
-	
-  document.getElementById('segment-area').innerText =
-    `Area: ${area.toFixed(5)} square units`;
-}
-
-  document.getElementById('segment-length').addEventListener('input', updateSegmentArea);
-  document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
-</script>
-<p style="margin:12px" id="segment-area"></p>
-</div>
-</section>
-<br>
-<br>
-<br>
-<br>
 <section itemscope itemtype="http://schema.org/CreativeWork" id="circumference">
 <h3 itemprop="name" style="margin:7px">Circumference of a Circle</h3>
 <br>
@@ -3123,9 +2999,9 @@ In calculus terms:
 </section>
 <br>
 <br>
-<section id="π">
+<section itemscope itemtype="http://schema.org/CreativeWork" itemprop="π" id="π">
 <details>
-  <summary><h4 style="margin:7px">While the approximate value of 3.14159…, commonly denoted by the Greek letter π, is widely recognized today, the historical development of this concept is less understood.</h4></summary>
+  <summary><h4 itemprop="description" style="margin:7px">While the approximate value of 3.14159…, commonly denoted by the Greek letter π, is widely recognized today, the historical development of this concept is less understood.</h4></summary>
 <p style="margin:12px">
 For centuries, the circle has been a symbol of mathematical elegance—and π its most iconic constant. But beneath the surface of tradition lies a deeper question: Are the formulas we use truly derived from geometric logic, or are they inherited approximations dressed in symbolic authority?
 <br>
@@ -3416,7 +3292,211 @@ The final conclusion is that adopting a consistent, rational constant like 3.2 o
 <br>
 <br>
 <br>
-<div itemscope itemtype="http://schema.org/CreativeWork" itemref="volume">
+<section itemscope itemtype="http://schema.org/CreativeWork" id="circle-segment">
+    <h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
+<br>
+<div class="imgbox">
+    <img class="center-fit" src="circleSegment.jpg" alt="figure-Circle-segment">
+    </div>
+<br>
+    <p itemprop="description" style="margin:12px">The area of a circle segment can be calculated by subtracting a triangle from a circle slice. 
+<br>
+<br>
+The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.
+</p>
+<br>
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>A</mi>
+    <mo>=</mo>
+    <mo>arccos</mo>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>r</mi>
+        <mo>-</mo>
+        <mi>n</mi>
+      </mrow>
+      <mi>r</mi>
+    </mfrac>
+    <mo>)</mo>
+<mo>×</mo>
+    <msup>
+      <mi>r</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>-</mo>
+    <mi>sin</mi>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mo>arccos</mo>
+    <mo>&#x2061;</mo>
+    <mo>(</mo>
+    <mfrac>
+      <mrow>
+        <mi>r</mi>
+        <mo>-</mo>
+        <mi>n</mi>
+      </mrow>
+      <mi>r</mi>
+    </mfrac>
+    <mo>)</mo>
+    <mo>)</mo>
+<mo>×</mo>
+    <mo>(</mo>
+    <mrow>
+      <mi>r</mi>
+      <mo>-</mo>
+      <mi>n</mi>
+    </mrow>
+    <mo>)</mo>
+<mo>×</mo>
+    <mi>r</mi>
+  </mrow>
+</math>
+<br>
+<br>
+<div>
+<label style="margin:12px" for="segment-length">Length:</label>
+<input id="segment-length" type="number" value="2" step="any">
+<br>
+<label style="margin:12px" for="segment-height">Height:</label>
+<input id="segment-height" type="number" value="1" step="any">
+<script>
+  function segmentArea(length, height, angle, radius) {
+    return angle * radius ** 2 - (radius - height) * length / 2;
+  }
+
+function updateSegmentArea() {
+  const length = parseFloat(document.getElementById('segment-length').value);
+  const height = parseFloat(document.getElementById('segment-height').value);
+
+  if (isNaN(length) || isNaN(height) || height === 0) {
+    document.getElementById('segment-area').innerText = '';
+    return;
+  }
+
+const ratio = 2 * height / length;
+	
+  // Segment validity check
+
+  if ( ratio === 0) {
+    document.getElementById('segment-area').innerText = '';
+    return;
+	}
+
+  if (ratio < 0.11 || ratio > 1) {
+    document.getElementById('segment-area').innerText = 'This ratio is out of range';
+    return;
+  }
+	
+  const angle = parseFloat(2 * Atan(ratio));
+  const sine = parseFloat(sin(angle));
+  const radius = parseFloat((length / 2 / sine).toFixed(5));
+  const area = segmentArea(length, height, angle, radius);
+
+  if ( ratio === 1) {
+    document.getElementById('segment-area').innerText =
+    `Area of semi-circle: ${area.toFixed(5)} square units`;
+	return;
+  }
+	
+  document.getElementById('segment-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
+
+  document.getElementById('segment-length').addEventListener('input', updateSegmentArea);
+  document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
+</script>
+<p style="margin:12px" id="segment-area"></p>
+</div>
+<br>
+<br>
+<br>
+<br>
+<section itemscope itemtype="http://schema.org/CreativeWork" id="cone-surface">
+<h3 itemprop="name" style="margin:7px">Surface Area of a Cone</h3>
+<br>
+<div class="imgbox">
+  <img class="center-fit" src="coneMarkup.jpeg" alt="figure-Cone-surface">
+  </div>
+<br>
+<p itemprop="description" style="margin:12px">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle given by the ratio between the height and the slant height.
+</p>
+<br>
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<mrow>
+<msub>
+<mi>A</mi>
+<mi>bottom</mi>
+</msub>
+<mo>+</mo>
+<msub>
+<mi>A</mi>
+<mi>side</mi>
+</msub>
+<mo>=</mo>
+<mn>3.2</mn>
+<mi>r</mi>
+<mo>×</mo>
+<mo>(</mo>
+<mi>r</mi>
+<mo>+</mo>
+<msqrt>
+<mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo>
+<msup>
+<mi>H</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+<mo>)</mo>
+</mrow>
+</math>
+<br>
+<br>
+<div>
+<label style="margin:12px" for="cone-radius-s">Radius:</label>
+<input id="cone-radius-s" type="number" value="1" step="any">
+<br>
+<label style="margin:12px" for="cone-height-s">Height:</label>
+<input id="cone-height-s" type="number" value="1" step="any">
+<script>
+  function coneSurface(radius, height) {
+    return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
+  }
+
+  function updateConeSurface() {
+    const radius = parseFloat(document.getElementById('cone-radius-s').value);
+    const height = parseFloat(document.getElementById('cone-height-s').value);
+
+    if (isNaN(radius) || isNaN(height)) {
+      document.getElementById('cone-surface-area').innerText = '';
+      return;
+    }
+
+    document.getElementById('cone-surface-area').innerText =
+      `Volume: ${coneSurface(radius, height).toFixed(5)} square units`;
+  }
+
+  document.getElementById('cone-radius-s').addEventListener('input', updateConeSurface);
+  document.getElementById('cone-height-s').addEventListener('input', updateConeSurface);
+</script>
+<p style="margin:12px" id="cone-surface-area"></p>
+</div>
+</section>
+</section>
+<br>
+<br>
+<br>
+<br>
+<div itemscope itemtype="http://schema.org/CreativeWork" itemprop="sphere_volume" itemref="volume">
 <section itemscope itemtype="http://schema.org/CreativeWork" id="sphere">
 <h3 itemprop="name" style="margin:7px">The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.
 </h3>
@@ -4304,87 +4384,6 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="cone-surface">
-<h3 itemprop="name" style="margin:7px">Surface Area of a Cone</h3>
-<br>
-<div class="imgbox">
-  <img class="center-fit" src="coneMarkup.jpeg" alt="figure-Cone-surface">
-  </div>
-<br>
-<p itemprop="description" style="margin:12px">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle given by the ratio between the height and the slant height.
-</p>
-<br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
-<mrow>
-<msub>
-<mi>A</mi>
-<mi>bottom</mi>
-</msub>
-<mo>+</mo>
-<msub>
-<mi>A</mi>
-<mi>side</mi>
-</msub>
-<mo>=</mo>
-<mn>3.2</mn>
-<mi>r</mi>
-<mo>×</mo>
-<mo>(</mo>
-<mi>r</mi>
-<mo>+</mo>
-<msqrt>
-<mrow>
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
-<mo>+</mo>
-<msup>
-<mi>H</mi>
-<mn>2</mn>
-</msup>
-</mrow>
-</msqrt>
-<mo>)</mo>
-</mrow>
-</math>
-<br>
-<br>
-<div>
-<label style="margin:12px" for="cone-radius-s">Radius:</label>
-<input id="cone-radius-s" type="number" value="1" step="any">
-<br>
-<label style="margin:12px" for="cone-height-s">Height:</label>
-<input id="cone-height-s" type="number" value="1" step="any">
-<script>
-  function coneSurface(radius, height) {
-    return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
-  }
-
-  function updateConeSurface() {
-    const radius = parseFloat(document.getElementById('cone-radius-s').value);
-    const height = parseFloat(document.getElementById('cone-height-s').value);
-
-    if (isNaN(radius) || isNaN(height)) {
-      document.getElementById('cone-surface-area').innerText = '';
-      return;
-    }
-
-    document.getElementById('cone-surface-area').innerText =
-      `Volume: ${coneSurface(radius, height).toFixed(5)} square units`;
-  }
-
-  document.getElementById('cone-radius-s').addEventListener('input', updateConeSurface);
-  document.getElementById('cone-height-s').addEventListener('input', updateConeSurface);
-</script>
-<p style="margin:12px" id="cone-surface-area"></p>
-</div>
-</section>
-<br>
-<br>
-<br>
-<br>
-<div>
 <section itemscope itemtype="http://schema.org/CreativeWork" id="pyramid">
 <h3 itemprop="description" style="margin:7px">The volume of a pyramid can be calculated 
 with the same coefficient as the volume of a cone.</h3>
@@ -4977,7 +4976,6 @@ Its volume can be calculated as a pyramid with an equilateral triangle base and 
 <p style="margin:12px" id="tetrahedron-volume"></p>
 </div>
 </section>
-</div>
 </div>
 </div>
 </div>
