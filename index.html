@@ -921,7 +921,7 @@ That could be written in decimal form only with an infinite number of numerals.
 <br>
 <br>
 <section itemscope itemtype="http://schema.org/SolveMathAction" id="adding_fractions" itemref="addition">
-<h4 itemprop="about" style="margin:12px">➕ Adding Fractions</h4>
+<h4 itemprop="name" style="margin:12px">➕ Adding Fractions</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">Adding the counters if the denominators are the same.</p>
@@ -951,7 +951,7 @@ That could be written in decimal form only with an infinite number of numerals.
 <br>
 <br>
 <section itemscope itemtype="http://schema.org/SolveMathAction" id="subtracting_fractions" itemref="subtraction">
-<h4 itemprop="about" style="margin:12px">➖ Subtracting Fractions</h4>
+<h4 itemprop="name" style="margin:12px">➖ Subtracting Fractions</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">Subtracting the counters if the denominators are the same.</p>
@@ -981,7 +981,7 @@ That could be written in decimal form only with an infinite number of numerals.
 <br>		
 <br>
 <section itemscope itemtype="http://schema.org/SolveMathAction" id="multiplying_fractions" itemref="multiplication">
-<h4 itemprop="about" style="margin:12px">✖️ Multiplying Fractions</h4>
+<h4 itemprop="name" style="margin:12px">✖️ Multiplying Fractions</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">Multiplying counter by counter and denominator by denominator.
@@ -1088,21 +1088,22 @@ The result of raising to a fraction is a root.
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/LearningResource" id="geometry">
-<h3 itemprop="name" style="margin:7px">The 2nd and the 3rd Powers manifesting in Geometry</h3>
+<section itemscope id="geometry">
+<h3 itemprop="about" style="margin:7px">The 2nd and the 3rd Powers manifesting in Geometry</h3>
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" id="area">
+<section itemscope itemtype="http://schema.org/SolveMathAction" id="area">
 <h3 itemprop="name" style="margin:7px">Area of a Square</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="square.png" alt="A square is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. Area = side × side = side²">
 </figure>
 <br>
-<p itemprop="about" style="margin:12px">The square is the foundational shape for area calculations. All area formulas relate to this instance.</p>
+<p itemprop="description" style="margin:12px">The square is the foundational shape for area calculations. All area formulas relate to this instance.
 <br>
-<p itemprop="description" style="margin:12px">A rectangle is a 2 dimensional plane shape with 2 equal perpendicular pairs of parallel straight sides. 
+<br>
+A rectangle is a 2 dimensional plane shape with 2 equal perpendicular pairs of parallel straight sides. 
 <br>
 A square is a rectangle with equal width and length.
 <br>
@@ -1135,16 +1136,17 @@ If the width of the rectangle is equal to its length, its area is the square val
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" id="volume">
+<section itemscope itemtype="http://schema.org/SolveMathAction" id="volume">
 <h3 itemprop="name" style="margin:7px">Volume of a Cube</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="cubeMarkup.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
     </figure>
 <br>
-<p itemprop="about" style="margin:12px">The cube extends the square into three dimensions. This is the basis of volume calculation.</p>
+<p itemprop="description" style="margin:12px">The cube extends the square into three dimensions. This is the basis of volume calculation.
 <br>
-<p itemprop="description" style="margin:12px">A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. 
+<br>
+A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. 
 <br>
 If those are equal that is a cube.
 <br>
@@ -1190,14 +1192,14 @@ That is a direct extrapolation from the area of the square, establishing the bas
 <br>
 <br>
 <section itemscope itemtype="http://schema.org/LearningResource" id="trigonometry" itemref="division">
-<h2 itemprop="name" style="margin:7px">Trigonometry</h2>
+<h2 itemprop="about" style="margin:7px">Trigonometry</h2>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="trigonometry.png" alt="Trigonometric identities in a right triangle">
     </figure>
 <br>
 <p itemprop="description" style="margin:12px">
-In a right triangle:</p>
+In a right triangle the ratios between the sides and the angles are proportional.</p>
 <br>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1276,7 +1278,7 @@ In a right triangle:</p>
 </mrow>
 </math>
 <div>
-<script>
+<script async>
 
 // ---- Trigonometry ----
 	
@@ -1808,8 +1810,12 @@ function Atan(x) {
 <br>
 <br>
 <br>
-<div id="triangle">
-<section itemscope itemtype="http://schema.org/MathSolver" itemref="area">
+<section itemscope itemtype="http://schema.org/MathSolver">
+<h2 itemprop="about" style="margin:7px">Area and Volume of basic Shapes</h2>
+<br>
+<br>
+<br>
+<section itemscope itemtype="http://schema.org/SolveMathAction" itemref="area" id="triangle">
 <h3 itemprop="name" style="margin:7px">Area of a Triangle</h3>
 <br>
 <p itemprop="description" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
@@ -1824,6 +1830,7 @@ The square root of half of the area of the rectangle is the side length of the t
 The area of a triangle can also be calculated by the length of its sides.
 </p>
 <br>
+<div itemprop="mathExpression-output">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" > <mrow>
  <mi>S</mi>
       <mo>=</mo>
@@ -1852,8 +1859,10 @@ The area of a triangle can also be calculated by the length of its sides.
 </mfrac>
 </mrow>
 </math>
+</div>
 <br>
 <br>
+<div itemprop="mathExpression-output">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
@@ -1901,6 +1910,7 @@ The area of a triangle can also be calculated by the length of its sides.
 </msqrt>
 </mrow>
 </math>
+</div>
 <br>
 <br>
 <div id="triangle_area_calculator">
@@ -1913,7 +1923,7 @@ The area of a triangle can also be calculated by the length of its sides.
 <label style="margin:12px" for="side3">Side 3:</label>
 <input id="side3" type="number" value="1" step="any">
 	
-<script>
+<script async>
   function triangleArea(product) {
   return Math.sqrt(product);
 }
@@ -1953,7 +1963,7 @@ function updateTriangleArea() {
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" itemref="trigonometry" id="polygon">
+<section itemscope itemtype="http://schema.org/SolveMathAction" itemref="trigonometry" id="polygon">
 <h3 itemprop="name" style="margin:7px">Area of a regular Polygon</h3>
 <br>
 <figure class="imgbox">
@@ -1972,6 +1982,7 @@ The base of each triangle equals the side length of the polygon.
 The height of each triangle is calculable via trigonometric functions. 
 </p>
 <br>
+<div itemprop="description">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 <mi>height</mi>
@@ -1996,6 +2007,7 @@ The height of each triangle is calculable via trigonometric functions.
 	</mrow>
   </mrow>
 </math>
+</div>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">The area of each triangle equals base × height / 2 . 
@@ -2004,6 +2016,7 @@ The height of each triangle is calculable via trigonometric functions.
 The area of the polygon equals the sum of the area of the triangles.
 </p>
 <br>
+<div itemprop="description">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>n</mi>
@@ -2020,8 +2033,10 @@ The area of the polygon equals the sum of the area of the triangles.
  <mi>side length</mi>
 </mrow>
 </math>
+</div>
 <br>
 <br>
+<div itemprop="description">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 <mi>A</mi>
@@ -2049,6 +2064,7 @@ The area of the polygon equals the sum of the area of the triangles.
 </msup>
 </mrow>
 </math>
+</div>
 <br>
 <br>
 <div id="polygon_area_calculator">
@@ -2057,7 +2073,7 @@ The area of the polygon equals the sum of the area of the triangles.
 <br>
 <label style="margin:12px" for="side-length">Side length:</label>
 <input id="side-length" type="number" value="1" step="any">
-<script>
+<script async>
   function polygonArea(length, number, tangent) {
     return number / 4  * length ** 2 / tangent;
   }
@@ -2092,7 +2108,8 @@ function updatePolygonArea() {
 </div>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">Interesting fact: 
+<div>
+<p style="margin:12px">Interesting fact: 
 </p>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -2110,22 +2127,29 @@ function updatePolygonArea() {
  </mrow>
 </mrow>
 </math>
+</div>
 </section>
 <br>
 <br>
 <br>
 <br>
-<div id="circle">
-<section itemscope itemtype="http://schema.org/CreativeWork">
-<h3 itemprop="name" style="margin:7px">
-The area of a circle is defined by comparing it to a square since that is the base of area calculation.
-</h3>
+<section id="cgs">
+<h2 itemprop="name" style="margin:7px">Core Geometric System ™</h2>
+<br>
+<br>
+<br>
+<section itemscope itemtype="http://schema.org/SolveMathAction" id="circle">
+<h3 itemprop="name" style="margin:7px">The Area of a Circle</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="areaOfACircle.jpg" alt="The circle is cut into four quadrants, each placed with their origin on the vertices of a square. The arcs of the quadrants of the circle that equals in area to the square intersect at the quarters on its centerlines. The ratio between the radius of the circle and the side of the square is calculable. r = side × √5 / 4 Area = 3.2r²">
 </figure>
 <br>
-<p itemprop="description" style="margin:12px">The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
+<p itemprop="description" style="margin:12px">
+The area of a circle is defined by comparing it to a square since that is the base of area calculation.
+<br>
+<br>
+The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
 <br>
 <br>
 In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square, leaving some of the square uncovered. 
@@ -2140,6 +2164,7 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
 The ratio between the radius of the circle and the side of the square is calculable.</strong>
 </p>
 <br>
+<div itemprop="description">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <msup>
@@ -2246,18 +2271,19 @@ The ratio between the radius of the circle and the side of the square is calcula
 </mrow>
 </mrow>
 </math>
+</div>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" itemref="trigonometry" id="circle_area_proof">
+<section itemprop="description" itemref="trigonometry" id="circle_area_proof">
 <details>
-  <summary><h4 itemprop="description" style="margin:7px">When the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.
+  <summary><h4 style="margin:7px">When the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.
 </h4></summary>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="equityFigure.jpg" alt="Circle area = 3.2r²">
     </figure>
 <br>
-<p itemprop="description" style="margin:12px">Quarter of the uncovered area in the middle:
+<p style="margin:12px">Quarter of the uncovered area in the middle:
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -2338,7 +2364,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <br>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">The area of an overlapping section:
+<p style="margin:12px">The area of an overlapping section:
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -2403,10 +2429,10 @@ The ratio between the radius of the circle and the side of the square is calcula
 <br>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">The equation can be simplified algebraically.
+<p style="margin:12px">The equation can be simplified algebraically.
 </p>
 <br>
-<p itemprop="description" style="margin:12px">Dividing both sides by 3.2r² :
+<p style="margin:12px">Dividing both sides by 3.2r² :
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -2482,7 +2508,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <br>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">Simplifying further:
+<p style="margin:12px">Simplifying further:
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -2537,7 +2563,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <br>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">Substituting 90° / 360° for 1 / 4 :
+<p style="margin:12px">Substituting 90° / 360° for 1 / 4 :
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -2598,7 +2624,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <br>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">Simplifying further:
+<p style="margin:12px">Simplifying further:
 </p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -2623,7 +2649,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <br>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">Which is equivalent to 1 = 1 .</p>
+<p style="margin:12px">Which is equivalent to 1 = 1 .</p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
@@ -2635,7 +2661,7 @@ The ratio between the radius of the circle and the side of the square is calcula
 <br>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">This is an identity; not tautology.</p>
+<p style="margin:12px">This is an identity; not tautology.</p>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
@@ -5005,8 +5031,8 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 </section>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 </section>
 </section>
 <br>
