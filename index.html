@@ -1035,6 +1035,7 @@ That could be written in decimal form only with an infinite number of numerals.
     <mfrac><mn>5</mn><mn>6</mn></mfrac>
   </mrow>
 </math>
+</section>
 </div>
 <br>
 <br>
@@ -1049,7 +1050,6 @@ That could be written in decimal form only with an infinite number of numerals.
 <br>
 <br>
 <p itemprop="about" style="margin:12px">Raising a number or unit of measurement to a power means multiplying it by itself.</p>
-<br>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">Example #1: 
@@ -1097,9 +1097,9 @@ The result of raising to a fraction is a root.
 <br>
 <p itemprop="about" style="margin:12px">The square is the foundational shape for area calculations. All area formulas relate to this instance.</p>
 <br>
-<p itemprop="abstract" style="margin:12px">A rectangle is a 2 dimensional plane shape with 2 equal perpendicular pairs of parallel straight sides. 
+<p itemprop="abstract" style="margin:12px">A rectangle is a 2 dimensional plane shape with 2 equal perpendicular pairs of parallel straight sides.</p>
 <br>
-<p itemprop="description" style="margin:12px">A square is a rectangle with equal width and length.</p>
+<p itemprop="description" style="margin:12px">A square is a rectangle with equal width and length.
 <br>
 The area of a rectangle is the product of its width and length.
 <br>
@@ -1177,6 +1177,169 @@ If its edges are equal, its volume equals the cubic value of its edge length.</p
 </details>
 </section>
 </details>
+<br>
+<br>
+<br>
+<br>
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="area" id="triangle">
+<h3 itemprop="name" style="margin:7px">Area of a Triangle</h3>
+<br>
+<div>
+<p itemprop="abstract" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
+<br>
+The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.</p>
+<br>
+<p itemprop="description" style="margin:12px">The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
+<br>
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>A</mi>
+<mo>=</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>base</mi>
+<mo>×</mo>
+<mi>height</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+ </mrow>
+</math>
+</div>
+<br>
+<br>
+<br>
+<div>
+<p itemprop="description" style="margin:12px">The area of a triangle can also be calculated by the length of its sides.</p>
+<br>
+<div itemprop="mathExpression">
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" > <mrow>
+<mrow>
+<mi>S</mi>
+    <mo>=</mo>
+<mi>Semi perimeter</mi>
+      <mo>=</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mo>(</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>1</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>2</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>3</mn>
+      </msub>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow>
+</math>
+</div>
+<br>
+<br>
+<div itemprop="mathExpression">
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>A</mi>
+<mo>=</mo>
+	<mrow>
+<msqrt>
+<mrow>
+<mi>S</mi>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>1</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>2</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>3</mn>
+</msub>
+<mo>)</mo>
+</mrow>
+</msqrt>
+</mrow>
+</mrow>
+</math>
+</div>
+</div>
+<br>
+<br>
+<div id="triangle_area_calculator">
+<label style="margin:12px" for="side1">Side 1:</label>
+<input id="side1" type="number" value="1" step="any">
+<br>
+<label style="margin:12px" for="side2">Side 2:</label>
+<input id="side2" type="number" value="1" step="any">
+<br>
+<label style="margin:12px" for="side3">Side 3:</label>
+<input id="side3" type="number" value="1" step="any">
+	
+<script>
+  function triangleArea(product) {
+  return Math.sqrt(product);
+}
+
+function updateTriangleArea() {
+  const side1 = parseFloat(document.getElementById('side1').value);
+  const side2 = parseFloat(document.getElementById('side2').value);
+  const side3 = parseFloat(document.getElementById('side3').value);
+
+  if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+    document.getElementById('triangle-area').innerText = '';
+    return;
+  }
+
+    // Triangle validity check
+  if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
+    document.getElementById('triangle-area').innerText = 'The sum of the length of the two shorter sides of a triangle is larger than the thrid one.';
+    return;
+  }
+
+  const s = (side1 + side2 + side3) / 2;
+  const product = s * (s - side1) * (s - side2) * (s - side3);
+  const area = triangleArea(product);
+
+  document.getElementById('triangle-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
+
+  document.getElementById('side1').addEventListener('input', updateTriangleArea);
+  document.getElementById('side2').addEventListener('input', updateTriangleArea);
+  document.getElementById('side3').addEventListener('input', updateTriangleArea);
+</script>
+<p style="margin:12px;" id="triangle-area"></p>
+</div>
+</section>
 <br>
 <br>
 <br>
@@ -1800,176 +1963,7 @@ function Atan(x) {
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver">
-<h2 itemprop="about" style="margin:7px">Area and Volume of basic Shapes</h2>
-<br>
-<br>
-<br>
-<section itemscope itemtype="http://schema.org/SolveMathAction" itemref="area" id="triangle">
-<h3 itemprop="name" style="margin:7px">Area of a Triangle</h3>
-<br>
-<div>
-<p itemprop="abstract" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
-<br>
-The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.</p>
-<br>
-<br>
-<p itemprop="description" style="margin:12px">The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
-<br>
-<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
- <mi>A</mi>
-<mo>=</mo>
-<mrow>
-<mfrac>
-<mrow>
-<mi>base</mi>
-<mo>×</mo>
-<mi>height</mi>
-</mrow>
-<mn>2</mn>
-</mfrac>
-</mrow>
- </mrow>
-</math>
-</div>
-<br>
-<br>
-<br>
-<div>
-<p itemprop="description" style="margin:12px">The area of a triangle can also be calculated by the length of its sides.</p>
-<br>
-<div itemprop="mathExpression">
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" > <mrow>
-<mrow>
-<mi>S</mi>
-    <mo>=</mo>
-<mi>Semi perimeter</mi>
-      <mo>=</mo>
-<mrow>
-<mfrac>
-<mrow>
-<mo>(</mo>
-      <msub>
-        <mi>side</mi>
-        <mn>1</mn>
-      </msub>
-<mo>+</mo>
-      <msub>
-        <mi>side</mi>
-        <mn>2</mn>
-      </msub>
-<mo>+</mo>
-      <msub>
-        <mi>side</mi>
-        <mn>3</mn>
-      </msub>
-<mo>)</mo>
-</mrow>
-<mn>2</mn>
-</mfrac>
-</mrow>
-</mrow>
-</math>
-</div>
-<br>
-<br>
-<div itemprop="mathExpression">
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
- <mi>A</mi>
-<mo>=</mo>
-<mrow>
-<msqrt>
-<mrow>
-<mi>S</mi>
-<mo>×</mo>
-<mo>(</mo>
-<mi>S</mi>
-<mo>-</mo>
-<msub>
-<mi>side</mi>
-<mn>1</mn>
-</msub>
-<mo>)</mo>
-<mo>×</mo>
-<mo>(</mo>
-<mi>S</mi>
-<mo>-</mo>
-<msub>
-<mi>side</mi>
-<mn>2</mn>
-</msub>
-<mo>)</mo>
-<mo>×</mo>
-<mo>(</mo>
-<mi>S</mi>
-<mo>-</mo>
-<msub>
-<mi>side</mi>
-<mn>3</mn>
-</msub>
-<mo>)</mo>
-</mrow>
-</msqrt>
-</mrow>
-</mrow>
-</math>
-</div>
-</div>
-<br>
-<br>
-<div id="triangle_area_calculator">
-<label style="margin:12px" for="side1">Side 1:</label>
-<input id="side1" type="number" value="1" step="any">
-<br>
-<label style="margin:12px" for="side2">Side 2:</label>
-<input id="side2" type="number" value="1" step="any">
-<br>
-<label style="margin:12px" for="side3">Side 3:</label>
-<input id="side3" type="number" value="1" step="any">
-	
-<script>
-  function triangleArea(product) {
-  return Math.sqrt(product);
-}
-
-function updateTriangleArea() {
-  const side1 = parseFloat(document.getElementById('side1').value);
-  const side2 = parseFloat(document.getElementById('side2').value);
-  const side3 = parseFloat(document.getElementById('side3').value);
-
-  if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
-    document.getElementById('triangle-area').innerText = '';
-    return;
-  }
-
-    // Triangle validity check
-  if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
-    document.getElementById('triangle-area').innerText = 'The sum of the length of the two shorter sides of a triangle is larger than the thrid one.';
-    return;
-  }
-
-  const s = (side1 + side2 + side3) / 2;
-  const product = s * (s - side1) * (s - side2) * (s - side3);
-  const area = triangleArea(product);
-
-  document.getElementById('triangle-area').innerText =
-    `Area: ${area.toFixed(5)} square units`;
-}
-
-  document.getElementById('side1').addEventListener('input', updateTriangleArea);
-  document.getElementById('side2').addEventListener('input', updateTriangleArea);
-  document.getElementById('side3').addEventListener('input', updateTriangleArea);
-</script>
-<p style="margin:12px;" id="triangle-area"></p>
-</div>
-</section>
-<br>
-<br>
-<br>
-<br>
-<section itemscope itemtype="http://schema.org/SolveMathAction" itemref="trigonometry;triangle" id="polygon">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="triangle" id="polygon">
 <h3 itemprop="name" style="margin:7px">Area of a regular Polygon</h3>
 <br>
 <figure class="imgbox">
@@ -1977,7 +1971,6 @@ function updateTriangleArea() {
 </figure>
 <br>
 <p itemprop="abstract" style="margin:12px">A regular polygon can be divided into as many isosceles triangles as many sides it has.</p>
-<br>
 <p itemprop="description" style="margin:12px">The base of each triangle equals the side length of the polygon. 
 <br>
 <br>
@@ -2018,7 +2011,6 @@ The height of each triangle is calculable via trigonometric functions.
   </mrow>
 </math>
 </div>
-<br>
 <br>
 <br>
 <div itemprop="description">
@@ -2139,14 +2131,15 @@ function updatePolygonArea() {
 <br>
 <br>
 <section id="cgs">
-<h2 itemprop="name" style="margin:7px">Core Geometric System ™</h2>
+<h2 itemprop="name" style="margin:7px">The Core Geometric System ™</h2>
 <br>
 <br>
 <br>
 <h2 itemprop="disambiguatingDescription" style="font-size:100%">By fundamentally shifting the axioms from the abstract, zero-dimensional point to the square and the cube as the primary, physically-relevant units for measurement, this system defines the properties of shapes like the circle and sphere not through abstract limits, but through their direct, rational relationship to these foundational units.</h2>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/SolveMathAction" itemref="triangle" id="circle">
+<br>
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="triangle" id="circle">
 <h3 itemprop="name" style="margin:7px">The Area of a Circle</h3>
 <br>
 <figure class="imgbox">
@@ -2154,7 +2147,6 @@ function updatePolygonArea() {
 </figure>
 <br>
 <p itemprop="description" style="margin:12px">The area of a circle is defined by comparing it to a square since that is the base of area calculation.</p>
-<br>
 <p itemprop="abstract" style="margin:12px">The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
 <br>
 <br>
@@ -2755,16 +2747,17 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/SolveMathAction" itemref="circle" id="circumference">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle" id="circumference">
 <h3 itemprop="name" style="margin:7px">Circumference of a Circle</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="circumference.jpg" alt="The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii. Circumference = 6.4r">
     </figure>
 <br>
-<p itemprop="description" style="margin:12px">The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii.</p>
+<p itemprop="abstract" style="margin:12px">The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii.
 <br>
-<p itemprop="abstract" style="margin:12px">The x represents the theoretical width of the circumference, which is a very small number.
+<br>
+The x represents the theoretical width of the circumference, which is a very small number.
 <br>
 <br>
 The difference between the shape of the straightened circumference and a quadrilateral is negligible.
@@ -3069,7 +3062,6 @@ In calculus terms:
 </script>
 <p style="margin:12px" id="circle-circumference"></p>
 </div>
-</section>
 <br>
 <br>
 <section itemscope itemtype="http://schema.org/usageInfo" id="pi">
@@ -3093,15 +3085,15 @@ Some think 'Standard Geometry' means accepting the pi. But the pi is actually an
 </p>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="Archimedes">
-<h4 itemprop="name" style="margin:12px">Archimedes and the Illusion of Limits</h4>
+<section id="Archimedes">
+<h4 style="margin:12px">Archimedes and the Illusion of Limits</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">The Greek Archimedes’ method for estimating the pi is often celebrated as a foundational triumph of geometric reasoning.
 </p>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="polygon-approximation">
+<section id="polygon-approximation">
 <details>
-<summary itemprop="name" style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. But that method itself introduced compounding errors.
+<summary style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. But that method itself introduced compounding errors.
 </summary>
 <p itemprop="description" style="margin:12px">
 He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
@@ -3182,8 +3174,8 @@ This equidistance constraint allows us to calculate perimeters for polygons of v
 </section>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="symbol">
-<h4 itemprop="name" style="margin:12px">The Symbol Pi: A Linguistic Shortcut</h4>
+<section id="symbol">
+<h4 style="margin:12px">The Symbol Pi: A Linguistic Shortcut</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">The symbol pi was introduced because the estimate ratio—approximately 3.14159…—is an infinite fraction. Since we can’t write all its digits, we needed a symbol. But this symbol has taken on a life of its own.
@@ -3199,8 +3191,8 @@ It was not until the 18th century that the symbol pi, popularized by the mathema
 </section>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="calculus">
-<h4 itemprop="name" style="margin:12px">∫ Calculus: Summary, Not Source</h4>
+<section id="calculus">
+<h4 style="margin:12px">∫ Calculus: Summary, Not Source</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">Several complex formulas were introduced by different mathematicians, aimed at more accurately estimating this ratio, based on theoretical polygons with an infinite number of sides. 
@@ -3255,8 +3247,8 @@ It can be exact with exact limits and certain operations, but if those are given
 </section>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="phi">
-<h4 itemprop="name" style="margin:12px">φ The Golden Ratio</h4>
+<section id="phi">
+<h4 style="margin:12px">φ The Golden Ratio</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">Some relate the numeric value of 3.14… to the so-called “golden ratio” of ( √5 + 1 ) / 2.
@@ -3292,8 +3284,8 @@ The golden ratio of ( √5 + 1 ) / 2 is irrelevant to the definition of these pr
 </section>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="solution">
-<h4 itemprop="name" style="margin:12px">A Rational Alternative: 3.2</h4>
+<section id="solution">
+<h4 style="margin:12px">A Rational Alternative: 3.2</h4>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">Historical records suggest that a legislative process took place in 1897, Indiana, USA, known as House Bill 246 ( sometimes listed as 264 ), or Indiana Pi Act, aiming to replace the numeric value 3.14 by 3.2.
@@ -3364,20 +3356,21 @@ The final conclusion is that adopting a consistent, rational constant like 3.2 o
 </section>
 </details>
 </section>
+</section>
 <br>
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/SolveMathAction" itemref="trigonometry" id="circle-segment">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle" id="circle-segment">
     <h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="circleSegment.jpg" alt="The area of a circle segment can be calculated by subtracting a triangle from a circle slice. Area = Acos(( r - n ) / r ) × r² - sin( Acos(( r - n ) / r ) × ( r - n ) × r">
     </figure>
 <br>
-    <p itemprop="description" style="margin:12px">The area of a circle segment can be calculated by subtracting a triangle from a circle slice.</p>
+    <p itemprop="abstract" style="margin:12px">The area of a circle segment can be calculated by subtracting a triangle from a circle slice.</p>
 <br>
-<p itemprop="abstract" style="margin:12px">The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.</p>
+<p itemprop="description" style="margin:12px">The triangle is given by the ratio between the chord and the height or the parent radius via trigonometric functions.</p>
 <br>
 <math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
@@ -3489,7 +3482,7 @@ const ratio = 2 * height / length;
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/SolveMathAction" id="cone-surface">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle" id="cone-surface">
 <h3 itemprop="name" style="margin:7px">Surface Area of a Cone</h3>
 <br>
 <figure class="imgbox">
@@ -3499,7 +3492,7 @@ const ratio = 2 * height / length;
 <p itemprop="abstract" style="margin:12px">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle given by the ratio between the height and the slant height.
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>A</mi>
@@ -3565,25 +3558,21 @@ const ratio = 2 * height / length;
 <p style="margin:12px" id="cone-surface-area"></p>
 </div>
 </section>
-</section>
 <br>
 <br>
 <br>
 <br>
-<div id="sphere">
-<section itemscope itemtype="http://schema.org/CreativeWork" itemref="volume">
-<h3 itemprop="name" style="margin:7px">The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.
-</h3>
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle" itemref="volume">
+<h3 itemprop="name" style="margin:7px">The Volume of a Sphere</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="sphereAndCubeMarkup.jpeg" alt="The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross-section. Volume = ( √ ( 3.2 ) × r )³">
     </figure>
 <br>
-<p itemprop="description" style="margin:12px"><strong>The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.
-</strong>
-</p>
+<p itemprop="description" style="margin:12px"><strong>The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.</strong>
+<p itemprop="abstract" style="margin:12px">The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.</p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
  <mi>V</mi>
 <mo>=</mo>
@@ -3651,7 +3640,7 @@ const ratio = 2 * height / length;
 <p itemprop="description" style="margin:12px">The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross-section.</p>
 <br>
 <br>
-<section>
+<section itemscope itemtype="http://schema.org/usageInfo" id="pi">
 <details>
   <summary><h4 style="margin:7px">The " V = 4 / 3 × pi × radius³ " formula is widely used for the volume of a sphere.</h4></summary>
 <p style="margin:12px">It is a cornerstone of theoretical geometry. 
@@ -3686,7 +3675,7 @@ The conventional formula for the surface area of a sphere was allegedly develope
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" style="border: 2px solid red; 
+<section itemscope itemtype="http://schema.org/Offer" itemref="sphere" style="border: 2px solid red; 
             padding: 10px" id="sphere-surface">
   <p style="margin:6px">Advertisement</p>
 <br>
@@ -3711,17 +3700,17 @@ The formula for the real surface area of a sphere is available for 3.2 billion U
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="cap">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="sphere" id="cap">
 <h3 itemprop="name" style="margin:7px">Volume of a Spherical Cap</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="sphericalCap.jpg" alt="One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere. V = 1.6 × (cap radius) × h × 4 / √5²">
     </figure>
     <br>
-<p itemprop="description" style="margin:12px">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.
+<p itemprop="abstract" style="margin:12px">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
  <mi>V</mi>
       <mo>=</mo>
@@ -3794,15 +3783,14 @@ if ( height === radius) {
 <br>
 <br>
 <br>
-<div id="cone">
-<section itemscope itemtype="http://schema.org/CreativeWork">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="sphere">
 <h3 itemprop="name" style="margin:7px">Volume of a Cone</h3>
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="coneAndSphereMarkup.jpeg" alt="Cone volume from sphere = base × height / √8">
 </figure>
 <br>
-<p itemprop="description" style="margin:12px"><strong>The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.
+<p itemprop="abstract" style="margin:12px"><strong>The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.
 </strong>
 </p>
 <br>
@@ -3810,7 +3798,7 @@ if ( height === radius) {
     <img class="center-fit" src="octantSphereQuarterCone.jpeg" alt="The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.">
 </figure>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>V</mi>
@@ -3884,7 +3872,7 @@ if ( height === radius) {
     <img class="center-fit" src="sphereAndConeMarkup.jpeg" alt="The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder. Volume = base × height / √8">
 </figure>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>A</mi>
@@ -3941,7 +3929,7 @@ if ( height === radius) {
 <p itemprop="description" style="margin:12px">The volume of a quadrant cylinder with the same base, and height equal to the slant height of the cone is a simple multiplication.
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msup>
 <mrow>
@@ -3976,7 +3964,7 @@ The area of a cone's vertical middle cross-section is the half of a cylinder's w
 The mean of the areas of the horizontal cross-sectional slices of a cone is the half of a cylinder’s.
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>V</mi>
@@ -4014,7 +4002,7 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 </math>
 <br>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>V</mi>
@@ -4071,7 +4059,7 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 </div>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="traditional_cone_volume">
+<section itemscope itemtype="http://schema.org/usageInfo" id="traditional_cone_volume">
 <details>
   <summary>
 	<h4 itemprop="name" style="margin:7px">
@@ -4084,7 +4072,7 @@ The volume of a cone or pyramid is conventionally approximated as base × height
 <p itemprop="description" style="margin:12px">That makes the ratio between the mid-height cross-sectional area of the pyramid, and the difference between the mid-height cross-sectional areas of the circumscribed solid and the pyramid 1 : 3 .
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <mrow>
 <mrow>
@@ -4183,7 +4171,7 @@ No. Because it's not true in case of most other shapes.
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="cube-dissection">
+<section id="cube-dissection">
 <h3 itemprop="name" style="margin:12px">The other idea is the cube dissection.</h3>
 <br>
 <figure class="imgbox">
@@ -4285,11 +4273,12 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.
 </section>
 </details>
 </section>
+</section>
 <br>
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="frustum-cone">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="cone" id="frustum-cone">
 <h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
 <br>
 <figure class="imgbox">
@@ -4303,7 +4292,7 @@ The height of the theoretical full cone can be calculated by the frustum height 
 </strong>
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
  <mrow>
  <mi>H</mi>
       <mo>=</mo>
@@ -4453,12 +4442,11 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <p style="margin:12px" id="frustum-cone-volume"></p>
 </div>
 </section>
-</section>
 <br>
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" itemref="polygon" id="pyramid">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="polygon" itemref="cone" id="pyramid">
 <h3 itemprop="description" style="margin:7px">The volume of a pyramid can be calculated 
 with the same coefficient as the volume of a cone.</h3>
 <br>
@@ -4470,7 +4458,7 @@ with the same coefficient as the volume of a cone.</h3>
   <img class="center-fit" src="tetraFrame.jpeg" alt="The volume of a pyramid can be calculated with the same coefficient as the volume of a cone. Volume = base × height / √8">
   </figure>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>V</mi>
 <mo>=</mo>
@@ -4531,11 +4519,12 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 </script>
 <p style="margin:12px" id="pyramid-volume"></p>
 </div>
+</section>
 <br>
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="frustum-pyramid">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="pyramid" id="frustum-pyramid">
 <h3 itemprop="name" style="margin:7px">Volume of a horizontal Frustum Pyramid</h3>
 <br>
 <figure class="imgbox">
@@ -4549,7 +4538,7 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
 </strong>
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
      <mrow>
  <mi>V</mi>
       <mo>=</mo>
@@ -4668,13 +4657,14 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </script>
 <p style="margin:12px" id="frustum-pyramid-volume"></p>
 </div>
+</section>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="square_frustum">
+<section itemscope itemtype="http://schema.org/MathSolver" id="square_frustum" itemref="frustum-pyramid">
 <h3 itemprop="name" style="margin:7px">The volume of a square frustum pyramid can be calculated via a simplified formula.
 </h3>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
      <mrow>
  <mi>H</mi>
       <mo>=</mo>
@@ -4683,7 +4673,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </math>
 <br>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
  <mrow>
  <mi>t</mi>
    <mo>=</mo>
@@ -4692,7 +4682,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </math>
 <br>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
      <mrow>
  <mi>b</mi>
       <mo>=</mo>
@@ -4701,7 +4691,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </math>
 <br>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>V</mi>
 <mo>=</mo>
@@ -4732,12 +4722,11 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </mrow>
   </math>
 </section>
-</section>
 <br>
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/CreativeWork" id="tetrahedron">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="pyramid" id="tetrahedron">
 <h3 itemprop="name" style="margin:7px">Volume of a Tetrahedron</h3>
 <br>
 <figure class="imgbox">
@@ -4751,7 +4740,7 @@ A tetrahedron is a pyramid with 4 equilateral triangles as boundaries, forming 6
 Its volume is calculated as a pyramid with an equilateral triangle base and fixed proportions. 
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
  <mi>A</mi>
     <mo>=</mo>
@@ -4821,7 +4810,7 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <p itemprop="description" style="margin:12px">Simplifying further:
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>A</mi>
 <mo>=</mo>
@@ -4868,7 +4857,7 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <p itemprop="description" style="margin:12px">The height of the tetrahedron is also calculable via trigonometry.
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
  <mi>H</mi>
     <mo>=</mo>
@@ -4914,7 +4903,7 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <p itemprop="description" style="margin:12px">Simplifying:
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
  <mi>H</mi>
     <mo>=</mo>
@@ -4960,7 +4949,7 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <p itemprop="description" style="margin:12px">The volume of a pyramid equals base × height × √2 / 4 . 
 </p>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
  <mi>V</mi>
     <mo>=</mo>
@@ -5049,11 +5038,7 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <p style="margin:12px" id="tetrahedron-volume"></p>
 </div>
 </section>
-</section>
-</div>
-</div>
-</section>
-<p itemprop="description" style="margin:12px">This is the only self-consistent geometric framework.</p>
+<p itemprop="description" style="margin:12px">This is the only exact, self-consistent geometric framework.</p>
 </section>
 </section>
 <br>
