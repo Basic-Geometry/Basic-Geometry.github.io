@@ -870,7 +870,7 @@ If the width of the rectangle is equal to its length, its area is the square val
 <section itemscope itemtype="http://schema.org/MathSolver" id="volume">
 <h3 itemprop="name" style="margin:7px">Volume of a Cube</h3>
 <br>
-<figure class=" imgbox"http://schema.org/ImageObject>
+<figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="cubeMarkup.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
     </figure>
 <br>
@@ -915,6 +915,7 @@ If its edges are equal, its volume equals the cubic value of its edge length.</p
 </details>
 </section>
 </details>
+</section>
 <br>
 <br>
 <br>
@@ -929,7 +930,8 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 <br>
 <p itemprop="description" style="margin:12px">The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
 <br>
-<math itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="mathExpression">
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
 <mo>=</mo>
@@ -945,6 +947,7 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 </mrow>
  </mrow>
 </math>
+</div>
 </div>
 <br>
 <br>
@@ -1701,7 +1704,7 @@ function Atan(x) {
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" itemref="triangle; trigonometry" id="polygon">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="triangle trigonometry" id="polygon">
 <h3 itemprop="name" style="margin:7px">Area of a regular Polygon</h3>
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -1997,10 +2000,9 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
 </mrow>
 </mrow>
 </math>
-</div>
 <br>
 <br>
-<section itemprop="description" itemref="trigonometry" id="circle_area_proof">
+<section itemref="trigonometry" id="circle_area_proof">
 <details>
   <summary><h4 style="margin:7px">When the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.
 </h4></summary>
@@ -2425,7 +2427,8 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
 The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle. 
 </p>
 <br>
-<math itemprop="mathExpression"> style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="mathExpression">
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>A</mi>
 <mo>=</mo>
@@ -2448,6 +2451,7 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 </msup>
 </mrow>
 </math>
+</div>
 <br>
 <br>
 <div id="circle_area_calculator">
@@ -4440,7 +4444,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </math>
 <br>
 <br>
-<math itemprop="description" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
      <mrow>
  <mi>b</mi>
       <mo>=</mo>
