@@ -940,16 +940,18 @@ function updateTriangleArea() {
 <br>
 <br>
 <section itemscope itemtype="http://schema.org/LearningResource" id="trigonometry" itemref="division">
-<h2 itemprop="about" style="margin:7px">Trigonometry</h2>
+<h3 itemprop="about" style="margin:7px">Trigonometry</h3>
 <br>
 <figure class="imgbox"  itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="trigonometry.png" alt="Trigonometric identities in a right triangle">
     </figure>
 <br>
-<p itemprop="description" style="margin:12px">
+<div itemprop="description">
+<p style="margin:12px">
 In a right triangle the ratios between the sides and the angles are proportional.</p>
 <br>
 <br>
+<div id="sine">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>sine</mi>
@@ -960,8 +962,10 @@ In a right triangle the ratios between the sides and the angles are proportional
       </mfrac>
 </mrow>
 </math>
+</div>
 <br>
 <br>
+<div id="cosine">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>cosine</mi>
@@ -972,8 +976,10 @@ In a right triangle the ratios between the sides and the angles are proportional
       </mfrac>
 </mrow>
 </math>
+</div>
 <br>
 <br>
+<div id="tangent">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>tangent</mi>
@@ -984,8 +990,10 @@ In a right triangle the ratios between the sides and the angles are proportional
       </mfrac>
 </mrow>
 </math>
+</div>
 <br>
 <br>
+<div id="cotangent">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML"> <mrow>
  <mi>cotangent</mi>
       <mo>=</mo>
@@ -995,8 +1003,11 @@ In a right triangle the ratios between the sides and the angles are proportional
       </mfrac>
 </mrow>
 </math>
+</div>
+</div
 <br>
 <br>
+<div>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <msup>
@@ -1025,6 +1036,7 @@ In a right triangle the ratios between the sides and the angles are proportional
 </msup>
 </mrow>
 </math>
+</div>
 <div>
 <script>
 
@@ -1605,10 +1617,8 @@ The height of each triangle is calculable via trigonometric functions.
   </mrow>
   </mrow>
 </math>
-</div>
 <br>
 <br>
-<div itemprop="description">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>n</mi>
@@ -2331,6 +2341,14 @@ The area of both the square and the sum of the quadrants equals 16 right triangl
 </script>
 <p style="margin:12px" id="circle-area"></p>
 </div>
+<br>
+<br>
+<section itemprop="disambiguatingDescription">
+<details>
+  <summary><h4 style="margin:12px"><strong>The direct area comparison ensures exactness.</strong></h4></summary>
+<p style="margin:12px"><strong>Archimedes' area formula A = pi × r² is not a direct result of calculus. It’s reverse-engineered by multiplying the approximate circumference formula C = 2pi × r by half the radius—treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it bypasses the geometric logic that defines area: the comparison to a square.</strong></p>
+</details>
+</section>
 </section>
 <br>
 <br>
@@ -2684,7 +2702,7 @@ Some think 'Standard Geometry' means accepting the pi. But the pi is actually an
 </p>
 <section id="polygon-approximation">
 <details>
-<summary style="margin:12px">He approximated the circle using inscribed and circumscribed polygons. But that method itself introduced compounding errors.
+<summary style="margin:12px">He approximated the circumference using inscribed and circumscribed polygons. But that method itself introduced compounding errors.
 </summary>
 <p style="margin:12px">
 He began with a circle bounded by an inscribed and a circumscribed hexagon — not the absolute minimum of 3 or 4 sides — likely because the hexagon is closer to the circle while still being easily calculable. By bisecting the angles (splitting them in half), he turned the hexagons into a 12-gons, then 24-gons, all the way to 96-sided shapes. This allowed him to calculate the perimeter of these shapes using only straight lines and Pythagoras' theorem. 
@@ -2760,8 +2778,6 @@ This equidistance constraint allows us to calculate perimeters for polygons of v
 <br>
 </details>
 </section>
-<p style="margin:12px"><strong>Archimedes' area formula A = pi × r² is not a direct result of calculus. It’s reverse-engineered by multiplying the circumference formula C = 2pi × r by half the radius—treating the area as the sum of infinitesimal rings. While the result of that method is algebraically valid, it bypasses the geometric logic that defines area: the comparison to a square.</strong>
-</p>
 </section>
 <br>
 <br>
@@ -4665,7 +4681,8 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 </section>
 <br>
 <br>
-<p itemprop="description" style="margin:12px">The Core Geometric System ™ is the only exact, self-consistent geometric framework grounded in the first principles of mathematics.</p>
+<br>
+<p itemprop="description" style="margin:12px">This Core Geometric System ™ is the only exact, self-consistent geometric framework grounded in the first principles of mathematics.</p>
 <p itemprop="description" style="margin:12px">By fundamentally shifting the axioms from the abstract, zero-dimensional point to the square and the cube as the primary, physically-relevant units for measurement, this system defines the properties of shapes like the circle and sphere not through abstract limits, but through their direct, rational relationship to these foundational units. The results of these formulas align better with physical reality than the traditional abstract approximations</p>
 <p itemprop="usageInfo" style="margin:12px">This system provides exact formulas for real-world applications.</p>
 </div>
@@ -4676,13 +4693,16 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <footer>
 <section itemscope itemtype="http://schema.org/Statement">
 <h4 itemprop="about" style="margin:12px">® All rights reserved</h4>
+<p itemprop="copyrightYear" style="margin:12px">2025</p>
 <div itemscope itemtype="http://schema.org/copyrightHolder">
-<p style="margin:12px" itemtype="http://schema.org/Person" itemprop="name">Gaál Sándor</p>
+<div itemscope itemtype="http://schema.org/Person">
+<p style="margin:12px" itemprop="name">Gaál Sándor</p>
 <div itemscope itemtype="http://schema.org/PostalAddress" style="margin:12px">
 <p itemprop="addressLocality" style="margin:12px">Szentendre</p>
 <p itemprop="addressRegion" style="margin:12px">Hungary</p>
 <p itemprop="postalCode" style="margin:12px">2000</p>
 <p itemprop="streetAddress" style="margin:12px">Ady Endre út 6.A</p>
+</div>
 </div>
 </div>
 </section>
