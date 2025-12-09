@@ -680,7 +680,7 @@ The result of raising to a fraction is a root.
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" id="area">
+<section itemscope itemtype="http://schema.org/MathSolver" id="square">
 <h3 itemprop="name" style="margin:7px">Area of a Square</h3>
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -721,7 +721,7 @@ If the width of the rectangle is equal to its length, its area is the square val
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" id="volume">
+<section itemscope itemtype="http://schema.org/MathSolver" id="cube">
 <h3 itemprop="name" style="margin:7px">Volume of a Cube</h3>
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -774,7 +774,7 @@ If its edges are equal, its volume equals the cubic value of its edge length.</p
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" itemref="area" id="triangle">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="square" id="triangle">
 <h3 itemprop="name" style="margin:7px">Area of a Triangle</h3>
 <br>
 <div>
@@ -2968,7 +2968,7 @@ The final conclusion is that adopting a consistent, rational constant like 3.2 o
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle" id="circle-segment">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle trigonometry" id="circle-segment">
     <h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -3174,7 +3174,7 @@ const ratio = 2 * height / length;
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle" id="sphere">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="circle cube" id="sphere">
 <h3 itemprop="name" style="margin:7px">Volume of a Sphere</h3>
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -3278,9 +3278,6 @@ These measurements have shown a systematic difference compared to the theoretica
 <br>
 <br>
 If you're trying to calculate the volume of a physical ball or sphere for a practical purpose – whether it's for a science experiment, engineering, or any other real-world application – my empirically derived V = (√(3.2)×radius)³ formula offers a result that aligns more closely with what you would measure in the lab.
-<br>
-<br>
-The conventional formula for the surface area of a sphere was allegedly developed from the " volume = 4/3×pi×radius³ " formula.
 </p>
 </details>
 </section>
@@ -3301,6 +3298,9 @@ The conventional formula for the surface area of a sphere was allegedly develope
 <br>
 <p style="margin:6px">The image is an illustration.</p>
 </div>
+<br>
+<br>
+<p itemprop="disambiguatingDescription" style="margin:6px">The conventional formula for the surface area of a sphere was allegedly developed from the " volume = 4/3×pi×radius³ " formula.</p>
 <br>
 <br>
 <p itemprop="description" style="margin:6px"><strong>
@@ -4075,7 +4075,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/MathSolver" itemref="cone" id="pyramid">
+<section itemscope itemtype="http://schema.org/MathSolver" itemref="cone polygon" id="pyramid">
 <h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="conePyramidVolumeMarkup.jpeg" alt="The volume of a pyramid can be calculated with the same coefficient as the volume of a cone. Volume = base × height / √8">
@@ -4709,10 +4709,10 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 </section>
 <br>
 <br>
-<a style="margin:6px" itemtype="http://schema.org/AboutPage href="about">About</a>
+<a style="margin:6px" itemscope itemtype="http://schema.org/AboutPage href="about">About</a>
 <br>
 <br> 
-<a style="margin:6px" itemtype="http://schema.org/WebPage href="privacy-policy">Do Not Sell My Personal Information</a>
+<a style="margin:6px" itemscope itemtype="http://schema.org/WebPage href="privacy-policy">Do Not Sell My Personal Information</a>
  <br>
  <br>
 </footer>
