@@ -1847,7 +1847,6 @@ The height of each triangle is calculable via trigonometric functions.
 </math>
 </div>
 <br>
-<br>
 <div itemprop="mathExpression">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
@@ -2518,7 +2517,6 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
 </section>
 <p style="margin:12px" itemprop="description">The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle.</p>
 <br>
-<br>
 <div style="margin:12px" itemprop="mathExpression">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -3102,7 +3100,6 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <p style="margin:12px" itemprop="description">The length of the circumference approaches 6.4 × radius as its thickness approaches 0.
 </p>
 <br>
-<br>
 <div style="margin:12px" itemprop="mathExpression">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -3116,7 +3113,6 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <br>
 <p style="margin:12px" itemprop="description">In calculus terms:</p>
-<br>
 <br>
 <div itemprop="mathExpression" style="margin:12px">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3279,6 +3275,9 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <label for="segment-height">Height:</label>
 <input id="segment-height" type="number" value="1" step="any">
+<br>
+<label for="segment-parent-radius">Radius:</label>
+<input id="segment-parent-radius" type="number" value="1" step="any">
 <script>
   function segmentArea(length, height, angle, radius) {
     return angle * radius ** 2 - (radius - height) * length / 2;
@@ -3287,7 +3286,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 function updateSegmentArea() {
   const length = parseFloat(document.getElementById('segment-length').value);
   const height = parseFloat(document.getElementById('segment-height').value);
-
+const radius = parseFloat(document.getElementById('segment-parent-radius').value);
+	
   if (isNaN(length) || isNaN(height) || height === 0) {
     document.getElementById('segment-area').innerText = '';
     return;
@@ -3324,6 +3324,7 @@ const ratio = 2 * height / length;
 
   document.getElementById('segment-length').addEventListener('input', updateSegmentArea);
   document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
+document.getElementById('segment-parent-radius').addEventListener('input', updateSegmentArea);
 </script>
 <p id="segment-area"></p>
 </div>
@@ -3356,7 +3357,6 @@ const ratio = 2 * height / length;
   </figure>
 <br>
 <p style="margin:12px" itemprop="abstract">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle given by the ratio between the height and the slant height.</p>
-<br>
 <br>
 <div style="margin:12px" itemprop="mathExpression">
 <math xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -3466,7 +3466,6 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 </details>
 </section>
 <p style="margin:12px" itemprop="abstract">The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.</p>
-<br>
 <br>
 <div style="margin:12px" itemprop="mathExpression">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3590,7 +3589,6 @@ The formula for the real surface area of a sphere is available for 3.2 billion U
     </figure>
     <br>
 <p style="margin:12px" itemprop="abstract">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.</p>
-<br>
 <br>
 <div style="margin:12px" itemprop="mathExpression">
 <math xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -4005,7 +4003,6 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 </math>
 </div>
 <br>
-<br>
 <div itemprop="mathExpression">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
@@ -4124,7 +4121,6 @@ The height of the theoretical full cone can be calculated by the frustum height 
 </mrow>
 </math>
 </div>
-<br>
 <br>
 <div itemprop="mathExpression">
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4654,7 +4650,6 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </math>
 </div>
 <br>
-<br>
 <div style="margin:12px" itemprop="mathExpression">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -4844,6 +4839,7 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <br>
 <br>
 <br>
+<br>
 <p itemprop="description">The height of the tetrahedron is also calculable via trigonometry.
 </p>
 <br>
@@ -4935,6 +4931,7 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 </mrow>
    </mrow>
 </math>
+<br>
 <br>
 <br>
 <br>
