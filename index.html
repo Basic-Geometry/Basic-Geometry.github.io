@@ -3284,7 +3284,7 @@ function updateSegmentArea() {
   const length = parseFloat(document.getElementById('segment-length').value);
   const height = parseFloat(document.getElementById('segment-height').value);
 	
-  if (isNaN(length) || isNaN(height) || height === 0) {
+  if (isNaN(length) || isNaN(height) || height === 0 || length === 0) {
     document.getElementById('segment-area').innerText = '';
     return;
   }
