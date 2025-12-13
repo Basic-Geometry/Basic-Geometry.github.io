@@ -3277,7 +3277,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <input id="segment-height" type="number" value="1" step="any">
 <script>
   function segmentArea(length, height, angle, radius) {
-    return angle * radius ** 2 - (radius - height) * length / 2;
+    return 2 * angle * radius ** 2 - (radius - height) * length / 2;
   }
 
 function updateSegmentArea() {
