@@ -3271,13 +3271,13 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <div style="margin:12px" id="circle-segment_area_calculator">
 <label for="segment-height">Height:</label>
-<input id="segment-height" type="number" step="any">
+<input id="segment-height" type="number" value="1" step="any">
 <br>
 <label for="chord-length">Chord Length:</label>
-<input id="chord-length" type="number" step="any">
+<input id="chord-length" type="number" value="2" step="any">
 <br>
 <label for="parent-radius">Circle Radius:</label>
-<input id="parent-radius" type="number" step="any">
+<input id="parent-radius" type="number" value="1" step="any">
 <script>
   function segmentArea(length, height, angle, radius) {
     return angle * radius ** 2 - (radius - height) * length / 2;
