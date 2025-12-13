@@ -3307,7 +3307,7 @@ const radius = parseFloat(document.getElementById('parent-radius').value);
 
 	const ratio = (radius - height) / radius;
 	const angle = parseFloat(Acos(ratio));
-	const length = parseFloat(2 * sqrt(radius**2 - (radius - height)**2);
+	const length = parseFloat(2 * sqrt(radius**2 - (radius - height)**2));
   
     document.getElementById('segment-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
