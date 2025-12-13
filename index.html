@@ -3307,7 +3307,7 @@ function updateSegmentArea() {
   const height = parseFloat(document.getElementById('segment-height').value);
 const radius = parseFloat(document.getElementById('parent-radius').value);
 	
-  if (isNaN(height) || isNaN(length) || isNaN(radius) || height === 0 || length === 0 || radius === 0) {
+  if (isNaN(height) || isNaN(length) || isNaN(radius)) {
     document.getElementById('segment-area').innerText = '';
     return;
 	}
@@ -3334,7 +3334,7 @@ const radius = parseFloat(document.getElementById('parent-radius').value);
   
 	
 	
-if (height > 0 || length > 0) {
+else if (height > 0 || length > 0) {
 	
 const ratio = 2 * height / length;
 	
