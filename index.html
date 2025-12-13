@@ -3269,15 +3269,15 @@ The length of the two longer sides is the area of the resulting ring divided by 
 </div>
 <br>
 <br>
-<label for="segment-height">Height:</label>
-<input id="segment-height" type="number" value="1" step="any">
-<br>
 <div style="margin:12px" id="circle-segment_area_calculator">
-<label for="segment-length">Chird Length:</label>
-<input id="chord-length" type="number" value="2" step="any">
+<label for="segment-height">Height:</label>
+<input id="segment-height" type="number" step="any">
 <br>
-<label for="segment-height">Circle Radius:</label>
-<input id="parent-radius" type="number" value="1" step="any">
+<label for="chord-length">Chord Length:</label>
+<input id="chord-length" type="number" step="any">
+<br>
+<label for="parent-radius">Circle Radius:</label>
+<input id="parent-radius" type="number" step="any">
 <script>
   function segmentArea(length, height, angle, radius) {
     return angle * radius ** 2 - (radius - height) * length / 2;
@@ -3293,30 +3293,29 @@ const radius = parseFloat(document.getElementById('parent-radius').value);
     return;
 	}
 
-	// If height and parent radius is known 
+	// If height and parent radius are known 
 	  
-	else if (!isNaN(height) || !isNaN(radius)|| height > 0 || radius > 0) {
+	if (!isNaN(height) || isNaN(length)|| !isNaN(radius)|| height > 0 || radius > 0) {
 	
-	const ratio = (radius - height) / radius;
-  
 	// Segment validity check
 
 
-  if (ratio > 1) {
-    document.getElementById('segment-area').innerText = 'This ratio is out of range';
+  if (height > radius) {
+    document.getElementById('segment-area').innerText = 'The height of a circle segment is shorter than the parent radius.';
     return;
   }
-	
-  const angle = parseFloat(Acos(ratio));
-  const length = parseFloat(2 * sin(angle) * radius);
+
+	const ratio = (radius - height) / radius;
+	const angle = parseFloat(Acos(ratio));
+	const length = parseFloat(2 * sqrt(radius**2 - (radius - height)**2);
   
     document.getElementById('segment-area').innerText =
-    `Area of circle segment: ${area.toFixed(5)} square units`;
-	return;
-  
+    `Area: ${area.toFixed(5)} square units`;
 	}
+  
 	
-else if (!isNaN(length) || !isNaN(height)|| height > 0 || length > 0) {
+	
+if (!isNaN(height) || !isNaN(length)|| || isNaN(radius) height > 0 || length > 0) {
 	
 const ratio = 2 * height / length;
 	
@@ -3340,13 +3339,14 @@ const ratio = 2 * height / length;
   if ( ratio === 1) {
     document.getElementById('segment-area').innerText =
     `Area of semi-circle: ${area.toFixed(5)} square units`;
-	return;
 	}
-		
-
-  document.getElementById('segment-area').innerText =
+	
+	document.getElementById('segment-area').innerText =
     `Area: ${area.toFixed(5)} square units`;
-	}
+	
+}
+
+  }
 	
   document.getElementById('chord-length').addEventListener('input', updateSegmentArea);
   document.getElementById('segment-height').addEventListener('input', updateSegmentArea);
