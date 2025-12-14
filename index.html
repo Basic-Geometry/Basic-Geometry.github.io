@@ -697,8 +697,8 @@ Example #3:
 <br>
 <br>
 <br>
-<section id="geometry" itemprop="about" itemscope itemtype="http://schema.org/LearningResource">
-<h3 itemprop="name" >The 2nd and the 3rd Powers manifesting in Geometry</h3>
+<section id="geometry"">
+<h3>The 2nd and the 3rd Powers manifesting in Geometry</h3>
 <br>
 <section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" id="square">
 <h3 itemprop="name">Area of a Square</h3>
@@ -707,9 +707,9 @@ Example #3:
     <img class="center-fit" src="square.png" alt="A square is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. Area = side × side = side²">
 </figure>
 <br>
-<strong itemprop="usageInfo">The square is the foundational shape for area calculations. All area formulas relate to this instance.</strong>
+<strong itemprop="description">The square is the foundational shape for area calculations. All area formulas relate to this instance.</strong>
 <br>
-<p itemprop="abstract">A rectangle is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides.
+<p itemprop="description">A rectangle is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides.
 <br>
 <br>
 The area of a rectangle is the product of its width and length.</p>
@@ -746,9 +746,9 @@ The area of a rectangle is the product of its width and length.</p>
     <img class="center-fit" src="cube.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
     </figure>
 <br>
-<strong itemprop="usageInfo">The cube extends the square into three dimensions. That is a direct extrapolation from the area of the square, establishing the basis for volumetric relationships. This is the basis of volume calculation.</strong>
+<strong itemprop="description">The cube extends the square into three dimensions. That is a direct extrapolation from the area of the square, establishing the basis for volumetric relationships. This is the basis of volume calculation.</strong>
 <br>
-<p itemprop="abstract">A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. 
+<p itemprop="description">A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. 
 <br>
 <br>The volume of a cuboid is the product of width, length and height.</p>
 <p itemprop="description">A cube is a cuboid with equal edges.</p>
@@ -2380,7 +2380,7 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
     </figure>
 <section id="pi">
 <details>
-  <summary><h4 itemprop="abstract" style="margin:12px">The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii.</h4></summary>
+  <summary><h4 itemprop="description" style="margin:12px">The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii.</h4></summary>
 <br>
 <br>
 <p style="margin:7px">
@@ -2627,7 +2627,7 @@ The final conclusion is that adopting a consistent, rational constant like 3.2 o
 </section>	
 <br>
 <br>
-<section style="margin:12px" itemprop="usageInfo" id="solution">
+<section style="margin:12px" itemprop="description" id="solution">
 <h4>A Rational Alternative: 3.2</h4>
 <br>
 <br>
@@ -2664,7 +2664,7 @@ These are two aspects of that.
 </details>
 </section>	
 <br>		
-<p itemprop="abstract" style="margin:12px">The x represents the theoretical width of the circumference, which is a very small number.
+<p itemprop="description" style="margin:12px">The x represents the theoretical width of the circumference, which is a very small number.
 <br>
 <br>
 The difference between the shape of the straightened circumference and a quadrilateral is negligible.
@@ -2886,8 +2886,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <p style="margin:12px" itemprop="description">The length of the circumference approaches 6.4 × radius as its thickness approaches 0.
 </p>
 <br>
-<div display="block" itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>C</mi>
 <mo>=</mo>
@@ -2900,8 +2900,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <p style="margin:12px" itemprop="description">In calculus terms:</p>
 <br>
-<div itemprop="mathExpression" style="margin:12px">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
     <mrow>
         <mi>C</mi>
     <mo>=</mo>
@@ -3149,8 +3149,6 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="cone_surface" itemref="circle">
 <h3 itemprop="eduQuestionType" style="margin:7px">Surface Area of a Cone</h3>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={cone_radius=1_height=2_area=?}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="cone.jpeg" alt="The surface area of a cone is calculated as a circle slice with a radius equal to the slant height. Area = 3.2r × ( r + √( r² + H² )">
@@ -3234,21 +3232,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <br>
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="sphere" itemref="circle cube">
-<h3 itemprop="name" style="margin:7px">Volume of a Sphere</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Core Geometric System, sphere volume">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="6-12">
-	<meta itemprop="mathExpression" content="sphere radius=1 volume=?">
-<meta itemprop="eduQuestionType" content="Sphere Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="5.724">
-</div>
-</div>
+<h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Sphere</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={sphere_radius=1_volume=?}">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="sphere.jpeg" alt="The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross-section. Volume = ( √ ( 3.2 ) × r )³">
@@ -3267,9 +3252,9 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 </p>
 </details>
 </section>
-<p style="margin:12px" itemprop="abstract">The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.</p>
+<p style="margin:12px" itemprop="description">The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.</p>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
 <math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>V</mi>
@@ -3314,7 +3299,7 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <br>
 <br>
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="sphere_volume_calculator">
-<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="name" content="Sphere Volume Calculator">
 <meta itemprop="applicationCategory" content="EducationalApplication">
 <meta itemprop="operatingSystem" content="Web">
 <label for="sphere-radius">Radius:</label>
@@ -3376,16 +3361,14 @@ Unlock the true formula to calculate the surface area of a sphere.
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="spherical_cap" itemref="sphere">
 <h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Spherical Cap</h3>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={spherical_cap_radius=2_height=1_volume=?}">
-</div>
-</div>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="sphericalCap.jpg" alt="One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere. V = 1.6 × (cap radius) × h × 4 / √5²">
     </figure>
     <br>
-<p style="margin:12px" itemprop="abstract">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.</p>
+<p style="margin:12px" itemprop="description">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.</p>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
 <math itemprop="mathExpression" display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
  <mi>V</mi>
@@ -3413,7 +3396,7 @@ Unlock the true formula to calculate the surface area of a sphere.
 <br>
 <br>
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="spherical_cap_volume_calculator">
-<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="name" content="Spherical Cap Volume Calculator">
 <meta itemprop="applicationCategory" content="EducationalApplication">
 <meta itemprop="operatingSystem" content="Web">
 <label for="cap-radius">Radius:</label>
@@ -3464,22 +3447,8 @@ if ( height === radius) {
 <br>
 <br>
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="cone" itemref="sphere">
-<h3 itemprop="name" style="margin:7px">Volume of a Cone</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Core Geometric System, cone volume">
-<meta itemprop="educationalLevel" content="advanced">
-<meta itemprop="typicalAgeRange" content="12-18">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="cone radius=1 height=2 volume=?">
-<meta itemprop="eduQuestionType" content="Cone Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="2.26274">
-</div>
-</div>
+<h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Cone</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={cone_radius=1_height=2_volume=?}">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="coneAndSphere.jpeg" alt="Cone volume from sphere = base × height / √8">
@@ -3487,9 +3456,9 @@ if ( height === radius) {
 <section style="margin:12px">
 <details>
   <summary>
-	<h4 itemprop="abstract">The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.</h4></summary>
+	<h4 itemprop="description">The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.</h4></summary>
 <br>
-<p itemprop="usageInfo">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable approximation, the exact ratio is 1 / √8.
+<p itemprop="disambiguatingDescription">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable approximation, the exact ratio is 1 / √8.
 <br>
 <p itemprop="disambiguatingDescription">The 1 / 3 coefficient was likely estimated based on the observation that the area of the mid-height cross section of a cone — of which's apex can be connected to the midpoint of the base with a perpendicular line — is exactly a quarter of a circumscribed cylinder's with the same base and height.
 <br>That makes the ratio between the mid-height cross-sectional area of the cone, and the difference between the mid-height cross-sectional areas of the circumscribed cylinder and the pyramid 1 : 3 .
@@ -3594,7 +3563,7 @@ No.
     <img class="center-fit" src="octantSphereQuarterCone.jpeg" alt="The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.">
 </figure>
 <br>
-<math display="block" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML" >
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>V</mi>
@@ -3661,8 +3630,8 @@ No.
     <img class="center-fit" src="sphereAndCone.jpeg" alt="The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder. Volume = base × height / √8">
 </figure>
 <br>
-<div itemprop="abstract" style="margin:12px">
-<p>The base of the two shapes is a quadrant circle.</p>
+<div itemprop="description">
+<p style="margin:12px">The base of the two shapes is a quadrant circle.</p>
 <br>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
@@ -3716,8 +3685,8 @@ No.
 </div>
 <br>
 <br>
-<div itemprop="abstract" style="margin:12px">
-<p>The slant height of the quadrant cone is √2 × radius.
+<div itemprop="description">
+<p style="margin:12px">The slant height of the quadrant cone is √2 × radius.
 <br>
 <br>
 The volume of a quadrant cylinder with the same base, and height equal to the slant height of the cone is a simple multiplication.</p>
@@ -3750,8 +3719,8 @@ The volume of a quadrant cylinder with the same base, and height equal to the sl
 </div>
 <br>
 <br>
-<div itemprop="abstract" style="margin:12px">
-<p>The slant form has a triangular vertical cross-section. 
+<div itemprop="description">
+<p style="margin:12px">The slant form has a triangular vertical cross-section. 
 <br>
 The area of a cone's vertical middle cross-section is the half of a cylinder's with equal base and height. 
 <br>
@@ -3825,7 +3794,7 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 <br>
 <br>
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="cone_volume_calculator">
-<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="name" content="Cone Volume Calculator">
 <meta itemprop="applicationCategory" content="EducationalApplication">
 <meta itemprop="operatingSystem" content="Web">
 <label for="cone-radius-v">Radius:</label>
@@ -3863,24 +3832,8 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 <br>
 <br>
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="frustum_cone" itemref="cone">
-<h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="disambiguatingDescription" content="The traditional formula for the volume of a frustum cone is raw transcript of the square frustum pyramid volume formula. That is inaccurate for a frustum cone.">
-<meta itemprop="keywords" content="Core Geometric System, frustum cone volume">
-<meta itemprop="educationalLevel" content="advanced">
-<meta itemprop="typicalAgeRange" content="12-18">
-<meta itemprop="usageInfo" content="By top and base radii and frustum height.">
-	<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="cone radius top=1 bottom=2 height=3 volume=?">
-<meta itemprop="eduQuestionType" content="Frustum Cone Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="23.7588">
-</div>
-</div>
+<h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Frustum Cone</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={cone_radius_top=1_bottom=2_height=3_volume=?}">
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="frustumCone.jpeg" alt="Subtracting the missing tip from a theoretical full cone gives the volume of a frustum cone. Volume = frustumHeight * (4 / 5 * bottomDiameter^2 * (1 / (1 - topDiameter / bottomDiameter)) - 4 / 5 * topDiameter^2 * (1 / (1 - topDiameter / bottomDiameter) - 1)) / √8">
@@ -3990,7 +3943,7 @@ The height of the theoretical full cone can be calculated by the frustum height 
 <br>
 <br>
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="frustum_cone_volume_calculator">
-<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="name" content="Frustum Cone Volume Calculator">
 <meta itemprop="applicationCategory" content="EducationalApplication">
 <meta itemprop="operatingSystem" content="Web">
 <label for="frustum-cone-base-radius">Base radius:</label>
@@ -4052,31 +4005,19 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <br>
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="pyramid" itemref="cone">
-<h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Core Geometric System, pyramid volume">
-<meta itemprop="educationalLevel" content="advanced">
-<meta itemprop="typicalAgeRange" content="12-18">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="pyramid bottom edge number=5 length=3 height=2 volume=?">
-<meta itemprop="eduQuestionType" content="Pramid Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="10.94216">
-</div>
-</div><figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
+<h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Pyramid</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={pyramid_bottom_edge_number=5_length=3_height=2_volume=?}">
+<br>
+<figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="conePyramidVolume.jpeg" alt="The volume of a pyramid can be calculated with the same coefficient as the volume of a cone. Volume = base × height / √8">
   </figure>
 <br>
 <section>
 <details>
   <summary>
-	<h4 itemprop="abstract" style="margin:12px">The volume of a pyramid can be calculated with the same coefficient as the volume of a cone.</h4></summary>
+	<h4 itemprop="description" style="margin:12px">The volume of a pyramid can be calculated with the same coefficient as the volume of a cone.</h4></summary>
 <br>
-<p itemprop="usageInfo" style="margin:12px">The volume of a pyramid is conventionally approximated as base × height / 3. While that is a reasonable approximation, the exact ratio is 1 / √8.</p>
+<p itemprop="description" style="margin:12px">The volume of a pyramid is conventionally approximated as base × height / 3. While that is a reasonable approximation, the exact ratio is 1 / √8.</p>
 <p itemprop="disambiguatingDescription" style="margin:12px">A common method aiming to prove the pyramid volume formula ( V = base × height / 3 ) involves dissecting a cube into three pyramids. Here’s how it’s typically presented:</p>
 <br>
 <figure class="imgbox" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
@@ -4179,7 +4120,7 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.
 <br>
 <br>
 <div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
-<math display="block" style="margin:12px" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>V</mi>
 <mo>=</mo>
@@ -4204,7 +4145,7 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.
 <br>
 <br>
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="pyramid_volume_calculator">
-<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="name" content="Pyramid Volume Calculator">
 <meta itemprop="applicationCategory" content="EducationalApplication">
 <meta itemprop="operatingSystem" content="Web">
 <label style="margin:12px" for="pyramid-side-number">Number of sides:</label>
@@ -4252,24 +4193,8 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br>
 <br>
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="frustum_pyramid" itemref="pyramid">
-<h3 itemprop="name" style="margin:12px">Volume of a horizontal Frustum Pyramid</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="disambiguatingDescription" content="The conventional formula for the volume of a frustum pyramid is based on the conventional V = base × height / 3 approximation.">
-<meta itemprop="keywords" content="Core Geometric System, frustum pyramid volume">
-<meta itemprop="educationalLevel" content="advanced">
-<meta itemprop="typicalAgeRange" content="12-18">
-<meta itemprop="usageInfo" content="By top and base area and frustum height. For any frustum pyramid, not only square based.">
-	<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="frustum pyramid height=3 edge length top=1 bottom=2 number=5 volume=?">
-<meta itemprop="eduQuestionType" content="Frustum Pyramid Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="12.76585">
-</div>
-	</div>
+<h3 itemprop="usageInfo" style="margin:12px">Volume of a horizontal Frustum Pyramid</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={frustum_pyramid_height=3_edge_length_top=1_bottom=2_number=5_volume=?}">
 	<br>
 <figure class="imgbox">
     <img class="center-fit" src="frustumPyramid.jpeg" alt="Subtracting the missing tip from a theoretical full pyramid gives the volume of a frustum pyramid. Volume = frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / √8">
@@ -4281,7 +4206,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 The height of the theoretical full pyramid can be calculated by the frustum height and the ratio between the top and bottom edges or areas.</p>
 <br>
 <div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
-<math display="block" itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
      <mrow>
  <mi>V</mi>
       <mo>=</mo>
@@ -4335,7 +4260,7 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
 <br>
 <br>
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="frustum_pyramid_volume_calculator">
-<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="name" content="Frustum Pyramid Volume Calculator">
 <meta itemprop="applicationCategory" content="EducationalApplication">
 <meta itemprop="operatingSystem" content="Web">
 <label for="frustum-pyramid-side-number">Number of sides:</label>
@@ -4408,23 +4333,8 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br>
 <br>
 <section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="square_frustum" itemref="pyramid">
-<h3 itemprop="name" style="margin:12px">Volume of a horizontal square Frustum Pyramid</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Core Geometric System, square frustum pyramid volume">
-<meta itemprop="educationalLevel" content="advanced">
-<meta itemprop="typicalAgeRange" content="12-18">
-<meta itemprop="usageInfo" content="By top and base edge length and height. For square based frustum only.">
-	<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="square frustum pyramid height=3 edge length top=1 bottom=2 volume=?">
-<meta itemprop="eduQuestionType" content="Square Frustum Pyramid Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="7.42462">
-</div>
-	</div>
+<h3 itemprop="eduQuestionType" style="margin:12px">Volume of a horizontal square Frustum Pyramid</h3>
+<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={square_frustum_pyramid_height=3_edge_length_top=1_bottom=2_volume=?"}">
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="squareFrustum.jpeg" alt="Square frustum pyramid">
@@ -4460,7 +4370,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </math>
 </div>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
 <math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>V</mi>
