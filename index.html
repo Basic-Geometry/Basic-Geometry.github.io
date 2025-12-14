@@ -809,14 +809,15 @@ The area of a rectangle is the product of its width and length.</p>
 <h3 style="margin:7px" itemprop="eduQuestionType">Area of a Triangle</h3>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={side1=3 side2=4 side3=5 area=?}">
 <br>
-<p itemprop="abstract" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
+<p itemprop="description" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
 <br>
 The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.</p>
 <br>
 <p itemprop="description" style="margin:12px">The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
 <br>
 <br>
-<math display="block" itemprop="result" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
 <mo>=</mo>
@@ -832,12 +833,14 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 </mrow>
  </mrow>
 </math>
+</div>
 <br>
 <br>
 <p itemprop="description" style="margin:12px">The area of a triangle can also be calculated by the length of its sides.</p>
 <br>
 <br>
-<math itemprop="result" xmlns="http://www.w3.org/1998/Math/MathML" > 
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML" > 
 <mrow>
 <mi>S</mi>
     <mo>=</mo>
@@ -871,7 +874,7 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 <br>
 <br>
 <br>
-<math itemprop="result" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<math display="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
 <mo>=</mo>
@@ -911,8 +914,13 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 </mrow>
 </mrow>
 </math>
+</div>
 <br>
 <br>
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="triangle_area_calculator">
+<meta itemprop="name" content="Circle Segment Area Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="side1" itemprop="mathExpression">Side 1:</label>
 <input id="side1" type="number" value="1" step="any">
 <br>
@@ -921,12 +929,7 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 <br>
 <label for="side3" itemprop="mathExpression">Side 3:</label>
 <input id="side3" type="number" value="1" step="any">
-
-<script itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="triangle_area_calculator">
-<meta itemprop="name" content="Circle Segment Area Calculator">
-<meta itemprop="applicationCategory" content="EducationalApplication">
-<meta itemprop="operatingSystem" content="Web">
-
+<script>
   function triangleArea(product) {
   return Math.sqrt(product);
 }
