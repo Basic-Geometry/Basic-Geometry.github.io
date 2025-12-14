@@ -151,15 +151,15 @@
 <summary><h2 itemprop="name" style="margin:7px">Mathematics</h2>
 </summary>
 <br>
-<section style="margin:12px" itemscope itemtype="http://schema.org/LearningResource" id="numbers">
+<section id="numbers">
 <details>
-<summary><h3 itemprop="name">1. Numbers</h3></summary>
+<summary><h3 itemprop="about" itemscope itemtype="http://schema.org/LearningResource">1. Numbers</h3></summary>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/LearningResource" id="numerals">
-<h3 itemprop="name">Numerals</h3>
+<section id="numerals">
+<h3 itemprop="name" itemscope itemtype="http://schema.org/LearningResource" >Numerals</h3>
 <br>
-<p itemprop="about">Notations of numeric Values</p>
+<p itemprop="description">Notations of numeric Values</p>
 <br>
 <div>
 <table>
@@ -205,7 +205,7 @@
 <section itemscope itemtype="http://schema.org/LearningResource" id="systems">
 <h3 itemprop="name">Numeric Systems</h3>
 <br>
-<p itemprop="about">The Values of Numbers.</p>
+<p itemprop="description">The Values of Numbers.</p>
 <br>
 <p itemprop="description">Example #1 - The year 2025 in the decimal system with Arab numerals</p>
 <br>
@@ -319,9 +319,9 @@
 </details>
 </section>
 <br>
-<section style="margin:12px" itemscope itemtype="http://schema.org/LearningResource" id="equation">
+<section style="margin:12px" id="equation">
 <details>
-<summary><h3 itemprop="name">2. Equations</h3></summary>
+<summary><h3 itemprop="about" itemscope itemtype="http://schema.org/LearningResource" >2. Equations</h3></summary>
 <br>
 <br>
 <section itemscope itemtype="http://schema.org/LearningResource">
@@ -343,24 +343,8 @@
 <h3 itemprop="name">Basic Operations</h3>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="addition">
+<section itemscope itemtype="https://schema.org/LearningResource id="addition">
 <h3 itemprop="name">+ Addition</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="basic algebraic operation, addition">
-<meta itemprop="educationalLevel" content="basic">
-<meta itemprop="typicalAgeRange" content="3-9">
-<meta itemprop="usageInfo" content="Universally applicable">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="1 + 1 = ?">
-	<meta itemprop="eduQuestionType" content="addition">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="2">
-</div>
-</div>
 <br>
 <p itemprop="description">
 Example #1:
@@ -384,24 +368,8 @@ Example #2:
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="subtraction" itemref="addition">
+<section itemscope itemtype="https://schema.org/LearningResource id="subtraction" itemref="addition">
 <h3 itemprop="name">- Subtraction</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="basic algebraic operation, subtraction">
-<meta itemprop="educationalLevel" content="basic">
-<meta itemprop="typicalAgeRange" content="3-9">
-<meta itemprop="usageInfo" content="Universally applicable">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="2 - 1 = ?">
-	<meta itemprop="eduQuestionType" content="subtraction">
-<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="1">
-</div>
-</div>
 <br>
 <p itemprop="description">The opposite of addition</p>
 <br>
@@ -427,23 +395,9 @@ Example #2:
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="multiplication" itemref="addition">
+<section itemscope itemtype="https://schema.org/LearningResource id="multiplication" itemref="addition">
 <h3 itemprop="name">× Multiplication *</h3>
 <meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="basic algebraic operation, multiplication">
-<meta itemprop="educationalLevel" content="basic">
-<meta itemprop="typicalAgeRange" content="3-9">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="2 × 3 = ?">
-	<meta itemprop="eduQuestionType" content="multiplication">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="6">
-</div>
-</div>
 <br>
 <p itemprop="description">An advanced form of addition</p>
 <br>
@@ -472,23 +426,8 @@ Example #2:
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="division" itemref="multiplication">
+<section itemscope itemtype="https://schema.org/LearningResource id="division" itemref="multiplication">
 <h3 itemprop="name">÷ Division /</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="basic algebraic operation, division">
-<meta itemprop="educationalLevel" content="basic">
-<meta itemprop="typicalAgeRange" content="3-9">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="6 / 3 = ?">
-<meta itemprop="eduQuestionType" content="division">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="2">
-</div>
-</div>
 <br>
 <p itemprop="description">The opposite of multiplication</p>
 <br>
@@ -546,23 +485,8 @@ That cannot be written in a decimal form with a finite number of numerals.
 <h3 itemprop="name">Operations with Fractions</h3>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="adding_fractions" itemref="addition">
+<section itemscope itemtype="https://schema.org/LearningResource id="adding_fractions" itemref="addition">
 <h3 itemprop="name">Adding Fractions</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Adding Fractions">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="9-12">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="1 / 4 + 3 / 4 = ?">
-<meta itemprop="eduQuestionType" content="Adding Fractions">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="1">
-</div>
-</div>
 <br>
 <p itemprop="description">Adding the counters if the denominators are the same.</p>
 <br>
@@ -619,23 +543,8 @@ The denominators can be multiplied by each other to get a common denominator. In
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="subtracting_fractions" itemref="adding_fractions">
+<section itemscope itemtype="https://schema.org/LearningResource id="subtracting_fractions" itemref="adding_fractions">
 <h3 itemprop="name">Subtracting Fractions</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Subtracting Fractions">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="9-12">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-<meta itemprop="eduQuestionType" content="Subtracting Fractions">
-	<meta itemprop="mathExpression" content="5 / 3 - 2 / 3 = ?">
-<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="1">
-</div>
-</div>
 <br>
 <p itemprop="description">Subtracting the counters if the denominators are the same.</p>
 <br>
@@ -690,24 +599,8 @@ The denominators can be multiplied by each other to get a common denominator. In
 <br>
 <br>	
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="multiplying_fractions" itemref="multiplication">
+<section itemscope itemtype="https://schema.org/LearningResource id="multiplying_fractions" itemref="multiplication">
 <h3 itemprop="name">Multiplying Fractions</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Multiplying Fractions">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="9-12">
-<meta itemprop="usageInfo" content="Universally applicable">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="( 2 / 3 ) × ( 4 / 5 )= ?">
-<meta itemprop="eduQuestionType" content="Multiplying Fractions">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="8 / 15">
-</div>
-</div>
 <br>
 <p itemprop="description">A fraction can be multiplied by multiplying its counter, or dividing its denominator.
 <br>
@@ -738,22 +631,6 @@ Multiplying by a fraction means multiplying counter by counter and denominator b
 <br>
 <section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="dividing_fractions" itemref="division">
 <h3 itemprop="name">Dividing Fractions</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Dividing Fractions">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="9-12">
-<meta itemprop="usageInfo" content="Universally applicable">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="( 5 / 4 ) / ( 3 / 2 )= ?">
-<meta itemprop="eduQuestionType" content="Dividing Fractions">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="10 / 12 = 5 / 6">
-</div>
-</div>
 <br>
 <p itemprop="description">A fraction can be divided by dividing its counter, or multiplying its denominator.
 <br>
@@ -834,23 +711,8 @@ Example #3:
 <section id="geometry">
 <h3 style="margin:7px" itemprop="about">The 2nd and the 3rd Powers manifesting in Geometry</h3>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="square" itemref="subtraction">
+<section itemscope itemtype="https://schema.org/LearningResource" id="square" itemref="subtraction">
 <h3 style="margin:7px" itemprop="name">Area of a Square</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="square area">
-<meta itemprop="educationalLevel" content="basic">
-<meta itemprop="typicalAgeRange" content="6-9">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="square side=2 area=?">
-<meta itemprop="eduQuestionType" content="Square Area">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="4">
-</div>
-</div>
 <br>
 <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="square.png" alt="A square is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. Area = side × side = side²">
@@ -864,7 +726,7 @@ Example #3:
 The area of a rectangle is the product of its width and length.</p>
 <p style="margin:12px" itemprop="description">A square is a rectangle with equal sides.</p>
 <br>
-<div itemprop="mathExpression">
+<div itemprop="description">
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
  <mi>A</mi>
@@ -889,23 +751,8 @@ The area of a rectangle is the product of its width and length.</p>
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cube" itemref="subtraction">
+<section itemscope itemtype="https://schema.org/LearningResource" id="cube" itemref="subtraction">
 <h3 style="margin:7px" itemprop="name">Volume of a Cube</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="cube volume">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="6-9">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="cube edge=2 volume=?">
-<meta itemprop="eduQuestionType" content="Cube Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="8">
-</div>
-</div>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="cube.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
@@ -918,7 +765,7 @@ The area of a rectangle is the product of its width and length.</p>
 <br>The volume of a cuboid is the product of width, length and height.</p>
 <p style="margin:12px" itemprop="description">A cube is a cuboid with equal edges.</p>
 <br>
-<div itemprop="mathExpression">
+<div itemprop="description">
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>V</mi>
@@ -950,35 +797,26 @@ The area of a rectangle is the product of its width and length.</p>
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="triangle" itemref="square">
-<h3 style="margin:7px" itemprop="name">Area of a Triangle</h3>
+<div itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver">
+<meta itemprop="name" content="Core Geometric System ™">
 <meta itemprop="url" content="https://basic-geometry.github.io">
 <meta itemprop="inLanguage" content="en">
+<meta itemprop="isFamilyFriendly" content="true">
 <meta itemprop="keywords" content="triangle area">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="6-12">
-<meta itemprop="usageInfo" content="Two different methods">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="triangle base=3 height=2 area=?">
-<meta itemprop="eduQuestionType" content="Triangle Area">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="3">
-</div>
-</div>
+<meta itemprop="educationalLevel" content="from basic to advanced">
+<meta itemprop="typicalAgeRange" content="6-18">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="triangle" itemref="square">
+<h3 style="margin:7px" itemprop="eduQuestionType">Area of a Triangle</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={side1=3 side2=4 side3=5 area=?}">
 <br>
-<div style="margin:12px">
-<p itemprop="abstract">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
+<p itemprop="abstract" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
 <br>
 The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.</p>
 <br>
-<p itemprop="description">The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
+<p itemprop="description" style="margin:12px">The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
 <br>
 <br>
-<div display="block" itemprop="mathExpression">
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math display="block" itemprop="result" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
 <mo>=</mo>
@@ -994,16 +832,12 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 </mrow>
  </mrow>
 </math>
-</div>
-</div>
 <br>
 <br>
-<div style="margin:12px">
-<p itemprop="description">The area of a triangle can also be calculated by the length of its sides.</p>
+<p itemprop="description" style="margin:12px">The area of a triangle can also be calculated by the length of its sides.</p>
 <br>
 <br>
-<div itemprop="mathExpression">
-<math xmlns="http://www.w3.org/1998/Math/MathML" > 
+<math itemprop="result" xmlns="http://www.w3.org/1998/Math/MathML" > 
 <mrow>
 <mi>S</mi>
     <mo>=</mo>
@@ -1037,7 +871,7 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 <br>
 <br>
 <br>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="result" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
 <mo>=</mo>
@@ -1077,21 +911,22 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 </mrow>
 </mrow>
 </math>
-</div>
-</div>
 <br>
 <br>
-<div style="margin:12px" id="triangle_area_calculator">
-<label for="side1">Side 1:</label>
+<label for="side1" itemprop="mathExpression">Side 1:</label>
 <input id="side1" type="number" value="1" step="any">
 <br>
-<label for="side2">Side 2:</label>
+<label for="side2" itemprop="mathExpression">Side 2:</label>
 <input id="side2" type="number" value="1" step="any">
 <br>
-<label for="side3">Side 3:</label>
+<label for="side3" itemprop="mathExpression">Side 3:</label>
 <input id="side3" type="number" value="1" step="any">
-	
-<script>
+
+<script itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="triangle_area_calculator">
+<meta itemprop="name" content="Circle Segment Area Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
+
   function triangleArea(product) {
   return Math.sqrt(product);
 }
@@ -5095,6 +4930,7 @@ Algebraic Manipulation
 <br>
 Simplifying equations to ensure consistency and precision.
 </strong>
+</div>
 <br>
 <br> 
 <br>
