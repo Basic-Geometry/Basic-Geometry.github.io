@@ -660,11 +660,11 @@ Dividing by a fraction means multiplying by the reciprocal of that fraction.</p>
 </details>
 </section>
 <br>
-<section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" style="margin:12px" itemref="multiplication" id="powers">
+<section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" itemref="multiplication" id="powers">
 <details>
-<summary><h3 itemprop="name">4. Powers</h3></summary>
+<summary><h3 style="margin:12px" itemprop="name">4. Powers</h3></summary>
 <br>
-<p itemprop="abstract">Raising a number or unit of measurement to a power means multiplying it by itself.</p>
+<p style="margin:12px" itemprop="abstract">Raising a number or unit of measurement to a power means multiplying it by itself.</p>
 <br>
 <p>Raising a value to the 3rd power means multiplying it by itself twice.
 <br>
@@ -698,22 +698,25 @@ Example #3:
 <br>
 <br>
 <section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" id="geometry"">
-<h3 itemprop="name">The 2nd and the 3rd Powers manifesting in Geometry</h3>
+<h3 style="margin:7px" itemprop="name">The 2nd and the 3rd Powers manifesting in Geometry</h3>
 <br>
-<section itemprop="about" id="square">
-<h3>Area of a Square</h3>
+<section id="square">
+<h3 style="margin:7px">Area of a Square</h3>
 <br>
 <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="square.png" alt="A square is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. Area = side × side = side²">
 </figure>
 <br>
-<strong itemprop="description">The square is the foundational shape for area calculations. All area formulas relate to this instance.</strong>
-<br>
-<p itemprop="description">A rectangle is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides.
+<p style="margin:12px" itemprop="description"><strong>The square is the foundational shape for area calculations. All area formulas relate to this instance.</strong>
 <br>
 <br>
-The area of a rectangle is the product of its width and length.</p>
-<p itemprop="description">A square is a rectangle with equal sides.</p>
+A rectangle is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides.
+<br>
+<br>
+The area of a rectangle is the product of its width and length.
+<br>
+<br>
+A square is a rectangle with equal sides.</p>
 <br>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
@@ -740,18 +743,22 @@ The area of a rectangle is the product of its width and length.</p>
 <br>
 <br>
 <section id="cube">
-<h3>Volume of a Cube</h3>
+<h3 style="margin:7px">Volume of a Cube</h3>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="cube.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
     </figure>
 <br>
-<strong itemprop="description">The cube extends the square into three dimensions. That is a direct extrapolation from the area of the square, establishing the basis for volumetric relationships. This is the basis of volume calculation.</strong>
+<p style="margin:12px" itemprop="description"><strong>The cube extends the square into three dimensions. That is a direct extrapolation from the area of the square, establishing the basis for volumetric relationships. This is the basis of volume calculation.</strong>
 <br>
-<p itemprop="description">A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. 
 <br>
-<br>The volume of a cuboid is the product of width, length and height.</p>
-<p itemprop="description">A cube is a cuboid with equal edges.</p>
+A cuboid is a 3 dimensional solid shape with 3 perpendicular pairs of parallel straight edges. 
+<br>
+<br>
+The volume of a cuboid is the product of width, length and height.
+<br>
+<br>
+A cube is a cuboid with equal edges.</p>
 <br>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -797,12 +804,11 @@ The area of a rectangle is the product of its width and length.</p>
 <br>
 <p itemprop="description" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.
 <br>
-The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.</p>
+The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.
 <br>
-<p itemprop="description" style="margin:12px">The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
+The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
 <br>
-<br>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver"
 <math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
@@ -823,7 +829,6 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 <br>
 <br>
 <p itemprop="description" style="margin:12px">The area of a triangle can also be calculated by the length of its sides.</p>
-<br>
 <br>
 <div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
 <math xmlns="http://www.w3.org/1998/Math/MathML" > 
@@ -859,8 +864,7 @@ The base of a triangle multiplied by its height equals a rectangle with twice th
 </math>
 <br>
 <br>
-<br>
-<math display="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
+<math itemprop="mathExpression" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
  <mi>A</mi>
 <mo>=</mo>
@@ -1767,9 +1771,9 @@ function updatePolygonArea() {
 <details>
   <summary><h4 itemprop="description" style="margin:12px">The area of a circle is defined by comparing it to a square since that is the base of area calculation.</h4></summary>
 <p itemprop="disambiguatingDescription" style="margin:12px"><strong>The widely used formula " A = pi × r² " is not a direct result of calculus. It’s multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</strong></p>
-<br>
 </details>
-</section><p itemprop="description" style="margin:12px">The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
+</section>
+<p itemprop="description" style="margin:12px">The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
 <br>
 <br>
 In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square, leaving some of the square uncovered. 
@@ -1815,7 +1819,6 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
 </msup>
 </mrow>
 </math>
-<br>
 <br>
 <br>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -2308,7 +2311,6 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
 </div>
 <br>
 <br>
-<br>
 </details>
 </section>
 <p style="margin:12px" itemprop="description">The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle.</p>
@@ -2377,12 +2379,11 @@ The arcs of the quadrants of a circumscribed circle would overlap, and intersect
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="circumference.jpg" alt="The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii. Circumference = 6.4r">
     </figure>
-<section id="pi">
+<section style="margin:12px" id="pi">
 <details>
   <summary><h4 itemprop="description" style="margin:12px">The circumference of a circle is derived from its area algebraically by subtracting a smaller circle and dividing the difference by the difference of the radii.</h4></summary>
 <br>
-<br>
-<p style="margin:7px">
+<p>
 For centuries, the circle has been a symbol of mathematical elegance—and the pi its most iconic constant. While the approximate value of 3.14159…, commonly denoted by the Greek letter pi, is widely recognized today, the historical development of this concept is less understood. Some think 'Standard Geometry' means accepting the pi. But beneath the surface of tradition lies a deeper question: Are the formulas we use truly derived from geometric logic, or are they inherited approximations dressed in symbolic authority?
 <br>
 <br>
@@ -2397,7 +2398,7 @@ Historical records suggest that ancient Babylonians initially calculated it as 3
 </p>
 <br>
 <br>
-<section style="margin:7px" id="Archimedes">
+<section id="Archimedes">
 <h4>Archimedes and the Illusion of Limits</h4>
 <br>
 <br>
@@ -2478,7 +2479,7 @@ This equidistance constraint allows us to calculate perimeters for polygons of v
 </section>
 <br>
 <br>
-<section style="margin:7px" itemprop="disambiguatingDescription" id="symbol">
+<section itemprop="disambiguatingDescription" id="symbol">
 <h4>The Symbol Pi: A Linguistic Shortcut</h4>
 <br>
 <br>
@@ -2551,7 +2552,7 @@ It can be exact with exact limits and certain operations, but if those are given
 </section>
 <br>
 <br>
-<section style="margin:7px" id="phi">
+<section id="phi">
 <h4>φ The Golden Ratio</h4>
 <br>
 <br>
@@ -2588,7 +2589,7 @@ The golden ratio of ( √5 + 1 ) / 2 is irrelevant to the definition of these pr
 </section>
 <br>
 <br>
-<section style="margin:12px" id="warning">
+<section id="warning">
 <h4 >The Cognitive Risk of flawed geometric Axioms.</h4>
 <br>
 <br>
@@ -2626,7 +2627,7 @@ The final conclusion is that adopting a consistent, rational constant like 3.2 o
 </section>	
 <br>
 <br>
-<section style="margin:12px" itemprop="description" id="solution">
+<section itemprop="description" id="solution">
 <h4>A Rational Alternative: 3.2</h4>
 <br>
 <br>
@@ -2657,12 +2658,9 @@ That makes the arc value of 360° = 6.4radian, and trigonometric functions that 
 <br>
 These are two aspects of that.
 </p>
-<br>
-<br>
 </section>
 </details>
 </section>	
-<br>		
 <p itemprop="description" style="margin:12px">The x represents the theoretical width of the circumference, which is a very small number.
 <br>
 <br>
@@ -2711,7 +2709,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 </math>
 <br>
 <br>
-<details>
+<details style="margin:12px" >
   <summary><h4>Expand</h4></summary>
 <p>the term (r - x)²:
 </p>
@@ -2879,6 +2877,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
       <mi>x</mi>
   </mrow>
 </math>		  
+<br>
 </details>
 </div>
 <br>	
@@ -3240,6 +3239,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <section style="margin:12px">
 <details>
   <summary><h4 itemprop="description">The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation.</h4></summary>
+<br>
 <p itemprop="disambiguatingDescription">The " V = 4 / 3 × pi × radius³ " formula is widely used for the volume of a sphere. 
 <br>
 <br>
@@ -3549,10 +3549,7 @@ if ( height === radius) {
 <p>That is a logical consequence of its equilateral triangular cross-section.
 <br>
 <br>
-Can this ratio be generalized for the overall volume of any cone and pyramid? 
-<br>
-<br>
-No.
+But this ratio can't be generalized for the overall volume of the cone.
 </p>
 </details>
 </section>	
@@ -4738,17 +4735,17 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 <br>
 <br>
 <br>
-<strong style="margin:12px">
-This is the only exact, self-contained geometric framework grounded in the first principles of mathematics, providing exact formulas for real-world applications.
+<br>
+<p itemprop="description" style="margin:12px"><strong>
+This is the only exact, self-contained geometric framework grounded in the first principles of mathematics, providing exact formulas for real-world applications.</strong></p>
+<p itemprop="disambiguatingDescription" style="margin:12px"><strong>
+By fundamentally shifting the axioms from the abstract, zero-dimensional point to the square and the cube as the primary, physically-relevant units for measurement, this system defines the properties of shapes like the circle and sphere not through abstract limits, but through their direct, rational relationship to these foundational units. The results of these formulas align better with physical reality than the traditional abstract approximations.</strong></p>
+<br>
+<p itemprop="usageInfo" style="margin:12px">
+This is the best framework for exact geometric calculations in engineering design solutions, computer graphics rendering, algorithm optimization, and navigation.</p>
 <br>
 <br>
-By fundamentally shifting the axioms from the abstract, zero-dimensional point to the square and the cube as the primary, physically-relevant units for measurement, this system defines the properties of shapes like the circle and sphere not through abstract limits, but through their direct, rational relationship to these foundational units. The results of these formulas align better with physical reality than the traditional abstract approximations.
-<br>
-<br>
-This is the best framework for exact geometric calculations in engineering design solutions, computer graphics rendering, algorithm optimization, and navigation.
-<br>
-<br>
-<br>
+<p itemprop="about" style="margin:12px">
 Comparative Geometry
 <br>
 Using geometric relationships to derive areas and volumes.
@@ -4762,29 +4759,14 @@ Applying proportional relationships for accurate calculations.
 Algebraic Manipulation
 <br>
 Simplifying equations to ensure consistency and precision.
-</strong>
+</p>
+<p itemprop="copyrightNotice" style="margin:12px">
+® All rights reserved 2025 Gaál Sándor</p>
 </div>
 <br>
 <br> 
 <br>
 <footer>
-<section style="margin:12px" itemscope itemtype="http://schema.org/Statement">
-<h4 itemprop="about">® All rights reserved</h4>
-<p itemprop="copyrightYear">2025</p>
-<div itemscope itemtype="http://schema.org/copyrightHolder">
-<div itemscope itemtype="http://schema.org/Person">
-<p itemprop="name">Gaál Sándor</p>
-<div itemscope itemtype="http://schema.org/PostalAddress" style="margin:12px">
-<p itemprop="addressLocality">Szentendre</p>
-<p itemprop="addressRegion">Hungary</p>
-<p itemprop="postalCode">2000</p>
-<p itemprop="streetAddress">Ady Endre út 6.A</p>
-</div>
-</div>
-</div>
-</section>
-<br>
-<br>
 <a style="margin:9px" itemscope itemtype="http://schema.org/AboutPage" href="about">About</a>
 <br>
 <br> 
