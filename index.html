@@ -2977,24 +2977,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="circle-segment" itemref="circle triangle trigonometry">
-<h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Core Geometric System, circle segment area">
-<meta itemprop="educationalLevel" content="advanced">
-<meta itemprop="typicalAgeRange" content="12-18">
-<meta itemprop="usageInfo" content="Via trigonometry">
-	<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="segment height=1 length=3 area=?">
-<meta itemprop="eduQuestionType" content="Circle Segment Area">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="2.21">
-</div>
-</div>
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="circle-segment" itemref="circle triangle trigonometry">
+<h3 itemprop="eduQuestionType" style="margin:7px">Area of a Circle Segment</h3>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="circleSegment.jpg" alt="The area of a circle segment can be calculated by subtracting a triangle from a circle slice. Area = Acos(( r - n ) / r ) × r² - sin( Acos(( r - n ) / r ) × ( r - n ) × r">
@@ -3004,7 +2988,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <p itemprop="description" style="margin:12px">The angle of the slice is given by the ratio between the segment height and the radius of the parent circle. The base of the triangle is the chord, its height is the segment height subtracted from the radius of the parent circle. If the radius of the parent circle is unknown it can be calculated from the the length of the segment ( chord ).</p>
 <br>
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
   <mi>radius</mi>
   <mo>=</mo>
   <mfrac>
@@ -3023,8 +3007,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 </math>
 <br>
 <br>
-<div itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mi>A</mi>
     <mo>=</mo>
@@ -3077,7 +3061,10 @@ The length of the two longer sides is the area of the resulting ring divided by 
 </div>
 <br>
 <br>
-<div style="margin:12px" id="circle-segment_area_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="circle_segment_area_calculator">
+<meta itemprop="name" content="Circle Segment Area Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
   <label for="segment-height">Segment Height:</label>
   <input id="segment-height" type="number" value="0" step="any">
   <br>
@@ -3159,24 +3146,11 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cone_surface" itemref="circle">
-<h3 itemprop="name" style="margin:7px">Surface Area of a Cone</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Core Geometric System, cone surface area">
-<meta itemprop="educationalLevel" content="basic">
-<meta itemprop="typicalAgeRange" content="12-18">
-<meta itemprop="usageInfo" content="By radius and height">
-	<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="cone radius=1 height=2 area=?">
-<meta itemprop="eduQuestionType" content="Cone Surface Area">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="cone_surface" itemref="circle">
+<h3 itemprop="eduQuestionType" style="margin:7px">Surface Area of a Cone</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={cone_radius=1_height=2_area=?}">
 </div>
 <div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="10.3554">
-</div>
-</div>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="cone.jpeg" alt="The surface area of a cone is calculated as a circle slice with a radius equal to the slant height. Area = 3.2r × ( r + √( r² + H² )">
@@ -3184,8 +3158,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <p style="margin:12px" itemprop="abstract">The surface area of a cone is calculated as a circle slice with a radius equal to the slant height and the angle given by the ratio between the height and the slant height.</p>
 <br>
-<div style="margin:12px" itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>A</mi>
@@ -3222,7 +3196,10 @@ The length of the two longer sides is the area of the resulting ring divided by 
 </div>
 <br>
 <br>
-<div style="margin:12px" id="cone-surface_area_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="cone-surface_area_calculator">
+<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="cone-radius-s">Radius:</label>
 <input id="cone-radius-s" type="number" value="1" step="any">
 <br>
@@ -3256,14 +3233,13 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="sphere" itemref="circle cube">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="sphere" itemref="circle cube">
 <h3 itemprop="name" style="margin:7px">Volume of a Sphere</h3>
 <meta itemprop="url" content="https://basic-geometry.github.io">
 <meta itemprop="inLanguage" content="en">
 <meta itemprop="keywords" content="Core Geometric System, sphere volume">
 <meta itemprop="educationalLevel" content="medium">
 <meta itemprop="typicalAgeRange" content="6-12">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
 	<meta itemprop="mathExpression" content="sphere radius=1 volume=?">
 <meta itemprop="eduQuestionType" content="Sphere Volume">
 	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
@@ -3293,8 +3269,8 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 </section>
 <p style="margin:12px" itemprop="abstract">The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.</p>
 <br>
-<div style="margin:12px" itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>V</mi>
 <mo>=</mo>
@@ -3337,7 +3313,10 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 </div>
 <br>
 <br>
-<div style="margin:12px" id="sphere_volume_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="sphere_volume_calculator">
+<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="sphere-radius">Radius:</label>
 <input id="sphere-radius" type="number" value="1" step="any">
 <script>
@@ -3364,9 +3343,9 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <br>
 <br>
 <br>
-<section itemscope itemtype="http://schema.org/Offer" itemref="sphere" style="border: 2px solid red; 
+<section itemprop="offers" itemscope itemtype="http://schema.org/Offer" itemref="sphere" style="border: 2px solid red; 
             padding: 10px" id="sphere-surface">
-  <p style="margin:6px">Advertisement</p>
+<p style="margin:6px">Advertisement</p>
 <br>
 <br>
 <h3 itemprop="name" style="margin:7px">Surface Area of a Sphere</h3>
@@ -3380,33 +3359,23 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <p itemprop="disambiguatingDescription" style="margin:6px">The conventional formula for the surface area of a sphere was allegedly developed from the " volume = 4/3×pi×radius³ " formula.</p>
 <br>
 <p itemprop="description" style="margin:6px"><strong>
-The formula for the real surface area of a sphere is available for 3.2 billion USD.
+Unlock the true formula to calculate the surface area of a sphere.
 </strong>( + tax, if applies )
 </p>
- <br>
+<meta itemprop="inLanguage" content="en">
+<span itemprop="priceCurrency" content="USD">$</span>
+<span itemprop="price" content="3,200,000,000.00">3,200,000,000.00</span>
+<link itemprop="availability" href="https://schema.org/InStock">
+<br>
 <a style="margin:12px" class="rounded-button" href="privacy-policy">Contact</a>
 </section>
 <br>
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="spherical_cap" itemref="sphere">
-<h3 itemprop="name" style="margin:7px">Volume of a Spherical Cap</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="keywords" content="Core Geometric System, spherical cap volume">
-<meta itemprop="disambiguatingDescription" content="Based on the real volume of a sphere - V = (√(3.2)r)³ - instead of the traditional V = 4r³pi/3 approximation, and derives the cap volume through a different method.">
-<meta itemprop="educationalLevel" content="medium">
-<meta itemprop="typicalAgeRange" content="12-18">
-<meta itemprop="usageInfo" content="Based on cap radius and height">
-<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="spherical cap radius=2 height=1 volume=?">
-<meta itemprop="eduQuestionType" content="Spherical Cap Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="11.44867">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="spherical_cap" itemref="sphere">
+<h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Spherical Cap</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={spherical_cap_radius=2_height=1_volume=?}">
 </div>
 </div>
 <br>
@@ -3416,8 +3385,8 @@ The formula for the real surface area of a sphere is available for 3.2 billion U
     <br>
 <p style="margin:12px" itemprop="abstract">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.</p>
 <br>
-<div style="margin:12px" itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math itemprop="mathExpression" display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
  <mi>V</mi>
       <mo>=</mo>
@@ -3443,7 +3412,10 @@ The formula for the real surface area of a sphere is available for 3.2 billion U
 </div>
 <br>
 <br>
-<div style="margin:12px" id="spherical_cap_volume_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="spherical_cap_volume_calculator">
+<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="cap-radius">Radius:</label>
 <input id="cap-radius" type="number" value="1" step="any">
 <br>
@@ -3491,7 +3463,7 @@ if ( height === radius) {
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cone" itemref="sphere">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="cone" itemref="sphere">
 <h3 itemprop="name" style="margin:7px">Volume of a Cone</h3>
 <meta itemprop="url" content="https://basic-geometry.github.io">
 <meta itemprop="inLanguage" content="en">
@@ -3825,8 +3797,8 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 </math>
 </div>
 <br>
-<div itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML" >
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver"">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML" >
 <mrow>
 <msub>
 <mi>V</mi>
@@ -3852,7 +3824,10 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 </div>
 <br>
 <br>
-<div style="margin:12px" id="cone_volume_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="cone_volume_calculator">
+<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="cone-radius-v">Radius:</label>
 <input id="cone-radius-v" type="number" value="1" step="any">
 <br>
@@ -3887,7 +3862,7 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="frustum_cone" itemref="cone">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="frustum_cone" itemref="cone">
 <h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
 <meta itemprop="url" content="https://basic-geometry.github.io">
 <meta itemprop="inLanguage" content="en">
@@ -3944,8 +3919,8 @@ The height of the theoretical full cone can be calculated by the frustum height 
 </math>
 </div>
 <br>
-<div itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
      <mrow>
  <mi>V</mi>
       <mo>=</mo>
@@ -4014,7 +3989,10 @@ The height of the theoretical full cone can be calculated by the frustum height 
 </div>
 <br>
 <br>
-<div style="margin:12px" id="frustum_cone_volume_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="frustum_cone_volume_calculator">
+<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="frustum-cone-base-radius">Base radius:</label>
 <input id="frustum-cone-base-radius" type="number" value="2" step="any">
 <br>
@@ -4073,7 +4051,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="pyramid" itemref="cone">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="pyramid" itemref="cone">
 <h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
 <meta itemprop="url" content="https://basic-geometry.github.io">
 <meta itemprop="inLanguage" content="en">
@@ -4200,8 +4178,8 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.
   </figure>
 <br>
 <br>
-<div itemprop="mathExpression">
-<math display="block" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" style="margin:12px" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>V</mi>
 <mo>=</mo>
@@ -4225,7 +4203,10 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.
 </div>
 <br>
 <br>
-<div id="pyramid_volume_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="pyramid_volume_calculator">
+<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label style="margin:12px" for="pyramid-side-number">Number of sides:</label>
 <input id="pyramid-side-number" type="number" value="4" step="1">
 <br>
@@ -4270,7 +4251,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="frustum_pyramid" itemref="pyramid">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="frustum_pyramid" itemref="pyramid">
 <h3 itemprop="name" style="margin:12px">Volume of a horizontal Frustum Pyramid</h3>
 <meta itemprop="url" content="https://basic-geometry.github.io">
 <meta itemprop="inLanguage" content="en">
@@ -4299,8 +4280,8 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br>
 The height of the theoretical full pyramid can be calculated by the frustum height and the ratio between the top and bottom edges or areas.</p>
 <br>
-<div itemprop="mathExpression">
-<math display="block" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<div itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
      <mrow>
  <mi>V</mi>
       <mo>=</mo>
@@ -4353,7 +4334,10 @@ The height of the theoretical full pyramid can be calculated by the frustum heig
 </div>
 <br>
 <br>
-<div style="margin:12px" id="frustum_pyramid_volume_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="frustum_pyramid_volume_calculator">
+<meta itemprop="name" content="Circumference Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="frustum-pyramid-side-number">Number of sides:</label>
 <input id="frustum-pyramid-side-number" type="number" value="4" step="1">
 <br>
@@ -4423,7 +4407,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </section>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="square_frustum" itemref="pyramid">
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="square_frustum" itemref="pyramid">
 <h3 itemprop="name" style="margin:12px">Volume of a horizontal square Frustum Pyramid</h3>
 <meta itemprop="url" content="https://basic-geometry.github.io">
 <meta itemprop="inLanguage" content="en">
@@ -4476,8 +4460,8 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </math>
 </div>
 <br>
-<div style="margin:12px" itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math display="block" itemprop="mathExpression" xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mi>V</mi>
 <mo>=</mo>
@@ -4513,25 +4497,9 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br>
 <br>
 <br>
-<section itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="tetrahedron" itemref="pyramid">
-<h3 itemprop="name" style="margin:7px">Volume of a Tetrahedron</h3>
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="disambiguatingDescription" content="The traditional formula for the volume of a tetrahedron is based on the conventional V = base × height / 3 approximation for a pyramid.">
-<meta itemprop="keywords" content="Core Geometric System, pyramid volume">
-<meta itemprop="educationalLevel" content="advanced">
-<meta itemprop="typicalAgeRange" content="12-18">
-<meta itemprop="usageInfo" content="Based on the true V = base × height / √8 formula of a pyramid.">
-	<div itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction">
-	<meta itemprop="mathExpression" content="tetrahedron edge=2 volume=?">
-<meta itemprop="eduQuestionType" content="Tetrahedron Volume">
-	<div itemprop="target" itemscope itemtype="https://schema.org/EntryPoint">
-	<meta itemprop="urlTemplate" content="https://basic-geometry.github.io?q={math_expression_string}">
-</div>
-<div itemprop="result" itemscope itemtype="https://schema.org/MathematicalSolution">
-      <meta itemprop="eduSolution" content="1">
-</div>
-	</div>
+<section itemprop="potentialAction" itemscope itemtype="https://schema.org/SolveMathAction" id="tetrahedron" itemref="pyramid">
+<h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Tetrahedron</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={tetrahedron_edge=2_volume=?}">
 	<br>
 <figure class="imgbox" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="tetrahedron.jpeg" alt="The volume of a tetrahedron is calculated as a pyramid with an equilateral triangle base and fixed proportions. Volume = edge³ / 8">
@@ -4765,8 +4733,8 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 </p>
 </div>
 <br>
-<div style="margin:12px" itemprop="mathExpression">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/MathSolver">
+<math itemprop="mathExpression" display="block" xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
  <mi>V</mi>
     <mo>=</mo>
@@ -4833,7 +4801,10 @@ Its volume is calculated as a pyramid with an equilateral triangle base and fixe
 </div>
 <br>
 <br>
-<div style="margin:12px" id="tetrahedron_volume_calculator">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="tetrahedron_volume_calculator">
+<meta itemprop="name" content="Tetrahedron Volume Calculator">
+<meta itemprop="applicationCategory" content="EducationalApplication">
+<meta itemprop="operatingSystem" content="Web">
 <label for="tetrahedron-edge">Edge:</label>
 <input id="tetrahedron-edge" type="number" value="1" step="any">
 
