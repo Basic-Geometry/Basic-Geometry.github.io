@@ -670,185 +670,6 @@ A cube is a cuboid with equal edges.</p>
 </details>
 </section>
 <br><br><br><br>
-<div itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver">
-<meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="url" content="https://basic-geometry.github.io">
-<meta itemprop="inLanguage" content="en">
-<meta itemprop="accessibilityHazard" content="none">
-<meta itemprop="accessibilitySummary" content="Equations with figures and explanations">
-<meta itemprop="accessMode" content="textual">
-<meta itemprop="accessMode" content="visual">
-<meta itemprop="isAccessibleForFree" content="true">
-<meta itemprop="isFamilyFriendly" content="true">
-<meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
-<meta itemprop="educationalLevel" content="from basic to advanced">
-<meta itemprop="typicalAgeRange" content="6-18">
-<section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="triangle">
-<h3 style="margin:7px" itemprop="eduQuestionType">Area of a Triangle</h3>
-<meta itemprop="target" content="https://basic-geometry.github.io?q={triangle_side1=3_side2=4_side3=5_area=?}">
-<div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
-<meta itemprop="name" content="Triangle area formula">
-<meta itemprop="usageInfo" content="Either by base length and height, or perimeter">
-<br>
-<p itemprop="description" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.</p>
-<p itemprop="abstract" style="margin:12px">The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.
-<br>
-The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
-<br>
-<div itemprop="text">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
- <mi>A</mi>
-<mo>=</mo>
-<mrow>
-<mfrac>
-<mrow>
-<mi>base</mi>
-<mo>×</mo>
-<mi>height</mi>
-</mrow>
-<mn>2</mn>
-</mfrac>
-</mrow>
- </mrow>
-</math>
-</div>
-</div>
-<br><br>
-<div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
-<meta itemprop="name" content="Triangle area formula aka Heron's formula">
-<p itemprop="description" style="margin:12px">The area of a triangle can also be calculated by the length of its sides.</p>
-<br>
-<div itemprop="usageInfo">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> 
-<mrow>
-<mi>S</mi>
-    <mo>=</mo>
-<mi>Semi perimeter</mi>
-      <mo>=</mo>
-<mrow>
-<mfrac>
-<mrow>
-<mo>(</mo>
-      <msub>
-        <mi>side</mi>
-        <mn>1</mn>
-      </msub>
-<mo>+</mo>
-      <msub>
-        <mi>side</mi>
-        <mn>2</mn>
-      </msub>
-<mo>+</mo>
-      <msub>
-        <mi>side</mi>
-        <mn>3</mn>
-      </msub>
-<mo>)</mo>
-</mrow>
-<mn>2</mn>
-</mfrac>
-</mrow>
-</mrow>
-</math>
-</div>
-<br><br><br>
-<div itemprop="text">
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> 
-<mrow>
- <mi>A</mi>
-<mo>=</mo>
-<mrow>
-<msqrt>
-<mrow>
-<mi>S</mi>
-<mo>×</mo>
-<mo>(</mo>
-<mi>S</mi>
-<mo>-</mo>
-<msub>
-<mi>side</mi>
-<mn>1</mn>
-</msub>
-<mo>)</mo>
-<mo>×</mo>
-<mo>(</mo>
-<mi>S</mi>
-<mo>-</mo>
-<msub>
-<mi>side</mi>
-<mn>2</mn>
-</msub>
-<mo>)</mo>
-<mo>×</mo>
-<mo>(</mo>
-<mi>S</mi>
-<mo>-</mo>
-<msub>
-<mi>side</mi>
-<mn>3</mn>
-</msub>
-<mo>)</mo>
-</mrow>
-</msqrt>
-</mrow>
-</mrow>
-</math>
-</div>
-</div>
-<br><br>
-<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="triangle_area_calculator">
-<meta itemprop="name" content="Triangle Area Calculator">
-<meta itemprop="applicationCategory" content="Geometric Calculator">
-<meta itemprop="operatingSystem" content="Web">
-<meta itemprop="isAccessibleForFree" content="true">
-<meta itemprop="description" content="Calculate the area of a triangle from the lengths of its sides.">
-<meta itemprop="usageInfo" content="Enter the lengths of the sides of the triangles one by one.">
-<label for="side1">Side 1:</label>
-<input id="side1" type="number" value="1" step="any">
-<br>
-<label for="side2">Side 2:</label>
-<input id="side2" type="number" value="1" step="any">
-<br>
-<label for="side3">Side 3:</label>
-<input id="side3" type="number" value="1" step="any">
-<script>
-  function triangleArea(product) {
-  return Math.sqrt(product);
-}
-
-function updateTriangleArea() {
-  const side1 = parseFloat(document.getElementById('side1').value);
-  const side2 = parseFloat(document.getElementById('side2').value);
-  const side3 = parseFloat(document.getElementById('side3').value);
-
-  if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
-    document.getElementById('triangle-area').innerText = '';
-    return;
-  }
-
-    // Triangle validity check
-  if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
-    document.getElementById('triangle-area').innerText = 'The sum of the length of the two shorter sides of a triangle is larger than the third one.';
-    return;
-  }
-
-  const s = (side1 + side2 + side3) / 2;
-  const product = s * (s - side1) * (s - side2) * (s - side3);
-  const area = triangleArea(product);
-
-  document.getElementById('triangle-area').innerText =
-    `Area: ${area.toFixed(5)} square units`;
-}
-
-  document.getElementById('side1').addEventListener('input', updateTriangleArea);
-  document.getElementById('side2').addEventListener('input', updateTriangleArea);
-  document.getElementById('side3').addEventListener('input', updateTriangleArea);
-</script>
-<p id="triangle-area"></p>
-</div>
-</section>
-<br><br><br><br>
 <section itemscope itemtype="http://schema.org/LearningResource" id="trigonometry" itemref="division">
 <h3 itemprop="name" style="margin:7px">Trigonometry</h3>
 <br>
@@ -856,7 +677,7 @@ function updateTriangleArea() {
     <img class="center-fit" src="trigonometry.png" alt="Trigonometric identities in a right triangle">
     </figure>
 <br>
-<p itemprop="about" style="margin:12px">In a right triangle the ratios between the sides and the angles are proportional.</p>
+<p itemprop="description" style="margin:12px">In a right triangle the ratios between the sides and the angles are proportional.</p>
 <br>
 <br>
 <math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1645,7 +1466,187 @@ function Atan(x) {
 
   return radian;
 }
+
 </script>
+</div>
+</section>
+<br><br><br><br>
+<div itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver">
+<meta itemprop="name" content="Core Geometric System ™">
+<meta itemprop="url" content="https://basic-geometry.github.io">
+<meta itemprop="inLanguage" content="en">
+<meta itemprop="accessibilityHazard" content="none">
+<meta itemprop="accessibilitySummary" content="Equations with figures and explanations">
+<meta itemprop="accessMode" content="textual">
+<meta itemprop="accessMode" content="visual">
+<meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="isFamilyFriendly" content="true">
+<meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
+<meta itemprop="educationalLevel" content="from basic to advanced">
+<meta itemprop="typicalAgeRange" content="6-18">
+<section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="triangle">
+<h3 style="margin:7px" itemprop="eduQuestionType">Area of a Triangle</h3>
+<meta itemprop="target" content="https://basic-geometry.github.io?q={triangle_side1=3_side2=4_side3=5_area=?}">
+<div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
+<meta itemprop="name" content="Triangle area formula">
+<meta itemprop="usageInfo" content="Either by base length and height, or perimeter">
+<br>
+<p itemprop="description" style="margin:12px">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.</p>
+<p itemprop="abstract" style="margin:12px">The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.
+<br>
+The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
+<br>
+<div itemprop="text">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+ <mi>A</mi>
+<mo>=</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>base</mi>
+<mo>×</mo>
+<mi>height</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+ </mrow>
+</math>
+</div>
+</div>
+<br><br>
+<div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
+<meta itemprop="name" content="Triangle area formula aka Heron's formula">
+<p itemprop="description" style="margin:12px">The area of a triangle can also be calculated by the length of its sides.</p>
+<br>
+<div itemprop="usageInfo">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> 
+<mrow>
+<mi>S</mi>
+    <mo>=</mo>
+<mi>Semi perimeter</mi>
+      <mo>=</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mo>(</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>1</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>2</mn>
+      </msub>
+<mo>+</mo>
+      <msub>
+        <mi>side</mi>
+        <mn>3</mn>
+      </msub>
+<mo>)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow>
+</math>
+</div>
+<br><br><br>
+<div itemprop="text">
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"> 
+<mrow>
+ <mi>A</mi>
+<mo>=</mo>
+<mrow>
+<msqrt>
+<mrow>
+<mi>S</mi>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>1</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>2</mn>
+</msub>
+<mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<mi>S</mi>
+<mo>-</mo>
+<msub>
+<mi>side</mi>
+<mn>3</mn>
+</msub>
+<mo>)</mo>
+</mrow>
+</msqrt>
+</mrow>
+</mrow>
+</math>
+</div>
+</div>
+<br><br>
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="triangle_area_calculator">
+<meta itemprop="name" content="Triangle Area Calculator">
+<meta itemprop="applicationCategory" content="Geometric Calculator">
+<meta itemprop="operatingSystem" content="Web">
+<meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculate the area of a triangle from the lengths of its sides.">
+<meta itemprop="usageInfo" content="Enter the lengths of the sides of the triangles one by one.">
+<label for="side1">Side 1:</label>
+<input id="side1" type="number" value="1" step="any">
+<br>
+<label for="side2">Side 2:</label>
+<input id="side2" type="number" value="1" step="any">
+<br>
+<label for="side3">Side 3:</label>
+<input id="side3" type="number" value="1" step="any">
+<script>
+  function triangleArea(product) {
+  return Math.sqrt(product);
+}
+
+function updateTriangleArea() {
+  const side1 = parseFloat(document.getElementById('side1').value);
+  const side2 = parseFloat(document.getElementById('side2').value);
+  const side3 = parseFloat(document.getElementById('side3').value);
+
+  if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+    document.getElementById('triangle-area').innerText = '';
+    return;
+  }
+
+    // Triangle validity check
+  if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
+    document.getElementById('triangle-area').innerText = 'The sum of the length of the two shorter sides of a triangle is larger than the third one.';
+    return;
+  }
+
+  const s = (side1 + side2 + side3) / 2;
+  const product = s * (s - side1) * (s - side2) * (s - side3);
+const area = triangleArea(product);
+
+  document.getElementById('triangle-area').innerText =
+    `Area: ${area.toFixed(5)} square units`;
+}
+
+  document.getElementById('side1').addEventListener('input', updateTriangleArea);
+  document.getElementById('side2').addEventListener('input', updateTriangleArea);
+  document.getElementById('side3').addEventListener('input', updateTriangleArea);
+</script>
+<p id="triangle-area"></p>
 </div>
 </section>
 <br><br><br><br>
