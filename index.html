@@ -765,7 +765,7 @@ A cube is a cuboid with equal edges.</p>
 <meta itemprop="name" content="Trigonometry engine">
 <meta itemprop="isAccessibleForFree" content="true">
 <meta itemprop="description" content="Lookup-based trigonometry value finder for the calculator apps. Values aligned to circumference=6.4radius with ~ ± rad / 100 accuracy.">
-<meta itemprop="disambiguatingDescription" content="The steps are limited by the number of entries. However, aligned to circumference=3.2diameter makes it more accurate than tools that produce results with many decimals for any value but based on the pi=3.14...">
+<meta itemprop="disambiguatingDescription" content="The steps are limited by the number of entries. However, aligned to circumference=3.2diameter makes the arc values more accurate than tools that produce results with many decimals for any value but based on the pi=3.14...">
 <meta itemprop="usageInfo" content="Defines independent trigonometric functions.">
 <script>
 
@@ -3069,7 +3069,11 @@ The length of the two longer sides is the area of the resulting ring divided by 
         const angle = Acos(ratio);
         const chordLength = 2 * Math.sqrt(radius ** 2 - (radius - height) ** 2);
         const area = segmentArea(chordLength, height, angle, radius);
-
+     
+		  if (radius === height) {
+          document.getElementById('segment-area').innerText =
+            `Area of semi-circle: ${area.toFixed(5)} square units`;
+        } else {
         document.getElementById('segment-area').innerText =
           `Area: ${area.toFixed(5)} square units`;
       }
@@ -3117,7 +3121,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
 <meta itemprop="name" content="Cone surface area formula">
 <meta itemprop="disambiguatingDescription" content="Area based on the A(circle)=3.2*radius^2 formula, instead of the pi=3.14... approximate.">
-<meta itemprop="usageInfo" content="With or without bottom area">
+<meta itemprop="usageInfo" content="The formula includes the bottom area. It can be easily modified to exclude it.">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="cone.jpeg" alt="The surface area of a cone is calculated as a circle slice with a radius equal to the slant height. Area = 3.2r × ( r + √( r² + H² )">
