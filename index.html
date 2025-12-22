@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Gaál Sándor">
 <meta name="description" content="This is the only exact and self-contained geometric framework grounded in the first principles of mathematics.">
-<meta name="keywords" content="Core Geometric System, Exact Geometric Calculations, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
+<meta name="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@gmac4247">
 <meta name="twitter:site" content="https://basic-geometry.github.io">
@@ -680,7 +680,7 @@ A cube is a cuboid with equal edges.</p>
 <meta itemprop="accessMode" content="visual">
 <meta itemprop="isAccessibleForFree" content="true">
 <meta itemprop="isFamilyFriendly" content="true">
-<meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
+<meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="educationalLevel" content="from basic to advanced">
 <meta itemprop="typicalAgeRange" content="6-18">
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="triangle">
@@ -802,6 +802,8 @@ The square root of half of the area of the rectangle is the side length of the t
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculate the area of a triangle from the lengths of its sides.">
+<meta itemprop="usageInfo" content="Enter the lengths of the sides of the triangles one by one.">
 <label for="side1">Side 1:</label>
 <input id="side1" type="number" value="1" step="any">
 <br>
@@ -938,7 +940,12 @@ function updateTriangleArea() {
 </div>
 <br><br>
 <p itemprop="usageInfo" style="margin:12px">Trigonometric functions with an "Arc" prefix refer to the angle corresponding to a value of that function.</p>
-<div>
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/CreativeWork" id="trigonometry_engine">
+<meta itemprop="name" content="Trigonometry engine">
+<meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Lookup-based trigonometry value finder for the calculator apps. Values aligned to circumference=6.4radius with ~ ± rad / 100 accuracy.">
+<meta itemprop="disambiguatingDescription" content="The steps are limited by the number of entries. However, aligned to circumference=3.2diameter makes it more accurate than tools that produce results with many decimals for any value but based on the pi=3.14...">
+<meta itemprop="usageInfo" content="Defines independent trigonometric functions.">
 <script>
 
 // ---- Trigonometry ----
@@ -1445,7 +1452,7 @@ const trig = {
 }
 	
 }
-	
+
 // Helper: Finds closest rad(x) match for given function (sin or cos)
  function closestRad(radian) {
   let closestKey = null;
@@ -1745,6 +1752,9 @@ The height of each triangle is calculable via trigonometric functions.</p>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the area of a regular polygon from the number and length of its sides.">
+<meta itemprop="disambiguatingDescription" content="With trigonometric functions aligned to circumference=3.2*diameter, instead of the pi=3.14... approximate.">
+<meta itemprop="usageInfo" content="Enter the number and the length of the sides of a regular polygon.">
 <label for="side-number">Number of sides:</label>
 <input id="side-number" type="number" value="5" step="1">
 <br>
@@ -2368,6 +2378,9 @@ The ratio between the radius of the circle and the side of the square is calcula
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the area of a circle from its radius.">
+<meta itemprop="disambiguatingDescription" content="Exact area of 3.2*radius^2, instead of the pi=3.14... approximate">
+<meta itemprop="usageInfo" content="Enter the radius">
 <label for="circle-radius-a">Radius:</label>
 <input id="circle-radius-a" type="number" value="1" step="any">
 <script>
@@ -2897,6 +2910,9 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte circumference from radius.">
+<meta itemprop="disambiguatingDescription" content="Exact circumference of 3.2*diameter, instead of the pi=3.14... approximate">
+<meta itemprop="usageInfo" content="Enter the radius">
 <label for="circle-radius-c">Radius:</label>
 <input id="circle-radius-c" type="number" value="1" step="any">
 <script>
@@ -2924,6 +2940,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="target" content="https://basic-geometry.github.io?q={circle_segment_height=1_length=3_radius=4_area=?}">
 <div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
 <meta itemprop="name" content="Circle segment area formula">
+<meta itemprop="disambiguatingDescription" content="Area based on the A(circle)=3.2*radius^2 formula, instead of the pi=3.14... approximate.">
 <meta itemprop="usageInfo" content="By segment height and radius. The radius can be calculated from the chord length.">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -3012,7 +3029,10 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
-<label for="segment-height">Segment Height:</label>
+<meta itemprop="description" content="Calculte the area of a circle segment from its height and either its chord length or the radius of its parent circle.">
+<meta itemprop="disambiguatingDescription" content="Area based on the A(circle)=3.2*radius^2 formula, instead of the pi=3.14... approximation">
+<meta itemprop="usageInfo" content="Enter the segment height and either the chord length or the radius of the parent circle. The other value will be discarded in the result.">
+	<label for="segment-height">Segment Height:</label>
   <input id="segment-height" type="number" value="0" step="any">
   <br>
   <label for="chord-length">Chord Length:</label>
@@ -3095,6 +3115,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="target" content="https://basic-geometry.github.io?q={cone_radius=1_height=2_area=?}">
 <div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
 <meta itemprop="name" content="Cone surface area formula">
+<meta itemprop="disambiguatingDescription" content="Area based on the A(circle)=3.2*radius^2 formula, instead of the pi=3.14... approximate.">
 <meta itemprop="usageInfo" content="With or without bottom area">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -3147,6 +3168,9 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the surface area of a cone from the radius and the height.">
+<meta itemprop="disambiguatingDescription" content="Area based on A(circle)=3.2*radius^2, instead of the pi=3.14... approximate.">
+<meta itemprop="usageInfo" content="Enter the radius and the height. The result includes the bottom area.">
 <label for="cone-radius-s">Radius:</label>
 <input id="cone-radius-s" type="number" value="1" step="any">
 <br>
@@ -3182,7 +3206,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="target" content="https://basic-geometry.github.io?q={sphere_radius=1_volume=?}">
 <div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
 <meta itemprop="name" content="Sphere volume formula">
-<meta itemprop="usageInfo" content="Universally applicable">
+<meta itemprop="usageInfo" content="Universally applicable. It's (4radius/sqrt(5))^3, not (3.2r)^3. Take the square root of the cross sectional area and raise that root to the 3rd power.">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="sphere.jpeg" alt="The edge length of the cube, which has the same volume as the sphere, equals the square root of the area of the square that has the same area as the sphere's cross-section. Volume = ( √ ( 3.2 ) × r )³">
@@ -3249,6 +3273,9 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the volume of a sphere from its radius.">
+<meta itemprop="disambiguatingDescription" content="Exact volume of (4*radius/sqrt(5))^3, instead of the (radius*4*pi/3)^3 approximation">
+<meta itemprop="usageInfo" content="Enter the radius">
 <label for="sphere-radius">Radius:</label>
 <input id="sphere-radius" type="number" value="1" step="any">
 <script>
@@ -3341,6 +3368,9 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the volume of a spherical cap from its radius and height.">
+<meta itemprop="disambiguatingDescription" content="Based on the exact volume of (4*radius/sqrt(5))^3, instead of the (radius*4*pi/3)^3 approximation">
+<meta itemprop="usageInfo" content="Enter the radius">
 <label for="cap-radius">Radius:</label>
 <input id="cap-radius" type="number" value="1" step="any">
 <br>
@@ -3389,7 +3419,7 @@ if ( height === radius) {
 <h3 itemprop="eduQuestionType" style="margin:7px">Volume of a Cone</h3>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={cone_radius=1_height=2_volume=?}">
 <div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
-<meta itemprop="usageInfo" content="Universally applicable">
+<meta itemprop="usageInfo" content="Universally applicable. It's base*height/(sqrt(8)), not base*height/8.">
 <meta itemprop="name" content="Cone volume formula">
 	<br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -3402,7 +3432,7 @@ if ( height === radius) {
 <br>
 <p itemprop="disambiguatingDescription">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable approximation, the exact ratio is 1 / √8.
 <br><br>
-The 1 / 3 coefficient was likely estimated based on the observation that the area of the mid-height cross section of a cone — of which's apex can be connected to the midpoint of the base with a perpendicular line — is exactly a quarter of a circumscribed cylinder's with the same base and height.
+The 1 / 3 coefficient was likely estimated based on the observation that the area of the mid-height cross sectional area of a cone is exactly a quarter of a circumscribed cylinder's with the same base and height.
 <br>
 That makes the ratio between the mid-height cross-sectional area of the cone, and the difference between the mid-height cross-sectional areas of the circumscribed cylinder and the cone 1 : 3 .</p>
 <br>
@@ -3728,7 +3758,10 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
-	<label for="cone-radius-v">Radius:</label>
+<meta itemprop="description" content="Calculte the volume of a cone from its radius and height.">
+<meta itemprop="disambiguatingDescription" content="Exact volume of 3.2*radius^2*height/sqrt(8), instead of the pi*radius^2*height/3 approximation">
+<meta itemprop="usageInfo" content="Enter the radius and the height">
+<label for="cone-radius-v">Radius:</label>
 <input id="cone-radius-v" type="number" value="1" step="any">
 <br>
 <label for="cone-height-v">Height:</label>
@@ -3880,7 +3913,10 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
-	<label for="frustum-cone-base-radius">Base radius:</label>
+<meta itemprop="description" content="Calculte the volume of a horizontal frustum cone from its height and top and bottom radii.">
+<meta itemprop="disambiguatingDescription" content="Exact volume via subtraction based on the exact V(cone)=3.2*radius^2*height/sqrt(8) formula, instead of the raw transcript of the square frustum pyramid formula based on the V=base*height/3 approximate.">
+<meta itemprop="usageInfo" content="Enter the frustum height and the top and bottom radii">
+<label for="frustum-cone-base-radius">Base radius:</label>
 <input id="frustum-cone-base-radius" type="number" value="2" step="any">
 <br>
 <label for="frustum-cone-top-radius">Top radius:</label>
@@ -4053,6 +4089,9 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.</
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the volume of a pyramid from its height and number and length of bottom edges.">
+<meta itemprop="disambiguatingDescription" content="Exact volume of base*height/sqrt(8), instead of the base*height/3 approximate.">
+<meta itemprop="usageInfo" content="Enter the height and the number and the length of the bottom edges">
 <label style="margin:12px" for="pyramid-side-number">Number of sides:</label>
 <input id="pyramid-side-number" type="number" value="4" step="1">
 <br>
@@ -4099,7 +4138,8 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <meta itemprop="target" content="https://basic-geometry.github.io?q={frustum_pyramid_height=3_edge_length_top=1_bottom=2_number=5_volume=?}">
 <div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
 <meta itemprop="name" content="Horizontal frustum pyramid volume formula">
-<meta itemprop="usageInfo" content="Universally applicable">
+<meta itemprop="disambiguatingDescription" content="Based on the exact volume of a pyramid, V=base*height/sqrt(8), instead of the V=base*height/3 approximate. For any number of sides, not only for square frustum pyramids.">
+<meta itemprop="usageInfo" content="Universally applicable.">
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="frustumPyramid.jpeg" alt="Subtracting the missing tip from a theoretical full pyramid gives the volume of a frustum pyramid. Volume = frustumHeight * (bottomArea * (1 / (1 - topArea / bottomArea)) - topArea * (1 / (1 - topArea / bottomArea) - 1)) / √8">
@@ -4167,6 +4207,9 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the volume of a horizontal frustum pyramid from its height and number and length of top and bottom edges.">
+<meta itemprop="disambiguatingDescription" content="Exact volume via subtraction based on the exact V(pyramid)=base*height/sqrt(8) formula instead of the V=base*height/3 approximate. Universally applicable, not only for square frustum pyramids.">
+<meta itemprop="usageInfo" content="Enter the frustum height and the number and length of top and bottom edges">
 <label for="frustum-pyramid-side-number">Number of sides:</label>
 <input id="frustum-pyramid-side-number" type="number" value="4" step="1">
 <br>
@@ -4240,6 +4283,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <meta itemprop="target" content="https://basic-geometry.github.io?q={square_frustum_pyramid_height=3_edge_length_top=1_bottom=2_volume=?}">
 <div itemprop="result" itemscope itemtype="https://schema.org/LearningResource">
 <meta itemprop="name" content="Horizontal square frustum pyramid volume formula">
+<meta itemprop="disambiguatingDescription" content="Based on the exact V(pyramid)=base*height/sqrt(8) formula, instead of the V=base*height/3 approximate.">
 <meta itemprop="usageInfo" content="Only for square frustum pyramids">
 <br>
 <figure class="imgbox">
@@ -4607,6 +4651,9 @@ The base is an equilateral triangle.</p>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="description" content="Calculte the volume of a tetrahedron from its edge length.">
+<meta itemprop="disambiguatingDescription" content="Exact volume of base*height/sqrt(8), instead of the V=base*height/3 approximate.">
+<meta itemprop="usageInfo" content="Enter the edge length">
 <label for="tetrahedron-edge">Edge:</label>
 <input id="tetrahedron-edge" type="number" value="1" step="any">
 
