@@ -3070,10 +3070,6 @@ The length of the two longer sides is the area of the resulting ring divided by 
         const chordLength = 2 * Math.sqrt(radius ** 2 - (radius - height) ** 2);
         const area = segmentArea(chordLength, height, angle, radius);
      
-		  if (radius === height) {
-          document.getElementById('segment-area').innerText =
-            `Area of semi-circle: ${area.toFixed(5)} square units`;
-        } else {
         document.getElementById('segment-area').innerText =
           `Area: ${area.toFixed(5)} square units`;
       }
