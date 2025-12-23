@@ -3034,6 +3034,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="disambiguatingDescription" content="Area based on the A(circle)=3.2*radius^2 formula, instead of the pi=3.14... approximation">
 <meta itemprop="usageInfo" content="Enter the segment height and either the chord length or the radius of the parent circle. The other value will be discarded in the result.">
 <label for="segment-height">Segment Height:</label>
+<label for="segment-height">Segment Height:</label>
 <input id="segment-height" type="number" step="any">
 <br>
 <label for="chord-length">Chord Length:</label>
@@ -3044,6 +3045,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br>
 <script>
 let autoFilledField = null;
+let userEntered = { h: false, l: false, r: false };
 
 function segmentArea() {
   const hInput = document.getElementById('segment-height');
@@ -3051,23 +3053,29 @@ function segmentArea() {
   const rInput = document.getElementById('parent-radius');
   const output = document.getElementById('segment-area');
 
+  // Detect which field the user is typing in
+  const activeElement = document.activeElement;
+  if (activeElement.id === "segment-height") userEntered.h = true;
+  if (activeElement.id === "chord-length") userEntered.l = true;
+  if (activeElement.id === "parent-radius") userEntered.r = true;
+
   let h = parseFloat(hInput.value);
   let l = parseFloat(lInput.value);
   let r = parseFloat(rInput.value);
 
   // Reset if user edits the auto-filled field
-  const activeElement = document.activeElement;
   if (autoFilledField && activeElement.id === autoFilledField) {
     hInput.value = "";
     lInput.value = "";
     rInput.value = "";
     output.innerText = "";
     autoFilledField = null;
+    userEntered = { h: false, l: false, r: false };
     return;
   }
 
-  // Workflow A: height + radius
-  if (!isNaN(h) && !isNaN(r)) {
+  // Workflow A: height + radius → derive length
+  if (userEntered.h && userEntered.r && !userEntered.l && !isNaN(h) && !isNaN(r)) {
     let angle = Acos((r - h) / r);
     l = 2 * r * sin(angle);
     lInput.value = l.toFixed(5);
@@ -3080,8 +3088,8 @@ function segmentArea() {
     return;
   }
 
-  // Workflow B: height + length
-  if (!isNaN(h) && !isNaN(l)) {
+  // Workflow B: height + length → derive radius
+  if (userEntered.h && userEntered.l && !userEntered.r && !isNaN(h) && !isNaN(l)) {
     r = (l ** 2 + 4 * h ** 2) / (8 * h);
     rInput.value = r.toFixed(5);
     autoFilledField = "parent-radius";
@@ -3094,8 +3102,8 @@ function segmentArea() {
     return;
   }
 
-  // Workflow C: length + radius
-  if (!isNaN(l) && !isNaN(r)) {
+  // Workflow C: length + radius → derive height
+  if (userEntered.l && userEntered.r && !userEntered.h && !isNaN(l) && !isNaN(r)) {
     h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
     hInput.value = h.toFixed(5);
     autoFilledField = "segment-height";
@@ -3108,7 +3116,12 @@ function segmentArea() {
     return;
   }
 
-	}
+  // If only one field filled
+  if ([!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length < 2) {
+    output.innerText = "Enter one more value to compute.";
+  }
+}
+
 // Attach listeners
 document.getElementById('segment-height').addEventListener('input', segmentArea);
 document.getElementById('chord-length').addEventListener('input', segmentArea);
