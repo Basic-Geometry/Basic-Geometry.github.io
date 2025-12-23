@@ -3055,7 +3055,7 @@ function segmentArea() {
   let l = parseFloat(lInput.value);
   let r = parseFloat(rInput.value);
 
-  // If user edits the auto-filled field → reset
+  // Reset if user edits the auto-filled field
   const activeElement = document.activeElement;
   if (autoFilledField && activeElement.id === autoFilledField) {
     hInput.value = "";
@@ -3066,10 +3066,18 @@ function segmentArea() {
     return;
   }
 
+  // Count how many fields are filled
+  let filled = [!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length;
+
+  if (filled < 2) {
+    output.innerText = "Enter one more value to compute.";
+    return;
+  }
+
   // Derive missing field
   if (!isNaN(h) && !isNaN(r) && isNaN(l)) {
-    let angle = Acos((r - h) / r);
-    l = 2 * r * sin(angle);
+    let angle = Math.acos((r - h) / r);
+    l = 2 * r * Math.sin(angle);
     lInput.value = l.toFixed(5);
     autoFilledField = "chord-length";
   }
@@ -3086,17 +3094,12 @@ function segmentArea() {
 
   // Validity check
   if (h > r || l < 2 * h || r < h) {
-    output.innerText = 'Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
-    // Clear auto-filled field to avoid stale values
-    if (autoFilledField) {
-      document.getElementById(autoFilledField).value = "";
-      autoFilledField = null;
-    }
-    return; // keep listening, but skip calculation
+    output.innerText = "Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.";
+    return; // keep listening, no lock
   }
 
-  // Compute angle and area
-  let angle = Acos((r - h) / r);
+  // Compute area
+  let angle = Math.acos((r - h) / r);
   let area = angle * r ** 2 - (r - h) * (l / 2);
 
   // Output
@@ -3112,7 +3115,7 @@ document.getElementById('segment-height').addEventListener('input', segmentArea)
 document.getElementById('chord-length').addEventListener('input', segmentArea);
 document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </script>
-  <p id="segment-area"></p>
+<p id="segment-area"></p>
 </div>
 </section>
 <br><br><br><br>
