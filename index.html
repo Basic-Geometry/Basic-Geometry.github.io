@@ -3095,18 +3095,22 @@ function segmentArea() {
     autoFilledField = "segment-height";
   }
 
-  // Compute angle and area
+  // Validity check 
+ if (h > r || l < 2 * h || r < h) {
+  document.getElementById('segment-area').innerText =
+    'Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
+
+  // Clear the auto-filled field so we don't get stuck with stale values
+  if (autoFilledField) {
+    document.getElementById(autoFilledField).value = "";
+    autoFilledField = null;
+  }
+} else {
+  // Compute only if valid
   let angle = Acos((r - h) / r);
   let area = angle * r ** 2 - (r - h) * (l / 2);
 
-  // Output with semicircle reminders
-  // Validity checks
-if (h > r || l < 2 * h || r < h) {
-  document.getElementById('segment-area').innerText =
-    'Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
-  // no return here — keep listening for further input
-} else {
-	if (h === r || h === l / 2 || l === 2 * r) {
+  if (h === r || h === l / 2 || l === 2 * r) {
     document.getElementById('segment-area').innerText =
       `Semicircle area: ${area.toFixed(5)} square units`;
   } else {
