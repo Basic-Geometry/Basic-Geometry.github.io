@@ -3105,8 +3105,8 @@ function segmentArea() {
     output.innerText = "The chord length must be at least twice the height.";
     return;
   }
-  if (l / h > 30) {
-    output.innerText = "Out of range: chord-to-height ratio exceeds 30.";
+  if (l / h > 11) {
+    output.innerText = "Out of range: chord-to-height ratio exceeds 11.";
     return;
   }
 
@@ -3114,7 +3114,12 @@ function segmentArea() {
   let angle = Acos((r - h) / r);
   let area = angle * r ** 2 - (r - h) * (l / 2);
 
-  if (h === r || h === l / 2 || l === 2 * r) {
+  if (isNaN(area)){
+	  output.innerText = "";
+	  return;
+	}
+	
+	if (h === r || h === l / 2 || l === 2 * r) {
     output.innerText = `Semicircle area: ${area.toFixed(5)} square units`;
   } else {
     output.innerText = `Area: ${area.toFixed(5)} square units`;
