@@ -3034,35 +3034,42 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="disambiguatingDescription" content="Area based on the A(circle)=3.2*radius^2 formula, instead of the pi=3.14... approximation">
 <meta itemprop="usageInfo" content="Enter the segment height and either the chord length or the radius of the parent circle. The other value will be discarded in the result.">
 <label for="segment-height">Segment Height:</label>
-<input id="segment-height" type="number" step="any" oninput="segmentArea()">
+<input id="segment-height" type="number" step="any">
 <br>
 <label for="chord-length">Chord Length:</label>
-<input id="chord-length" type="number" step="any" oninput="segmentArea()">
+<input id="chord-length" type="number" step="any">
 <br>
 <label for="parent-radius">Circle Radius:</label>
-<input id="parent-radius" type="number" step="any" oninput="segmentArea()">
+<input id="parent-radius" type="number" step="any">
 <br>
 <script>
-	let calculated = false;
+let autoFilledField = null;
 
 function segmentArea() {
-  if (calculated) {
-    // Clear everything on next input after a calculation
-    document.getElementById('segment-height').value = "";
-    document.getElementById('parent-radius').value = "";
-    document.getElementById('chord-length').value = "";
-    document.getElementById('segment-area').innerText = "";
-    calculated = false; // reset flag
+  const hInput = document.getElementById('segment-height');
+  const rInput = document.getElementById('parent-radius');
+  const lInput = document.getElementById('chord-length');
+  const output = document.getElementById('segment-area');
+
+  let h = parseFloat(hInput.value);
+  let r = parseFloat(rInput.value);
+  let l = parseFloat(lInput.value);
+
+  // If user edits the auto-filled field → reset
+  const activeElement = document.activeElement;
+  if (autoFilledField && activeElement.id === autoFilledField) {
+    hInput.value = "";
+    rInput.value = "";
+    lInput.value = "";
+    output.innerText = "";
+    autoFilledField = null;
     return;
   }
 
-  let h = parseFloat(document.getElementById('segment-height').value);
-  let r = parseFloat(document.getElementById('parent-radius').value);
-  let l = parseFloat(document.getElementById('chord-length').value);
-
+  // Count known values
   let known = [!isNaN(h), !isNaN(r), !isNaN(l)].filter(Boolean).length;
   if (known < 2) {
-    document.getElementById('segment-area').innerText = "";
+    output.innerText = "";
     return;
   }
 
@@ -3070,34 +3077,29 @@ function segmentArea() {
   if (!isNaN(h) && !isNaN(r) && isNaN(l)) {
     let angle = Acos((r - h) / r);
     l = 2 * r * sin(angle);
-    document.getElementById('chord-length').value = l.toFixed(5);
+    lInput.value = l.toFixed(5);
+    autoFilledField = "chord-length";
   }
 
   // Case 2: height + length known → derive radius
   if (!isNaN(h) && !isNaN(l) && isNaN(r)) {
     r = (l ** 2 + 4 * h ** 2) / (8 * h);
-    document.getElementById('parent-radius').value = r.toFixed(5);
+    rInput.value = r.toFixed(5);
+    autoFilledField = "parent-radius";
   }
 
   // Case 3: length + radius known → derive height
   if (!isNaN(l) && !isNaN(r) && isNaN(h)) {
     h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
-    document.getElementById('segment-height').value = h.toFixed(5);
+    hInput.value = h.toFixed(5);
+    autoFilledField = "segment-height";
   }
 
   // Validity checks
-if (h > r || l < 2 * h || r < h) {
-  document.getElementById('segment-area').innerText =
-    'The height of the segment must be shorter than the radius and half the length.';
-
-  // Clear everything so it doesn't get stuck
-  document.getElementById('segment-height').value = "";
-  document.getElementById('parent-radius').value = "";
-  document.getElementById('chord-length').value = "";
-  
-  calculated = false; // reset flag
-  return;
-}
+  if (h > r || l < 2 * h || r < h) {
+    output.innerText = 'Invalid input: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
+    return;
+  }
 
   // Compute angle and area
   let angle = Acos((r - h) / r);
@@ -3105,16 +3107,16 @@ if (h > r || l < 2 * h || r < h) {
 
   // Output with semicircle reminders
   if (h === r || h === l / 2 || l === 2 * r) {
-    document.getElementById('segment-area').innerText =
-      `Semicircle area: ${area.toFixed(5)} square units`;
+    output.innerText = `Semicircle area: ${area.toFixed(5)} square units`;
   } else {
-    document.getElementById('segment-area').innerText =
-      `Area: ${area.toFixed(5)} square units`;
+    output.innerText = `Area: ${area.toFixed(5)} square units`;
   }
-
-  // Mark that a calculation has been completed
-  calculated = true;
 }
+
+// Attach listeners to all inputs
+document.getElementById('segment-height').addEventListener('input', segmentArea);
+document.getElementById('parent-radius').addEventListener('input', segmentArea);
+document.getElementById('chord-length').addEventListener('input', segmentArea);
 </script>
   <p id="segment-area"></p>
 </div>
