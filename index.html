@@ -3066,50 +3066,48 @@ function segmentArea() {
     return;
   }
 
-  // Count how many fields are filled
-  let filled = [!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length;
-
-  if (filled < 2) {
-    output.innerText = "Enter one more value to compute.";
-    return;
-  }
-
-  // Derive missing field
-  if (!isNaN(h) && !isNaN(r) && isNaN(l)) {
+  // Workflow A: height + radius
+  if (!isNaN(h) && !isNaN(r)) {
     let angle = Acos((r - h) / r);
     l = 2 * r * sin(angle);
     lInput.value = l.toFixed(5);
     autoFilledField = "chord-length";
+
+    let area = angle * r ** 2 - (r - h) * (l / 2);
+    output.innerText = (h === r || h === l / 2 || l === 2 * r)
+      ? `Semicircle area: ${area.toFixed(5)} square units`
+      : `Area: ${area.toFixed(5)} square units`;
+    return;
   }
-  if (!isNaN(h) && !isNaN(l) && isNaN(r)) {
+
+  // Workflow B: height + length
+  if (!isNaN(h) && !isNaN(l)) {
     r = (l ** 2 + 4 * h ** 2) / (8 * h);
     rInput.value = r.toFixed(5);
     autoFilledField = "parent-radius";
+
+    let angle = Acos((r - h) / r);
+    let area = angle * r ** 2 - (r - h) * (l / 2);
+    output.innerText = (h === r || h === l / 2 || l === 2 * r)
+      ? `Semicircle area: ${area.toFixed(5)} square units`
+      : `Area: ${area.toFixed(5)} square units`;
+    return;
   }
-  if (!isNaN(l) && !isNaN(r) && isNaN(h)) {
+
+  // Workflow C: length + radius
+  if (!isNaN(l) && !isNaN(r)) {
     h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
     hInput.value = h.toFixed(5);
     autoFilledField = "segment-height";
+
+    let angle = Acos((r - h) / r);
+    let area = angle * r ** 2 - (r - h) * (l / 2);
+    output.innerText = (h === r || h === l / 2 || l === 2 * r)
+      ? `Semicircle area: ${area.toFixed(5)} square units`
+      : `Area: ${area.toFixed(5)} square units`;
+    return;
   }
 
-  // Validity check
-  if (h > r || l < 2 * h || r < h) {
-    output.innerText = "Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.";
-  return;
-  }
-
-  // Compute area
-  let angle = Acos((r - h) / r);
-  let area = angle * r ** 2 - (r - h) * (l / 2);
-
-  // Output
-  if (h === r || h === l / 2 || l === 2 * r) {
-    output.innerText = `Semicircle area: ${area.toFixed(5)} square units`;
-  return;
-  } else {
-    output.innerText = `Area: ${area.toFixed(5)} square units`;
-  }
-}
 
 // Attach listeners
 document.getElementById('segment-height').addEventListener('input', segmentArea);
