@@ -3067,8 +3067,8 @@ The length of the two longer sides is the area of the resulting ring divided by 
 
         const ratio = (radius - height) / radius;
         const angle = Acos(ratio);
-        const chordLength = 2 * Math.sqrt(radius ** 2 - (radius - height) ** 2);
-        const area = segmentArea(chordLength, height, angle, radius);
+        const length = 2 * Math.sqrt(radius ** 2 - (radius - height) ** 2);
+        const area = segmentArea(length, height, angle, radius);
      
         document.getElementById('segment-area').innerText =
           `Area: ${area.toFixed(5)} square units`;
