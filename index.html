@@ -3086,11 +3086,18 @@ function segmentArea() {
   }
 
   // Validity checks
-  if (h > r || l < 2 * h || r < h) {
-    document.getElementById('segment-area').innerText =
-      'Invalid input: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
-    return;
-  }
+if (h > r || l < 2 * h || r < h) {
+  document.getElementById('segment-area').innerText =
+    'The height of the segment must be shorter than the radius and half the length.';
+
+  // Clear everything so it doesn't get stuck
+  document.getElementById('segment-height').value = "";
+  document.getElementById('parent-radius').value = "";
+  document.getElementById('chord-length').value = "";
+  
+  calculated = false; // reset flag
+  return;
+}
 
   // Compute angle and area
   let angle = Acos((r - h) / r);
