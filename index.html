@@ -3034,7 +3034,6 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="disambiguatingDescription" content="Area based on the A(circle)=3.2*radius^2 formula, instead of the pi=3.14... approximation">
 <meta itemprop="usageInfo" content="Enter the segment height and either the chord length or the radius of the parent circle. The other value will be discarded in the result.">
 <label for="segment-height">Segment Height:</label>
-<label for="segment-height">Segment Height:</label>
 <input id="segment-height" type="number" step="any">
 <br>
 <label for="chord-length">Chord Length:</label>
@@ -3053,7 +3052,6 @@ function segmentArea() {
   const rInput = document.getElementById('parent-radius');
   const output = document.getElementById('segment-area');
 
-  // Detect which field the user is typing in
   const activeElement = document.activeElement;
   if (activeElement.id === "segment-height") userEntered.h = true;
   if (activeElement.id === "chord-length") userEntered.l = true;
@@ -3074,51 +3072,52 @@ function segmentArea() {
     return;
   }
 
-  // Workflow A: height + radius → derive length
+  // If height and radius is known → derive length
   if (userEntered.h && userEntered.r && !userEntered.l && !isNaN(h) && !isNaN(r)) {
     let angle = Acos((r - h) / r);
     l = 2 * r * sin(angle);
     lInput.value = l.toFixed(5);
     autoFilledField = "chord-length";
-
-    let area = angle * r ** 2 - (r - h) * (l / 2);
-    output.innerText = (h === r || h === l / 2 || l === 2 * r)
-      ? `Semicircle area: ${area.toFixed(5)} square units`
-      : `Area: ${area.toFixed(5)} square units`;
-    return;
   }
 
-  // Workflow B: height + length → derive radius
+  // If height and length is known → derive radius
   if (userEntered.h && userEntered.l && !userEntered.r && !isNaN(h) && !isNaN(l)) {
     r = (l ** 2 + 4 * h ** 2) / (8 * h);
     rInput.value = r.toFixed(5);
     autoFilledField = "parent-radius";
-
-    let angle = Acos((r - h) / r);
-    let area = angle * r ** 2 - (r - h) * (l / 2);
-    output.innerText = (h === r || h === l / 2 || l === 2 * r)
-      ? `Semicircle area: ${area.toFixed(5)} square units`
-      : `Area: ${area.toFixed(5)} square units`;
-    return;
   }
 
-  // Workflow C: length + radius → derive height
+  // If length and radius is known → derive height
   if (userEntered.l && userEntered.r && !userEntered.h && !isNaN(l) && !isNaN(r)) {
     h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
     hInput.value = h.toFixed(5);
     autoFilledField = "segment-height";
+  }
 
-    let angle = Acos((r - h) / r);
-    let area = angle * r ** 2 - (r - h) * (l / 2);
-    output.innerText = (h === r || h === l / 2 || l === 2 * r)
-      ? `Semicircle area: ${area.toFixed(5)} square units`
-      : `Area: ${area.toFixed(5)} square units`;
+  // If fewer than 2 inputs → prompt
+  if ([!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length < 2) {
+    output.innerText = "Enter one more property to compute.";
     return;
   }
 
-  // If only one field filled
-  if ([!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length < 2) {
-    output.innerText = "Enter one more value to compute.";
+  // Proportion checks (replace output if triggered)
+  if (l < 2 * h) {
+    output.innerText = "The chord length must be at least twice the height.";
+    return;
+  }
+  if (l / h > 30) {
+    output.innerText = "Out of range: chord-to-height ratio exceeds 30.";
+    return;
+  }
+
+  // Unified area calculation
+  let angle = Acos((r - h) / r);
+  let area = angle * r ** 2 - (r - h) * (l / 2);
+
+  if (h === r || h === l / 2 || l === 2 * r) {
+    output.innerText = `Semicircle area: ${area.toFixed(5)} square units`;
+  } else {
+    output.innerText = `Area: ${area.toFixed(5)} square units`;
   }
 }
 
