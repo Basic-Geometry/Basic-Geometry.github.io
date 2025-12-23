@@ -1630,7 +1630,7 @@ function updateTriangleArea() {
 
     // Triangle validity check
   if (side1 + side2 <= side3 || side2 + side3 <= side1 || side3 + side1 <= side2) {
-    document.getElementById('triangle-area').innerText = 'The sum of the length of the two shorter sides of a triangle must be larger than the third one.';
+    document.getElementById('triangle-area').innerText = 'The sum of the lengths of the two shorter sides must be larger than the third side.';
     return;
   }
 
@@ -3094,13 +3094,7 @@ function segmentArea() {
     autoFilledField = "segment-height";
   }
 
-  // If fewer than 2 inputs → prompt
-  if ([!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length < 2) {
-    output.innerText = "Enter one more property to compute.";
-    return;
-  }
-
-  // Proportion checks (replace output if triggered)
+  // Proportion checks
   if (l < 2 * h) {
     output.innerText = "The chord length must be at least twice the height.";
     return;
@@ -3110,7 +3104,7 @@ function segmentArea() {
     return;
   }
 
-  // Unified area calculation
+  // Area calculation
   let angle = Acos((r - h) / r);
   let area = angle * r ** 2 - (r - h) * (l / 2);
 
@@ -3203,10 +3197,9 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <input id="cone-height-s" type="number" value="1" step="any">
 <script>
   function coneSurface(radius, height) {
-    return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
+	return 3.2 * radius * (radius + Math.sqrt(radius ** 2 + height ** 2));
   }
-
-  function updateConeSurface() {
+	function updateConeSurface() {
     const radius = parseFloat(document.getElementById('cone-radius-s').value);
     const height = parseFloat(document.getElementById('cone-height-s').value);
 
@@ -3216,7 +3209,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
     }
 
     document.getElementById('cone-surface-area').innerText =
-      `Volume: ${coneSurface(radius, height).toFixed(5)} square units`;
+      `Surface area: ${coneSurface(radius, height).toFixed(5)} square units`;
   }
 
   document.getElementById('cone-radius-s').addEventListener('input', updateConeSurface);
@@ -3419,7 +3412,7 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
 // Cap validity check
 	  
   if ( height > radius) {
-    document.getElementById('cap-volume').innerText = 'The height of a spherical cap must be shorter than its radius.';
+    document.getElementById('cap-volume').innerText = 'The height must be shorter than the radius.';
     return;
 }
 
