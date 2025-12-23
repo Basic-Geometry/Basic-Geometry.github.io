@@ -3047,83 +3047,77 @@ let autoFilledField = null;
 
 function segmentArea() {
   const hInput = document.getElementById('segment-height');
-  const rInput = document.getElementById('parent-radius');
   const lInput = document.getElementById('chord-length');
+  const rInput = document.getElementById('parent-radius');
   const output = document.getElementById('segment-area');
 
   let h = parseFloat(hInput.value);
-  let r = parseFloat(rInput.value);
   let l = parseFloat(lInput.value);
+  let r = parseFloat(rInput.value);
 
   // If user edits the auto-filled field → reset
   const activeElement = document.activeElement;
   if (autoFilledField && activeElement.id === autoFilledField) {
     hInput.value = "";
-    rInput.value = "";
     lInput.value = "";
+    rInput.value = "";
     output.innerText = "";
     autoFilledField = null;
     return;
   }
 
   // Count known values
-  let known = [!isNaN(h), !isNaN(r), !isNaN(l)].filter(Boolean).length;
+  let known = [!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length;
   if (known < 2) {
     output.innerText = "";
     return;
   }
 
-  // Case 1: height + radius known → derive length
+  // Derive missing field
   if (!isNaN(h) && !isNaN(r) && isNaN(l)) {
-  // l was empty, so we auto-fill it
-  l = 2 * r * sin(angle);
-  lInput.value = l.toFixed(5);
-  autoFilledField = "chord-length";
-}
-
-if (!isNaN(h) && !isNaN(l) && isNaN(r)) {
-  // r was empty, so we auto-fill it
-  r = (l ** 2 + 4 * h ** 2) / (8 * h);
-  rInput.value = r.toFixed(5);
-  autoFilledField = "parent-radius";
-}
-
-if (!isNaN(l) && !isNaN(r) && isNaN(h)) {
-  // h was empty, so we auto-fill it
-  h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
-  hInput.value = h.toFixed(5);
-  autoFilledField = "segment-height";
-	}
-
-  // Validity check 
- if (h > r || l < 2 * h || r < h) {
-  document.getElementById('segment-area').innerText =
-    'Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
-
-  // Clear the auto-filled field so we don't get stuck with stale values
-  if (autoFilledField) {
-    document.getElementById(autoFilledField).value = "";
-    autoFilledField = null;
+    let angle = Acos((r - h) / r);
+    l = 2 * r * sin(angle);
+    lInput.value = l.toFixed(5);
+    autoFilledField = "chord-length";
   }
-} else {
-  // Compute only if valid
+  if (!isNaN(h) && !isNaN(l) && isNaN(r)) {
+    r = (l ** 2 + 4 * h ** 2) / (8 * h);
+    rInput.value = r.toFixed(5);
+    autoFilledField = "parent-radius";
+  }
+  if (!isNaN(l) && !isNaN(r) && isNaN(h)) {
+    h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
+    hInput.value = h.toFixed(5);
+    autoFilledField = "segment-height";
+  }
+
+  // Validity check
+  if (h > r || l < 2 * h || r < h) {
+    output.innerText = 'Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
+    // Clear auto-filled field to avoid stale values
+    if (autoFilledField) {
+      document.getElementById(autoFilledField).value = "";
+      autoFilledField = null;
+    }
+    return; // keep listening, but skip calculation
+  }
+
+  // Compute angle and area
   let angle = Acos((r - h) / r);
   let area = angle * r ** 2 - (r - h) * (l / 2);
 
+  // Output
   if (h === r || h === l / 2 || l === 2 * r) {
-    document.getElementById('segment-area').innerText =
-      `Semicircle area: ${area.toFixed(5)} square units`;
+    output.innerText = `Semicircle area: ${area.toFixed(5)} square units`;
   } else {
-    document.getElementById('segment-area').innerText =
-      `Area: ${area.toFixed(5)} square units`;
+    output.innerText = `Area: ${area.toFixed(5)} square units`;
   }
 }
-}
 
-// Attach listeners to all inputs
+// Attach listeners
 document.getElementById('segment-height').addEventListener('input', segmentArea);
-document.getElementById('parent-radius').addEventListener('input', segmentArea);
 document.getElementById('chord-length').addEventListener('input', segmentArea);
+document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </script>
   <p id="segment-area"></p>
 </div>
