@@ -3076,8 +3076,8 @@ function segmentArea() {
 
   // Derive missing field
   if (!isNaN(h) && !isNaN(r) && isNaN(l)) {
-    let angle = Math.acos((r - h) / r);
-    l = 2 * r * Math.sin(angle);
+    let angle = Acos((r - h) / r);
+    l = 2 * r * sin(angle);
     lInput.value = l.toFixed(5);
     autoFilledField = "chord-length";
   }
@@ -3095,16 +3095,17 @@ function segmentArea() {
   // Validity check
   if (h > r || l < 2 * h || r < h) {
     output.innerText = "Invalid: must satisfy h ≤ r, l ≥ 2h, r ≥ h.";
-    return; // keep listening, no lock
+  return;
   }
 
   // Compute area
-  let angle = Math.acos((r - h) / r);
+  let angle = Acos((r - h) / r);
   let area = angle * r ** 2 - (r - h) * (l / 2);
 
   // Output
   if (h === r || h === l / 2 || l === 2 * r) {
     output.innerText = `Semicircle area: ${area.toFixed(5)} square units`;
+  return;
   } else {
     output.innerText = `Area: ${area.toFixed(5)} square units`;
   }
