@@ -3066,13 +3066,6 @@ function segmentArea() {
     return;
   }
 
-  // Count known values
-  let known = [!isNaN(h), !isNaN(l), !isNaN(r)].filter(Boolean).length;
-  if (known < 2) {
-    output.innerText = "";
-    return;
-  }
-
   // Derive missing field
   if (!isNaN(h) && !isNaN(r) && isNaN(l)) {
     let angle = Acos((r - h) / r);
