@@ -3088,7 +3088,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
           return;
         }
 
-        const angle = 2 * Math.atan(ratio);
+        const angle = 2 * Atan(ratio);
         const sine = sin(angle);
         radius = length / (2 * sine);
         const area = segmentArea(length, height, angle, radius);
