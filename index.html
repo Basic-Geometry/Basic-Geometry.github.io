@@ -3061,20 +3061,17 @@ function segmentArea() {
   if (!isNaN(h) && !isNaN(r) && isNaN(l)) {
     let angle = Acos((r - h) / r);
     l = 2 * r * sin(angle);
-    document.getElementById('chord-length').value = l.toFixed(5);
-  }
+    }
 
   // Case 2: height + length known → derive radius
   if (!isNaN(h) && !isNaN(l) && isNaN(r)) {
     r = (l ** 2 + 4 * h ** 2) / (8 * h);
-    document.getElementById('parent-radius').value = r.toFixed(5);
-  }
+      }
 
   // Case 3: length + radius known → derive height
   if (!isNaN(l) && !isNaN(r) && isNaN(h)) {
     h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
-    document.getElementById('segment-height').value = h.toFixed(5);
-  }
+      }
 
   // Validity checks
   if (h > r || l < 2 * h || r < h) {
