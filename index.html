@@ -3095,24 +3095,26 @@ function segmentArea() {
     autoFilledField = "segment-height";
   }
 
-  // Validity checks
-  if (h > r || l < 2 * h || r < h) {
-    output.innerText = 'Invalid input: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
-    return;
-  }
-
+// Validity checks
+if (h > r || l < 2 * h || r < h) {
+  document.getElementById('segment-area').innerText =
+    'Invalid input: must satisfy h ≤ r, l ≥ 2h, r ≥ h.';
+  // no return here — keep listening for further input
+} else {
   // Compute angle and area
   let angle = Acos((r - h) / r);
   let area = angle * r ** 2 - (r - h) * (l / 2);
 
   // Output with semicircle reminders
   if (h === r || h === l / 2 || l === 2 * r) {
-    output.innerText = `Semicircle area: ${area.toFixed(5)} square units`;
+    document.getElementById('segment-area').innerText =
+      `Semicircle area: ${area.toFixed(5)} square units`;
   } else {
-    output.innerText = `Area: ${area.toFixed(5)} square units`;
+    document.getElementById('segment-area').innerText =
+      `Area: ${area.toFixed(5)} square units`;
   }
 }
-
+}
 // Attach listeners to all inputs
 document.getElementById('segment-height').addEventListener('input', segmentArea);
 document.getElementById('parent-radius').addEventListener('input', segmentArea);
