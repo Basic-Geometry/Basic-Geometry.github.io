@@ -1605,24 +1605,26 @@ The square root of half of the area of the rectangle is the side length of the t
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="triangle_area_calculator">
 <meta itemprop="name" content="Triangle Area Calculator">
 <meta itemprop="description" content="Calculate the area of a triangle from the lengths of its sides.">
+<meta itemprop="description" content="Calculate the area of a triangle from the lengths of its sides.">
 <meta itemprop="accessibilityControl" content="fullKeyboardControl">
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="interactivityType" content="Active">
 <meta itemprop="isAccessibleForFree" content="true">
 <meta itemprop="usageInfo" content="Enter the lengths of the sides of the triangles one by one.">
-<div itemprop="assesses" itemscope itemtype="https://schema.org/Observation">
-<div itemprop="measuredProperty" itemscope itemtype="https://schema.org/Property">
-<label itemprop="name" for="side1">Side 1:</label>
+<div itemprop="assesses" itemscope itemtype="https://schema.org/DefinedTerm">
+<div itemprop="about" itemscope itemtype="https://schema.org/Observation">
+<label for="side1">Side 1:</label>
 <input id="side1" type="number" value="1" step="any">
-</div>
 <br>
 <label for="side2">Side 2:</label>
 <input id="side2" type="number" value="1" step="any">
 <br>
 <label for="side3">Side 3:</label>
 <input id="side3" type="number" value="1" step="any">
-</div>
+<br>
+<p itemprop="measuredProperty" id="triangle-area">Triangle area</p>
+</div></div>
 <script type="module" async>
   function triangleArea(product) {
   return Math.sqrt(product);
@@ -1656,7 +1658,6 @@ const area = triangleArea(product);
   document.getElementById('side2').addEventListener('input', updateTriangleArea);
   document.getElementById('side3').addEventListener('input', updateTriangleArea);
 </script>
-<p id="triangle-area"></p>
 </div>
 </section>
 <br><br><br><br>
