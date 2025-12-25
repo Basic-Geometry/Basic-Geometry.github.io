@@ -761,12 +761,16 @@ A cube is a cuboid with equal edges.</p>
 </div>
 <br><br>
 <p itemprop="usageInfo" style="margin:12px">Trigonometric functions with an "Arc" prefix refer to the angle corresponding to a value of that function.</p>
-<div itemprop="subjectOf" itemscope itemtype="https://schema.org/CreativeWork" id="trigonometry_engine">
-<meta itemprop="name" content="Trigonometry engine">
-<meta itemprop="isAccessibleForFree" content="true">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" id="trigonometry_engine">
+<meta itemprop="name" content="Trigonometry">
 <meta itemprop="description" content="Lookup-based trigonometry value finder for the calculator apps. Values aligned to circumference=6.4radius with ~ ± rad / 100 accuracy.">
 <meta itemprop="disambiguatingDescription" content="The arc values are more accurate than the results of other tools with many decimals for any value but based on the pi=3.14...">
-<meta itemprop="usageInfo" content="Defines independent trigonometric functions. The steps are limited by the number of entries.">
+<meta itemprop="applicationCategory" content="Trigonometry engine">
+<meta itemprop="featureList" content="Defines independent trigonometric functions.">
+<meta itemprop="interactivityType" content="Expositive">
+<meta itemprop="isAccessibleForFree" content="true">
+<meta itemprop="operatingSystem" content="Web">
+<meta itemprop="usageInfo" content="The steps are limited by the number of entries.">
 <script type="module" async>
 
 // ---- Trigonometry ----
@@ -1478,8 +1482,7 @@ function Atan(x) {
 <meta itemprop="inLanguage" content="en">
 <meta itemprop="accessibilityHazard" content="none">
 <meta itemprop="accessibilitySummary" content="Equations with figures and explanations">
-<meta itemprop="accessMode" content="textual">
-<meta itemprop="accessMode" content="visual">
+<meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="isAccessibleForFree" content="true">
 <meta itemprop="isFamilyFriendly" content="true">
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
@@ -1601,19 +1604,25 @@ The square root of half of the area of the rectangle is the side length of the t
 <br><br>
 <div itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication" style="margin:12px" id="triangle_area_calculator">
 <meta itemprop="name" content="Triangle Area Calculator">
+<meta itemprop="description" content="Calculate the area of a triangle from the lengths of its sides.">
+<meta itemprop="accessibilityControl" content="fullKeyboardControl">
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="operatingSystem" content="Web">
+<meta itemprop="interactivityType" content="Active">
 <meta itemprop="isAccessibleForFree" content="true">
-<meta itemprop="description" content="Calculate the area of a triangle from the lengths of its sides.">
 <meta itemprop="usageInfo" content="Enter the lengths of the sides of the triangles one by one.">
-<label for="side1">Side 1:</label>
+<div itemprop="assesses" itemscope itemtype="https://schema.org/Observation">
+<div itemprop="measuredProperty" itemscope itemtype="https://schema.org/Property">
+<label itemprop="name" for="side1">Side 1:</label>
 <input id="side1" type="number" value="1" step="any">
+</div>
 <br>
 <label for="side2">Side 2:</label>
 <input id="side2" type="number" value="1" step="any">
 <br>
 <label for="side3">Side 3:</label>
 <input id="side3" type="number" value="1" step="any">
+</div>
 <script type="module" async>
   function triangleArea(product) {
   return Math.sqrt(product);
