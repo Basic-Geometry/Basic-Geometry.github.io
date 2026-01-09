@@ -2418,14 +2418,16 @@ Circle area = square area</p>
 </section>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToSection">
 <meta itemprop="position" content="2">
-<div style="margin:12px" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+<div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="1">
 <p itemprop="abstract">The area of both the square and the sum of the quadrants equals 16 right triangles with legs of a quarter, and a half of the square's sides, and its hypotenuse equal to the radius of the circle.</p>
 <br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Exact circle area formula">
 <span itemprop="name">A<sub>(circle)</sub></span>=
 <span itemprop="value">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
 <mrow>
 <mfrac>
 <mn>16</mn>
@@ -2437,17 +2439,7 @@ Circle area = square area</p>
 <mn>2</mn>
 </msup>
 </mrow>
-</math>
-</span>
-</div>
-</div>
-<br>
-<div style="margin:12px" itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="2">
-<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">A<sub>(circle)</sub></span>=
-<span itemprop="value">
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mo>=</mo>
 <mrow>
 <mn>3.2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
@@ -2455,6 +2447,7 @@ Circle area = square area</p>
 <mi>r</mi>
 <mn>2</mn>
 </msup>
+</mrow>
 </mrow>
 </math>
 </span>
@@ -2985,12 +2978,13 @@ The length of the two longer sides is the area of the resulting ring divided by 
 </div>
 </details>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="8">
-<p itemprop="description" style="margin:12px">The length of the circumference approaches 6.4 × radius as its thickness approaches 0.</p>
+<p itemprop="description">The length of the circumference approaches 6.4 × radius as its thickness approaches 0.</p>
 <br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">Circumference</span>=
+<meta itemprop="description" content="Exact circumference formula">
+	<span itemprop="name">Circumference</span>=
 <span itemprop="value">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -3211,9 +3205,10 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <p itemprop="abstract">The height of the triangle is the segment height subtracted from the radius of the parent circle.</p>
 </details>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="4">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Exact circle segment area formula">
 <span itemprop="name">A<sub>(segment)</sub></span>=
 <span itemprop="value">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3607,8 +3602,9 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </div>
 </details>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="8">
+<meta itemprop="description" content="Exact cone surface area formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">Surface<sub>(cone)</sub></span>=
 <span itemprop="value">
@@ -3794,8 +3790,9 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <br>
 </details>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="7">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="3">
+<meta itemprop="description" content="Exact sphere volume formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>(sphere)</sub></span>=
 <span itemprop="value">
@@ -3909,8 +3906,9 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
 <p style="margin:12px" itemprop="description">One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere.</p>
 </div>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="2">
+<meta itemprop="description" content="Spherical cap volume formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>(cap)</sub></span>=
 <span itemprop="value">
@@ -4215,7 +4213,7 @@ But this ratio can't be generalized for the overall volume of the cone.</p>
 </figure>
 <br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="3">
+<meta itemprop="position" content="2">
 <p itemprop="abstract">The base of the two shapes is a quadrant circle.</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML" >
@@ -4271,7 +4269,7 @@ But this ratio can't be generalized for the overall volume of the cone.</p>
 </div>
 <br><br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="4">
+<meta itemprop="position" content="3">
 <p itemprop="abstract">The slant height of the quadrant cone is √2 × radius.</p>
 </div>
 <br>
@@ -4308,7 +4306,7 @@ But this ratio can't be generalized for the overall volume of the cone.</p>
 </div>
 <br><br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="6">
+<meta itemprop="position" content="4">
 <p itemprop="abstract">The slant form has a triangular vertical cross-section. 
 <br>
 The area of a cone's vertical middle cross-section is the half of a cylinder with equal base and height. 
@@ -4354,8 +4352,9 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 </div>
 </div>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="7">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="5">
+<meta itemprop="description" content="Exact cone volume formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>(cone)</sub></span>=
 <span itemprop="value">
@@ -4606,8 +4605,9 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 </math>
 </div>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="7">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="6">
+<meta itemprop="description" content="Exact frustum cone volume formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>(frustum)</sub></span>=
 <span itemprop="value">
@@ -4843,8 +4843,9 @@ The so-called "calculus-based proofs" of the conventional formula are invalid.</
   <img class="center-fit" src="tetraFrame.jpeg" alt="The volume of a pyramid can be calculated with the same coefficient as the volume of a cone. Volume = base × height / √8">
   </figure>
 <br><br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="2">
+<meta itemprop="description" content="Exact pyramid volume formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>(pyramid)</sub></span>=
 <span itemprop="value">
@@ -4948,8 +4949,9 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <p itemprop="description">The volume of a frustum pyramid can be calculated with the same method as the <a href="#frustum_cone">volume of a frustum cone</a></p>
 </div>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="2">
+<meta itemprop="description" content="Exact frustum pyramid volume formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>(frustum)</sub></span>=
 <span itemprop="value">
@@ -5103,7 +5105,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <section itemscope itemtype="https://schema.org/LearningResource" id="square_frustum">
 <h3 style="margin:12px">Calculate the Volume of a square Frustum</h3>
 <meta itemprop="name" content="Horizontal square frustum pyramid volume calculation">
-<meta itemprop="disambiguatingDescription" content="Based on the exact volume of a pyramid - base × height / √8 -, instead of the base × height / 3 approximate.">
+<meta itemprop="disambiguatingDescription" content="Only for square frustum pyramids. Based on the exact volume of a pyramid - base × height / √8 -, instead of the base × height / 3 approximate.">
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="squareFrustum.jpeg" alt="Square frustum pyramid">
@@ -5139,6 +5141,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </div>
 <br>
 <div style="margin:12px" itemprop="description">
+<meta itemprop="description" content="Exact square frustum pyramid volume formula">
 <span>V<sub>(square frustum)</sub></span>=
 <span>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5487,8 +5490,9 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </div>
 </details>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="7">
+<meta itemprop="description" content="Exact tetrahedron volume formula">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>(tetrahedron)</sub></span>=
 <span itemprop="value">
