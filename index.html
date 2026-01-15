@@ -3319,21 +3319,21 @@ function segmentArea() {
   if (userEntered.h && userEntered.r && !userEntered.l && !isNaN(h) && !isNaN(r)) {
     let angle = Acos((r - h) / r);
     l = 2 * r * sin(angle);
-    lInput.value = l.toFixed(5);
+    chordLength.value = l.toFixed(5);
     autoFilledField = "chord-length";
   }
 
   // If height and length is known → derive radius
   if (userEntered.h && userEntered.l && !userEntered.r && !isNaN(h) && !isNaN(l)) {
     r = (l ** 2 + 4 * h ** 2) / (8 * h);
-    rInput.value = r.toFixed(5);
+    radius.value = r.toFixed(5);
     autoFilledField = "parent-radius";
   }
 
   // If length and radius is known → derive height
   if (userEntered.l && userEntered.r && !userEntered.h && !isNaN(l) && !isNaN(r)) {
     h = r - Math.sqrt(r ** 2 - (l / 2) ** 2);
-    hInput.value = h.toFixed(5);
+    height.value = h.toFixed(5);
     autoFilledField = "segment-height";
   }
 
@@ -3359,7 +3359,7 @@ function segmentArea() {
 	if (h === r || h === l / 2 || l === 2 * r) {
     output.innerText = `Semicircle area = ${area.toFixed(5)} square units`;
   } else {
-    output.innerText = `Area = ${area.toFixed(5)} square units`;
+    output.innerText = `Area ~ ${area.toFixed(5)} square units`;
   }
 }
 
