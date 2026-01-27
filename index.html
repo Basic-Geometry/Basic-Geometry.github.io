@@ -2628,140 +2628,26 @@ The classical half‑angle formula</p>
 <br><br>
 But a geometric inconsistency emerges when we compare circumscribed polygons to circles.
 <br><br>
-A “circumscribed polygon” is not guaranteed to be an upper bound in every sense.
-<br><br>
-Consider a circular sector of angle 2x and radius r.</p>
+Consider a circular sector</p>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="polygonApproximation.png" alt="A slice of a circle with angle=2x and the corresponding isosceles triangle split in half">
 </figure>
 <br>
-<p>Now look at the isosceles triangle formed by joining the endpoints of the arc to the center.  
+<p>Imagine the half diagonals as two rigid plates and the side as a straight lid wedged between them.
+<br>
+If we bend the lid into a curve, it can slip lower between the plates because the distance between its endpoints decreases, while its length doesn't change.
+<br>
+The polygon still encloses more area, but the arc sits lower — even with an equal perimeter.
 <br><br>
-Focus on half of this configuration: a right triangle with</p>
-<ul style="margin:6px">
-      <li>one leg = r</li>
-      <li>the other leg = half the polygon side</li>
-      <li>hypotenuse = half the polygon diagonal</li>
-</ul>
-<br>
-<p>This right triangle always contains the corresponding half‑sector of the circle, so its area is larger.  
-<br>
-But the key detail is the ratio of these areas.</p>
-<br>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mi>Area of the half‑sector</mi>
-	  <mo>=</mo>
-<mfrac>
-	<mrow>
-	  <mi>x</mi>
-	<mo>×</mo>
-	  <msup>
-<mi>r</mi>
-<mn>2</mn>
-	  </msup>
-	</mrow>
-	<mn>2</mn>
-</mfrac>
-    </mrow>
-</math>
+A “circumscribed polygon” is not guaranteed to be an upper bound in every sense.
 <br><br>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-	<mrow>
-	<mi>Area of the right triangle</mi>
-	<mo>=</mo>
-        <mfrac>
-          <mrow>
-			  <mi>sin</mi>
-            <mo>&#x2061;</mo>
-            <mo>(</mo><mi>x</mi><mo>)</mo>
-		  </mrow>
-			<mrow>
-				<mn>2</mn>
-			 <mo>×</mo>
-            <mi>cos</mi>
-            <mo>&#x2061;</mo>
-            <mo>(</mo><mi>x</mi><mo>)</mo>
-          </mrow>
-        </mfrac>
-      <mo>×</mo>
-	  <msup>
-		  <mi>r</mi>
-		  <mn>2</mn>
-	  </msup>
-  </mrow>
-</math>
-<br><br>
-<p>Since</p>
-<br>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-	<mrow>
-	<mi></mi>
-		<mi>cos</mi>
-    <mo>&#x2061;</mo>
-    <mo>(</mo><mi>x</mi><mo>)</mo>
-	<mo>&lt;</mo>
-	<mn>1</mn>
-	</mrow>
-</math>
-<br><br>
-<p>the inequality</p>
-<br>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-	<mrow>
-        <mfrac>
-          <mrow>
-			  <mi>sin</mi>
-            <mo>&#x2061;</mo>
-            <mo>(</mo><mi>x</mi><mo>)</mo>
-		  </mrow>
-			<mrow>
-			<mn>2</mn>
-			 <mo>×</mo>
-            <mi>cos</mi>
-            <mo>&#x2061;</mo>
-            <mo>(</mo><mi>x</mi><mo>)</mo>
-          </mrow>
-		</mfrac>
-		<mo>&gt;</mo>
-	<mi>x</mi>
-	</mrow>
-</math>
-<br><br>
-<p>can hold even when</p>
-<br>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-	<mrow>
-	<mi>x</mi>
-	<mo>&gt;</mo>
-	<mi>sin</mi>
-    <mo>&#x2061;</mo>
-    <mo>(</mo><mi>x</mi><mo>)</mo>
-	</mrow>
-</math>
-<br><br>
-<p>This means that a polygon can enclose more area than the circle even when its perimeter is smaller than the circle’s circumference.
-<br><br>
-As the number of sides increases, the polygon’s vertices flatten toward 180°.
-<br>
-The polygon begins to enclose area in a fundamentally different way than the circle.
-<br>
 The usual assumption — that a tangent circumscribed polygon must have a larger perimeter — is not guaranteed.
 <br><br>
-A circle has constant curvature. A straight line has zero curvature. Treating the two as interchangeable is a category error disguised as approximation.
-<br><br>
-Imagine two rigid plates with a straight lid wedged between them.
-<br>
-If we bend the lid into a curve, it can slip lower between the plates because the distance between its endpoints decreases — even if the curved lid is longer.
-<br>
-The polygon still encloses more area, but the arc sits lower.
-<br><br>
-These are the overlooked geometric facts.</p>
+This is the overlooked geometric fact.</p>
 <br><br>
 <p>Why this matters
-<br>
-<br>
+<br><br>
 The classical argument assumes:</p>
 <ul style="margin:6px">
       <li>the inscribed polygon is always an under‑estimate</li>
@@ -2772,8 +2658,7 @@ The classical argument assumes:</p>
 <br>
 <p>But the geometry shows:</p>
 <ul style="margin:6px">
-      <li>a tangent polygon can have smaller perimeter than the circle, yet still enclose larger area</li>
-      <li>so “circumscribed” and “upper bound” are not equivalent concepts</li>
+      <li>“circumscribed” and “upper bound” are not equivalent concepts</li>
       <li>The geometric ordering required by the polygon‑approximation method is not structurally guaranteed.</li>
       </ul>
 <br>
