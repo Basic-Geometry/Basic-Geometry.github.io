@@ -4837,7 +4837,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <p itemprop="abstract">Subtracting the volume of the missing tip from the theoretical full pyramid gives the volume of the frustum.</p>
 <br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact frustum pyramid volume formula: Volume = frustumHeight × ( bottomArea / (1 - topArea / bottomArea) - ( topArea / (1 - topArea / bottomArea) - 1) ) / sqrt(8)">
+<meta itemprop="description" content="Exact frustum pyramid volume formula: Volume = frustumHeight × ( bottomArea / (1 - topArea / bottomArea) - ( topArea / (1 - topArea / bottomArea) - topArea ) ) / sqrt(8)">
 <span itemprop="name">V<sub>(frustum)</sub></span>=
 <span itemprop="value">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4897,7 +4897,10 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
         </mrow>
       </mfrac>
       <mo>-</mo>
-      <mn>1</mn>
+      <msub>
+				<mi>A</mi>
+				<mi>(top)</mi>
+	  </msub>
       <mo>)</mo>
       <mo>)</mo>
 </mrow>
@@ -5041,7 +5044,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </figure>
 <br>
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact frustum cone volume formula: Volume = 3.2 × frustumHeight × ( bottomRadius^2 / (1 - topRadius / bottomRadius ) - ( topRadius^2 / ( 1 - topRadius / bottomRadius) - 1 ) ) / sqrt(8)">
+<meta itemprop="description" content="Exact frustum cone volume formula: Volume = 3.2 × frustumHeight × ( bottomRadius^2 / (1 - topRadius / bottomRadius ) - ( topRadius^2 / ( 1 - topRadius / bottomRadius) - topRadius^2 ) ) / sqrt(8)">
 <span itemprop="name">V</span>=
 <span itemprop="value">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5111,7 +5114,13 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
         </mrow>
       </mfrac>
       <mo>-</mo>
-      <mn>1</mn>
+      <msup>
+			<msub>  
+        <mi>r</mi>
+			<mi>(top)</mi>
+			</msub>
+        <mn>2</mn>
+	  </msup>
       <mo>)</mo>
       <mo>)</mo>
 </mrow>
