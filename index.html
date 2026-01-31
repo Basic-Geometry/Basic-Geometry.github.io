@@ -4775,7 +4775,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <p itemprop="description">Subtracting the frustum height from the extended height gives the height of the missing tip.</p>
 <br>
-<meta itemprop="description" content="Volume of the missing tip">
+<meta itemprop="description" content="Volume of the missing tip: Volume = topArea × frustumHeight / sqrt(8) ×  ( 1 / ( 1 - topArea / bottomArea ) - 1 )">
 <span itemprop="name">V<sub>(tip)</sub> </span>=
 <span itemprop="value">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4890,8 +4890,8 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 </span>
 </div>
 <br><br>
-<div style="margin:12px">
-<p itemprop="description">The volume of a frustum can also be calculated via a simplified formula.</p>
+<div style="margin:12px" itemprop="description">
+<p>The volume of a frustum can also be calculated via a simplified formula.</p>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -5234,10 +5234,10 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <figure class="imgbox" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="tetrahedron.jpeg" alt="Tetrahedron">
   </figure>
-<summary><h4 itemprop="abstract" style="margin:12px">A tetrahedron is a pyramid with fixed proportions.</h4></summary>
+<p itemprop="abstract" style="margin:12px">A tetrahedron is a pyramid with fixed proportions.<p>
 <p itemprop="description" style="margin:12px">It is bound by 4 equilateral triangles forming 6 equal edges.</p>
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<p itemprop="description" style="margin:12px">The base is an equilateral triangle.</p>
+<p itemprop="description">The base is an equilateral triangle.</p>
 <br>
 <meta itemprop="description" content="Base area of a tetrahedron: Exact equilateral triangle formula: Area = edge^2 × sqrt(3) / 4">
 <span itemprop="name">A<sub>(base)</sub> </span>=
@@ -5272,7 +5272,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
   </mrow>
 </math>
 </span>
-<br>
+<br><br><br>
 <p>Simplifying:</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5307,7 +5307,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
       </msqrt>
 </mrow>
 	</math>
-<br>
+<br><br><br>
 <p>Simplifying further:</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5403,7 +5403,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
    </mrow>
 </math>
 </span>
-<br>
+<br><br><br>
 <p>Simplifying:</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5510,7 +5510,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
     </msup>
    </mrow>
 </math>
-<br>
+<br><br><br>
 <meta itemprop="description" content="Exact tetrahedron volume formula: V = edge^3 / 8">
 <span itemprop="name">V<sub>(tetrahedron)</sub> </span>=
 <span itemprop="value">
