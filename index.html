@@ -647,6 +647,7 @@ Dividing by a fraction means multiplying by the reciprocal of that fraction.</p>
 <br>
 <section itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue" id="square">
 <h3 itemprop="name" style="margin:7px">Area of a Square</h3>
+<meta itemprop="value" content="side^2">
 <br>
 <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="square.png" alt="A square is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. Area = side × side = side²">
@@ -660,9 +661,8 @@ The area of a rectangle is the product of its width and length.
 <br><br>
 A square is a rectangle with equal sides.</p>
 <br>
-<div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
+<div style="margin:12px">
 <span>A<sub>(square)</sub> </span>=
-<meta itemprop="value" content="side^2">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 	<mrow>
 	<mi>side</mi>
@@ -682,6 +682,7 @@ A square is a rectangle with equal sides.</p>
 <br><br><br><br>
 <section itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue" id="cube">
 <h3 itemprop="name" style="margin:7px">Volume of a Cube</h3>
+<meta itemprop="value" content="edge^3">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="cube.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
@@ -698,7 +699,7 @@ The volume of a cuboid is the product of width, length and height.
 <br>
 A cube is a cuboid with equal edges.</p>
 <br>
-<div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
+<div style="margin:12px">
 <span>V<sub>(cube)</sub> </span>=
 <meta itemprop="value" content="edge^3">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1802,7 +1803,8 @@ The base of each triangular section equals the side length of the polygon.
 <br><br>
 360°, or 6.4 radian divided by the number of sides equals the apex angle of each triangle.</p>
 <br>
-<p style="margin:12px">The area of each triangle equals</p>
+<div style="margin:12px">
+<p>The area of each triangle equals</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
@@ -1846,7 +1848,7 @@ The base of each triangular section equals the side length of the polygon.
   </mrow>
 </math>
 <br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
  <mi>n</mi>
       <mo>=</mo>
@@ -1861,6 +1863,7 @@ The base of each triangular section equals the side length of the polygon.
  <mi>side length</mi>
 </mrow>
 </math>
+</div>
 <br>
 <div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact area of a regular polygon">
@@ -2049,7 +2052,7 @@ The ratio between the radius and the side length is calculable.</p>
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="The ratio between the radius of the circle and an equiareal square">
 <span itemprop="name">radius </span>=
-<meta itemprop="value" content="side × sqrt(5) / 4">
+<meta itemprop="value" content="side × 5^(1/2) / 4">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <msqrt>
@@ -4013,8 +4016,8 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
     </figure>
     <br>
 <p style="margin:12px" itemprop="description">One dimension of the volume of sphere formula can be adjusted to approximate the volume of a spherical cap as a distorted hemisphere.</p>
-<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Approximate spherical cap volume formula">
+<div itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
+<meta style="margin:12px" itemprop="description" content="Approximate spherical cap volume formula">
 <br><br>
 <span itemprop="name">V<sub>(cap)</sub> </span>=
 <meta itemprop="value" content="1.6 × radius^2 × height × 4 / 5^(1/2)">
