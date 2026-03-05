@@ -12,20 +12,19 @@
 <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
 <link rel="manifest" href="manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://basic-geometry.github.io">
-<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="Gaál Sándor">
 <meta name="description" content="Exact formulas for real-world applications like analysis, engineering design solutions, computer graphics rendering, algorithm optimization, and navigation">
 <meta name="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@gmac4247">
-<meta name="twitter:site" content="https://gmac4247.github.io">
+<meta name="twitter:site" content="https://basic-geometry.github.io">
 <meta name="twitter:title" content="Home of Basic Geometry">
 <meta name="twitter:description" content="Exact formulas for real-world applications like analysis, engineering design solutions, computer graphics rendering, algorithm optimization, and navigation">
 <meta name="twitter:image" content="android-chrome-256x256.png">
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="theme-color" content="#000000">
+<meta name="msvalidate.01" content="EA6B8354B9F3C956E862954E97EB8CD0">
 <style>
        
         * {
@@ -111,7 +110,7 @@
 <meta itemprop="isAccessibleForFree" content="true">
 <meta itemprop="isFamilyFriendly" content="true">
 <meta itemprop="typicalAgeRange" content="5-105">
-<meta itemprop="url" content="https://gmac4247.github.io">
+<meta itemprop="url" content="https://basic-geometry.github.io">
 <div itemprop="usageInfo" itemscope itemtype="https://schema.org/Statement" id="cookie-notice">
                 <div id="cookie-notice-text">
                         This website uses cookies to ensure you get the best experience on it.<br>
@@ -450,10 +449,10 @@ Breaking the branch into 3 equal pieces gives 1 / 3.
 <br>
 That cannot be written in a decimal form with a finite number of numerals.</p>
 <br><br><br>
-<section itemprop="subjectOf" itemscope itemtype="http://schema.org/LearningResource" id=operations_with_fractions>
+<section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" id=operations_with_fractions>
 <h3 itemprop="name">Operations with Fractions</h3>
 <br><br>
-<section itemprop="subjectOf" itemscope itemtype="http://schema.org/LearningResource" id="adding_fractions" itemref="addition">
+<section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" id="adding_fractions" itemref="addition">
 <h3 itemprop="name">Adding Fractions</h3>
 <br>
 <p itemprop="description">Adding the nominators if the denominators are the same.</p>
@@ -503,7 +502,7 @@ The denominators can be multiplied by each other to get a common denominator. In
 </math>
 </section>
 <br><br><br>
-<section itemprop="subjectOf" itemscope itemtype="http://schema.org/LearningResource" id="subtracting_fractions" itemref="adding_fractions">
+<section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" id="subtracting_fractions" itemref="adding_fractions">
 <h3 itemprop="name">Subtracting Fractions</h3>
 <br>
 <p itemprop="description">Subtracting the nominators if the denominators are the same.</p>
@@ -553,7 +552,7 @@ The denominators can be multiplied by each other to get a common denominator. In
 	</math>
 </section>
 <br><br><br>
-<section itemprop="subjectOf" itemscope itemtype="http://schema.org/LearningResource" id="multiplying_fractions" itemref="multiplication">
+<section itemprop="about" itemscope itemtype="http://schema.org/LearningResource" id="multiplying_fractions" itemref="multiplication">
 <h3 itemprop="name">Multiplying Fractions</h3>
 <br>
 <p itemprop="description">A fraction can be multiplied by multiplying its nominator, or dividing its denominator.
@@ -578,7 +577,7 @@ Multiplying by a fraction means multiplying nominator by nominator and denominat
 </math>
 </section>
 <br><br><br>
-<section itemprop="subjectOf" id="dividing_fractions" itemscope itemtype="http://schema.org/LearningResource" itemref="division">
+<section itemprop="about" id="dividing_fractions" itemscope itemtype="http://schema.org/LearningResource" itemref="division">
 <h3 itemprop="name">Dividing Fractions</h3>
 <br>
 <p itemprop="description">A fraction can be divided by dividing its nominator, or multiplying its denominator.
@@ -648,7 +647,6 @@ Dividing by a fraction means multiplying by the reciprocal of that fraction.</p>
 <br>
 <section itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue" id="square">
 <h3 itemprop="name" style="margin:7px">Area of a Square</h3>
-<meta itemprop="value" content="side^2">
 <br>
 <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="square.png" alt="A square is a 2 dimensional plane shape with 2 perpendicular pairs of parallel straight sides. Area = side × side = side²">
@@ -662,8 +660,9 @@ The area of a rectangle is the product of its width and length.
 <br><br>
 A square is a rectangle with equal sides.</p>
 <br>
-<div style="margin:12px">
+<div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
 <span>A<sub>(square)</sub> </span>=
+<meta itemprop="value" content="side^2">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 	<mrow>
 	<mi>side</mi>
@@ -683,7 +682,6 @@ A square is a rectangle with equal sides.</p>
 <br><br><br><br>
 <section itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue" id="cube">
 <h3 itemprop="name" style="margin:7px">Volume of a Cube</h3>
-<meta itemprop="value" content="edge^3">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="cube.jpeg" alt="A cube is a 3 dimensional solid shape with 3 equal perpendicular pairs of parallel straight edges. V = edge × edge × edge = edge³">
@@ -700,8 +698,9 @@ The volume of a cuboid is the product of width, length and height.
 <br>
 A cube is a cuboid with equal edges.</p>
 <br>
-<div style="margin:12px">
+<div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
 <span>V<sub>(cube)</sub> </span>=
+<meta itemprop="value" content="edge^3">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 	 <mrow>
 		 <mi>edge</mi>
@@ -1732,7 +1731,7 @@ The square root of half of the area of the rectangle is the side length of the t
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="5-105">
-<meta itemprop="url" content="https://gmac4247.github.io#triangle_area_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#triangle_area_calculator">
 <meta itemprop="usageInfo" content="Enter the length of each side">
 <label for="side1">Side 1:</label>
 <input id="side1" type="number" value="1" step="any">
@@ -1851,7 +1850,7 @@ The base of each triangular section equals the side length of the polygon.
 <mrow>
  <mi>n</mi>
       <mo>=</mo>
-<mi>number of sides</mi>
+<mi>side count</mi>
 </mrow>
 </math>
 <br><br>
@@ -1907,9 +1906,9 @@ The base of each triangular section equals the side length of the polygon.
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#polygon_area_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#polygon_area_calculator">
 <meta itemprop="usageInfo" content="Enter the side count and the length of a side">
-<label for="side-count">Number of sides:</label>
+<label for="side-count">Side count:</label>
 <input id="side-count" type="number" value="5" step="1">
 <br>
 <label for="side-length">Side length:</label>
@@ -1983,10 +1982,10 @@ function updatePolygonArea() {
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="typicalAgeRange" content="12-102">
 <meta itemprop="usageInfo" content="Learn to calculate exact area and volume of shapes">
-<meta itemprop="url" content="https://gmac4247.github.io#cgs">
+<meta itemprop="url" content="https://basic-geometry.github.io#cgs">
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="circle">
 <h3 itemprop="name" style="margin:7px">Area of a Circle</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#circle">
+<meta itemprop="url" content="https://basic-geometry.github.io#circle">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="circle.png" alt="The circle is cut into four quadrants, each placed with their origin on the vertices of a square. The arcs of the quadrants of the circle that equals in area to the square intersect at the quarters on its centerlines. The ratio between the radius of the circle and the side of the square is calculable. r = side × √5 / 4 Area = 3.2r²">
@@ -2584,7 +2583,7 @@ Circle area = square area</p>
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#circle_area_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#circle_area_calculator">
 <meta itemprop="usageInfo" content="Enter the radius">
 <label for="circle-radius-a">Radius:</label>
 <input id="circle-radius-a" type="number" value="1" step="any">
@@ -2612,7 +2611,7 @@ Circle area = square area</p>
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="circumference">
 <h3 itemprop="name" style="margin:7px">Circumference of a Circle</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#circumference">
+<meta itemprop="url" content="https://basic-geometry.github.io#circumference">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="circumference.png" alt="The circumference of a circle is derived from its area algebraically by subtracting a smaller circle">
@@ -3255,7 +3254,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#circumference_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#circumference_calculator">
 <meta itemprop="usageInfo" content="Enter the radius">
 <label for="circle-radius-c">Radius:</label>
 <input id="circle-radius-c" type="number" value="1" step="any">
@@ -3282,7 +3281,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="circle-segment">
 <h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#circle-segment">
+<meta itemprop="url" content="https://basic-geometry.github.io#circle-segment">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="circleSegment.png" alt="Circle segment">
@@ -3451,7 +3450,7 @@ The length of the two longer sides is the area of the resulting ring divided by 
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#circle_segment_area_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#circle_segment_area_calculator">
 <meta itemprop="usageInfo" content="Enter each two of segment height, radius of parent circle, chord length.">
 <label for="segment-height">Segment Height:</label>
 <input id="segment-height" type="number" step="any">
@@ -3551,7 +3550,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="cone_surface">
 <h3 itemprop="name" style="margin:7px">Surface Area of a Cone</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#cone_surface">
+<meta itemprop="url" content="https://basic-geometry.github.io#cone_surface">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="cone.jpeg" alt="The surface area of a cone">
@@ -3564,7 +3563,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <br>
 <meta itemprop="description" content="Calculating the slant height of the cone from its height and radius">
 <span itemprop="name">Slant height </span>=
-<meta itemprop="value" content="sqrt( radius^2 + height^2 )">
+<meta itemprop="value" content="( radius^2 + height^2 )^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <msqrt>
@@ -3589,7 +3588,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <br>
 <meta itemprop="description" content="Central angle of the circle slice that forms the lateral surface of the cone">
 <span itemprop="name">Angle </span>=
-<meta itemprop="value" content="radius / sqrt( radius^2 + height^2 )">
+<meta itemprop="value" content="radius / ( radius^2 + height^2 )^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -3619,7 +3618,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <br>
 <meta itemprop="description" content="Lateral surface of the cone">
 <span itemprop="name">A<sub>(lateral)</sub> </span>=
-<meta itemprop="value" content="3.2 × ( radius^2 + height^2 ) × ( radius / sqrt( radius^2 + height^2 ) )">
+<meta itemprop="value" content="3.2 × ( radius^2 + height^2 ) × ( radius / ( radius^2 + height^2 )^(1/2) )">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mn>3.2</mn>
@@ -3669,7 +3668,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 	<br>
 	<meta itemprop="description" content="Lateral surface of the cone">
 	<span itemprop="name">A<sub>(lateral)</sub> </span>=
-    <meta itemprop="value" content="3.2 × radius × sqrt( radius^2 + height^2 )">
+    <meta itemprop="value" content="3.2 × radius × ( radius^2 + height^2 )^(1/2)">
     <math xmlns="http://www.w3.org/1998/Math/MathML">
         <mrow>
           <mn>3.2</mn>
@@ -3690,7 +3689,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Bottom area of the cone">
 <span itemprop="name">A<sub>bottom</sub> </span>=
-<meta itemprop="value" content="3.2 × radius²">
+<meta itemprop="value" content="3.2 × radius^2">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mn>3.2</mn>
@@ -3706,7 +3705,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact surface area of the cone formula including the bottom">
 <span itemprop="name">A<sub>(bottom)</sub> + A<sub>(lateral)</sub> </span>=
-<meta itemprop="value" content="3.2 × radius^2 + 3.2 × radius × sqrt( radius^2 + height^2 )">
+<meta itemprop="value" content="3.2 × radius^2 + 3.2 × radius × ( radius^2 + height^2 )^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mrow>
@@ -3740,7 +3739,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <br>
 <meta itemprop="description" content="Exact surface area of the cone formula including the bottom">
 <span itemprop="name">Surface<sub>(cone)</sub> </span>=
-<meta itemprop="value" content="3.2 × radius × ( radius + sqrt( radius^2 + height^2 ) )">
+<meta itemprop="value" content="3.2 × radius × ( radius + ( radius^2 + height^2 )^(1/2) )">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mn>3.2</mn>
@@ -3785,7 +3784,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#cone-surface_area_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#cone-surface_area_calculator">
 <meta itemprop="usageInfo" content="Enter the height and the bottom radius.">
 <label for="cone-radius-s">Radius:</label>
 <input id="cone-radius-s" type="number" value="1" step="any">
@@ -3819,7 +3818,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="sphere">
 <h3 itemprop="name" style="margin:7px">Volume of a Sphere</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#sphere">
+<meta itemprop="url" content="https://basic-geometry.github.io#sphere">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="sphere.jpeg" alt="Sphere and isovolumetric cube comparison">
@@ -3857,7 +3856,7 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <br>
 <meta itemprop="description" content="Square root of the cross-sectional area of the sphere">
 <span itemprop="name">√A<sub>(cross-section)</sub> </span>=
-<meta itemprop="value" content="sqrt(3.2) × radius = 4 × radius / sqrt(5)">
+<meta itemprop="value" content="(3.2)^(1/2) × radius = 4 × radius / 5^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <msqrt>
@@ -3912,7 +3911,7 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <br>
 <meta itemprop="description" content="Exact sphere volume formula">
 <span itemprop="name">V<sub>(sphere)</sub> </span>=
-<meta itemprop="value" content="( 4 × radius / sqrt(5) )^3">
+<meta itemprop="value" content="( 4 × radius / 5^(1/2) )^3">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
   <msup>
@@ -3953,7 +3952,7 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#sphere_volume_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#sphere_volume_calculator">
 <meta itemprop="usageInfo" content="Enter the radius.">
 <label for="sphere-radius">Radius:</label>
 <input id="sphere-radius" type="number" value="1" step="any">
@@ -4006,7 +4005,7 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
 <br><br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="cap">
 <h3 itemprop="name" style="margin:7px">Volume of a Spherical Cap</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#cap">
+<meta itemprop="url" content="https://basic-geometry.github.io#cap">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="sphericalCap.png" alt="One dimension of the volume of sphere formula can be adjusted to calculate the volume of a spherical cap as a distorted hemisphere. V = 1.6 × (cap radius) × h × 4 / √5²">
@@ -4017,7 +4016,7 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
 <meta itemprop="description" content="Approximate spherical cap volume formula">
 <br><br>
 <span itemprop="name">V<sub>(cap)</sub> </span>=
-<meta itemprop="value" content="1.6 × radius^2 × sqrt(3.2) × height">
+<meta itemprop="value" content="1.6 × radius^2 × height × 4 / 5^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
   <mn>1.6</mn>
@@ -4058,7 +4057,7 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#spherical_cap_volume_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#spherical_cap_volume_calculator">
 <meta itemprop="usageInfo" content="Enter the radius and the height.">
 <label for="cap-radius">Radius:</label>
 <input id="cap-radius" type="number" value="1" step="any">
@@ -4106,7 +4105,7 @@ if ( height === radius) {
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="cone">
 <h3 itemprop="name" style="margin:7px">Volume of a Cone</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#cone">
+<meta itemprop="url" content="https://basic-geometry.github.io#cone">
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="coneAndSphere.jpeg" alt="Sphere and cone">
@@ -4218,7 +4217,7 @@ But this ratio can't be generalized for the overall volume of the cone.</p>
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Volume of an octant sphere">
 <span itemprop="name">V<sub>(octant sphere)</sub> </span>=
-<meta itemprop="value" content="( sqrt(3.2) × radius / 2 )^3">
+<meta itemprop="value" content="( (3.2)^(1/2) × radius / 2 )^3">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mrow>
@@ -4407,7 +4406,7 @@ The mean of the areas of the horizontal cross-sectional slices of a cone is the 
 <br>
 <meta itemprop="description" content="Volume of a quadrant cone">
 <span itemprop="name">V<sub>(quadrant cone)</sub> </span>=
-<meta itemprop="value" content="(3.2 × radius^2 / 4 × sqrt(2) × height ) / ( 2 + 2 )">
+<meta itemprop="value" content="(3.2 × radius^2 / 4 × 2^(1/2) × height ) / ( 2 + 2 )">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -4451,7 +4450,7 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <br><br>
 <meta itemprop="description" content="Exact cone volume formula">
 <span itemprop="name">V<sub>(cone)</sub> </span>=
-<meta itemprop="value" content="3.2 × radius^2 / sqrt(8)">
+<meta itemprop="value" content="3.2 × radius^2 / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -4489,7 +4488,7 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#cone_volume_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#cone_volume_calculator">
 <meta itemprop="usageInfo" content="Enter the bottom radius and the height.">
 <label for="cone-radius-v">Radius:</label>
 <input id="cone-radius-v" type="number" value="1" step="any">
@@ -4524,7 +4523,7 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="pyramid">
 <h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#pyramid">
+<meta itemprop="url" content="https://basic-geometry.github.io#pyramid">
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="conePyramidVolume.jpeg" alt="Pyramid">
@@ -4609,7 +4608,7 @@ Thus, the "V = base × height / 3" formula, and its so-called "calculus-based pr
 <div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact pyramid volume formula">
 <span itemprop="name">V<sub>(pyramid)</sub></span>=
-<meta itemprop="value" content="base × height / sqrt(8)">
+<meta itemprop="value" content="base × height / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -4646,9 +4645,9 @@ Thus, the "V = base × height / 3" formula, and its so-called "calculus-based pr
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#pyramid_volume_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#pyramid_volume_calculator">
 <meta itemprop="usageInfo" content="Enter the height, the side count and the length of the bottom edge.">
-<label for="pyramid-side-count">Number of sides:</label>
+<label for="pyramid-side-count">Side count:</label>
 <input id="pyramid-side-count" type="number" value="4" step="1">
 <br>
 <label for="pyramid-base-edge-length">Base edge length:</label>
@@ -4691,7 +4690,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="frustum_pyramid">
 <h3 itemprop="name" style="margin:12px">Volume of a Frustum Pyramid</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#frustum_pyramid">
+<meta itemprop="url" content="https://basic-geometry.github.io#frustum_pyramid">
 <br>
 <figure class="imgbox">
     <img class="center-fit" src="frustumPyramid.jpeg" alt="Frustum pyramid">
@@ -4737,7 +4736,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br>
 <meta itemprop="description" content="Volume of the theoretical full pyramid">
 <span itemprop="name">V<sub>(pyramid)</sub> </span>=
-<meta itemprop="value" content="bottomArea × frustumHeight / sqrt(8) × ( 1 / ( 1 - topArea / bottomArea ) )">
+<meta itemprop="value" content="bottomArea × frustumHeight / 8^(1/2) × ( 1 / ( 1 - topArea / bottomArea ) )">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 	<msub>
@@ -4778,7 +4777,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br>
 <meta itemprop="description" content="Volume of the missing tip">
 <span itemprop="name">V<sub>(tip)</sub> </span>=
-<meta itemprop="value" content="topArea × frustumHeight / sqrt(8) ×  ( 1 / ( 1 - topArea / bottomArea ) - 1 )">
+<meta itemprop="value" content="topArea × frustumHeight / 8^(1/2) ×  ( 1 / ( 1 - topArea / bottomArea ) - 1 )">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
    <msub>
@@ -4821,7 +4820,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact frustum pyramid volume formula">
 <span itemprop="name">V<sub>(frustum)</sub> </span>=
-<meta itemprop="value" content="frustumHeight × ( bottomArea / (1 - topArea / bottomArea) - ( topArea / (1 - topArea / bottomArea) - topArea ) ) / sqrt(8)">
+<meta itemprop="value" content="frustumHeight × ( bottomArea / (1 - topArea / bottomArea) - ( topArea / (1 - topArea / bottomArea) - topArea ) ) / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 	<mfrac>
@@ -4933,7 +4932,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 </div>
 <br><br>
 <div style="margin:12px" id="frustum_pyramid_volume_calculator" itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication">
-<meta itemprop="name" content="Pyramid volume calculator">
+<meta itemprop="name" content="Frustum pyramid volume calculator">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessibilityControl" content="fullKeyboardControl">
 <meta itemprop="accessibilityHazard" content="none">
@@ -4949,9 +4948,9 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#frustum_pyramid_volume_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#frustum_pyramid_volume_calculator">
 <meta itemprop="usageInfo" content="Enter the height, the side count and the length of the top and bottom edges.">
-<label for="frustum-pyramid-side-count">Number of sides:</label>
+<label for="frustum-pyramid-side-count">Side count:</label>
 <input id="frustum-pyramid-side-count" type="number" value="4" step="1">
 <br>
 <label for="frustum-pyramid-base-edge-length">Base edge length:</label>
@@ -5022,7 +5021,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="frustum_cone">
 <h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#frustum_cone">
+<meta itemprop="url" content="https://basic-geometry.github.io#frustum_cone">
 <br>
 <figure class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="frustumCone.jpeg" alt="Frustum cone">
@@ -5031,7 +5030,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact frustum cone volume formula">
 <span itemprop="name">V </span>=
-<meta itemprop="value" content="3.2 × frustumHeight × ( bottomRadius^2 / (1 - topRadius / bottomRadius ) - ( topRadius^2 / ( 1 - topRadius / bottomRadius) - topRadius^2 ) ) / sqrt(8)">
+<meta itemprop="value" content="3.2 × frustumHeight × ( bottomRadius^2 / (1 - topRadius / bottomRadius ) - ( topRadius^2 / ( 1 - topRadius / bottomRadius) - topRadius^2 ) ) / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -5178,7 +5177,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#frustum_cone_volume_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#frustum_cone_volume_calculator">
 <meta itemprop="usageInfo" content="Enter the height and the top and bottom radii.">
 <label for="frustum-cone-base-radius">Base radius:</label>
 <input id="frustum-cone-base-radius" type="number" value="2" step="any">
@@ -5237,7 +5236,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br><br><br>
 <section itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm" id="tetrahedron">
 <h3 itemprop="name" style="margin:7px">Volume of a Tetrahedron</h3>
-<meta itemprop="url" content="https://gmac4247.github.io#tetrahedron">
+<meta itemprop="url" content="https://basic-geometry.github.io#tetrahedron">
 <br>
 <figure class="imgbox" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
   <img class="center-fit" src="tetrahedron.jpeg" alt="Tetrahedron">
@@ -5250,7 +5249,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <meta itemprop="description" content="Base area of a tetrahedron: Exact equilateral triangle formula">
 <span itemprop="name">A<sub>(base)</sub> </span>=
-<meta itemprop="value" content="edge^2 × sqrt(3) / 4">
+<meta itemprop="value" content="edge^2 × 3^(1/2) / 4">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 <mfrac>
@@ -5370,7 +5369,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <meta itemprop="description" content="Exact height of a tetrahedron formula">
 <span itemprop="name">H </span>=
-<meta itemprop="value" content="sqrt( 2 / 3 ) × edge">
+<meta itemprop="value" content="( 2 / 3 )^(1/2) × edge">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 <msqrt>
@@ -5553,7 +5552,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <meta itemprop="keywords" content="Core Geometric System, Exact Geometric Calculations, Analysis, Engineering Design Solutions, Computer Graphics Rendering, Algorithm Optimization, Navigation">
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="typicalAgeRange" content="12-102">
-<meta itemprop="url" content="https://gmac4247.github.io#tetrahedron_volume_calculator">
+<meta itemprop="url" content="https://basic-geometry.github.io#tetrahedron_volume_calculator">
 <meta itemprop="usageInfo" content="Enter the length of the edge.">
 <label for="tetrahedron-edge">Edge:</label>
 <input id="tetrahedron-edge" type="number" value="1" step="any">
