@@ -1,4 +1,0 @@
-User-agent:Bingbot
-Allow:/
-
-Sitemap: https://basic-geometry.github.io/sitemap.xml
