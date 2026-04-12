@@ -32,7 +32,7 @@
       "alignmentType": "educationalSubject",
       "educationalFramework": "Geometric framework",
       "targetName": "Core Geometric System™",
-      "targetUrl": "https://basic-geometry.github.io"
+      "targetUrl": "https://basic-geometry.pages.dev"
     },
     "educationalLevel": "from basic to advanced",
 	"headline": "Featuring The Core Geometric System™",
@@ -61,7 +61,7 @@
 	
 	{
     "name": "sphereVolume",
-	"disambiguatingDescription": "The V = 4 / 3 × pi × radius³ formula is a result of a very rough underestimate, approximated by comparing a hemisphere to the difference between the approximate volume a cone and a circumscribed cylinder, discarding the difference between the straight slant height of a cone and the curvature of a sphere.",
+    "disambiguatingDescription": "The V = 4 / 3 × pi × radius³ formula is a result of a very rough underestimate, approximated by comparing a hemisphere to the difference between the approximate volume a cone and a circumscribed cylinder, discarding the difference between the straight slant height of a cone and the curvature of a sphere.",
 	"description": "The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.",
 	"inDefinedTermSet": "Core Geometric System ™",
 	"id": "/#sphere"
