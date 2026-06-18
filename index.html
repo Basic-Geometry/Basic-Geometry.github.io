@@ -2063,7 +2063,9 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 </math>
 </div>
 <br><br>
-<p style="margin:12px">Trigonometric functions with an "Arc" - or simply A - prefix refer to the angle corresponding to a value of that function.</p>
+<p style="margin:12px">Trigonometric functions with an "Arc" — or simply A — prefix refer to the arc length or the angle corresponding to a value of that function.
+<br>
+They can be expressed both in radians or degrees.</p>
 <br><br>
 <div style="margin:12px" itemprop="teaches" itemscope itemtype="https://schema.org/DefinedTerm">
 <span itemprop="name">hypotenuse² </span>=
@@ -2900,7 +2902,7 @@ function Atan(x) {
 The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</p>
 </div>
 </div>
-<br><br>
+<br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact triangle area formula">
 <span itemprop="name">A<sub>(triangle)</sub> </span>=
@@ -4956,7 +4958,7 @@ Simplifying equations to ensure consistency and precision.</p>
 <br>
 It dealt with shapes, areas, volumes, and constructions — not abstractions, limits, or analytic assumptions.
 <br><br>
-Yet what is commonly presented elsewhere as standard, applied geometry—often labeled “Euclidean geometry”—is actually a blend of two very different traditions:</strong></p>
+Yet what is commonly presented elsewhere as standard, applied geometry — often labeled “Euclidean geometry” — is actually a blend of two very different traditions:</strong></p>
 <br>
 <ul>
   <li>Universal, constructive geometry, which is intuitive, physical, and based on equivalence</li>
@@ -4973,7 +4975,7 @@ Yet what is commonly presented elsewhere as standard, applied geometry—often l
 </section>
 <br><br><br>
 <section style="margin:12px" id="pi">
-<h4>For centuries, the circle has been a symbol of mathematical elegance—and the pi its most iconic constant.</h4>
+<h4>For centuries, the circle has been a symbol of mathematical elegance — and the pi its most iconic constant.</h4>
 <br> 
 <p>While the approximate value of 3.14159…, commonly denoted by the Greek letter pi, is widely recognized today, the historical development of this concept is less understood. Some think 'Standard Geometry' means accepting the pi. But beneath the surface of tradition lies a deeper question: Are the formulas we use truly derived from geometric logic, or are they inherited approximations dressed in symbolic authority?
 <br><br>
@@ -5063,14 +5065,12 @@ Angles like 15°, 7.5°, and 3.75° can be derived from these using the classica
   </mrow>
 </math>
 <br><br><br>
-
-<p itemprop="disambiguatingDescription">If the true circumference is 6.4r, then:</p>
 <p itemprop="disambiguatingDescription">But the entire method relies on the unproven assumption that every polygon produced by repeated angle bisection of a circumscribed polygon remains circumscribed.
 <br>
 This is never demonstrated. It is simply taken for granted.
 <br>
 And the assumption is false once the polygon has too many sides.
-<br><br>
+<br><br><br>
 <b>Why the Assumption Fails</b>
 <br><br>
 The math world loves the idea that a regular polygon with a side count approaching infinity “collapses into a circle.” It’s a charming picture — but it is highly theoretical and ultimately unrealistic.
@@ -5106,13 +5106,17 @@ The flaw in the classical method becomes even clearer when we try to implement i
 <br><br>
 The breakdown is visible already at a small finite side count when attempting to draw a circumscribed 24-gon or 48-gon via exact angle bisection (central angle 15° → 7.5°).
 <br>
-The figure collapses: 
+The figure collapses:</p>
 <br>
-The supposed tangent lines merge, overlap, or cross the arc, behaving like an isoperimetric polygon rather than a circumscribed one. 
+<figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
+    <img class="center-fit" src="polygonApproximation.png" alt="When attempting to draw a circumscribed 24-gon via exact angle bisection (central angle 15°), the tangent lines merge, overlap, or cross the arc. The individual sides become indistinguishable or intersect the circle before reaching distinct tangent points.">
+</figure>
 <br>
-This is not a precision or rendering error; it is the geometry refusing to produce a valid set of external tangents.</p>
+<p itemprop="disambiguatingDescription">The supposed tangent lines merge, overlap, or cross the arc, behaving like an isoperimetric polygon rather than a circumscribed one. 
+<br>
+This is not a precision or rendering error; it is the geometry refusing to produce a valid set of external tangents.
 <br><br>
-<p itemprop="disambiguatingDescription">The area–square construction gives the true ratio. 
+The area–square construction gives the true ratio. 
 <br>
 Differentiating with respect to the radius gives a circumference exactly 6.4r. 
 <br>
@@ -5124,13 +5128,9 @@ A circumscribed n‑gon has a perimeter:
 <br><br>
 P(n) = n × tan(180° / n) × r</p>
 <br>
-<figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
-    <img class="center-fit" src="polygonApproximation.png" alt="When attempting to draw a circumscribed 24-gon via exact angle bisection (central angle 15°), the tangent lines merge, overlap, or cross the arc. The individual sides become indistinguishable or intersect the circle before reaching distinct tangent points.">
-</figure>
-<br>
 <p>Evaluating:</p>
 <br>
-<ul style="margin:6px">
+<ul style="margin:6px" itemprop="disambiguatingDescription">
     <li>P(12) = 12 × tan(15°) × r ~ 6.43r</li>
     <li>P(24) = 24 × tan(7.5°) × r ~ 6.319r</li>
 </ul>
@@ -5156,7 +5156,7 @@ If we treat the filled space as a perfect hexagon and the hole as a perfect insc
 <br><br>
 <p itemprop="disambiguatingDescription">Conclusion:
 <br><br>
-The assumption “we can always bisect again and obtain another circumscribed polygon” fails constructively — at a small, finite number of sides, not only in some unreachable infinite limit.
+The assumption “we can always bisect again and obtain another circumscribed polygon” fails constructively at a small, finite number of sides, not only in some unreachable infinite limit.
 <br>
 Once the perimeter of the constructed polygon falls below the true circumference, the tangent‑doubling formulas no longer describe a real circumscribed polygon. They describe a figure that has already slipped inside the circle. 
 <br><br>
@@ -5816,7 +5816,7 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 </section>
 <br><br><br>
 <section style="margin:12px" id="ancient_cone_volume_formula">
-<h4 itemprop="disambiguatingDescription">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable approximation, the exact ratio is 1 / √8.</h4>
+<h4 itemprop="disambiguatingDescription">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8.</h4>
 <br><br>
 <p itemprop="disambiguatingDescription">The 1 / 3 coefficient was likely estimated based on the observation that the mid-height cross-sectional area of a cone is exactly a quarter of a circumscribed cylinder's with the same base and height.
 <br>
@@ -5911,7 +5911,7 @@ But this ratio can't be generalized for the overall volume of the cone.</p>
 </section>
 <br><br><br>
 <section style="margin:12px" id="ancient_pyramid_volume_formula">
-<h4 itemprop="disambiguatingDescription">The volume of a pyramid is conventionally approximated as base × height / 3. While that is a reasonable approximation, the exact ratio is 1 / √8.</h4>
+<h4 itemprop="disambiguatingDescription">The volume of a pyramid is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8.</h4>
 <br><br>
 <p itemprop="disambiguatingDescription">A common method aiming to prove the pyramid volume formula "V = base × height / 3" involves dissecting a cube into three pyramids. Here’s how it’s typically presented:</p>
 <br>
