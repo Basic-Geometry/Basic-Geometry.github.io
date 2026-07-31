@@ -5857,7 +5857,7 @@ If we dissect the cube, we need to designate each shared vertex to be a part of 
 <br><br>
 Consequence: 
 <br><br>
-The volume of each pyramid is exactly a third of the cube, but with a base smaller than the square value of e, and height shorter than e.
+The volume of each pyramid is exactly a third of the cube, but with a height shorter than e, or a base smaller than the square value of e.
 <br><br>
 Their bases and heights are slightly adjusted due to the vertex assignment, undermining the proof’s simplicity.
 <br><br><br>
@@ -5995,57 +5995,90 @@ This restores geometry to its constructive roots and eliminates the analytic ass
     <a href="#circle" itemprop="item">
       <span itemprop="name">Area of a Circle = 3.2 × radius²</span>
     </a>
-    <span itemprop="description">Compared directly to a square, using geometric properties and the Pythagorean theorem.</span>
+	  <br><br>
+    <span itemprop="description">The area of a circle is defined by comparing it to a square since that is the base of area calculation.
+<br>
+The circle can be cut into four quadrants, each placed with their origin on the vertices of a square.
+<br>
+In this layout the arcs of the quadrants of an inscribed circle would meet at the midpoints of the sides of the square, leaving some of the square uncovered.
+<br>
+The arcs of the quadrants of a circumscribed circle would overlap, and intersect at the center of the square, covering it all.
+<br>
+The arcs of the quadrants of the circle that equals in area to the square intersect right in between those limits, at the quarters on its centerlines.
+<br>
+The length of the centerline equals the side length of the square.
+<br>
+The quarter of the centerline and the half of the side of the square form two legs of a right triangle with its hypotenuse equal to the radius.
+<br>
+The ratio between the radius and the side length is calculable.
+<br>
+radius²=(side/2)²+side²
+<br>
+radius=side√5/4</span>
+	<br><br>
 	<span itemprop="disambiguatingDescription">The widely used formula " A = pi × r² " is not a result of direct geometric comparison, nor a direct result of calculus. It’s multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</span>
   </div>
-<br>
+<br><br>
   <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     <meta itemprop="position" content="2">
     <a href="#circumference" itemprop="item">
       <span itemprop="name">Circumference = 6.4 × radius</span>
     </a>
-    <span itemprop="description">Derived from the area by subtracting a smaller theoretical circle.</span>
-	<span itemprop="disambiguatingDescription">The widely used pi≈3.14... is an artifact of a fundamentally flawed theoretical approximate. It was approximated by assuming that the circumference rests in between the theoretical maximum perimeter of the inscribed polygon and the minimum of the circumscribed polygon.">
+    <br><br>
+	  <span itemprop="description">Derived from the area by subtracting a smaller theoretical circle, and dividing the difference by the thickness of the radius. The thickness of the radius is just theoretical, but it's essential, because that separates it from the rest of the circle.</span>
+	<br><br>
+	  <span itemprop="disambiguatingDescription">The widely used pi≈3.14... is an artifact of a fundamentally flawed theoretical approximate. It was approximated by assuming that the circumference rests in between the theoretical maximum perimeter of the inscribed polygon and the minimum of the circumscribed polygon.">
   </div>
-<br>
+<br><br>
   <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     <meta itemprop="position" content="3">
     <a href="#sphere" itemprop="item">
       <span itemprop="name">Volume of a Sphere = ( √(3.2) × radius )³</span>
     </a>
-    <span itemprop="description">Compared to a cube, using the area of the sphere's cross-section.</span>
-	<span itemprop="disambiguatingDescription">The widely used formula " V = 4 / 3 × pi × radius³ " was approximated by comparing a hemisphere to the difference between the approximate volume a cone and a circumscribed cylinder. That is a very exaggerated, distortion-based comparison that discards the difference between the straight slant height of a cone and the curvature of a sphere, resulting in a very rough underestimate.</span>
+    <br><br>
+	  <span itemprop="description">The volume of a sphere is defined by comparing it to a cube, since that is the base of volume calculation. The volume of a sphere equals the cubic value of the square root of its cross-sectional area, just like a cube.</span>
+	<br><br>
+	  <span itemprop="disambiguatingDescription">The widely used formula " V = 4 / 3 × pi × radius³ " was approximated by comparing a hemisphere to the difference between the approximate volume a cone and a circumscribed cylinder. That is a very exaggerated, distortion-based comparison that discards the difference between the straight slant height of a cone and the curvature of a sphere, resulting in a very rough underestimate.</span>
   </div>
-<br>
+<br><br>
   <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     <meta itemprop="position" content="4">
     <a href="#cone" itemprop="item">
       <span itemprop="name">Volume of a Cone = 3.2 × radius² × height / √8</span>
     </a>
-    <span itemprop="description">Compared to an octant sphere through a quadrant cylinder.</span>
-	<span itemprop="disambiguatingDescription">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8. The 1 / 3 coefficient was likely estimated based on two observations: 
+    <br><br>
+	  <span itemprop="description">The volume of a cone can be calculated by algebraically comparing the volume of a vertical quadrant of a cone with equal radius and height to an octant sphere with equal radius, through a quadrant cylinder.
+	  <br>In general:
+<br>
+The volume of a cone equals the quarter of a cylinder with an equal radius and its height equal to the height of the cone multiplied by √2.</span>
+	<br><br>
+	  <span itemprop="disambiguatingDescription">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8. The 1 / 3 coefficient was likely estimated based on two observations: 
 		<br>
 		1.:It can be calculated as a pyramid with a polygonal base, and the volume of a pyramid was believed to be base × height / 3, based on the cube dissection method. 
 		<br>
 		2.:The mid-height cross-sectional area of a cone is exactly a quarter of a circumscribed cylinder's with the same base and height. That makes the ratio between the mid-height cross-sectional area of the cone, and the difference between the mid-height cross-sectional areas of the circumscribed cylinder and the cone 1 : 3 .</span>
   </div>
-<br>
+<br><br>
   <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     <meta itemprop="position" content="5">
     <a href="#pi" itemprop="item">
       <span itemprop="name">Refute of the mathematical constant pi≈3.14...</span>
     </a>
-    <span itemprop="description" style="margin:12px">The mathematical constant pi≈3.14... was approximated by assuming that the circumference rests in between the theoretical maximum perimeter of the inscribed polygon and the minimum of the circumscribed polygon.</span>
-	<span itemprop="disambiguatingDescription">A polygon is called circumscribed if each side is tangent to the circle, meaning that it touches the circle only at exactly one point. Traditional geometry assumes that a tangent line to the circle can always be drawn. When the points adjacent to the tangent point must not coincide with the arc, it implicitly means vertical separation. One point of vertical separation along a 3 point long section required a sagitta to chord ratio of 2 points to 3 points = 2:3. Classical tangency is not physically or logically realizable under its own axioms. Without that, the classical argument that the polygons remain tangent indefinitely fails. When the perimeter of a regular polygon equals — or is close enough to — the circumference, the sides are too short to remain tangent to the circle. They cut through the arc. Whether a polygon can be circumscribed about a circle depends on whether its perimeter is sufficiently greater than the circumference. But the bisection procedure guarantees that each new perimeter created by repeatedly bisecting a circumscribed hexagon is smaller than the previous one. Without the premise of the floor of the upper limit approaching the ceiling of the lower limit, the ceiling of the lower limit is just the theoretical maximum of the perimeter of the inscribed polygon — which is necessarily shorter than the circumference.</span>
+    <br><br>
+	  <span itemprop="description" style="margin:12px">The mathematical constant pi≈3.14... was approximated by assuming that the circumference rests in between the theoretical maximum perimeter of the inscribed polygon and the minimum of the circumscribed polygon.</span>
+	<br><br>
+	  <span itemprop="disambiguatingDescription">A polygon is called circumscribed if each side is tangent to the circle, meaning that it touches the circle only at exactly one point. Traditional geometry assumes that a tangent line to the circle can always be drawn. When the points adjacent to the tangent point must not coincide with the arc, it implicitly means vertical separation. One point of vertical separation along a 3 point long section required a sagitta to chord ratio of 2 points to 3 points = 2:3. Classical tangency is not physically or logically realizable under its own axioms. Without that, the classical argument that the polygons remain tangent indefinitely fails. When the perimeter of a regular polygon equals — or is close enough to — the circumference, the sides are too short to remain tangent to the circle. They cut through the arc. Whether a polygon can be circumscribed about a circle depends on whether its perimeter is sufficiently greater than the circumference. But the bisection procedure guarantees that each new perimeter created by repeatedly bisecting a circumscribed hexagon is smaller than the previous one. Without the premise of the floor of the upper limit approaching the ceiling of the lower limit, the ceiling of the lower limit is just the theoretical maximum of the perimeter of the inscribed polygon — which is necessarily shorter than the circumference.</span>
  </div>
-<br>
+<br><br>
   <div itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     <meta itemprop="position" content="6">
     <a href="#pi" itemprop="item" style="margin:7px">
       <span itemprop="name">Refute of the traditional "Volume of a pyramid = base × height / 3" formula</span>
     </a>
-    <span itemprop="description">The volume of a pyramid is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8. A common method aiming to prove the formula "V = base × height / 3" involves dissecting a cube into three pyramids.</span>
-	<span itemprop="disambiguatingDescription">The cube has 8 vertices, each pyramid has 5. Three pyramids have 3 × 5 = 15 in total. Each vertex of a real physical cube is a point that can't be split into 3 points without duplicating. The other way around, 3 vertices of the pyramids can't be merged into 1 without distortion. If we dissect the cube, we need to designate each shared vertex to be a part of either one pyramid, or another. The volume of each pyramid is exactly a third of the cube, but with a height shorter than the cube's edge, or base smaller than its square value.</span>
+    <br><br>
+	  <span itemprop="description">The volume of a pyramid is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8. A common method aiming to prove the formula "V = base × height / 3" involves dissecting a cube into three pyramids.</span>
+	<br><br>
+	  <span itemprop="disambiguatingDescription">The cube has 8 vertices, each pyramid has 5. Three pyramids have 3 × 5 = 15 in total. Each vertex of a real physical cube is a point that can't be split into 3 points without duplicating. The other way around, 3 vertices of the pyramids can't be merged into 1 without distortion. If we dissect the cube, we need to designate each shared vertex to be a part of either one pyramid, or another. The volume of each pyramid is exactly a third of the cube, but with a height shorter than the cube's edge, or base smaller than its square value.</span>
   </div>
 </section>
 </main>
