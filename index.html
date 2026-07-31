@@ -4773,13 +4773,11 @@ Angles like 15°, 7.5°, and 3.75° can be derived from these using the classica
 <br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue" id="circumscribed_polygon_perimeter">
 <meta itemprop="description" content="Perimeter of a polygon circumscribed about a circle in terms of the diameter">
-<span itemprop="name">- a circumscribed n‑gon has a perimeter: </span>=
+<span itemprop="name">- The perimeter of a circumscribed n‑gon </span>=
 <meta itemprop="value" content="n × tan(180° / n) × d">
 <br><br>
 <math>
   <mrow>
-    <mi>P</mi><mo>(</mo><mi>n</mi><mo>)</mo>
-    <mo>=</mo>
     <mi>n</mi>
     <mo>&#x00D7;</mo>
     <mi>tan</mi>
@@ -4798,14 +4796,11 @@ Angles like 15°, 7.5°, and 3.75° can be derived from these using the classica
 <br><br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue" id="inscribed_polygon_perimeter">
 <meta itemprop="description" content="Perimeter of a polygon circumscribed about a circle in terms of the diameter">
-<span itemprop="name">- an inscribed n‑gon has a perimeter: </span>=
+<span itemprop="name">- The perimeter of an inscribed n‑gon </span>=
 <meta itemprop="value" content="n × sin(180° / n) × d">
-<br><br>
 <br><br>
 <math>
   <mrow>
-    <mi>P</mi><mo>(</mo><mi>n</mi><mo>)</mo>
-    <mo>=</mo>
     <mi>n</mi>
     <mo>&#x00D7;</mo>
     <mi>sin</mi>
@@ -4823,42 +4818,41 @@ Angles like 15°, 7.5°, and 3.75° can be derived from these using the classica
 </div>
 <br><br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue" id="pi-approximation">
-<span itemprop="description">Both approach 3.14...d as n approaches infinity, hence</span>
+<span itemprop="description">Both approach 3.14...d as n approaches infinity.</span>
 <br><br>
-<span itemprop="name">the approximate circumference to diameter ratio, based on the polygonal limits:</span>
+<span itemprop="name">The approximate circumference to diameter ratio, based on the polygonal limits:</span>
 <br><br>
 <meta itemprop="value" content="3sin(60°/n)n<pi<3sin(60°/n)n/cos(60°/n)">
 <br><br>
 <math>
   <mrow>
-    <mn>3</mn>
-    <mo>&#x00D7;</mo>
-    <mi>sin</mi>
-    <mo>(</mo>
-      <mfrac>
-        <mn>60</mn>
-        <mi>n</mi>
-      </mfrac>
-      <mo>&#x00B0;</mo>
-    <mo>)</mo>
-    <mo>&#x00D7;</mo>
     <mi>n</mi>
-    <mo>&lt;</mo>
-    <mi>&#x03C0;</mi>
-    <mo>&lt;</mo>
-    <mn>3</mn>
     <mo>&#x00D7;</mo>
     <mi>sin</mi>
     <mo>(</mo>
       <mfrac>
-        <mn>60</mn>
+        <mn>180</mn>
         <mi>n</mi>
       </mfrac>
       <mo>&#x00B0;</mo>
     <mo>)</mo>
+    <mo>&lt;</mo>
+    <mi>pi</mi>
+    <mo>&lt;</mo>
+	<mfrac>
+	<mrow>
+    <mi>n</mi>
     <mo>&#x00D7;</mo>
-    <mfrac>
-      <mi>n</mi>
+    <mi>sin</mi>
+    <mo>(</mo>
+      <mfrac>
+        <mn>180</mn>
+        <mi>n</mi>
+      </mfrac>
+      <mo>&#x00B0;</mo>
+    <mo>)</mo>
+	</mrow>
+    <mrow>
       <mi>cos</mi>
       <mo>(</mo>
         <mfrac>
@@ -4867,6 +4861,7 @@ Angles like 15°, 7.5°, and 3.75° can be derived from these using the classica
         </mfrac>
         <mo>&#x00B0;</mo>
       <mo>)</mo>
+	</mrow>
     </mfrac>
   </mrow>
 </math>
