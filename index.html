@@ -4688,6 +4688,7 @@ The verse of 1. Kings 7:23 in the Holy Bible suggests that some estimated it as 
 Historical records suggest that ancient Babylonians initially calculated it as 3, later they used 3.125; Egyptians estimated it as ( 16 / 9 )² ~ 3.16.</p>
 <br><br><br>
 <section id="Archimedes">
+<div id="Archimedes-method">
 <h4>Archimedes and the Illusion of Limits</h4>
 <br><br>
 <p itemprop="disambiguatingDescription">Archimedes’ method marked a turning point: instead of calculating the properties of the circle directly, he introduced an analytic process that relied on polygonal limits.
@@ -4735,6 +4736,7 @@ is a geometric tautology arising from symmetry.
 <br><br>
 Angles like 15°, 7.5°, and 3.75° can be derived from these using the classical half‑angle formula:</p>
 <br>
+<div id="half-angle_formula">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mi>sin</mi>
@@ -4765,26 +4767,120 @@ Angles like 15°, 7.5°, and 3.75° can be derived from these using the classica
 	</msqrt>
   </mrow>
 </math>
+</div>
 <br><br><br>
-<p itemprop="disambiguatingDescription">With sine and cosine calculable,
+<p>With sine and cosine calculable,</p>
 <br><br>
-- a circumscribed n‑gon has a perimeter:
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue" id="circumscribed_polygon_perimeter">
+<meta itemprop="description" content="Perimeter of a polygon circumscribed about a circle in terms of the diameter">
+<span itemprop="name">- a circumscribed n‑gon has a perimeter: </span>=
+<meta itemprop="value" content="n × tan(180° / n) × d">
 <br><br>
-P(n) = n × tan(180° / n) × r
+<math>
+  <mrow>
+    <mi>P</mi><mo>(</mo><mi>n</mi><mo>)</mo>
+    <mo>=</mo>
+    <mi>n</mi>
+    <mo>&#x00D7;</mo>
+    <mi>tan</mi>
+    <mo>(</mo>
+      <mfrac>
+        <mn>180</mn>
+        <mi>n</mi>
+      </mfrac>
+      <mo>&#x00B0;</mo>
+    <mo>)</mo>
+    <mo>&#x00D7;</mo>
+    <mi>diameter</mi>
+  </mrow>
+</math>
+</div>
 <br><br><br>
-- an inscribed n‑gon has a perimeter:
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue" id="inscribed_polygon_perimeter">
+<meta itemprop="description" content="Perimeter of a polygon circumscribed about a circle in terms of the diameter">
+<span itemprop="name">- an inscribed n‑gon has a perimeter: </span>=
+<meta itemprop="value" content="n × sin(180° / n) × d">
 <br><br>
-P(n) = n × 2 × sin(180° / n) × r
+<br><br>
+<math>
+  <mrow>
+    <mi>P</mi><mo>(</mo><mi>n</mi><mo>)</mo>
+    <mo>=</mo>
+    <mi>n</mi>
+    <mo>&#x00D7;</mo>
+    <mi>sin</mi>
+    <mo>(</mo>
+      <mfrac>
+        <mn>180</mn>
+        <mi>n</mi>
+      </mfrac>
+      <mo>&#x00B0;</mo>
+    <mo>)</mo>
+    <mo>&#x00D7;</mo>
+    <mi>diameter</mi>
+  </mrow>
+</math>
+</div>
 <br><br><br>
-Both approach 6.28...r as n approaches infinity.
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue" id="pi-approximation">
+<span itemprop="description">Both approach 3.14...d as n approaches infinity, hence</span>
+<br><br>
+<span itemprop="name">the approximate circumference to diameter ratio, based on the polygonal limits:</span>
+<br><br>
+<meta itemprop="value" content="3sin(60°/n)n<pi<3sin(60°/n)n/cos(60°/n)">
+<br><br>
+<math>
+  <mrow>
+    <mn>3</mn>
+    <mo>&#x00D7;</mo>
+    <mi>sin</mi>
+    <mo>(</mo>
+      <mfrac>
+        <mn>60</mn>
+        <mi>n</mi>
+      </mfrac>
+      <mo>&#x00B0;</mo>
+    <mo>)</mo>
+    <mo>&#x00D7;</mo>
+    <mi>n</mi>
+    <mo>&lt;</mo>
+    <mi>&#x03C0;</mi>
+    <mo>&lt;</mo>
+    <mn>3</mn>
+    <mo>&#x00D7;</mo>
+    <mi>sin</mi>
+    <mo>(</mo>
+      <mfrac>
+        <mn>60</mn>
+        <mi>n</mi>
+      </mfrac>
+      <mo>&#x00B0;</mo>
+    <mo>)</mo>
+    <mo>&#x00D7;</mo>
+    <mfrac>
+      <mi>n</mi>
+      <mi>cos</mi>
+      <mo>(</mo>
+        <mfrac>
+          <mn>60</mn>
+          <mi>n</mi>
+        </mfrac>
+        <mo>&#x00B0;</mo>
+      <mo>)</mo>
+    </mfrac>
+  </mrow>
+</math>
+</div>
 <br><br><br>
-But the entire method relies on unproven assumptions, that are never demonstrated; they're simply taken for granted.
+<p itemprop="disambiguatingDescription">But the entire method relies on unproven assumptions, that are never demonstrated; they're simply taken for granted.
 <br>
 And those assumptions are false once the polygon has too many sides.
+</div>
 <br><br><br>
-<b>Why the Assumptions Fail</b>
+<div id="Archimedes-method-refute">
+<h3>Why the Assumptions Fail</h3>
 <br><br>
-The math world loves the idea that a regular polygon with a side count approaching infinity “collapses into a circle.” It’s a charming picture — but it is highly theoretical and ultimately unrealistic for two main reasons:</p>
+<p itemprop="disambiguatingDescription">The math world loves the idea that a regular polygon with a side count approaching infinity “collapses into a circle.” It’s a charming picture — but it is highly theoretical and ultimately unrealistic for two main reasons:</p>
 <br>
 <ul style="margin:6px" itemprop="disambiguatingDescription">
     <li>A polygon with an infinite side count is still oblong; not round. That distinguishes the polygon from the circle. Treating the two as interchangeable is a category error disguised as an approximate.</li>
