@@ -36,7 +36,7 @@
       "alignmentType": "educationalSubject",
       "educationalFramework": "Geometric framework",
       "targetName": "Core Geometric System ™",
-      "targetUrl": "https://basic-geometry.pages.dev"
+      "targetUrl": "https://basic-geometry.github.io"
     },
     "educationalLevel": "from basic to advanced",
 	"headline": "Featuring The Core Geometric System™",
@@ -84,7 +84,7 @@
 	},
     "usageInfo": {
 		"text": "One side of the triangle has to be shorter than the sum of the other two sides.",
-		"url": "https://basic-geometry.pages.dev#triangle"
+		"url": "https://basic-geometry.github.io#triangle"
 	}
 	},
     
@@ -123,7 +123,7 @@
 	},
       "usageInfo": {
 		  "text": "For regular polygons only.",
-		  "url": "https://basic-geometry.pages.dev#polygon"
+		  "url": "https://basic-geometry.github.io#polygon"
 	  }
      },
     
@@ -159,7 +159,7 @@
 		"required": ["area"]
 	},
 			"usageInfo": {
-				"url": "https://basic-geometry.pages.dev#circle"
+				"url": "https://basic-geometry.github.io#circle"
 			}
 		},
 
@@ -184,7 +184,7 @@
 		"description": "Text explanation of the geometric derivation."
 	},
 	"usageInfo": {
-			"url": "https://basic-geometry.pages.dev#circle"
+			"url": "https://basic-geometry.github.io#circle"
 		}
 	},
 
@@ -205,9 +205,9 @@
 		"description": "Text explanation of the proof of the area."
 	},
 	"usageInfo": {
-		"url": "https://basic-geometry.pages.dev#circle_area_proof",
+		"url": "https://basic-geometry.github.io#circle_area_proof",
 		"relatedUrls": [
-      "https://basic-geometry.pages.dev#circle"
+      "https://basic-geometry.github.io#circle"
 		]
 	}
 	},
@@ -227,11 +227,11 @@
 		"description": "Text explanation of the traditional formula."
 	},
 	"usageInfo": {
-    "url": "https://cgs-mcp-server-authless.gmac4247-ac0.workers.dev#circle_area_proof",
+    "url": "https://basic-geometry.github.io#circle_area_proof",
     "relatedUrls": [
-		"https://basic-geometry.pages.dev#circle",
-		"https://basic-geometry.pages.dev#pi",
-		"https://basic-geometry.pages.dev#summary"
+		"https://basic-geometry.github.io#circle",
+		"https://basic-geometry.github.io#pi",
+		"https://basic-geometry.github.io#summary"
     ]
 	}
 	},
@@ -268,9 +268,9 @@
 		"required": ["circumference"]
 	},
   "usageInfo": {
-    "url": "https://basic-geometry.pages.dev#circumference",
+    "url": "https://basic-geometry.github.io#circumference",
     "relatedUrls": [
-      "https://basic-geometry.pages.dev#circle"
+      "https://basic-geometry.github.io#circle"
     ]
       }
     },
@@ -298,9 +298,9 @@
   "description": "Text explanation of the geometric derivation."
 	},
 	"usageInfo": {
-		"url": "https://basic-geometry.pages.dev#circumference",
+		"url": "https://basic-geometry.github.io#circumference",
 		"relatedUrls": [
-			"https://basic-geometry.pages.dev#circle"
+			"https://basic-geometry.github.io#circle"
     ]
 	}
 	  },
@@ -332,10 +332,10 @@
 		"description": "Text explanation of why the mathematical constant 3.14... named pi is a fundamentally flawed theoretical approximate, and shall be replaced by the true circumference to diameter ratio: 3.2."
 	},
 	"usageInfo": {
-    "url": "https://basic-geometry.pages.dev#pi",
+    "url": "https://basic-geometry.github.io#pi",
     "relatedUrls": [
-		"https://basic-geometry.pages.dev#circle",
-		"https://basic-geometry.pages.dev#summary"
+		"https://basic-geometry.github.io#circle",
+		"https://basic-geometry.github.io#summary"
     ]
 	}
 	},
@@ -375,9 +375,9 @@
 		"required": ["area"]
 	},
       "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#circle-segment",
+		  "url": "https://basic-geometry.github.io#circle-segment",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#circle"
     ]
 	  }
     },
@@ -415,9 +415,9 @@
 		"required": ["area"]
 	},
         "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#circle-segment",
+		  "url": "https://basic-geometry.github.io#circle-segment",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#circle"
     ]
 		}
      },
@@ -457,9 +457,9 @@
 		"required": ["area"]
 	},
         "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#circle-segment",
+		  "url": "https://basic-geometry.github.io#circle-segment",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#circle"
     ]
 	  }
      },
@@ -499,9 +499,9 @@
 		"required": ["area"]
 	},
         "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#cone",
+		  "url": "https://basic-geometry.github.io#cone",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#circle"
     ]
 	  }
      },
@@ -538,9 +538,9 @@
 		"required": ["volume"]
 	},
       "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#sphere",
+		  "url": "https://basic-geometry.github.io#sphere",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#circle"
 		  ]
 	  }
     },
@@ -561,9 +561,9 @@
 			"description": "Text explanation of the geometric derivation."
 		},
 		"usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#sphere",
+		  "url": "https://basic-geometry.github.io#sphere",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#circle"
 		  ]
 		}
 	},
@@ -583,12 +583,12 @@
 				"description": "Text explanation of why the traditional volume of a sphere = 4 / 3 × pi × radius³ formula is wrong."
 			},
 			"usageInfo": {
-				"url": "https://basic-geometry.pages.dev#ancient_sphere_volume_formula",
+				"url": "https://basic-geometry.github.io#ancient_sphere_volume_formula",
 				"relatedUrls": [
-					"https://basic-geometry.pages.dev#sphere",
-					"https://basic-geometry.pages.dev#circle",
-					"https://basic-geometry.pages.dev#pi",
-					"https://basic-geometry.pages.dev#summary"
+					"https://basic-geometry.github.io#sphere",
+					"https://basic-geometry.github.io#circle",
+					"https://basic-geometry.github.io#pi",
+					"https://basic-geometry.github.io#summary"
 				]
 			}
 		},
@@ -628,10 +628,10 @@
 		"required": ["volume"]
 	},
       "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#cone",
+		  "url": "https://basic-geometry.github.io#cone",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#sphere",
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#sphere",
+			  "https://basic-geometry.github.io#circle"
 		  ]
 		  }
      },
@@ -653,10 +653,10 @@
 				"description": "Text explanation of the geometric derivation."
 			},
 			"usageInfo": {
-				"url": "https://basic-geometry.pages.dev#cone",
+				"url": "https://basic-geometry.github.io#cone",
 				"relatedUrls": [
-					"https://basic-geometry.pages.dev#sphere",
-					"https://basic-geometry.pages.dev#circle"
+					"https://basic-geometry.github.io#sphere",
+					"https://basic-geometry.github.io#circle"
 				]
 			}
 	  },
@@ -678,14 +678,14 @@
 				"description": "Text explanation of why the volume of a cone is not base × height / 3."
 			},
 			"usageInfo": {
-				"url": "https://basic-geometry.pages.dev#ancient_cone_volume_formula",
+				"url": "https://basic-geometry.github.io#ancient_cone_volume_formula",
 				"relatedUrls": [
-					"https://basic-geometry.pages.dev#ancient_pyramid_volume_formula",
-					"https://basic-geometry.pages.dev#pyramid",
-					"https://basic-geometry.pages.dev#cone",
-					"https://basic-geometry.pages.dev#sphere",
-					"https://basic-geometry.pages.dev#circle",
-					"https://basic-geometry.pages.dev#summary"
+					"https://basic-geometry.github.io#ancient_pyramid_volume_formula",
+					"https://basic-geometry.github.io#pyramid",
+					"https://basic-geometry.github.io#cone",
+					"https://basic-geometry.github.io#sphere",
+					"https://basic-geometry.github.io#circle",
+					"https://basic-geometry.github.io#summary"
 				]
 			}
 		},
@@ -731,11 +731,11 @@
 		"required": ["volume"]
 	},
       "usageInfo": {
-		  "url": "https://cgs-mcp-server-authless.gmac4247-ac0.workers.dev#pyramid",
+		  "url": "https://basic-geometry.github.io#pyramid",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#cone",
-			  "https://basic-geometry.pages.dev#sphere",
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#cone",
+			  "https://basic-geometry.github.io#sphere",
+			  "https://basic-geometry.github.io#circle"
 		  ]
 	  }
      },
@@ -754,11 +754,11 @@
 				"description": "Text explanation of the geometric derivation."
 			},
 			"usageInfo": {
-				"url": "https://basic-geometry.pages.dev#pyramid",
+				"url": "https://basic-geometry.github.io#pyramid",
 				"relatedUrls": [
-					"https://basic-geometry.pages.dev#cone",
-					"https://basic-geometry.pages.dev#sphere",
-					"https://basic-geometry.pages.dev#circle"
+					"https://basic-geometry.github.io#cone",
+					"https://basic-geometry.github.io#sphere",
+					"https://basic-geometry.github.io#circle"
 				]
 			}
 		},
@@ -779,13 +779,13 @@
 				"description": "Text explanation of why the volume of a pyramid can't be base × height / 3."
 			},
 			"usageInfo": {
-				"url": "https://basic-geometry.pages.dev#ancient_pyramid_volume_formula",
+				"url": "https://basic-geometry.github.io#ancient_pyramid_volume_formula",
 				"relatedUrls": [
-					"https://basic-geometry.pages.dev#pyramid",
-					"https://basic-geometry.pages.dev#cone",
-					"https://basic-geometry.pages.dev#sphere",
-					"https://basic-geometry.pages.dev#circle",
-					"https://basic-geometry.pages.dev#summary"
+					"https://basic-geometry.github.io#pyramid",
+					"https://basic-geometry.github.io#cone",
+					"https://basic-geometry.github.io#sphere",
+					"https://basic-geometry.github.io#circle",
+					"https://basic-geometry.github.io#summary"
 				]
 			}
 		},
@@ -836,12 +836,12 @@
 		"required": ["volume"]
 	},
       "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#frustum_pyramid",
+		  "url": "https://basic-geometry.github.io#frustum_pyramid",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#pyramid",
-			  "https://basic-geometry.pages.dev#cone",
-			  "https://basic-geometry.pages.dev#sphere",
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#pyramid",
+			  "https://basic-geometry.github.io#cone",
+			  "https://basic-geometry.github.io#sphere",
+			  "https://basic-geometry.github.io#circle"
 		  ]
 	  }
      },
@@ -887,13 +887,13 @@
 		"required": ["volume"]
 	},
       "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#frustum_cone",
+		  "url": "https://basic-geometry.github.io#frustum_cone",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#frustum_pyramid",
-			  "https://basic-geometry.pages.dev#pyramid",
-			  "https://basic-geometry.pages.dev#cone",
-			  "https://basic-geometry.pages.dev#sphere",
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#frustum_pyramid",
+			  "https://basic-geometry.github.io#pyramid",
+			  "https://basic-geometry.github.io#cone",
+			  "https://basic-geometry.github.io#sphere",
+			  "https://basic-geometry.github.io#circle"
 		  ]
 	  }
      },
@@ -930,12 +930,12 @@
 		"required": ["volume"]
 	},
       "usageInfo": {
-		  "url": "https://basic-geometry.pages.dev#tetrahedron",
+		  "url": "https://basic-geometry.github.io#tetrahedron",
 		  "relatedUrls": [
-			  "https://basic-geometry.pages.dev#pyramid",
-			  "https://basic-geometry.pages.dev#cone",
-			  "https://basic-geometry.pages.dev#sphere",
-			  "https://basic-geometry.pages.dev#circle"
+			  "https://basic-geometry.github.io#pyramid",
+			  "https://basic-geometry.github.io#cone",
+			  "https://basic-geometry.github.io#sphere",
+			  "https://basic-geometry.github.io#circle"
 		  ]
 	  }
     }
