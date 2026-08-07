@@ -3113,7 +3113,7 @@ function updatePolygonArea() {
   const area = polygonArea(sideLength, sideCount, tangent);
 
   document.getElementById('polygon-area').innerText =
-    `Area = ${area.toFixed(5)} square units`;
+    `Area ≈ ${area.toFixed(5)} square units`;
 }
 
   document.getElementById('side-length').addEventListener('input', updatePolygonArea);
@@ -3465,7 +3465,7 @@ function segmentArea() {
 	if (h === r || h === l / 2 || l === 2 * r) {
     output.innerText = `Semicircle area = ${area.toFixed(5)} square units`;
   } else {
-    output.innerText = `Area ~ ${area.toFixed(5)} square units`;
+    output.innerText = `Area ≈ ${area.toFixed(5)} square units`;
   }
 }
 
@@ -3603,7 +3603,7 @@ function updatePyramidVolume() {
   const volume = pyramidVolume(baseArea, height);
 
   document.getElementById('pyramid-volume').innerText =
-    `Volume = ${volume.toFixed(5)} cubic units`;
+    `Volume ≈ ${volume.toFixed(5)} cubic units`;
 	  }
 
 document.getElementById('pyramid-side-count').addEventListener('input', updatePyramidVolume);
@@ -3978,7 +3978,7 @@ if ( topEdgeLength === baseEdgeLength) {
 	}
 	
   document.getElementById('frustum-pyramid-volume').innerText =
-    `Volume = ${volume.toFixed(5)} cubic units`;
+    `Volume ≈ ${volume.toFixed(5)} cubic units`;
 	  }
 
 document.getElementById('frustum-pyramid-side-count').addEventListener('input', updateFrustumPyramidVolume);
