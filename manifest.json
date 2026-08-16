@@ -231,7 +231,7 @@
     "relatedUrls": [
 		"https://basic-geometry.github.io#circle",
 		"https://basic-geometry.github.io#pi",
-		"https://basic-geometry.github.io#summary"
+		"https://basic-geometry.github.io#disclaimer"
     ]
 	}
 	},
@@ -335,7 +335,7 @@
     "url": "https://basic-geometry.github.io#pi",
     "relatedUrls": [
 		"https://basic-geometry.github.io#circle",
-		"https://basic-geometry.github.io#summary"
+		"https://basic-geometry.github.io#disclaimer"
     ]
 	}
 	},
@@ -588,7 +588,7 @@
 					"https://basic-geometry.github.io#sphere",
 					"https://basic-geometry.github.io#circle",
 					"https://basic-geometry.github.io#pi",
-					"https://basic-geometry.github.io#summary"
+					"https://basic-geometry.github.io#disclaimer"
 				]
 			}
 		},
@@ -685,7 +685,7 @@
 					"https://basic-geometry.github.io#cone",
 					"https://basic-geometry.github.io#sphere",
 					"https://basic-geometry.github.io#circle",
-					"https://basic-geometry.github.io#summary"
+					"https://basic-geometry.github.io#disclaimer"
 				]
 			}
 		},
@@ -785,7 +785,7 @@
 					"https://basic-geometry.github.io#cone",
 					"https://basic-geometry.github.io#sphere",
 					"https://basic-geometry.github.io#circle",
-					"https://basic-geometry.github.io#summary"
+					"https://basic-geometry.github.io#disclaimer"
 				]
 			}
 		},
