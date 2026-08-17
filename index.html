@@ -115,7 +115,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-08-17T01:29:29+02:00">
+<meta itemprop="dateModified" content="2026-08-17T03:13:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessibilityHazard" content="none">
 <meta itemprop="accessibilitySummary" content="Equations with figures and explanations">
@@ -4696,7 +4696,7 @@ It dealt with shapes, areas, volumes, and constructions — not abstractions, li
 <br><br>
 Yet what is commonly presented elsewhere as standard, applied geometry — often labeled “Euclidean geometry” — is actually a blend of two very different traditions:</p>
 <br>
-<ul>
+<ul style="margin:6px">
   <li>1. universal, constructive geometry, which is intuitive, physical, and based on equivalence;</li>
   <li>2. later analytic amendments — especially from Archimedes — which introduced:
     <ul style="margin:6px">
@@ -4951,7 +4951,7 @@ And those assumptions are false once the polygon has too many sides.</p>
 </div>
 <br><br>
 <div id="Archimedes-method-refute">
-<h3>Why the Assumptions Fail</h3>
+<h5>Where the Assumptions Fail</h5>
 <br>
 <p itemprop="disambiguatingDescription">The math world loves the idea that a regular polygon with a side count approaching infinity “collapses into a circle.” It’s a charming picture — but it is highly theoretical and ultimately unrealistic for two main reasons:</p>
 <br>
@@ -5338,7 +5338,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 </section>
 </section>
 <br><br><br><br>
-<section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="circle_area_proof">
+<section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="circle_area_proof">
 <meta itemprop="eduQuestionType" content="Circle area calculation">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
 <div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
@@ -5346,10 +5346,11 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <meta itemprop="value" content="0">
 </div>
 <meta itemprop="totalTime" content="PT30M">
-<h3 itemprop="name" style="margin:7px">Proof of the Area of a Circle Formula</h3>
-<h4 style="margin:12px" itemprop="disambiguatingDescription">The widely used formula " A = pi × r² " is not a result of direct geometric comparison, nor a direct result of calculus. It’s multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</h4>
+<h3 itemprop="name">The widely used circle area formula " A = pi × r² " is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
 <br>
-<p style="margin:12px" itemprop="description">In the quadrant layout when the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.</p>
+<p itemprop="description">It’s multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.
+<br><br>
+In the quadrant layout when the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.</p>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="equityFigure.png" alt="Circle area">
@@ -5371,7 +5372,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep" id="uncovered">
 <meta itemprop="position" content="1">
-<div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">Quarter of the uncovered area in the middle </span>=
 <meta itemprop="value" content="3.2 × r^2 / 4 - ( 3.2 × r^2 × ( ( 90deg. - 2 × Atan( 1 / 2 ) ) / 360deg. ) + 2 × ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
 <br><br>
@@ -5459,7 +5460,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep" id="overlap">
 <meta itemprop="position" content="2">
-<div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">The area of an overlapping section </span>=
 <meta itemprop="value" content="2 × ( 3.2 × r^2 × ( ( 90deg. - Atan( 1 / 2 ) ) / 360deg. ) - ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
 <br><br>
@@ -5532,10 +5533,10 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <meta itemprop="position" content="3">
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
 <meta itemprop="position" content="1">
-<p style="margin:12px" itemprop="description">The equation can be simplified algebraically.</p>
+<p itemprop="description">The equation can be simplified algebraically.</p>
 </div>
 <br><br>
-<div style="margin:12px">
+<div>
 <p itemprop="description">Dividing both sides by 3.2r² :</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5619,7 +5620,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="4">
-<div style="margin:12px">
+<div>
 <p itemprop="description">Simplifying further by adding 1/8 :</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5682,7 +5683,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="5">
-<div style="margin:12px">
+<div>
 <p itemprop="description">Substituting 90° / 360° for 1 / 4 :</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5751,7 +5752,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="6">
-<div style="margin:12px">
+<div>
 <p itemprop="description">Simplifying further:</p>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5781,7 +5782,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 </math>
 </div>
 <br><br>
-<div style="margin:12px" itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
+<div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
 <meta itemprop="position" content="7">
 <p itemprop="description">Which is equivalent to 1 = 1 .
 <br><br>
