@@ -4591,7 +4591,7 @@ function updateFrustumConeVolume() {
 	const baseRadius = parseFloat(document.getElementById('frustum-cone-base-radius').value);
 	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
 	const height = parseFloat(document.getElementById('frustum-cone-height').value);
-	const cylinderVolume = baseArea * height;
+	const cylinderVolume = 3.2 * baseRadius ** 2 * height;
 	const volume = frustumConeVolume(baseRadius, topRadius, height);
 	
   if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height) || baseRadius === 0 || topRadius === 0) {
