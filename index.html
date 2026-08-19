@@ -4331,7 +4331,6 @@ The term inside the parentheses is the algebraic quotient:</span>
 </math>
 </div>
 </div>
-</div>
 <br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="description">Replacing the term inside the fraction gives:</span>
@@ -4452,7 +4451,8 @@ if ( topEdgeLength > baseEdgeLength) {
 	const topArea = (sideCount / 4) * (topEdgeLength ** 2) / tangent;
 	const root = Math.sqrt(baseArea * topArea);
 	const volume = frustumPyramidVolume(baseArea, topArea, root, height);
-
+	const solidVolume = baseArea * height;
+	
 
 if ( topEdgeLength === baseEdgeLength) {
     document.getElementById('frustum-pyramid-volume').innerText = 
@@ -4591,7 +4591,9 @@ function updateFrustumConeVolume() {
 	const baseRadius = parseFloat(document.getElementById('frustum-cone-base-radius').value);
 	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
 	const height = parseFloat(document.getElementById('frustum-cone-height').value);
-
+	const cylinderVolume = baseArea * height;
+	const volume = frustumConeVolume(baseRadius, topRadius, height);
+	
   if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height) || baseRadius === 0 || topRadius === 0) {
     document.getElementById('frustum-cone-volume').innerText = '';
     return;
@@ -4601,9 +4603,13 @@ if ( topRadius > baseRadius) {
     document.getElementById('frustum-cone-volume').innerText = 'Let the larger end be the base.';
     return;
 }
-	
-	const volume = frustumConeVolume(baseRadius, topRadius, height);
-	
+
+if ( topRadius === baseRadius) {
+    document.getElementById('frustum-cone-volume').innerText = 
+	`Volume of cylinder: ${cylinderVolume.toFixed(5)} cubic units`;
+    return;
+}
+		
 	
   document.getElementById('frustum-cone-volume').innerText =
     `Volume = ${volume.toFixed(5)} cubic units`;
