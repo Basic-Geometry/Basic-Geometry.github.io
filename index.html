@@ -328,7 +328,7 @@ The ratio between the radius and the side length is calculable.</span>
 <mrow>
 <mo>(</mo>
 <mn>2</mn>
-<mo>×</mo>
+<mo>&#x2062;</mo>
 <mrow>
 <mo>(</mo>
 <mfrac>
@@ -3341,7 +3341,7 @@ That is called a chord.</span>
 	</mrow>
 		<mo>)</mo>
 	</mrow>
-<mo>×</mo>
+<mo>&#x2062;</mo>
    <mrow>
 	   <mo>(</mo>
       <mi>r</mi>
@@ -3660,7 +3660,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 			<mi>A</mi>
 			<mi>base</mi>
 		</msub>
-		<mo>×</mo>
+		<mo>&#x2062;</mo>
 		<msub>
 			<mi>H</mi>
 			<mi>pyramid</mi>
@@ -3677,7 +3677,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 			<mi>A</mi>
 			<mi>top</mi>
 		</msub>
-		<mo>×</mo>
+		<mo>&#x2062;</mo>
 		<msub>
 			<mi>H</mi>
 			<mi>tip</mi>
@@ -3714,7 +3714,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 			<mi>A</mi>
 			<mi>base</mi>
 		</msub>
-		<mo>×</mo>
+		<mo>&#x2062;</mo>
 		<msub>
 			<mi>H</mi>
 			<mi>pyramid</mi>
@@ -3724,7 +3724,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 			<mi>A</mi>
 			<mi>top</mi>
 		</msub>
-		<mo>×</mo>
+		<mo>&#x2062;</mo>
 		<msub>
 			<mi>H</mi>
 			<mi>tip</mi>
@@ -4166,7 +4166,8 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 </math>
 </div>
 </div>
-<br><div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<br>
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="7">
 <span itemprop="description">Apply the Algebraic Identity (a³ - b³).
 <br>
@@ -4243,7 +4244,7 @@ The term inside the parentheses is the algebraic quotient:</span>
 </div>
 </div>
 <br><br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="8">
 <span itemprop="description">Convert back to area terms:</span>
 <br><br>
@@ -4374,7 +4375,7 @@ The term inside the parentheses is the algebraic quotient:</span>
 <mi>A</mi>
 <mi>base</mi>
 </msub>
-<mo>×</mo>
+<mo>&#x2062;</mo>
 <msub>  
 <mi>A</mi>
 <mi>top</mi>
@@ -4512,7 +4513,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <mfrac>
 	<mrow>
 		<mn>3.2</mn>
-<mo>×</mo>
+<mo>&#x2062;</mo>
       <mi>H</mi>
 	</mrow>
 <msqrt>
@@ -4611,13 +4612,8 @@ if ( topRadius > baseRadius) {
     return;
 }
 	
-	const volume = frustumConeVolume(baseArea, topArea, reciprocal, height);
-
-if ( topRadius === baseRadius) {
-    document.getElementById('frustum-cone-volume').innerText = 
-	`Volume of cylinder: ${cylinderVolume.toFixed(5)} cubic units`;
-    return;
-}
+	const volume = frustumConeVolume(baseRadius, topRadius, height);
+	
 	
   document.getElementById('frustum-cone-volume').innerText =
     `Volume = ${volume.toFixed(5)} cubic units`;
@@ -4774,7 +4770,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
       <mi>3</mi>
       <mn>4</mn>
 		</mfrac>
-		<mo>×</mo>
+		<mo>&#x2062;</mo>
 		<msup>
       <mi>edge</mi>
       <mn>2</mn>
@@ -4792,7 +4788,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 			</mrow>
       <mn>4</mn>
 		</mfrac>
-	<mo>×</mo>
+	<mo>&#x2062;</mo>
 	<msup>
 <mi>edge</mi>
 <mn>2</mn>
@@ -4817,14 +4813,14 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <msup>
 <mrow>
 <mo>(</mo>
-<mi>edge</mi>
-    <mo>×</mo>
-      <mfrac>
+<mfrac>
 		  <msqrt>
 		<mn>3</mn>
 	  </msqrt>
 	<mn>2</mn>
-	  </mfrac>
+</mfrac>
+	<mo>&#x2062;</mo>
+	<mi>edge</mi>
 	<mo>)</mo>
 </mrow>
 	<mn>2</mn>
@@ -4833,14 +4829,14 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <msup>
 <mrow>
 <mo>(</mo>
-<mi>edge</mi>
-    <mo>×</mo>
-      <mfrac>
+<mfrac>
 		  <msqrt>
 		<mn>3</mn>
 	  </msqrt>
 	<mn>6</mn>
-	  </mfrac>
+</mfrac>
+	<mo>&#x2062;</mo>
+	<mi>edge</mi>
 	<mo>)</mo>
 </mrow>
 	<mn>2</mn>
@@ -4863,11 +4859,6 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <mrow>
 <msqrt>
 <mrow>
-<msup>
-<mi>edge</mi>
-	<mn>2</mn>
- </msup>
-<mo>×</mo>
 	<mo>(</mo>
 	<mfrac>
 	<mn>3</mn>
@@ -4879,6 +4870,11 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 	<mn>36</mn>
 </mfrac>
 <mo>)</mo>
+	<mo>&#x2062;</mo>
+<msup>
+<mi>edge</mi>
+	<mn>2</mn>
+ </msup>
 </mrow>
 </msqrt>
 </mrow>
@@ -4892,7 +4888,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 </mfrac>
 </mrow>
 	</msqrt>
-	<mo>×</mo>
+	<mo>&#x2062;</mo>
 <mi>edge</mi>
 </mrow>
    </mrow>
