@@ -4588,28 +4588,27 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 
 function updateFrustumConeVolume() {
 
-	const baseRadius = parseFloat(document.getElementById('frustum-cone-base-radius').value);
-	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
-	const height = parseFloat(document.getElementById('frustum-cone-height').value);
-	const cylinderVolume = 3.2 * baseRadius ** 2 * height;
-	const volume = frustumConeVolume(baseRadius, topRadius, height);
-	
-  if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height) || baseRadius === 0 || topRadius === 0) {
+	if (isNaN(baseRadius) || isNaN(topRadius) || isNaN(height) || baseRadius === 0 || topRadius === 0) {
     document.getElementById('frustum-cone-volume').innerText = '';
     return;
   }
 
-if ( topRadius > baseRadius) {
+	if ( topRadius > baseRadius) {
     document.getElementById('frustum-cone-volume').innerText = 'Let the larger end be the base.';
     return;
-}
+	}
+	
+	const baseRadius = parseFloat(document.getElementById('frustum-cone-base-radius').value);
+	const topRadius = parseFloat(document.getElementById('frustum-cone-top-radius').value);
+	const height = parseFloat(document.getElementById('frustum-cone-height').value);
+	const volume = frustumConeVolume(baseRadius, topRadius, height);
+	const cylinderVolume = 3.2 * baseRadius ** 2 * height;
 
-if ( topRadius === baseRadius) {
-    document.getElementById('frustum-cone-volume').innerText = 
-	`Volume of cylinder: ${cylinderVolume.toFixed(5)} cubic units`;
-    return;
-}
-		
+	if ( topRadius === baseRadius) {
+		document.getElementById('frustum-cone-volume').innerText = 
+			`Volume of cylinder: ${cylinderVolume.toFixed(5)} cubic units`;
+		return;
+	}
 	
   document.getElementById('frustum-cone-volume').innerText =
     `Volume = ${volume.toFixed(5)} cubic units`;
