@@ -4475,7 +4475,19 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="frustum_cone">
 <meta itemprop="eduQuestionType" content="Horizontal frustum cone volume calculation">
 <meta itemprop="target" content="https://basic-geometry.github.io?q={frustum_cone_radius_top=1_bottom=2_height=3_volume=?}">
-<h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
+<div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
+<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
+<meta itemprop="currency" content="USD">
+<meta itemprop="value" content="0">
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Exact frustum cone volume formula">
+<meta itemprop="name" content="Volume of a frustum cone">
+<meta itemprop="value" content="3.2×height×(baseRadius²+topRadius²+baseRadius×topRadius)">
+</div>
+</div>
+<meta itemprop="totalTime" content="PT30M"><h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
 <br>
 	<figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
     <img class="center-fit" src="frustumCone.jpeg" alt="Frustum cone">
@@ -4495,7 +4507,98 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <meta itemprop="contentUrl" content="https://basic-geometry.github.io/frustumCone.jpeg">
 </figure>
 <br>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="1">
+<span itemprop="description" style="margin:12px">The volume of a frustum cone can be calculated by subtracting the missing tip from the theoretical full cone.</span>
+<br>
+<div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Base area of a tetrahedron: Exact equilateral triangle formula">
+<span itemprop="name">V </span>=
+<meta itemprop="value" content="3.2×height×(baseRadius²/(1-topRadius/baseRadius)-(topRadius²/(1-topRadius/baseRadius)-topRadius²))">
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mfrac>
+	<mrow>
+		<mn>3.2</mn>
+<mo>×</mo>
+      <mi>H</mi>
+	</mrow>
+	<msqrt>
+        <mn>8</mn>
+      </msqrt>
+</mfrac>
+	<mo>×</mo>
+      <mo>(</mo>
+      <mfrac>
+        <mrow>
+      <msup>
+			<msub>  
+        <mi>r</mi>
+			<mi>(bottom)</mi>
+			</msub>
+        <mn>2</mn>
+	  </msup>
+		</mrow>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+          <mfrac>
+            <msub>  
+        <mi>r</mi>
+			<mi>(top)</mi>
+			</msub>
+            <msub>  
+        <mi>r</mi>
+			<mi>(bottom)</mi>
+			</msub>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>-</mo>
+      <mo>(</mo>
+      <mfrac>
+        <mrow>
+      <msup>
+			<msub>  
+        <mi>r</mi>
+			<mi>(top)</mi>
+			</msub>
+        <mn>2</mn>
+	  </msup>
+		</mrow>
+        <mrow>
+          <mn>1</mn>
+          <mo>-</mo>
+<mfrac>
+            <msub>  
+        <mi>r</mi>
+			<mi>(top)</mi>
+			</msub>
+            <msub>  
+        <mi>r</mi>
+			<mi>(bottom)</mi>
+			</msub>
+          </mfrac>
+        </mrow>
+      </mfrac>
+      <mo>-</mo>
+      <msup>
+			<msub>  
+        <mi>r</mi>
+			<mi>(top)</mi>
+			</msub>
+        <mn>2</mn>
+	  </msup>
+      <mo>)</mo>
+      <mo>)</mo>
+</mrow>
+  </math>
+</div>
+</div>
+<br>
+<br><br><br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
+<span itemprop="description">The volume of a frustum cone can also be calculated via a simplified formula.</span>
 <span itemprop="name">V </span>=
 <meta itemprop="value" content="3.2 × height × ( baseRadius^2 + topRadius^2 + baseRadius × topRadius ) / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
