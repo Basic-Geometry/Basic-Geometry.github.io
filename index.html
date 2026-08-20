@@ -3394,7 +3394,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact regular polygon area formula">
 <meta itemprop="name" content="Area of a regular polygon">
-<meta itemprop="value" content="sideCount / 4 × ctg( 180deg. / sideCount ) × sideLength^2">
+<meta itemprop="value" content="sideCount / 4 × ctg( 180° / sideCount ) × sideLength^2">
 </div>
 </div>
 <h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
@@ -3463,6 +3463,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </div>
 </div>
 </div>
+<br><br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact pyramid volume formula">
 <span itemprop="name">V<sub>pyramid</sub></span>=
@@ -3581,9 +3582,9 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Detailed exact regular frustum pyramid volume formula">
-<meta itemprop="name" content="Volume of of a regular frustum pyramid">
-<meta itemprop="value" content="height / 8^(1/2) × sideCount / 4 × ctg( 180deg. / sideCount ) × (baseEdge^2 / (1 - topEdge/baseEdge) - (topEdge^2 / (1 - topEdge/baseEdge) - 1))">
+<meta itemprop="description" content="Exact pyramid volume formula">
+<meta itemprop="name" content="Volume of a pyramid">
+<meta itemprop="value" content="base area × height / 8^(1/2)">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -3613,7 +3614,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Volume of a frustum pyramid">
 <span itemprop="name">V<sub>frustum</sub> </span>=
-<meta itemprop="value" content="(baseArea × pyramidHeight) / 8^(1/2) - (topArea × tipHeight) / 8^(1/2)">
+<meta itemprop="value" content="(base area × height) / 8^(1/2) - (top area × tip height) / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
    <mfrac>
@@ -3661,7 +3662,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Volume of a frustum pyramid">
 <span itemprop="name">V<sub>frustum</sub> </span>=
-<meta itemprop="value" content="1 / 8^(1/2) × (baseArea × pyramidHeight - topArea × tipHeight)">
+<meta itemprop="value" content="1 / 8^(1/2) × (base area × pyramid height - top area × tip height)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow>
    <mfrac>
@@ -3835,7 +3836,7 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Volume of the virtual full pyramid">
 <span itemprop="name">H<sub>pyramid</sub> </span>=
-<meta itemprop="value" content="height × √baseArea / √topArea - √baseArea">
+<meta itemprop="value" content="height × base area^(1/2) / (top area^(1/2) - base area^(1/2))">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 	   <mfrac>
@@ -3926,7 +3927,7 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 <br><br>
 <meta itemprop="description" content="Volume of the missing tip">
 <span itemprop="name">H<sub>tip</sub> </span>=
-<meta itemprop="value" content="height × √topArea / √baseArea - √topArea">
+<meta itemprop="value" content="height × top area^(1/2) / (base area^(1/2) - top area^(1/2))">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 	   <mfrac>
@@ -4295,7 +4296,7 @@ The term inside the parentheses is the algebraic quotient:</span>
 <meta itemprop="description" content="Exact frustum pyramid volume formula">
 <br><br><br>
 <span itemprop="name">V<sub>frustum</sub> </span>=
-<meta itemprop="value" content="frustumHeight × ( baseArea + topArea + (baseArea × topArea)^(1/2) ) / 8^(1/2)">
+<meta itemprop="value" content="Height × ( base area + top area + (base area × top area)^(1/2) ) / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -4451,9 +4452,16 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact frustum pyramid volume formula">
-<meta itemprop="name" content="Volume of a frustum cone">
-<meta itemprop="value" content="3.2×height×(baseRadius²+topRadius²+baseRadius×topRadius)">
+<meta itemprop="description" content="Exact frustum volume formula">
+<meta itemprop="name" content="Volume of a cone">
+<meta itemprop="value" content="Height × ( base area + top area + (base area × top area)^(1/2) ) / 8^(1/2)">
+</div>
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Exact circle area formula">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="value" content="3.2 × radius^2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M"><h3 itemprop="name" style="margin:7px">Volume of a Frustum Cone</h3>
@@ -4481,94 +4489,51 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <span itemprop="description" style="margin:12px">The volume of a frustum cone can be calculated by subtracting the missing tip from the theoretical full cone.</span>
 <br>
 <div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Base area of a tetrahedron: Exact equilateral triangle formula">
+<meta itemprop="description" content="Exact volume of a frustum formula">
 <span itemprop="name">V </span>=
-<meta itemprop="value" content="3.2×height×(baseRadius²/(1-topRadius/baseRadius)-(topRadius²/(1-topRadius/baseRadius)-topRadius²))">
+<meta itemprop="value" content="Height × ( baseArea + topArea + (baseArea × topArea)^(1/2) ) / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
-	<mrow>
-		<mn>3.2</mn>
-<mo>×</mo>
-      <mi>H</mi>
-	</mrow>
-	<msqrt>
-        <mn>8</mn>
-      </msqrt>
+<mi>H</mi>
+<msqrt>
+ <mn>8</mn>
+ </msqrt>
 </mfrac>
-	<mo>×</mo>
-      <mo>(</mo>
-      <mfrac>
-        <mrow>
-      <msup>
-			<msub>  
-        <mi>r</mi>
-			<mi>(bottom)</mi>
-			</msub>
-        <mn>2</mn>
-	  </msup>
-		</mrow>
-        <mrow>
-          <mn>1</mn>
-          <mo>-</mo>
-          <mfrac>
-            <msub>  
-        <mi>r</mi>
-			<mi>(top)</mi>
-			</msub>
-            <msub>  
-        <mi>r</mi>
-			<mi>(bottom)</mi>
-			</msub>
-          </mfrac>
-        </mrow>
-      </mfrac>
-      <mo>-</mo>
-      <mo>(</mo>
-      <mfrac>
-        <mrow>
-      <msup>
-			<msub>  
-        <mi>r</mi>
-			<mi>(top)</mi>
-			</msub>
-        <mn>2</mn>
-	  </msup>
-		</mrow>
-        <mrow>
-          <mn>1</mn>
-          <mo>-</mo>
-<mfrac>
-            <msub>  
-        <mi>r</mi>
-			<mi>(top)</mi>
-			</msub>
-            <msub>  
-        <mi>r</mi>
-			<mi>(bottom)</mi>
-			</msub>
-          </mfrac>
-        </mrow>
-      </mfrac>
-      <mo>-</mo>
-      <msup>
-			<msub>  
-        <mi>r</mi>
-			<mi>(top)</mi>
-			</msub>
-        <mn>2</mn>
-	  </msup>
-      <mo>)</mo>
-      <mo>)</mo>
+<mo>×</mo>
+<mo>(</mo>
+<msub>  
+<mi>A</mi>
+<mi>base</mi>
+</msub>
+<mo>+</mo>
+<msub>  
+<mi>A</mi>
+<mi>top</mi>
+</msub>
+<mo>+</mo>
+<msqrt>
+<mrow>
+<msub> 
+<mi>A</mi>
+<mi>base</mi>
+</msub>
+<mo>&#x2062;</mo>
+<msub>  
+<mi>A</mi>
+<mi>top</mi>
+</msub>
 </mrow>
-  </math>
+</msqrt>
+<mo>)</mo>
+</mrow>
+</math>
 </div>
 </div>
 </div>
-<br>
 <br><br><br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="description">The volume of a frustum cone can also be calculated via a simplified formula.</span>
+<span itemprop="description">The volume of a frustum cone can be calculated via a simplified formula.</span>
 <span itemprop="name">V </span>=
 <meta itemprop="value" content="3.2 × height × ( baseRadius^2 + topRadius^2 + baseRadius × topRadius ) / 8^(1/2)">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -4708,9 +4673,9 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact tetrahedron volume formula">
-<meta itemprop="name" content="Volume of a tetrahedron">
-<meta itemprop="value" content="edge^3 / 8">
+<meta itemprop="description" content="Exact pyramid volume formula">
+<meta itemprop="name" content="Volume of a pyramid">
+<meta itemprop="value" content="base area × height / 8">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -6281,7 +6246,6 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <br><br><br><br>
 <section style="margin:12px" id="ancient_sphere_volume_formula" itemprop="assesses" itemscope itemtype="https://schema.org/DefinedTerm">
 <meta itemprop="name" content="Traditional volume of a sphere formula">
-<meta itemprop="inDefinedTermSet" content="Archimedian geometry">
 <h3 itemprop="description">The " V = 4 / 3 × pi × radius³ " formula is widely used for the volume of a sphere.</h3>
 <br>
 <p itemprop="disambiguatingDescription">It was approximated by comparing a hemisphere to the difference between the approximate volume a cone and a circumscribed cylinder.
@@ -6291,7 +6255,6 @@ That is a very exaggerated, distortion-based comparison that discards the differ
 <br><br><br><br>
 <section style="margin:12px" id="ancient_cone_volume_formula" itemprop="assesses" itemscope itemtype="https://schema.org/DefinedTerm">
 <meta itemprop="name" content="Traditional volume of a cone formula">
-<meta itemprop="inDefinedTermSet" content="Archimedian geometry">
 <h3 itemprop="description">The volume of a cone is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8.</h3>
 <br>
 <p itemprop="disambiguatingDescription">The 1 / 3 coefficient was likely estimated based on the observation that the mid-height cross-sectional area of a cone is exactly a quarter of a circumscribed cylinder's with the same base and height.
@@ -6390,7 +6353,6 @@ But this ratio can't be generalized for the overall volume of the cone.</p>
 <br><br><br><br>
 <section style="margin:12px" id="ancient_pyramid_volume_formula" itemprop="assesses" itemscope itemtype="https://schema.org/DefinedTerm">
 <meta itemprop="name" content="Traditional volume of a pyramid formula">
-<meta itemprop="inDefinedTermSet" content="Archimedian geometry">
 <h3 itemprop="description">The volume of a pyramid is conventionally approximated as base × height / 3. While that is a reasonable rounding, the exact ratio is 1 / √8.</h3>
 <br>
 <p itemprop="disambiguatingDescription">A common method aiming to prove the pyramid volume formula "V = base × height / 3" involves dissecting a cube into three pyramids. Here’s how it’s typically presented:</p>
