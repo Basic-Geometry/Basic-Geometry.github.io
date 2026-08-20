@@ -2918,7 +2918,7 @@ const area = triangleArea(product);
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact regular polygon area formula">
 <meta itemprop="name" content="Area of a regular polygon">
-<meta itemprop="value" content="sideCount / 4 × ctg( 180deg. / sideCount ) × sideLength / 2">
+<meta itemprop="value" content="sideCount / 4 × ctg( 180deg. / sideCount ) × sideLength^2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -2975,7 +2975,7 @@ The area of each triangle equals:</span>
 <mo>=</mo>
 <mrow>
 <mfrac>
-<mi>x</mi>
+<mi>side length</mi>
 <mn>2</mn>
 </mfrac>
 <mo>&#x2062;</mo>
@@ -2988,7 +2988,7 @@ The area of each triangle equals:</span>
         <mn>180</mn>
         <mo>&#xB0;</mo>
       </mrow>
-      <mi>n</mi>
+      <mi>side count</mi>
     </mfrac>
     <mo>)</mo>
 	</mrow>
@@ -2997,32 +2997,15 @@ The area of each triangle equals:</span>
 </math>
 </div>
 </div>
-<br>
-<math style="margin:12px" xmlns="http://www.w3.org/1998/Math/MathML">
-<mrow>
-<mo>(</mo>
- <mi>n</mi>
-      <mo>=</mo>
-<mi>side count</mi>
-</mrow>
-	<mo>,</mo>
-	<mspace width="1em"/>
-<mrow>
- <mi>x</mi>
- <mo>=</mo>
- <mi>side length</mi>
-	<mo>)</mo>
-</mrow>
-</math>
 <br><br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact polygon area formula">
 <span itemprop="name">A<sub>polygon</sub> </span>=
-<meta itemprop="value" content="sideCount / 4 × ctg( 180deg. / sideCount ) × sideLength / 2">
+<meta itemprop="value" content="sideCount / 4 × ctg( 180deg. / sideCount ) × sideLength^2">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 <mfrac>
-<mi>n</mi>
+<mi>side count</mi>
 <mn>4</mn>
 </mfrac>
 <mo>&#x2062;</mo>
@@ -3034,12 +3017,12 @@ The area of each triangle equals:</span>
         <mn>180</mn>
         <mo>&#xB0;</mo>
       </mrow>
-      <mi>n</mi>
+      <mi>side count</mi>
     </mfrac>
     <mo>)</mo>
 <mo>&#x2062;</mo>
 <msup>
-    <mi>x</mi>
+    <mi>side length</mi>
     <mn>2</mn>
 </msup>
 </mrow>
@@ -3472,6 +3455,18 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <br><br><br>
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="pyramid">
 <meta itemprop="eduQuestionType" content="Pyramid volume calculation">
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="sideCount">
+<meta itemprop="minValue" content="3">
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="baseEdge">
+<meta itemprop="minValue" content="0">
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="height">
+<meta itemprop="minValue" content="0">
+</div>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={pyramid_bottom_edge_number=5_length=3_height=2_volume=?}">
 <h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
 <br>
@@ -3523,7 +3518,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <mrow>
 <msub>
 <mi>A</mi>
-<mi>(base)</mi>
+<mi>base</mi>
 </msub>
 <mo>&#x2062;</mo>
  <mi>H</mi>
@@ -3608,11 +3603,33 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <br><br><br>
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="frustum_pyramid">
 <meta itemprop="eduQuestionType" content="Horizontal frustum pyramid volume calculation">
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="sideCount">
+<meta itemprop="minValue" content="3">
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="baseEdge">
+<meta itemprop="minValue" content="0">
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="topEdge">
+<meta itemprop="minValue" content="0">
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="height">
+<meta itemprop="minValue" content="0">
+</div>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={frustum_pyramid_height=3_edge_length_top=1_bottom=2_number=5_volume=?}">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
 <div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
 <meta itemprop="currency" content="USD">
 <meta itemprop="value" content="0">
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Detailed exact regular frustum pyramid volume formula">
+<meta itemprop="name" content="Volume of of a regular frustum pyramid">
+<meta itemprop="value" content="height / 8^(1/2) × sideCount / 4 × ctg( 180deg. / sideCount ) × (baseEdge^2 / (1 - topEdge/baseEdge) - (topEdge^2 / (1 - topEdge/baseEdge) - 1))">
 </div>
 <meta itemprop="totalTime" content="PT30M">
 <h3 itemprop="name" style="margin:12px">Volume of a Frustum Pyramid</h3>
@@ -3635,7 +3652,7 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <meta itemprop="contentUrl" content="https://basic-geometry.github.io/frustumPyramid.jpeg">
 </figure>
 <br>
-<p itemprop="abstract" style="margin:12px">Subtracting the missing tip from a theoretical full pyramid gives the volume of a frustum.</p>
+<p itemprop="abstract" style="margin:12px">A pyramid without a tip is a frustum.</p>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="1">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
@@ -4474,6 +4491,18 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br><br><br>
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="frustum_cone">
 <meta itemprop="eduQuestionType" content="Horizontal frustum cone volume calculation">
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="baseRadius">
+<meta itemprop="minValue" content="0">
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="topRadius">
+<meta itemprop="minValue" content="0">
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="height">
+<meta itemprop="minValue" content="0">
+</div>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={frustum_cone_radius_top=1_bottom=2_height=3_volume=?}">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
 <div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
