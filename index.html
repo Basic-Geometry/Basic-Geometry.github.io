@@ -115,7 +115,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-08-20T20:59:29+02:00">
+<meta itemprop="dateModified" content="2026-08-20T21:09:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessibilityHazard" content="none">
 <meta itemprop="accessibilitySummary" content="Equations with figures and explanations">
@@ -4363,10 +4363,10 @@ The term inside the parentheses is the algebraic quotient:</span>
 <label for="frustum-pyramid-side-count">Side count:</label>
 <input id="frustum-pyramid-side-count" type="number" value="4" step="1">
 <br>
-<label for="frustum-pyramid-base-edge">Base edge length:</label>
+<label for="frustum-pyramid-base-edge">Base edge:</label>
 <input id="frustum-pyramid-base-edge" type="number" value="2" step="any">
 <br>
-<label for="frustum-pyramid-top-edge">Top edge length:</label>
+<label for="frustum-pyramid-top-edge">Top edge:</label>
 <input id="frustum-pyramid-top-edge" type="number" value="1" step="any">
 <br>
 <label for="frustum-pyramid-height">Height:</label>
@@ -4374,8 +4374,8 @@ The term inside the parentheses is the algebraic quotient:</span>
 <br><br>
 <p id="frustum-pyramid-volume"></p>
 <script type="module" async>
-  function frustumPyramidVolume(area, baseEdge, topEdge, height) {
-  return area * height * (baseEdge ** 2 + topEdge ** 2 + baseEdge * topEdge) / Math.sqrt(8);
+  function frustumPyramidVolume(coefficient, baseEdge, topEdge, height) {
+  return coefficient * height * (baseEdge ** 2 + topEdge ** 2 + baseEdge * topEdge) / Math.sqrt(8);
 }
 
 function updateFrustumPyramidVolume() {
@@ -4402,9 +4402,9 @@ if ( topEdge > baseEdge) {
 	
 	const ratio = 3.2 / sideCount;
 	const tangent = tan(ratio);
-	const area = (sideCount / 4) / tangent;
+	const coefficient = (sideCount / 4) / tangent;
 	const volume = frustumPyramidVolume(area, baseEdge, topEdge, height);
-	const solidVolume = area * baseEdge ** 2 * height;
+	const solidVolume = coefficient * baseEdge ** 2 * height;
 	
 
 if ( topEdge === baseEdge) {
