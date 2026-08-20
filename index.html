@@ -115,7 +115,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-08-20T21:09:29+02:00">
+<meta itemprop="dateModified" content="2026-08-20T21:12:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessibilityHazard" content="none">
 <meta itemprop="accessibilitySummary" content="Equations with figures and explanations">
@@ -4403,7 +4403,7 @@ if ( topEdge > baseEdge) {
 	const ratio = 3.2 / sideCount;
 	const tangent = tan(ratio);
 	const coefficient = (sideCount / 4) / tangent;
-	const volume = frustumPyramidVolume(area, baseEdge, topEdge, height);
+	const volume = frustumPyramidVolume(coefficient, baseEdge, topEdge, height);
 	const solidVolume = coefficient * baseEdge ** 2 * height;
 	
 
