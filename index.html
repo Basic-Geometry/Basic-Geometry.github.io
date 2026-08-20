@@ -3373,7 +3373,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact cone volume formula">
 <meta itemprop="name" content="Volume of a Cone">
-<meta itemprop="value" content="3.2 × radius^2 / 8^(1/2)">
+<meta itemprop="value" content="base area × height / 8^(1/2)">
 </div>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
@@ -3500,7 +3500,6 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </div>
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="url" content="https://basic-geometry.github.io#pyramid_volume_calculator">
-<meta itemprop="usageInfo" content="Enter the height, the side count and the length of the bottom edge.">
 <label for="pyramid-side-count">Side count:</label>
 <input id="pyramid-side-count" type="number" value="4" step="1">
 <br>
@@ -3755,9 +3754,7 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
           </mfrac>
 </mrow>
 </math>
-</div>
 <br><br>
-<div>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 		<mi>H</mi>
@@ -3787,9 +3784,7 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 	   <mo>)</mo>
 </mrow>
 </math>
-</div>
 <br><br>
-<div>
 	<math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 		<msub>
@@ -3820,12 +3815,11 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
           </mfrac>
 </mrow>
 </math>
-</div>
 <br><br>
-<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="description">To eliminate the fraction in the denominator, multiply both the numerator and denominator by √A<sub>bottom</sub>:</span>
 <br><br>
-<meta itemprop="description" content="Volume of the theoretical full pyramid">
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Volume of the virtual full pyramid">
 <span itemprop="name">H<sub>pyramid</sub> </span>=
 <meta itemprop="value" content="height × √baseArea / √topArea - √baseArea">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3861,7 +3855,6 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 </math>
 </div>
 <br><br>
-<div>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 	<msub>
@@ -3913,12 +3906,11 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 	   </mfrac>
 </mrow>
 </math>
-</div>
 <br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="description">Cancel out the common √A<sub>bottom</sub> term in the numerator and denominator:</span>
+<span itemprop="description">Cancel out the common √A<sub>base</sub> term in the numerator and denominator:</span>
 <br><br>
-<meta itemprop="description" content="Volume of a frustum pyramid">
+<meta itemprop="description" content="Volume of the missing tip">
 <span itemprop="name">H<sub>tip</sub> </span>=
 <meta itemprop="value" content="height × √topArea / √baseArea - √topArea">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3959,7 +3951,6 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 <meta itemprop="position" content="5">
 <span itemprop="description">Substitute the heights into the original equation:</span>
 <br><br>
-<div>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <msub>
@@ -4046,7 +4037,6 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 	<mo>)</mo>
 </mrow>
 </math>
-</div>
 </div>
 <br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
@@ -4358,7 +4348,6 @@ The term inside the parentheses is the algebraic quotient:</span>
 </div>
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="url" content="https://basic-geometry.github.io#frustum_pyramid_volume_calculator">
-<meta itemprop="usageInfo" content="Enter the height, the side count and the length of the top and bottom edges.">
 <label for="frustum-pyramid-side-count">Side count:</label>
 <input id="frustum-pyramid-side-count" type="number" value="4" step="1">
 <br>
@@ -4448,7 +4437,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact frustum cone volume formula">
+<meta itemprop="description" content="Exact frustum pyramid volume formula">
 <meta itemprop="name" content="Volume of a frustum cone">
 <meta itemprop="value" content="3.2×height×(baseRadius²+topRadius²+baseRadius×topRadius)">
 </div>
@@ -4640,7 +4629,6 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 </div>
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="url" content="https://basic-geometry.github.io#frustum_cone_volume_calculator">
-<meta itemprop="usageInfo" content="Enter the height and the top and bottom radii.">
 <label for="frustum-cone-base-radius">Base radius:</label>
 <input id="frustum-cone-base-radius" type="number" value="2" step="any">
 <br>
@@ -5072,7 +5060,6 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 </div>
 <meta itemprop="operatingSystem" content="Web">
 <meta itemprop="url" content="https://basic-geometry.github.io#tetrahedron_volume_calculator">
-<meta itemprop="usageInfo" content="Enter the length of the edge.">
 <label for="tetrahedron-edge">Edge:</label>
 <input id="tetrahedron-edge" type="number" value="1" step="any">
 <br><br>
@@ -5101,7 +5088,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 <br>
 <p itemprop="keywords">Exact formulas for real-world applications like analysis, engineering design solutions, computer graphics rendering, algorithm optimization, and navigation.</p>
 <br>
-<ul style="margin:6px" itemprop="usageInfo">
+<ul style="margin:6px" itemprop="description">
     <li>Comparative Geometry: using geometric relationships to derive areas and volumes.</li>
 	<li>Scaling and Proportions: applying proportional relationships for accurate calculations.</li>
 	<li>Algebraic Manipulation: simplifying equations to ensure consistency and precision.</li>
