@@ -171,9 +171,9 @@
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact circle area formula">
-<meta itemprop="name" content="Area of a circle">
-<meta itemprop="value" content="3.2 × radius^2">
+<meta itemprop="description" content="The Right Triangle Hypotenuse Theorem">
+<meta itemprop="name" content="hypotenuse^2">
+<meta itemprop="value" content="(leg1)^2 + (leg2)^2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -427,9 +427,9 @@ The ratio between the radius and the side length is calculable.</span>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact circle circumference formula">
-<meta itemprop="name" content="Circumference of a circle">
-<meta itemprop="value" content="6.4 × radius">
+<meta itemprop="description" content="Exact circle area formula">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="value" content="3.2 × radius^2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -827,9 +827,9 @@ The ratio between the radius and the side length is calculable.</span>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact sphere volume formula">
-<meta itemprop="name" content="Volume of a Sphere">
-<meta itemprop="value" content="( 4 × radius / 5^(1/2) )^3">
+<meta itemprop="description" content="Exact circle area formula">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="value" content="3.2 × radius^2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -1071,9 +1071,16 @@ Unlock the true formula to calculate the surface area of a sphere.</strong></p>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact cone volume formula">
-<meta itemprop="name" content="Volume of a Cone">
-<meta itemprop="value" content="3.2 × radius^2 × height / 8^(1/2)">
+<meta itemprop="description" content="Exact circle area formula">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="value" content="3.2 × radius^2">
+</div>
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Exact sphere volume formula">
+<meta itemprop="name" content="Volume of a Sphere">
+<meta itemprop="value" content="( 4 × radius / 5^(1/2) )^3">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -1457,9 +1464,9 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact surface area of the cone formula including the bottom">
-<meta itemprop="name" content="Surface area of a cone">
-<meta itemprop="value" content="3.2 × radius × ( radius + ( radius^2 + height^2 )^(1/2) )">
+<meta itemprop="description" content="Exact circle area formula">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="value" content="3.2 × radius^2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -2619,13 +2626,6 @@ function Atan(x) {
 <meta itemprop="currency" content="USD">
 <meta itemprop="value" content="0">
 </div>
-<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact triangle area formula">
-<meta itemprop="name" content="Area of a triangle">
-<meta itemprop="value" content="base × height / 2">
-</div>
-</div>
 <meta itemprop="totalTime" content="PT30M">
 <h3 style="margin:7px" itemprop="name">Area of a Triangle</h3>
 <br>
@@ -2827,9 +2827,16 @@ const area = triangleArea(product);
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact regular polygon area formula">
-<meta itemprop="name" content="Area of a regular polygon">
-<meta itemprop="value" content="sideCount / 4 × ctg( 180deg. / sideCount ) × sideLength^2">
+<meta itemprop="description" content="Sum of the internal angles of a regular polygon formula">
+<meta itemprop="name" content="Sum of the internal angles of a regular polygon">
+<meta itemprop="value" content="(sideCount - 2) × 180°">
+</div>
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Exact triangle area formula">
+<meta itemprop="name" content="Area of a triangle">
+<meta itemprop="value" content="base × height / 2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -2912,7 +2919,7 @@ The area of each triangle equals:</span>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="description" content="Exact polygon area formula">
 <span itemprop="name">A<sub>polygon</sub> </span>=
-<meta itemprop="value" content="sideCount / 4 × ctg( 180deg. / sideCount ) × sideLength^2">
+<meta itemprop="value" content="sideCount / 4 × ctg( 180° / sideCount ) × sideLength^2">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 <mfrac>
@@ -3005,10 +3012,10 @@ function updatePolygonArea() {
 </script>
 </div>
 <br><br>
-<div style="margin:12px" itemprop="about" itemscope itemtype="https://schema.org/PropertyValue" id="internal-angle-sum">
+<div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/PropertyValue" id="internal-angle-sum">
 <span itemprop="description">Interesting fact:</span>
 <br><br>
-<span itemprop="name">Sum of the internal angles of a polygon </span>:
+<span itemprop="name">Sum of the internal angles of a regular polygon </span>:
 <br><br>
 <span itemprop="value">(side count - 2)180°</span>
 </div>
@@ -3039,9 +3046,16 @@ function updatePolygonArea() {
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact circle segment area formula">
-<meta itemprop="name" content="Area of a circle segment">
-<meta itemprop="value" content="Acos( ( radius - height ) / radius ) × radius^2 - sin( Acos( ( radius - height ) / radius ) × radius ) × ( radius - height ) × radius">
+<meta itemprop="description" content="Exact circle area formula">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="value" content="3.2 × radius^2">
+</div>
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="description" content="Exact triangle area formula">
+<meta itemprop="name" content="Area of a triangle">
+<meta itemprop="value" content="base × height / 2">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
