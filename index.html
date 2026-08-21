@@ -1722,8 +1722,8 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <meta itemprop="accessibilitySummary" content="Enter numbers and read results">
 <meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="5">
-    <meta itemprop="reviewCount" content="1">
+    <meta itemprop="ratingValue" content="Excellent">
+    <meta itemprop="reviewCount" content=1>
 </div>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="description" content="Calculates the surface area of a cone with circle area = 3.2×radius^2.">
@@ -1737,7 +1737,7 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 <meta itemprop="name" content="Personal, non-commercial use">
 <meta itemprop="description" content="Non-exclusive, non-transferable">
-<meta itemprop="price" content="0">
+<meta itemprop="price" content=0>
 <meta itemprop="priceCurrency" content="USD">
 </div>
 <meta itemprop="operatingSystem" content="Web">
@@ -2611,13 +2611,14 @@ function Atan(x) {
 </section>
 <br><br><br><br>
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="triangle">
+<h3 style="margin:7px" itemprop="name">Area of a Triangle</h3>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="side1">
-<meta itemprop="minValue" content="0">
+<meta itemprop="minValue" content=0>
 </div>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="side2">
-<meta itemprop="minValue" content="0">
+<meta itemprop="minValue" content=0>
 </div>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="side3">
@@ -2635,26 +2636,30 @@ function Atan(x) {
 <meta itemprop="eduQuestionType" content="Triangle area calculation">
 <meta itemprop="target" content="https://basic-geometry.github.io?q={triangle_base=3_height=2_area=?}">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
-<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
+<meta itemprop="name" content="Derive the Area of a Triangle">
+	<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
 <meta itemprop="currency" content="USD">
-<meta itemprop="value" content="0">
+<meta itemprop="value" content=0>
 </div>
 <meta itemprop="totalTime" content="PT30M">
-<h3 style="margin:7px" itemprop="name">Area of a Triangle</h3>
 <br>
-<p style="margin:12px" itemprop="description">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.</p>
+<span style="margin:12px" itemprop="abstract">The area of a triangle equals half of the area of a rectangle with a width equal to the base of the triangle and length equal to the height of the triangle.</span>
+<br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="1">
+<meta itemprop="position" content=1>
 <span itemprop="abstract">The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.
+</div>
 <br>
-The square root of half of the area of the rectangle is the side length of the theoretical square that has the same area as the triangle.</span>
+<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content=2>
+<span itemprop="abstract">The square root of half of the area of the rectangle is the side length of the virtual square that has the same area as the triangle.</span>
 </div>
 </div>
 <br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact triangle area formula">
 <span itemprop="name">A<sub>triangle</sub> </span>=
 <meta itemprop="value" content="base × height / 2">
+<meta itemprop="description" content="Exact triangle area formula">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -2756,8 +2761,8 @@ The square root of half of the area of the rectangle is the side length of the t
 <meta itemprop="accessibilitySummary" content="Enter numbers and read result">
 <meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="5">
-    <meta itemprop="reviewCount" content="1">
+    <meta itemprop="ratingValue" content="Excellent">
+    <meta itemprop="reviewCount" content=1>
 </div>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="featureList" content="Calculates the area of a triangle by the length of its sides">
@@ -2821,6 +2826,7 @@ const area = triangleArea(product);
 </section>
 <br><br><br>
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="polygon">
+<h3 itemprop="name" style="margin:7px">Area of a regular Polygon</h3>
 <meta itemprop="eduQuestionType" content="Polygon area calculation">
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="side count">
@@ -2834,6 +2840,7 @@ const area = triangleArea(product);
 </div>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={polygon_sideCount=8_sideLength=4_area=?}">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
+<meta itemprop="name" content="Derive the Area of a regular Polygon">
 <div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
 <meta itemprop="currency" content="USD">
 <meta itemprop="value" content="0">
@@ -2846,7 +2853,6 @@ const area = triangleArea(product);
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
-<h3 itemprop="name" style="margin:7px">Area of a regular Polygon</h3>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
     <img class="center-fit" src="polygon.png" alt="A regular polygon can be divided into as many isosceles triangles as many sides it has.">
@@ -2961,8 +2967,8 @@ The area of each triangle equals:</span>
 <meta itemprop="accessibilitySummary" content="Enter numbers and read result">
 <meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="5">
-    <meta itemprop="reviewCount" content="1">
+    <meta itemprop="ratingValue" content="Good">
+    <meta itemprop="reviewCount" content=1>
 </div>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="featureList" content="Calculates the area of a regular polygon by the number and the length of its sides">
@@ -3028,33 +3034,37 @@ function updatePolygonArea() {
 </section>
 <br><br><br><br>
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="circle-segment">
+<h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
 <meta itemprop="eduQuestionType" content="Circle segment area calculation">
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="height">
 <meta itemprop="description" content="segment height">
-<meta itemprop="minValue" content="0">
+<meta itemprop="minValue" content=0>
 </div>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="length">
 <meta itemprop="description" content="chord length">
-<meta itemprop="minValue" content="0">
+<meta itemprop="minValue" content=0>
 </div>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="radius">
 <meta itemprop="description" content="radius of the parent circle">
-<meta itemprop="minValue" content="0">
+<meta itemprop="minValue" content=0>
 </div>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={circle_segment_height=1_length=3_radius=4_area=?}">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
-<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
+<meta itemprop="name" content="Derive the Area of a Circle Segment">
+	<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
 <meta itemprop="currency" content="USD">
-<meta itemprop="value" content="0">
+<meta itemprop="value" content=0>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<meta itemprop="name" content="Circle area formula">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact circle area formula">
 <meta itemprop="name" content="Area of a circle">
 <meta itemprop="value" content="3.2 × radius^2">
+<meta itemprop="description" content="Exact formula derived from direct circle to square comparison">
+<meta itemprop="disambiguatingDescription" content="No pi">
 </div>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
@@ -3065,7 +3075,6 @@ function updatePolygonArea() {
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
-<h3 itemprop="name" style="margin:7px">Area of a Circle Segment</h3>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
     <img class="center-fit" src="circleSegment.png" alt="Circle segment">
@@ -3253,8 +3262,8 @@ That is called a chord.</span>
 <meta itemprop="accessibilitySummary" content="Enter numbers and read results">
 <meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="4">
-    <meta itemprop="reviewCount" content="1">
+    <meta itemprop="ratingValue" content="Good">
+    <meta itemprop="reviewCount" content=1>
 </div>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="description" content="Calculates the area of a circle as 3.2×radius^2.">
@@ -3268,7 +3277,7 @@ That is called a chord.</span>
 <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 <meta itemprop="name" content="Personal, non-commercial use">
 <meta itemprop="description" content="Non-exclusive, non-transferable">
-<meta itemprop="price" content="0">
+<meta itemprop="price" content=0>
 <meta itemprop="priceCurrency" content="USD">
 </div>
 <meta itemprop="operatingSystem" content="Web">
@@ -3370,24 +3379,26 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </section>
 <br><br><br>
 <section itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="pyramid">
+<h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
 <meta itemprop="eduQuestionType" content="Pyramid volume calculation">
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="sideCount">
-<meta itemprop="minValue" content="3">
+<meta itemprop="minValue" content=3>
 </div>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="baseEdge">
-<meta itemprop="minValue" content="0">
+<meta itemprop="minValue" content=0>
 </div>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="height">
-<meta itemprop="minValue" content="0">
+<meta itemprop="minValue" content=0>
 </div>
 <meta itemprop="target" content="https://basic-geometry.github.io?q={pyramid_bottom_edge_number=5_length=3_height=2_volume=?}">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
+<meta itemprop="name" content="Derive the Volume of a Pyramid">
 <div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
 <meta itemprop="currency" content="USD">
-<meta itemprop="value" content="0">
+<meta itemprop="value" content=0>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Cone volume formula">
@@ -3399,13 +3410,12 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </div>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Polygon area formula">
+<meta itemprop="name" content="Regular polygon area formula">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a regular polygon">
 <meta itemprop="value" content="sideCount / 4 × ctg( 180° / sideCount ) × sideLength^2">
 </div>
 </div>
-<h3 itemprop="name" style="margin:7px">Volume of a Pyramid</h3>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
   <img class="center-fit" src="conePyramidVolume.jpeg" alt="Pyramid">
@@ -3448,9 +3458,9 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="1">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact cone volume formula">
 <span itemprop="name">V<sub>cone</sub> </span>=
 <meta itemprop="value" content="base area × height / 8^(1/2)">
+<meta itemprop="description" content="Exact cone volume formula">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -3473,9 +3483,9 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </div>
 <br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact pyramid volume formula">
 <span itemprop="name">V<sub>pyramid</sub></span>=
 <meta itemprop="value" content="base area × height / 8^(1/2)">
+<meta itemprop="description" content="Exact pyramid volume formula">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -3503,8 +3513,8 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <meta itemprop="accessibilitySummary" content="Enter numbers and read results">
 <meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="5">
-    <meta itemprop="reviewCount" content="1">
+    <meta itemprop="ratingValue" content="Good">
+    <meta itemprop="reviewCount" content=1>
 </div>
 <meta itemprop="applicationCategory" content="Geometric Calculator">
 <meta itemprop="description" content="Calculates the volume of a pyramid as base×height/8^(1/2).">
@@ -3518,7 +3528,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
 <meta itemprop="name" content="Personal, non-commercial use">
 <meta itemprop="description" content="Non-exclusive, non-transferable">
-<meta itemprop="price" content="0">
+<meta itemprop="price" content=0>
 <meta itemprop="priceCurrency" content="USD">
 </div>
 <meta itemprop="operatingSystem" content="Web">
