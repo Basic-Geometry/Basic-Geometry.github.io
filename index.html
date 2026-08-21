@@ -4517,6 +4517,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br><br>
 <span itemprop="name">V </span>=
 <meta itemprop="value" content="Height × ( baseArea + topArea + (baseArea × topArea)^(1/2) ) / 8^(1/2)">
+<meta itemprop="description" content="Exact frustum volume formula">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -4563,7 +4564,7 @@ document.getElementById('frustum-pyramid-height').addEventListener('input', upda
 <br><br><br>
 <span itemprop="name">V </span>=
 <meta itemprop="value" content="3.2 × height × ( baseRadius^2 + topRadius^2 + baseRadius × topRadius ) / 8^(1/2)">
-<meta itemprop="description" content="Exact volume of a frustum cone formula">
+<meta itemprop="description" content="Exact frustum cone volume formula">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mfrac>
@@ -5798,19 +5799,29 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 </section>
 <br><br><br><br>
 <section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="circle_area_proof">
+<h3 itemprop="name">The widely used circle area formula " A = pi × r² " is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
 <meta itemprop="eduQuestionType" content="Circle area calculation">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
+<meta itemprop="name" content="Prove that the area of a circle equals exactly 3.2radius^2">
 <div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
 <meta itemprop="currency" content="USD">
 <meta itemprop="value" content="0">
 </div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<meta itemprop="name" content="Circle area formula">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="value" content="3.2 × radius^2">
+<meta itemprop="description" content="Exact formula derived from direct circle to square comparison">
+<meta itemprop="disambiguatingDescription" content="No pi">
+</div>
+</div>
 <meta itemprop="totalTime" content="PT30M">
-<h3 itemprop="name">The widely used circle area formula " A = pi × r² " is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
 <br>
-<p itemprop="description">It’s multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.
+<span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</span>
+<br><br><br>
+<span itemprop="description">In the quadrant layout when the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.</p>
 <br><br>
-In the quadrant layout when the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.</p>
-<br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="equityFigure.png" alt="Circle area">
 <div itemprop="creator" itemscope itemtype="https://schema.org/Person">
@@ -5834,6 +5845,7 @@ In the quadrant layout when the overlapping area equals to the uncovered area in
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">Quarter of the uncovered area in the middle </span>=
 <meta itemprop="value" content="3.2 × r^2 / 4 - ( 3.2 × r^2 × ( ( 90deg. - 2 × Atan( 1 / 2 ) ) / 360deg. ) + 2 × ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
+<meta itemprop="description" content="Quarter of the area in the middle of the square, uncovered by the quadrant circles.">
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -5922,6 +5934,7 @@ In the quadrant layout when the overlapping area equals to the uncovered area in
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">The area of an overlapping section </span>=
 <meta itemprop="value" content="2 × ( 3.2 × r^2 × ( ( 90deg. - Atan( 1 / 2 ) ) / 360deg. ) - ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
+<meta itemprop="description" content="Quarter of the total overlapping area.">
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
