@@ -115,7 +115,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-08-21T02:36:29+02:00">
+<meta itemprop="dateModified" content="2026-08-21T09:42:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessibilityHazard" content="none">
 <meta itemprop="accessibilitySummary" content="Equations with figures and explanations">
@@ -3129,9 +3129,9 @@ function updatePolygonArea() {
 <span itemprop="description">The ratio between the segment height and the radius of the parent circle gives the cosine of the angle of the slice.</span>
 <br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Central angle">
 <span itemprop="name">Angle </span>=
 <meta itemprop="value" content="Acos( ( radius - height ) / radius">
+<meta itemprop="description" content="Central angle">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
     <mo>arccos</mo>
@@ -3163,9 +3163,9 @@ function updatePolygonArea() {
 That is called a chord.</span>
 <br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Segment chord length">
 <span itemprop="name">Chord </span>=
 <meta itemprop="value" content="2 × sin ( Acos( ( radius - height ) / radius ) )">
+<meta itemprop="description" content="Segment chord length">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 	<mn>2</mn>
@@ -3195,11 +3195,11 @@ That is called a chord.</span>
 <br>
 </div>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact circle segment area formula">
 <span itemprop="name">A<sub>segment</sub> </span>=
 <meta itemprop="value" content="Acos( ( radius - height ) / radius ) × radius^2 - sin( Acos( ( radius - height ) / radius ) × radius ) × ( radius - height ) × radius">
+<meta itemprop="description" content="Exact circle segment area formula">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
+<mrow>
     <mo>arccos</mo>
     <mo>&#x2061;</mo>
     <mrow>
@@ -3629,7 +3629,8 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 <meta itemprop="contentUrl" content="https://basic-geometry.github.io/frustumPyramid.jpeg">
 </figure>
 <br>
-<p itemprop="abstract" style="margin:12px">A truncated pyramid is a frustum.</p>
+<span itemprop="description" style="margin:12px">A truncated pyramid is a frustum.</span>
+<br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content=1>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
@@ -3852,12 +3853,12 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 </mrow>
 </math>
 <br><br><br>
-<span itemprop="description">To eliminate the fraction in the denominator, multiply both the numerator and denominator by √A<sub>bottom</sub>:</span>
+<span itemprop="description">To eliminate the fraction in the denominator, multiply both the numerator and denominator by √A<sub>base</sub>:</span>
 <br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">H<sub>pyramid</sub> </span>=
 <meta itemprop="value" content="height × base area^(1/2) / (top area^(1/2) - base area^(1/2))">
-<meta itemprop="description" content="Volume of the virtual full pyramid">
+<meta itemprop="description" content="Height of the virtual full pyramid">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 	   <mfrac>
@@ -3948,7 +3949,7 @@ In similar 3D shapes, linear dimensions scale with the square root of their cros
 <br><br>
 <span itemprop="name">H<sub>tip</sub> </span>=
 <meta itemprop="value" content="height × top area^(1/2) / (base area^(1/2) - top area^(1/2))">
-<meta itemprop="description" content="Volume of the missing tip">
+<meta itemprop="description" content="Height of the missing tip">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
    <mrow>
 	   <mfrac>
