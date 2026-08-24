@@ -1495,12 +1495,15 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <meta itemprop="value" content=0>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Circle area formula">
+<meta itemprop="name" content="Area of a circle">
+<meta itemprop="description" content="Exact, physical area of a circle.">
+<meta itemprop="description" content="Direct circle-to-square comparison.">
+<meta itemprop="disambiguatingDescription" content="Not the traditional, abstract pi≈3.14... approximate.">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a circle">
 <meta itemprop="value" content="3.2 × radius^2">
-<meta itemprop="description" content="Exact formula derived from direct circle to square comparison">
-<meta itemprop="disambiguatingDescription" content="No pi">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical area of a circle in terms of its radius.">
+<meta itemprop="description" content="Derived via cutting the circle into four quadrants, placing them with their origin on the vertices of a square with side = 4radius / 5^(1/2).">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -1707,7 +1710,9 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 </div>
 </div>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/DefinedTerm">
+<meta itemprop="name" content="Surface area of a cone">
+<div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">A<sub>cone</sub> </span>=
 <meta itemprop="value" content="3.2 × radius × ( radius + ( radius^2 + height^2 )^(1/2) )">
 <meta itemprop="description" content="Exact surface area of the cone formula including the base">
@@ -1736,6 +1741,7 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <mo>)</mo>
 </mrow>
 </math>
+</div>
 </div>
 <br><br>
 <div style="margin:12px" id="cone-surface_area_calculator" itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication">
@@ -2680,14 +2686,13 @@ function Atan(x) {
 <meta itemprop="position" content=1>
 <span itemprop="abstract">The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.</span>
 </div>
-<br>
-<div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content=2>
-<span itemprop="abstract">The square root of half of the area of the rectangle is the side length of the virtual square that has the same area as the triangle.</span>
-</div>
 </div>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/DefinedTerm">
+<meta itemprop="name" content="Area of a triangle">
+<span itemprop="description">The area of a triangle equals half of the circumscribed rectangle.</span>
+<br><br><br>
+<div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">A<sub>triangle</sub> </span>=
 <meta itemprop="value" content="base × height / 2">
 <meta itemprop="description" content="Exact triangle area formula">
@@ -2703,6 +2708,7 @@ function Atan(x) {
 </mfrac>
 </mrow>
 </math>
+</div>
 </div>
 <br><br>
 <div style="margin:12px" itemprop="subjectOf" itemscope itemtype="https://schema.org/LearningResource">
@@ -2880,10 +2886,20 @@ const area = triangleArea(product);
 <meta itemprop="value" content="0">
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Triangle area formula">
+<meta itemprop="name" content="Area of a triangle">
+<meta itemprop="description" content="Exact, physical area of a triangle">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a triangle">
 <meta itemprop="value" content="base × height / 2">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical area of a triangle in terms of its base, and height.">
+</div>
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<meta itemprop="name" content="cotangent">
+<meta itemprop="description" content="Trigonometric function">
+<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="name" content="cotangent">
+<meta itemprop="value" content="adjacent / opposite">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -2962,11 +2978,13 @@ The area of each triangle equals:</span>
 </div>
 </div>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="description" content="Exact polygon area formula">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/DefinedTerm">
+<meta itemprop="name" content="Area of a regular polygon">
 <span itemprop="name">A<sub>polygon</sub> </span>=
+<div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="value" content="sideCount / 4 × ctg( 180° / sideCount ) × sideLength^2">
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<meta itemprop="description" content="Exact polygon area formula">
+	<math xmlns="http://www.w3.org/1998/Math/MathML">
   <mrow>
 <mfrac>
 <mi>side count</mi>
@@ -2991,6 +3009,7 @@ The area of each triangle equals:</span>
 </msup>
 </mrow>
 </math>
+</div>
 </div>
 <br><br>
 <div style="margin:12px" id="polygon_area_calculator" itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication">
@@ -6734,7 +6753,7 @@ Thus, the V = base × height / 3 formula, and its so-called "calculus-based proo
 <div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a triangle">
 <meta itemprop="value" content="base × height / 2">
-<meta itemprop="description" content="Universally applicable formula to calculate the exact area of a triangle in terms of its base, and height.">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical area of a triangle in terms of its base, and height.">
 </div>
 </div>
 <div itemprop="hasDefinedTerm" itemscope itemtype="https://schema.org/DefinedTerm">
