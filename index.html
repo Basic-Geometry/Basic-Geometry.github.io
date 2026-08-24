@@ -113,7 +113,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-08-22T22:07:29+02:00">
+<meta itemprop="dateModified" content="2026-08-22T21:50:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessMode" content="textual">
 <meta itemprop="accessMode" content="visual">
@@ -433,7 +433,7 @@ The ratio between the radius and the side length is calculable.</span>
 <meta itemprop="value" content=0>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Area of a circle">
+<meta itemprop="name" content="Circle area formula">
 <meta itemprop="description" content="Exact, physical area of a circle.">
 <meta itemprop="description" content="Direct circle-to-square comparison.">
 <meta itemprop="disambiguatingDescription" content="Not the traditional, abstract pi≈3.14... approximate.">
@@ -841,7 +841,7 @@ The ratio between the radius and the side length is calculable.</span>
 <meta itemprop="value" content=0>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Area of a circle">
+<meta itemprop="name" content="Circle area formula">
 <meta itemprop="description" content="Exact, physical area of a circle.">
 <meta itemprop="description" content="Direct circle-to-square comparison.">
 <meta itemprop="disambiguatingDescription" content="Not the traditional, abstract pi≈3.14... approximate.">
@@ -1098,7 +1098,7 @@ The ratio between the radius and the side length is calculable.</span>
 <meta itemprop="value" content=0>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Volume of a sphere">
+<meta itemprop="name" content="Sphere volume formula">
 <meta itemprop="description" content="Exact, physical volume of a sphere.">
 <meta itemprop="disambiguatingDescription" content="Not the traditional, abstract pi4radius^3 / 3 approximate.">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
@@ -1495,7 +1495,7 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 <meta itemprop="value" content=0>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Area of a circle">
+<meta itemprop="name" content="Circle area formula">
 <meta itemprop="description" content="Exact, physical area of a circle.">
 <meta itemprop="description" content="Direct circle-to-square comparison.">
 <meta itemprop="disambiguatingDescription" content="Not the traditional, abstract pi≈3.14... approximate.">
@@ -1649,7 +1649,6 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
       </math>
   </div>
 </div>
-<br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content=5>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
@@ -1668,7 +1667,6 @@ The volume of a cone equals the quarter of a cylinder with an equal radius and i
 </math>
 </div>
 </div>
-<br>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content=6>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
@@ -2687,7 +2685,6 @@ function Atan(x) {
 <span itemprop="abstract">The base of a triangle multiplied by its height equals a rectangle with twice the area of the triangle.</span>
 </div>
 </div>
-<br>
 <div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/DefinedTerm">
 <meta itemprop="name" content="Area of a triangle">
 <span itemprop="description">The area of a triangle equals half of the circumscribed rectangle.</span>
@@ -2886,20 +2883,12 @@ const area = triangleArea(product);
 <meta itemprop="value" content="0">
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Area of a triangle">
+<meta itemprop="name" content="Triangle area formula">
 <meta itemprop="description" content="Exact, physical area of a triangle">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a triangle">
 <meta itemprop="value" content="base × height / 2">
 <meta itemprop="description" content="Universally applicable formula to calculate the exact physical area of a triangle in terms of its base, and height.">
-</div>
-</div>
-<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="cotangent">
-<meta itemprop="description" content="Trigonometric function">
-<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="cotangent">
-<meta itemprop="value" content="adjacent / opposite">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -3116,18 +3105,23 @@ function updatePolygonArea() {
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Circle area formula">
+<meta itemprop="description" content="Exact, physical area of a circle.">
+<meta itemprop="description" content="Direct circle-to-square comparison.">
+<meta itemprop="disambiguatingDescription" content="Not the traditional, abstract pi≈3.14... approximate.">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a circle">
 <meta itemprop="value" content="3.2 × radius^2">
-<meta itemprop="description" content="Exact formula derived from direct circle to square comparison">
-<meta itemprop="disambiguatingDescription" content="No pi">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical area of a circle in terms of its radius.">
+<meta itemprop="description" content="Derived via cutting the circle into four quadrants, placing them with their origin on the vertices of a square with side = 4radius / 5^(1/2).">
 </div>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Triangle area formula">
+<meta itemprop="description" content="Exact, physical area of a triangle">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a triangle">
 <meta itemprop="value" content="base × height / 2">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical area of a triangle in terms of its base, and height.">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -3245,12 +3239,13 @@ That is called a chord.</span>
   </mrow>
 </math>
 </div>
+<br>
+<span itemprop="description">The height of the triangle is the segment height subtracted from the radius of the parent circle.</span>
 </div>
 <br>
-<p style="margin:12px" itemprop="description">The height of the triangle is the segment height subtracted from the radius of the parent circle.</p>
-<br>
-</div>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/DefinedTerm">
+<meta itemprop="name" content="Area of a circle segment">
+<div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">A<sub>segment</sub> </span>=
 <meta itemprop="value" content="Acos( ( radius - height ) / radius ) × radius^2 - sin( Acos( ( radius - height ) / radius ) × radius ) × ( radius - height ) × radius">
 <meta itemprop="description" content="Exact circle segment area formula">
@@ -3308,6 +3303,7 @@ That is called a chord.</span>
     <mi>r</mi>
   </mrow>
 </math>
+</div>
 </div>
 <br><br>
 <div style="margin:12px" id="circle_segment_area_calculator" itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication">
@@ -3461,18 +3457,22 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Cone volume formula">
+<meta itemprop="description" content="Exact, physical volume of a cone.">
+<meta itemprop="disambiguatingDescription" content="Not the traditional, abstract base × height / 3 approximate.">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Volume of a Cone">
-<meta itemprop="value" content="base area × height / 8^(1/2)">
-<meta itemprop="description" content="Exact formula derived from quadrant cone to octant sphere comparison">
-<meta itemprop="disambiguatingDescription" content="Not the base × height / 3 approximate">
+<meta itemprop="name" content="Volume of a cone">
+<meta itemprop="value" content="3.2 × radius^2 × height / 8^(1/2)">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical volume of a cone in terms of its radius.">
+<meta itemprop="description" content="Derived via comparing a quadrant cone with an equal height and radius to an octant sphere with an equal radius.">
 </div>
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Regular polygon area formula">
+<meta itemprop="description" content="Exact, physical area of a regular polygon">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Area of a regular polygon">
-<meta itemprop="value" content="sideCount / 4 × ctg( 180° / sideCount ) × sideLength^2">
+<meta itemprop="value" content="acos((radius − height) / radius) × radius^2 − sin(acos((radius − height) / radius)) × radius × (radius − height)">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical area of a circle segment in terms of its height, and the radius of its parent circle.">
 </div>
 </div>
 <br>
@@ -3541,7 +3541,8 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 </div>
 </div>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/DefinedTerm">
+<div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>pyramid</sub></span>=
 <meta itemprop="value" content="base area × height / 8^(1/2)">
 <meta itemprop="description" content="Exact pyramid volume formula">
@@ -3562,6 +3563,7 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
  </mfrac>
 </mrow>
 </math>
+</div>
 </div>
 <br><br>
 <div style="margin:12px" id="pyramid_volume_calculator" itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication">
@@ -3664,11 +3666,12 @@ document.getElementById('pyramid-height').addEventListener('input', updatePyrami
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Pyramid volume formula">
+<meta itemprop="description" content="Exact, physical volume of a pyramid.">
+<meta itemprop="disambiguatingDescription" content="Not the traditional, abstract base × height / 3 approximate.">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Volume of a pyramid">
 <meta itemprop="value" content="base area × height / 8^(1/2)">
-<meta itemprop="description" content="Exact formula derived from quadrant cone to octant sphere comparison">
-<meta itemprop="disambiguatingDescription" content="Not the base × height / 3 approximate">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical volume of a pyramid in terms of its base area, and height.">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -4772,11 +4775,12 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Pyramid volume formula">
+<meta itemprop="description" content="Exact, physical volume of a pyramid.">
+<meta itemprop="disambiguatingDescription" content="Not the traditional, abstract base × height / 3 approximate.">
 <div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="Volume of a pyramid">
 <meta itemprop="value" content="base area × height / 8^(1/2)">
-<meta itemprop="description" content="Exact formula derived from quadrant cone to octant sphere comparison">
-<meta itemprop="disambiguatingDescription" content="Not the base × height / 3 approximate">
+<meta itemprop="description" content="Universally applicable formula to calculate the exact physical volume of a pyramid in terms of its base area, and height.">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -5092,7 +5096,8 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
 </div>
 </div>
 <br>
-<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
+<div style="margin:12px" itemprop="result" itemscope itemtype="https://schema.org/DefinedTerm">
+<div itemprop="identifier" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">V<sub>tetrahedron</sub> </span>=
 <meta itemprop="value" content="edge^3 / 8">
 <meta itemprop="description" content="Exact tetrahedron volume formula">
@@ -5109,6 +5114,7 @@ document.getElementById('frustum-cone-height').addEventListener('input', updateF
     </mfrac>
   </mrow>
 </math>
+</div>
 </div>
 <br><br>
 <div style="margin:12px" id="tetrahedron_volume_calculator" itemprop="subjectOf" itemscope itemtype="https://schema.org/SoftwareApplication">
