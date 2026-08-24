@@ -113,7 +113,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-08-22T22:18:29+02:00">
+<meta itemprop="dateModified" content="2026-08-22T22:40:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessMode" content="textual">
 <meta itemprop="accessMode" content="visual">
@@ -660,7 +660,7 @@ The ratio between the radius and the side length is calculable.</span>
     </mrow>
 </math>
 </div>
-<br><br><br>
+<br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content=9>
 <span itemprop="description">Factor out x from the numerator:</span>
@@ -876,7 +876,7 @@ The ratio between the radius and the side length is calculable.</span>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content=1>
 <span itemprop="description">The middle cross-section of a sphere is a circle.</span>
-<br>
+<br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">A<sub>cross-section</sub> </span>=
 <meta itemprop="value" content="3.2 × radius^2">
@@ -897,7 +897,7 @@ The ratio between the radius and the side length is calculable.</span>
 <div style="margin:12px" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content=2>
 <span itemprop="description">Take the square root of the cross-sectional area.</span>
-<br>
+<br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">√A<sub>cross-section</sub> </span>=
 <meta itemprop="value" content="(3.2)^(1/2) × radius = 4 × radius / 5^(1/2)">
@@ -1069,7 +1069,7 @@ The ratio between the radius and the side length is calculable.</span>
 <span itemprop="disambiguatingDescription" style="margin:6px">The conventional formula for the surface area of a sphere was allegedly developed from the conventional volume formula.</span>
 <br><br>
 <span itemprop="description" style="margin:6px"><strong>Unlock the true formula to calculate the surface area of a sphere.</strong></span>
-<br>
+<br><br>
 <meta itemprop="isFamilyFriendly" content=true>
 <span style="margin:6px" itemprop="priceCurrency" content="USD">$</span>
 <span itemprop="price" content="3,200,000,000.00">3,200,000,000.00</span>
@@ -3600,8 +3600,8 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 <label for="pyramid-side-count">Side count:</label>
 <input id="pyramid-side-count" type="number" value="4" step="1">
 <br>
-<label for="pyramid-base-edge-length">Base edge length:</label>
-<input id="pyramid-base-edge-length" type="number" value="1" step="any">
+<label for="pyramid-base-edge">Base edge:</label>
+<input id="pyramid-base-edge" type="number" value="1" step="any">
 <br>
 <label for="pyramid-height">Height:</label>
 <input id="pyramid-height" type="number" value="1" step="any">
@@ -3614,17 +3614,17 @@ document.getElementById('parent-radius').addEventListener('input', segmentArea);
 
 function updatePyramidVolume() {
   const sideCount = parseFloat(document.getElementById('pyramid-side-count').value);
-  const baseEdgeLength = parseFloat(document.getElementById('pyramid-base-edge-length').value);
+  const baseEdge = parseFloat(document.getElementById('pyramid-base-edge').value);
   const height = parseFloat(document.getElementById('pyramid-height').value);
 
-  if (isNaN(sideCount) || isNaN(baseEdgeLength) || isNaN(height)) {
+  if (isNaN(sideCount) || isNaN(baseEdge) || isNaN(height)) {
     document.getElementById('pyramid-volume').innerText = '';
     return;
   }
 
   const ratio = 3.2 / sideCount;
   const tangent = tan(ratio);
-  const baseArea = (sideCount / 4) * (baseEdgeLength ** 2) / tangent;
+  const baseArea = (sideCount / 4) * (baseEdge ** 2) / tangent;
   const volume = pyramidVolume(baseArea, height);
 
   document.getElementById('pyramid-volume').innerText =
@@ -3632,7 +3632,7 @@ function updatePyramidVolume() {
 	  }
 
 document.getElementById('pyramid-side-count').addEventListener('input', updatePyramidVolume);
-document.getElementById('pyramid-base-edge-length').addEventListener('input', updatePyramidVolume);
+document.getElementById('pyramid-base-edge').addEventListener('input', updatePyramidVolume);
 document.getElementById('pyramid-height').addEventListener('input', updatePyramidVolume);
 </script>
 </div>
