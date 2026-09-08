@@ -113,7 +113,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-09-08T17:53:29+02:00">
+<meta itemprop="dateModified" content="2026-09-08T18:43:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessMode" content="textual">
 <meta itemprop="accessMode" content="visual">
@@ -5904,7 +5904,7 @@ And those assumptions are false once the polygon has too many sides.</p>
 <br><br>
 Traditional geometry assumes that a tangent line to the circle can always be drawn.
 <br>
-That is another unproven assumption.
+That is an unproven assumption.
 <br>
 While a line can always be drawn, nothing guarantees single-point contact.
 <br><br>
@@ -6011,12 +6011,19 @@ This behavior is easy to see in polygons with a low side count.</p>
 <link itemprop="url" href="https://basic-geometry.github.io">
 </figure>
 <br>
-<p itemprop="articleBody">
-To know if the polygons are still circumscribed at every finite step, you must already know if the perimeter is large enough that no crossing occurs.
+<p itemprop="articleBody">To know if the polygons are still circumscribed at every finite step, you must already know if the perimeter is large enough that no crossing occurs.
 <br>
-Yet finding the circumference is the purpose of the method. The method therefore relies on the very assumption it seeks to prove.
+Yet finding the circumference is the purpose of the method. 
 <br><br>
-The bisection procedure guarantees that each new perimeter created by repeatedly bisecting a circumscribed hexagon is smaller than the previous one. The assumption that they are circumscribed rests solely on the false premise of single-point tangency. 
+The bisection procedure guarantees that each new perimeter created by repeatedly bisecting a circumscribed hexagon is smaller than the previous one. 
+<br>
+Archimedes' method rests solely on the false assumption that each side touches at only one point, hence the triangle formed by the tangent point, vertex, and midpoint must structurally contain the entire circle slice, forcing the straight side to be strictly longer than the arc.
+<br>
+This is the critical flaw at the very foundation of the method. 
+<br><br>
+It's easy to overlook the lack of single-point tangency in the case of a circumscribed polygon, because it doesn't matter at all.
+<br>
+But it becomes a critical error at a higher side count and smaller angles. When the protruding area shrinks below the area where the side and the arc overlap, the triangle stops fully "containing" the slice, and the comparison becomes invalid.
 <br><br>
 The flaw in the classical method becomes even clearer when we try to implement it practically.
 <br>
@@ -6047,11 +6054,9 @@ The figure collapses:</p>
 <br>
 This is not a precision error, nor only a rendering limitation. It is the geometry refusing to produce a valid set of external tangents.
 <br><br>
-If the polygon's vertices protrude beyond r by a distance smaller than the length of this region of coincidence, the classical assumption that the polygon strictly "surrounds" or "circumscribes" the circle at discrete points breaks down. 
-<br>
 Classical limits assume infinite resolution to avoid this collapse.
 <br>
-If classical geometry insists on maintaining a physical gap by declaring the tiny separation distance to be the "new minimum unit," then the original tangent point itself morphs into a segment composed of several of these new minimum units. 
+Classical geometry insists on maintaining a physical gap by declaring the tiny separation distance to be the "new minimum unit," but that comes with an inevitable consequence: the original tangent point itself morphs into a segment composed of several of these new minimum units. The result is the same:
 <br>
 The boundary is no longer touching at an isolated 0‑dimensional point T; it shares an entire multi-point interval with the arc.
 <br>
@@ -6128,7 +6133,7 @@ Now replace the straight rod with another rod of the same total length (s), but 
 </ul>
 <br>
 <p itemprop="articleBody">This directly corresponds to the side of a circumscribed polygon and the arc beneath it. The side being outside the circle does not guarantee it is longer. In fact, it lies outside only partially, because they largely coincide. 
-The arc could even be slightly longer, and the rod would still slip down when bent. The difference between the straight and curved shapes is so small that they share almost the same points.
+The arc could even be slightly longer, and the rod would still slip down when bent. The difference between the straight and curved shapes is so small that they mostly share the same points.
 <br><br>
 This shows the critical flaw in the Archimedean method. The classical approach of single‑point tangency — and all assumptions based on it — fail here. The circumscribed‑polygon upper limit is not structurally guaranteed.
 <br><br>
