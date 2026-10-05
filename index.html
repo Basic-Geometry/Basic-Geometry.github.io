@@ -6781,8 +6781,6 @@ This configuration proves the circle’s exact area in two independent ways. The
 <div itemprop="description">
 <span>Defining structural points for objects with reference to the origin (0, 0):</span>
 <br><br>
-<span>O: (0, 0) The origin of the circle and the center of the equiareal square.</span>
-<br><br>
 <span>A: (2/√5, 1/√5) An intersection point of the arc and a side of the equiareal square.</span>
 <br><br>
 <span>B: (√2/2, √2/2) An intersection point of the arc and the diagonal of the equiareal square.</span>
@@ -6799,7 +6797,7 @@ This configuration proves the circle’s exact area in two independent ways. The
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="2">
-<span itemprop="description">Calculate the half of an outlying segment by subtracting triangle OEF from circle slice ODE.
+<span itemprop="description">Calculate the half of an outlying segment by subtracting triangle OEF from circle slice ODE.</span>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -6835,7 +6833,7 @@ This configuration proves the circle’s exact area in two independent ways. The
 <mn>5</mn>
 </msqrt>
 </mfrac>
-<mo>&#x2062;</mo> <!-- invisible times -->
+<mo>×</mo>
 <mfrac>
 <mn>2</mn>
 <msqrt>
@@ -6845,13 +6843,78 @@ This configuration proves the circle’s exact area in two independent ways. The
 </mrow>
 <mn>2</mn>
 </mfrac>
-<mo>=</mo>
-<mfrac>
-<mn>1</mn>
-<mn>5</mn>
-</mfrac>
+<mo>≈</mo>
+<mn>0.0361337</mn>
 </mrow>
 </math>
+</div>
+<br><br>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="3">
+<span itemprop="description">Calculate the half of an uncovered curvilinear area by subtracting triangle ACO from circle slice ABO.</span>
+<br><br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mn>45</mn>
+<mo>&#xB0;</mo>
+<mo>-</mo>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mn>1</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>≈</mo>
+<mn>0.0638662</mn>
+</mrow>
+</math>
+</div>
+<br><br>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="4">
+<span itemprop="description">The sum of the outlying segments and the uncovered curvilinear areas equals exactly the overlapping areas of the small squares.</span>
+</div>
+<br><br>
+<br><br>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="5">
+<span itemprop="description">Since the sum of an outlying segment and an uncovered curvilinear area is exactly 1/5, subtracting a previously calculated curvilinear area from a square with an area of 1/5 shows that the area of a straight‑edged vertex region lying outside the circle equals exactly the area of a segment.</span>
 </div>
 </div>
 </section>
