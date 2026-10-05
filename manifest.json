@@ -205,7 +205,7 @@
 		"description": "Text explanation of the proof of the area."
 	},
 	"usageInfo": {
-		"url": "https://basic-geometry.github.io#circle_area_proof",
+		"url": "https://basic-geometry.github.io#basic_circle_area_proof",
 		"relatedUrls": [
       "https://basic-geometry.github.io#circle"
 		]
