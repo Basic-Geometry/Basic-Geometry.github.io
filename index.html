@@ -6796,16 +6796,14 @@ This configuration proves the circle’s exact area in two independent ways. The
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="2">
-<span itemprop="description">Calculate the half of an outlying segment by subtracting triangle OEF from circle slice ODE.</span>
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="name" content="half area of an outlying segment">
+<meta itemprop="value" content="3.2×atan(1/2)/360deg.-1/5">
+<span itemprop="description">Calculate the half area of an outlying segment by subtracting triangle OEF from circle slice ODE.</span>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mn>3.2</mn>
-<mo>&#x2062;</mo> <!-- invisible times -->
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mfrac>
 <mrow>
@@ -6842,24 +6840,21 @@ This configuration proves the circle’s exact area in two independent ways. The
 </mrow>
 <mn>2</mn>
 </mfrac>
-<mo>≈</mo>
-<mn>0.0361337</mn>
 </mrow>
 </math>
+</div>
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="3">
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<meta itemprop="name" content="half of an uncovered curvilinear area">
+<meta itemprop="value" content="3.2×(45deg.-atan(1/2))/360deg.-1/10">
 <span itemprop="description">Calculate the half of an uncovered curvilinear area by subtracting triangle ACO from circle slice ABO.</span>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mn>3.2</mn>
-<mo>&#x2062;</mo> <!-- invisible times -->
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mfrac>
 <mrow>
@@ -6899,24 +6894,207 @@ This configuration proves the circle’s exact area in two independent ways. The
 </mrow>
 <mn>2</mn>
 </mfrac>
-<mo>≈</mo>
-<mn>0.0638662</mn>
+</mrow>
+</math>
+</div>
+</div>
+<br><br>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="4">
+<span itemprop="description">Add an outlying segment and an uncovered curvilinear area.</span>
+<br><br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mn>2</mn>
+<mo>×</mo>
+<mo>(</mo>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mn>2</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>+</mo>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mn>45</mn>
+<mo>&#xB0;</mo>
+<mo>-</mo>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mn>1</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</math>
+</div>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="5">
+<span itemprop="description">Simplify.</span>
+<br><br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mn>2</mn>
+<mo>×</mo>
+<mo>(</mo>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+<mo>+</mo>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mn>45</mn>
+<mo>&#xB0;</mo>
+<mo>-</mo>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mn>1</mn>
+<mn>10</mn>
+</mfrac>
+<mo>)</mo>
 </mrow>
 </math>
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="4">
+<meta itemprop="position" content="6">
+<span itemprop="description">Simplify further.</span>
+<br><br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mn>2</mn>
+<mo>×</mo>
+<mo>(</mo>
+<mfrac>
+<mn>4</mn>
+<mn>10</mn>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mn>3</mn>
+<mn>10</mn>
+</mfrac>
+<mo>)</mo>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</math>
+<br><br>
+<div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
+<meta itemprop="position" content="7">
 <span itemprop="description">The sum of the outlying segments and the uncovered curvilinear areas equals exactly the overlapping areas of the small squares.</span>
 </div>
 <br><br>
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
-<meta itemprop="position" content="5">
+<meta itemprop="position" content="8">
 <span itemprop="description">Since the sum of an outlying segment and an uncovered curvilinear area is exactly 1/5, subtracting an uncovered curvilinear area from a square with an area of 1/5 shows that the area of a straight‑edged vertex region lying outside the circle equals exactly the area of an outlying segment.</span>
+</div>
+</div>
 </div>
 <br><br>
 <span itemprop="description">The arc intersects the sides of a concentric square at its quarters only if side/radius=4/√5, hence this is the only true area balance ratio.</span>
-</div>
 </section>
 <br><br><br><br>
 <section style="margin:12px" id="ancient_sphere_volume_formula" itemprop="assesses" itemscope itemtype="https://schema.org/DefinedTerm">
