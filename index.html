@@ -6200,21 +6200,22 @@ These values are exact, rational, and logically derived. They can be verified nu
 Since the true ratio is exactly 3.2, and that is a rational number, then we can — and should — write it as it is. Let the pi remain in the history books. Geometry deserves better.</strong></p>
 <br><br>
 <div id="correction">
+<meta itemprop="description" content="pi≠Circumference/diameter=Area/radius^2=3.2≈3.14≈pi">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
     <mrow>
       <mtext>pi</mtext>
 	<mo>≠</mo>
+		<mfrac>
+        <mrow><mtext>Circumference</mtext></mrow>
+        <mrow><mtext>diameter</mtext></mrow>
+		</mfrac>
+		<mo>=</mo>
       <mfrac>
         <mrow><mtext>Area</mtext></mrow>
         <mrow><msup><mtext>radius</mtext><mn>2</mn></msup></mrow>
       </mfrac>
 	<mo>=</mo>
-      <mn>3.2</mn>
-      <mo>=</mo>
-      <mfrac>
-        <mrow><mtext>Circumference</mtext></mrow>
-        <mrow><mtext>diameter</mtext></mrow>
-      </mfrac>
+      <mn>3.2</mn>      
       <mo>&#x2248;</mo>
       <mn>3.14</mn>
       <mo>&#x2248;</mo>
@@ -6229,8 +6230,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br><br><br><br>
 <section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="basic_circle_area_proof">
 <meta itemprop="name" content="Basic proof of 3.2radius^2 is the exact area of a circle">
-<h3 itemprop="disambiguatingDescription">The widely used circle area formula ( A = pi × r² ) is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
-<meta itemprop="eduQuestionType" content="Circle area calculation">
+<meta itemprop="eduQuestionType" content="Circle area proof">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
 <div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
 <meta itemprop="currency" content="USD">
@@ -6245,9 +6245,13 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
+<h3 itemprop="disambiguatingDescription">The widely used circle area formula ( A = pi × r² ) is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
 <br>
-<span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</span>
-<br><br><br>
+<span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.
+<br><br>
+Instead of relying on that circumference‑based amendment, this proof follows the direct circle–square comparison described earlier. We compare a square and a circle in a quadrant layout, where the arc‑intersection condition fixes the side to radius ratio as 4/√5. With that ratio established, the area balance is determined entirely through the areas that arise in this configuration: the curvilinear quarter of the uncovered region and the two overlapping segment halves along each side.
+</span>
+<br><br>
 <span itemprop="description">In the quadrant layout when the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.</span>
 <br><br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -6271,9 +6275,12 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep" id="uncovered">
 <meta itemprop="position" content="1">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">Quarter of the uncovered area in the middle </span>=
+<span itemprop="name">Quarter of the uncovered area in the middle</span>:
+<br>
+<span itemprop="description">(Curvilinear area, defined by points with reference to the origin (0,0))
+<br>
+(0,0), (1/√5,0), (0,1/√5)</span>
 <meta itemprop="value" content="3.2 × r^2 / 4 - ( 3.2 × r^2 × ( ( 90deg. - 2 × Atan( 1 / 2 ) ) / 360deg. ) + 2 × ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
-<meta itemprop="description" content="Quarter of the area in the middle of the square, uncovered by the quadrant circles.">
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -6360,7 +6367,11 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep" id="overlap">
 <meta itemprop="position" content="2">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">The area of an overlapping section </span>=
+<span itemprop="name">The area of an overlapping section</span>:
+<br>
+<span itemprop="description">(Segment half, defined by points with reference to the origin (0,0))
+<br>
+(1/√5,0), (2/√5,0), (2/√5,1-2/√5)</span>
 <meta itemprop="value" content="2 × ( 3.2 × r^2 × ( ( 90deg. - Atan( 1 / 2 ) ) / 360deg. ) - ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
 <meta itemprop="description" content="Quarter of the total overlapping area.">
 <br><br>
