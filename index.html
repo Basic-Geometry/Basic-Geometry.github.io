@@ -6446,11 +6446,11 @@ Instead of relying on that circumference‑based amendment, this proof follows t
 <meta itemprop="position" content="3">
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
 <meta itemprop="position" content="1">
-<p itemprop="description">The equation can be simplified algebraically.</p>
+<span itemprop="description">The equation can be simplified algebraically.</span>
 </div>
 <br><br>
 <div>
-<p itemprop="description">Dividing both sides by 3.2r² :</p>
+<span itemprop="description">Dividing both sides by 3.2r² :</span>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -6534,7 +6534,7 @@ Instead of relying on that circumference‑based amendment, this proof follows t
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="4">
 <div>
-<p itemprop="description">Simplifying further by adding 1/8 :</p>
+<span itemprop="description">Simplifying further by adding 1/8 :</span>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -6597,7 +6597,7 @@ Instead of relying on that circumference‑based amendment, this proof follows t
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="5">
 <div>
-<p itemprop="description">Substituting 90° / 360° for 1 / 4 :</p>
+<span itemprop="description">Substituting 90° / 360° for 1 / 4 :</span>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -6666,7 +6666,7 @@ Instead of relying on that circumference‑based amendment, this proof follows t
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="6">
 <div>
-<p itemprop="description">Simplifying further:</p>
+<span itemprop="description">Simplifying further:</span>
 <br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -6728,7 +6728,7 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <meta itemprop="contentUrl" content="https://basic-geometry.github.io/circleArea.png">
 </figure>
 </section>
-<br><br><br><br>
+<br><br><br>
 <section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="advanced_circle_area_proof">
 <meta itemprop="name" content="Advanced proof of 3.2radius^2 is the exact area of a circle">
 <meta itemprop="eduQuestionType" content="Circle area proof">
@@ -6773,12 +6773,85 @@ This configuration proves the circle’s exact area in two independent ways. The
 <meta itemprop="creditText" content="Made with the help of Vectorink.io">
 <link itemprop="license" href="https://basic-geometry.github.io">
 <meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
-<meta itemprop="contentUrl" content="https://basic-geometry.github.io/equityFigure.png">
+<meta itemprop="contentUrl" content="https://basic-geometry.github.io/equityFigure2.png">
 </figure>
 <br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep" id="uncovered">
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="1">
-<span itemprop="description">Defining structural points with reference to the origin (0, 0):</span>
+<div itemprop="description">
+<span>Defining structural points for objects with reference to the origin (0, 0):</span>
+<br><br>
+<span>O: (0, 0) The origin of the circle and the center of the equiareal square.</span>
+<br><br>
+<span>A: (2/√5, 1/√5) An intersection point of the arc and a side of the equiareal square.</span>
+<br><br>
+<span>B: (√2/2, √2/2) An intersection point of the arc and the diagonal of the equiareal square.</span>
+<br><br>
+<span>C: (1/√5, 1/√5) An intersection point of two smaller squares, and the diagonal of the equiareal square.</span>
+<br><br>
+<span>D: (0, 1) An intersection point of the arc and the centerline.</span>
+<br><br>
+<span>E: (-1/√5, 2/√5) An intersection point of the arc and a side of the equiareal square.</span>
+<br><br>
+<span>F: (0, 2/√5) An intersection point of the centerline and a side of the equiareal square.</span>
+</div>
+</div>
+<br><br>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="2">
+<span itemprop="description">Calculate the half of an outlying segment by subtracting triangle OEF from circle slice ODE.
+<br><br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mn>2</mn>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</math>
 </div>
 </div>
 </section>
