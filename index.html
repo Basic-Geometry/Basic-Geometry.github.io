@@ -6229,13 +6229,13 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 </section>
 <br><br><br><br>
 <section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="circle_area_proof">
-<meta itemprop="name" content="Basic proof of 3.2radius^2 is the exact area of a circle">
+<meta itemprop="name" content="Proof of 3.2radius^2 is the exact area of a circle">
+<meta itemprop="description" content="Constructive, algebraic proof of 3.2radius^2 is the exact area of a circle">
+<h3 itemprop="disambiguatingDescription">The widely used circle area formula ( A = pi × r² ) is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
+<br>
+<span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</span>
+<br><br>
 <meta itemprop="eduQuestionType" content="Circle area proof">
-<div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
-<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
-<meta itemprop="currency" content="USD">
-<meta itemprop="value" content="0">
-</div>
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="radius of the circle">
 <meta itemprop="minValue" content=0>
@@ -6243,6 +6243,12 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
 <meta itemprop="name" content="side length of the concentric equiareal square">
 <meta itemprop="value" content="4radius/5^(1/2)">
+</div>
+<meta itemprop="target" content="https://cgs-mcp-server-authless.gmac4247-ac0.workers.dev?q={area of a circle = 3.2radius^2}">
+<div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
+<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
+<meta itemprop="currency" content="USD">
+<meta itemprop="value" content="0">
 </div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Area of a square formula">
@@ -6258,14 +6264,9 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
 <meta itemprop="name" content="Area of a triangle formula">
 </div>
-</div>
 <meta itemprop="totalTime" content="PT30M">
-<h3 itemprop="disambiguatingDescription">The widely used circle area formula ( A = pi × r² ) is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
+<h4 itemprop="name">Constructive algebraic proof</h4>
 <br>
-<span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</span>
-<br><br>
-<span itemprop="description">Instead of relying on that circumference‑based amendment, this proof compares a square and a circle directly.
-<br><br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
     <img class="center-fit" src="circleArea.png" alt="Circle area">
 <div itemprop="creator" itemscope itemtype="https://schema.org/Person">
@@ -6284,12 +6285,14 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <meta itemprop="contentUrl" content="https://basic-geometry.github.io/circleArea.png">
 </figure>
 <br>
+<span itemprop="description">Instead of relying on the circumference‑based amendment, this proof compares a square and a circle directly.
+<br><br>
 <div itemprop="abstract">
 <span>In the quadrant circles to square layout, the arc‑intersection condition fixes the side to radius ratio as 4/√5. With that ratio established, the overlapping area equals to the uncovered area in the middle, hence the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units. The area balance is determined through the areas that arise in this configuration:</span>
 <br>
 <ul style="margin:6px">
     <li>1. the curvilinear region uncovered by the quadrants at the middle of the square, and</li>
-	<li>2. the overlapping circle segment halves along the centerline.</li>
+	<li>2. the circular segment halves overlapping along the centerline.</li>
 </ul>
 </div>
 <br>
