@@ -6779,6 +6779,7 @@ The areas are perfectly balanced if</span>
 <br><br>
 <meta itemprop="description" content="Triangle defined by points with reference to the origin (0, 0) with r=1: (0, 0), (0, 2/√5): An intersection point of the centerline and a side of the equiareal square, (-1/√5, 2/√5): An intersection point of the arc and a side of the equiareal square">
 <meta itemprop="description" content="Circle slice defined by points with reference to the origin (0, 0) with r=1: (0, 0), (0, 1): An intersection point of the arc and the centerline, (-1/√5, 2/√5)">
+<meta itemprop="description" content="Half segment defined by points with reference to the origin (0, 0) with r=1: (0, 1), (-1/√5, 2/√5), (0, 2/√5)">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">Half of the area of an outlying segment </span>=
 <meta itemprop="value" content="3.2r^2×atan(1/2)/360deg.-r^2/5">
@@ -6821,9 +6822,11 @@ The areas are perfectly balanced if</span>
 </mfrac>
 <mo>×</mo>
 <mfrac>
+<mrow>
 <mn>2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mi>r</mi>
+	</mrow>
 <msqrt>
 <mn>5</mn>
 </msqrt>
@@ -6837,11 +6840,12 @@ The areas are perfectly balanced if</span>
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="3">
+<meta itemprop="position" content="9">
 <span itemprop="description">Calculating a half of an uncovered curvilinear area by subtracting triangle ACO from circle slice ABO.</span>
 <br><br>
 <meta itemprop="description" content="Triangle defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5): An intersection point of the arc and a side of the equiareal square, (1/√5, 1/√5): An intersection point of two smaller squares, and the diagonal of the equiareal square">
 <meta itemprop="description" content="Circle slice defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5), (√2/2, √2/2): An intersection point of the arc and the diagonal of the equiareal square">
+<meta itemprop="description" content="Half curvilinear region defined by points with reference to the origin (0, 0) with r=1: (1/√5, 1/√5), (2/√5, 1/√5), (√2/2, √2/2)">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">Half of an uncovered curvilinear area </span>=
 <meta itemprop="value" content="3.2r^2×(45deg.-atan(1/2))/360deg.-r^2/10">
@@ -6901,8 +6905,8 @@ The areas are perfectly balanced if</span>
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="4">
-<span itemprop="description">Add an outlying segment and an uncovered curvilinear area:</span>
+<meta itemprop="position" content="10">
+<span itemprop="description">Add an outlying segment and an uncovered curvilinear region:</span>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -6945,9 +6949,11 @@ The areas are perfectly balanced if</span>
 </mfrac>
 <mo>×</mo>
 <mfrac>
+<mrow>
 <mn>2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mi>r</mi>
+</mrow>
 <msqrt>
 <mn>5</mn>
 </msqrt>
@@ -7009,7 +7015,7 @@ The areas are perfectly balanced if</span>
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="5">
+<meta itemprop="position" content="11">
 <span itemprop="description">Simplify:</span>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -7017,58 +7023,35 @@ The areas are perfectly balanced if</span>
 <mn>2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mo>(</mo>
+<mfrac>
+<mrow>
 <mn>3.2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
-<mfrac>
-<mrow>
-<mo>arctan</mo>
-<mo>&#x2061;</mo>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>1</mn>
+<msup>
+<mi>r</mi>
 <mn>2</mn>
-</mfrac>
-<mo>)</mo>
+</msup>
 </mrow>
-</mrow>
-<mrow>
-<mn>360</mn>
-<mo>&#xB0;</mo>
-</mrow>
+<mn>8</mn>
 </mfrac>
 <mo>-</mo>
 <mfrac>
-<mn>1</mn>
-<mn>5</mn>
-</mfrac>
-<mo>+</mo>
-<mn>3.2</mn>
+<mrow>
+<mn>2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
-<mfrac>
-<mrow>
-<mn>45</mn>
-<mo>&#xB0;</mo>
-<mo>-</mo>
-<mo>arctan</mo>
-<mo>&#x2061;</mo>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>1</mn>
+<msup>
+<mi>r</mi>
 <mn>2</mn>
-</mfrac>
-<mo>)</mo>
+</msup>
 </mrow>
-</mrow>
-<mrow>
-<mn>360</mn>
-<mo>&#xB0;</mo>
-</mrow>
+<mn>10</mn>
 </mfrac>
 <mo>-</mo>
 <mfrac>
-<mn>1</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
 <mn>10</mn>
 </mfrac>
 <mo>)</mo>
@@ -7077,7 +7060,7 @@ The areas are perfectly balanced if</span>
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="6">
+<meta itemprop="position" content="12">
 <span itemprop="description">Simplify further:</span>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -7086,31 +7069,48 @@ The areas are perfectly balanced if</span>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mo>(</mo>
 <mfrac>
+<mrow>
 <mn>4</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow>
 <mn>10</mn>
 </mfrac>
 <mo>-</mo>
 <mfrac>
+<mrow>
 <mn>3</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+	<msup>
+<mi>r</mi>
+<mn>2</mn>
+	</msup>
+</mrow>
 <mn>10</mn>
 </mfrac>
 <mo>)</mo>
 <mo>=</mo>
 <mfrac>
-<mn>1</mn>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
 <mn>5</mn>
 </mfrac>
 </mrow>
 </math>
 <br><br><br>
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
-<meta itemprop="position" content="7">
+<meta itemprop="position" content="13">
 <span itemprop="description">The sum of the outlying segments and the uncovered curvilinear areas equals exactly the overlapping areas of the small squares.</span>
 </div>
 <br>
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
-<meta itemprop="position" content="8">
-<span itemprop="description">Since the sum of an outlying segment and an uncovered curvilinear area is exactly 1/5, subtracting an uncovered curvilinear area from a square with an area of 1/5 shows that the area of a straight‑edged vertex region lying outside the circle equals exactly the area of an outlying segment.</span>
+<meta itemprop="position" content="14">
+<span itemprop="description">Since the sum of an outlying segment and an uncovered curvilinear area is exactly r²/5, subtracting an uncovered curvilinear area from a square with an area of r²/5 shows that the area of a straight‑edged vertex region lying outside the circle equals exactly the area of an outlying segment.</span>
 </div>
 </div>
 </div>
