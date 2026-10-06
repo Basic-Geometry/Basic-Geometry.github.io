@@ -6229,11 +6229,13 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 </section>
 <br><br><br><br>
 <section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="circle_area_proof">
-<meta itemprop="name" content="Proof of 3.2radius^2 is the exact area of a circle">
+<meta itemprop="name" content="Circle Area Proof">
 <meta itemprop="description" content="Constructive, algebraic proof of 3.2radius^2 is the exact area of a circle">
 <h3 itemprop="disambiguatingDescription">The widely used circle area formula ( A = pi × r² ) is not a result of direct geometric comparison, nor a direct result of calculus.</h3>
 <br>
-<span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</span>
+<span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.
+<br><br>
+Instead of relying on the circumference‑based amendment, this proof compares a square and a circle directly.</span>
 <br><br>
 <meta itemprop="eduQuestionType" content="Circle area proof">
 <div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
@@ -6285,8 +6287,6 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <meta itemprop="contentUrl" content="https://basic-geometry.github.io/circleArea.png">
 </figure>
 <br>
-<span itemprop="description">Instead of relying on the circumference‑based amendment, this proof compares a square and a circle directly.
-<br><br>
 <div itemprop="abstract">
 <span>In the quadrant circles to square layout, the arc‑intersection condition fixes the side to radius ratio as 4/√5. With that ratio established, the overlapping area equals to the uncovered area in the middle, hence the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units. The area balance is determined through the areas that arise in this configuration:</span>
 <br>
@@ -6316,12 +6316,11 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep" id="uncovered">
 <meta itemprop="position" content="1">
+<span itemprop="description">Calculating a quarter of the uncovered area by subtracting two right triangles with legs of r/√5 and 2r/√5, and a circle slice with an angle of 90°-2arctan(1/2) from a square with a side length of 2r/√5:
+<br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">Quarter of the uncovered curvilinear area in the middle</span>:
-<br>
-<span itemprop="description">(Defined by points with reference to the origin (0, 0): 
-<br>
-(0, 0), (1/√5, 0), (0, 1/√5))</span>
+<span itemprop="name">Quarter of the uncovered curvilinear area in the middle </span>=
+<meta itemprop="description" content="Defined by points with reference to the origin (0, 0) with r=1: (0, 0), (1/√5, 0), (0, 1/√5)">
 <meta itemprop="value" content="3.2 × r^2 / 4 - ( 3.2 × r^2 × ( ( 90deg. - 2 × Atan( 1 / 2 ) ) / 360deg. ) + 2 × ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -6408,14 +6407,11 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep" id="overlap">
 <meta itemprop="position" content="2">
+<span itemprop="description">Calculating a quarter of the overlapping area by subtracting two right triangles with legs of r/√5 and 2r/√5 from two circle slices with an angle of arctan(1/2):
+<br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">The area of 2 overlapping segment halves</span>:
-<br>
-<span itemprop="description">(Defined by points with reference to the origin (0, 0): 
-<br>
-(1/√5, 0), (2/√5, 0), (2/√5, 1-2/√5); 
-<br>
-(0, 1/√5), (0, 2/√5), (1-2/√5, 2/√5))</span>
+<span itemprop="name">The area of 2 overlapping circular segment halves </span>=
+<meta itemprop="description" content="Defined by points with reference to the origin (0, 0) with r=1: (1/√5, 0), (2/√5, 0), (2/√5, 1-2/√5); (0, 1/√5), (0, 2/√5), (1-2/√5, 2/√5)">
 <meta itemprop="value" content="2 × ( 3.2 × r^2 × ( ( 90deg. - Atan( 1 / 2 ) ) / 360deg. ) - ( ( sqrt(3.2) / 4 ) × ( sqrt(3.2) / 2 ) / 2 ) )"> 
 <meta itemprop="description" content="Quarter of the total overlapping area.">
 <br><br>
@@ -6747,7 +6743,7 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 </div>
 </div>
 <br><br>
-<h4 itemprop="description">Verifying that this is an identity; not tautology in two independent ways.</h4>
+<h4 itemprop="description">Verifying that this is an identity; not tautology</h4>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
 <img class="center-fit" src="equityFigure2.png" alt="Circle area">
@@ -6797,11 +6793,12 @@ The areas are perfectly balanced if</span>
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="2">
+<meta itemprop="position" content="8">
+<span itemprop="description">Calculating a half of the area of an outlying segment by subtracting a triangle OEF from circle slice ODE.</span>
+<br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <meta itemprop="name" content="half area of an outlying segment">
 <meta itemprop="value" content="3.2×atan(1/2)/360deg.-1/5">
-<span itemprop="description">Calculate the half area of an outlying segment by subtracting triangle OEF from circle slice ODE.</span>
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
