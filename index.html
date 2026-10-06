@@ -6772,37 +6772,25 @@ The areas are perfectly balanced if</span>
 	<li>2. the circular segments lying outside the equiareal square equal the straight‑edged vertex regions lying outside the circle.</li>
 </ul>
 </div>
-<br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="8">
-<div itemprop="description">
-<span>Defining structural points for objects with reference to the origin (0, 0):</span>
-<br><br>
-<span>A: (2/√5, 1/√5) An intersection point of the arc and a side of the equiareal square.</span>
-<br><br>
-<span>B: (√2/2, √2/2) An intersection point of the arc and the diagonal of the equiareal square.</span>
-<br><br>
-<span>C: (1/√5, 1/√5) An intersection point of two smaller squares, and the diagonal of the equiareal square.</span>
-<br><br>
-<span>D: (0, 1) An intersection point of the arc and the centerline.</span>
-<br><br>
-<span>E: (-1/√5, 2/√5) An intersection point of the arc and a side of the equiareal square.</span>
-<br><br>
-<span>F: (0, 2/√5) An intersection point of the centerline and a side of the equiareal square.</span>
-</div>
-</div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="8">
-<span itemprop="description">Calculating a half of the area of an outlying segment by subtracting a triangle OEF from circle slice ODE.</span>
+<span itemprop="description">Calculating a half of the area of an outlying segment by subtracting a triangle from a circle slice:</span>
 <br><br>
+<meta itemprop="description" content="Triangle defined by points with reference to the origin (0, 0) with r=1: (0, 0), (0, 2/√5): An intersection point of the centerline and a side of the equiareal square, (-1/√5, 2/√5): An intersection point of the arc and a side of the equiareal square">
+<meta itemprop="description" content="Circle slice defined by points with reference to the origin (0, 0) with r=1: (0, 0), (0, 1): An intersection point of the arc and the centerline, (-1/√5, 2/√5)">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="half area of an outlying segment">
-<meta itemprop="value" content="3.2×atan(1/2)/360deg.-1/5">
+<span itemprop="name">Half of the area of an outlying segment </span>=
+<meta itemprop="value" content="3.2r^2×atan(1/2)/360deg.-r^2/5">
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mfrac>
 <mrow>
@@ -6826,7 +6814,7 @@ The areas are perfectly balanced if</span>
 <mfrac>
 <mrow>
 <mfrac>
-<mn>1</mn>
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
@@ -6834,6 +6822,8 @@ The areas are perfectly balanced if</span>
 <mo>×</mo>
 <mfrac>
 <mn>2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
@@ -6848,14 +6838,22 @@ The areas are perfectly balanced if</span>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="3">
+<span itemprop="description">Calculating a half of an uncovered curvilinear area by subtracting triangle ACO from circle slice ABO.</span>
+<br><br>
+<meta itemprop="description" content="Triangle defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5): An intersection point of the arc and a side of the equiareal square, (1/√5, 1/√5): An intersection point of two smaller squares, and the diagonal of the equiareal square">
+<meta itemprop="description" content="Circle slice defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5), (√2/2, √2/2): An intersection point of the arc and the diagonal of the equiareal square">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="half of an uncovered curvilinear area">
-<meta itemprop="value" content="3.2×(45deg.-atan(1/2))/360deg.-1/10">
-<span itemprop="description">Calculate the half of an uncovered curvilinear area by subtracting triangle ACO from circle slice ABO.</span>
+<span itemprop="name">Half of an uncovered curvilinear area </span>=
+<meta itemprop="value" content="3.2r^2×(45deg.-atan(1/2))/360deg.-r^2/10">
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
 <mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mfrac>
 <mrow>
@@ -6882,14 +6880,14 @@ The areas are perfectly balanced if</span>
 <mfrac>
 <mrow>
 <mfrac>
-<mn>1</mn>
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
 </mfrac>
 <mo>×</mo>
 <mfrac>
-<mn>1</mn>
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
@@ -6913,6 +6911,11 @@ The areas are perfectly balanced if</span>
 <mo>(</mo>
 <mn>3.2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>&#x2062;</mo> <!-- invisible times -->
 <mfrac>
 <mrow>
 <mo>arctan</mo>
@@ -6935,7 +6938,7 @@ The areas are perfectly balanced if</span>
 <mfrac>
 <mrow>
 <mfrac>
-<mn>1</mn>
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
@@ -6943,6 +6946,8 @@ The areas are perfectly balanced if</span>
 <mo>×</mo>
 <mfrac>
 <mn>2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
@@ -6952,6 +6957,11 @@ The areas are perfectly balanced if</span>
 </mfrac>
 <mo>+</mo>
 <mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mfrac>
 <mrow>
@@ -6978,14 +6988,14 @@ The areas are perfectly balanced if</span>
 <mfrac>
 <mrow>
 <mfrac>
-<mn>1</mn>
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
 </mfrac>
 <mo>×</mo>
 <mfrac>
-<mn>1</mn>
+<mi>r</mi>
 <msqrt>
 <mn>5</mn>
 </msqrt>
