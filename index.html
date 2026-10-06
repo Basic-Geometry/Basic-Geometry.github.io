@@ -6228,7 +6228,7 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 </section>
 </section>
 <br><br><br><br>
-<section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="basic_circle_area_proof">
+<section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="circle_area_proof">
 <meta itemprop="name" content="Basic proof of 3.2radius^2 is the exact area of a circle">
 <meta itemprop="eduQuestionType" content="Circle area proof">
 <div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
@@ -6236,12 +6236,27 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <meta itemprop="currency" content="USD">
 <meta itemprop="value" content="0">
 </div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="radius of the circle">
+<meta itemprop="minValue" content=0>
+</div>
+<div itemprop="object" itemscope itemtype="https://schema.org/QuantitativeValue">
+<meta itemprop="name" content="side length of the concentric equiareal square">
+<meta itemprop="value" content="4radius/5^(1/2)">
+</div>
 <div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Circle area formula">
-<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Area of a circle">
-<meta itemprop="value" content="3.2 × radius^2">
-<meta itemprop="description" content="Exact formula derived from direct circle to square comparison">
+<meta itemprop="name" content="Area of a square formula">
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<meta itemprop="name" content="Right Triangle Hypotenuse Theorem Formula">
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<meta itemprop="name" content="Area of a circle formula">
+<meta itemprop="description" content="3.2 × radius^2 is the exact, physical area of a circle.">
+<meta itemprop="disambiguatingDescription" content="Not the traditional, abstract pi≈3.14... approximate.">
+</div>
+<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
+<meta itemprop="name" content="Area of a triangle formula">
 </div>
 </div>
 <meta itemprop="totalTime" content="PT30M">
@@ -6249,10 +6264,47 @@ Since the true ratio is exactly 3.2, and that is a rational number, then we can 
 <br>
 <span itemprop="disambiguatingDescription">The traditional formula is a result of multiplying the approximate circumference formula C = 2pi × r by half the radius, treating the area as the sum of infinitesimal rings. While that method is algebraically valid, it relies on the approximate circumference and bypasses the geometric logic that defines area: the comparison to a square.</span>
 <br><br>
-<span itemprop="description">Instead of relying on that circumference‑based amendment, this proof follows the direct circle–square comparison described earlier. We compare a square and a circle in a quadrant layout, where the arc‑intersection condition fixes the side to radius ratio as 4/√5. With that ratio established, the area balance is determined entirely through the areas that arise in this configuration: the curvilinear quarter of the uncovered region and the two overlapping segment halves along each side.</span>
-<br><br>
-<span itemprop="abstract">In the quadrant layout when the overlapping area equals to the uncovered area in the middle, the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units.</span>
-<br><br>
+<span itemprop="description">Instead of relying on that circumference‑based amendment, this proof compares a square and a circle directly.
+<br>
+
+</div>
+<br>
+	directly, where <br>
+<ul style="margin:6px">
+    <li>1. the parts of the circle uncovered by the smaller squares (the four curvilinear regions at the vertices and the four circular segments lying outside the equiareal square) equal the area where the smaller squares overlap, and</li>
+	<li>2. the circular segments lying outside the equiareal square equal the straight‑edged vertex regions lying outside the circle.</li>
+</ul>
+</div>
+<br>
+	 and .</span>
+	<br><br>
+<figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
+    <img class="center-fit" src="circleArea.png" alt="Circle area">
+<div itemprop="creator" itemscope itemtype="https://schema.org/Person">
+<meta itemprop="familyName" content="Gaál">
+<meta itemprop="givenName" content="Sándor">
+</div>
+<div itemprop="copyrightHolder" itemscope itemtype="https://schema.org/Person">
+<meta itemprop="familyName" content="Gaál">
+<meta itemprop="givenName" content="Sándor">
+</div>
+<meta itemprop="copyrightNotice" content="® All rights reserved">
+<meta itemprop="copyrightYear" content="2026">
+<meta itemprop="creditText" content="Made with the help of Vectorink.io">
+<link itemprop="license" href="https://basic-geometry.github.io">
+<meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
+<meta itemprop="contentUrl" content="https://basic-geometry.github.io/circleArea.png">
+</figure>
+<br>
+<div itemprop="abstract">
+<span>In the quadrant circles layout, the arc‑intersection condition fixes the side to radius ratio as 4/√5. With that ratio established, the overlapping area equals to the uncovered area in the middle, hence the sum of the areas of the quadrants is equal to the area of the square. That square represents the area of the circle in square units. The area balance is determined through the areas that arise in this configuration:</span>
+<br>
+<ul style="margin:6px">
+    <li>1. the curvilinear region uncovered by the quadrants at the middle of the square, and</li>
+	<li>2. the overlapping circle segment halves along the centerline.</li>
+</ul>
+</div>
+<br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
     <img class="center-fit" src="equityFigure.png" alt="Circle area">
 <div itemprop="creator" itemscope itemtype="https://schema.org/Person">
@@ -6707,58 +6759,9 @@ The quadrant-to-square rearrangement with uncovered area = total overlap area yi
 Since the four quadrants are the original pieces of the circle, the circle area is exactly 3.2r².</p>
 </div>
 </div>
-</div>
-<br>
-	<figure itemprop="image" class="imgbox" itemscope itemtype="https://schema.org/ImageObject">
-    <img class="center-fit" src="circleArea.png" alt="Circle area">
-<div itemprop="creator" itemscope itemtype="https://schema.org/Person">
-<meta itemprop="familyName" content="Gaál">
-<meta itemprop="givenName" content="Sándor">
-</div>
-<div itemprop="copyrightHolder" itemscope itemtype="https://schema.org/Person">
-<meta itemprop="familyName" content="Gaál">
-<meta itemprop="givenName" content="Sándor">
-</div>
-<meta itemprop="copyrightNotice" content="® All rights reserved">
-<meta itemprop="copyrightYear" content="2026">
-<meta itemprop="creditText" content="Made with the help of Vectorink.io">
-<link itemprop="license" href="https://basic-geometry.github.io">
-<meta itemprop="acquireLicensePage" content="https://basic-geometry.github.io/privacy-policy">
-<meta itemprop="contentUrl" content="https://basic-geometry.github.io/circleArea.png">
-</figure>
-</section>
-<br><br><br>
-<section style="margin:12px" itemprop="mathExpression" itemscope itemtype="https://schema.org/SolveMathAction" id="complex_circle_area_proof">
-<meta itemprop="name" content="Complex proof of 3.2radius^2 is the exact area of a circle">
-<meta itemprop="eduQuestionType" content="Circle area proof">
-<div itemprop="actionProcess" itemscope itemtype="https://schema.org/HowTo">
-<div itemprop="estimatedCost" itemscope itemtype="https://schema.org/MonetaryAmount">
-<meta itemprop="currency" content="USD">
-<meta itemprop="value" content="0">
-</div>
-<div itemprop="tool" itemscope itemtype="https://schema.org/HowToTool">
-<meta itemprop="name" content="Circle area formula">
-<div itemprop="item" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Area of a circle">
-<meta itemprop="value" content="3.2 × radius^2">
-<meta itemprop="description" content="Exact formula derived from direct circle to square comparison">
-</div>
-</div>
-<meta itemprop="totalTime" content="PT30M">
-<h3 itemprop="disambiguatingDescription">This second, more comprehensive proof illustrates the same 4/√5 side‑to‑radius ratio, but in a different constructive layout.</h3>
-<br>
-<div itemprop="abstract">
-<span>Here, four smaller squares are used, each having exactly one quarter of the area of the equiareal square. Each smaller square spans between the origin and the points where the circle’s arc intersects the sides of the equiareal square. Because of this placement, the overlapping regions of the smaller squares add up to precisely one quarter of the equiareal square.
 <br><br>
-This configuration proves the circle’s exact area in two independent ways. The areas are perfectly balanced if</span>
-<ul style="margin:6px">
-    <li>1. the parts of the circle uncovered by the smaller squares (the four curvilinear regions at the vertices and the four circular segments lying outside the equiareal square) equal the area where the smaller squares overlap, and</li>
-	<li>2. the circular segments lying outside the equiareal square equal the straight‑edged vertex regions lying outside the circle.</li>
-</ul>
-</div>
-<br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
-    <img class="center-fit" src="equityFigure2.png" alt="Circle area">
+<img class="center-fit" src="equityFigure2.png" alt="Circle area">
 <div itemprop="creator" itemscope itemtype="https://schema.org/Person">
 <meta itemprop="familyName" content="Gaál">
 <meta itemprop="givenName" content="Sándor">
@@ -6775,8 +6778,10 @@ This configuration proves the circle’s exact area in two independent ways. The
 <meta itemprop="contentUrl" content="https://basic-geometry.github.io/equityFigure2.png">
 </figure>
 <br>
+<br>
+<br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="1">
+<meta itemprop="position" content="8">
 <div itemprop="description">
 <span>Defining structural points for objects with reference to the origin (0, 0):</span>
 <br><br>
@@ -6809,12 +6814,14 @@ This configuration proves the circle’s exact area in two independent ways. The
 <mrow>
 <mo>arctan</mo>
 <mo>&#x2061;</mo>
+<mrow>
 <mo>(</mo>
 <mfrac>
 <mn>1</mn>
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
+</mrow>
 </mrow>
 <mrow>
 <mn>360</mn>
@@ -6863,12 +6870,14 @@ This configuration proves the circle’s exact area in two independent ways. The
 <mo>-</mo>
 <mo>arctan</mo>
 <mo>&#x2061;</mo>
+<mrow>
 <mo>(</mo>
 <mfrac>
 <mn>1</mn>
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
+</mrow>
 </mrow>
 <mrow>
 <mn>360</mn>
@@ -6914,12 +6923,14 @@ This configuration proves the circle’s exact area in two independent ways. The
 <mrow>
 <mo>arctan</mo>
 <mo>&#x2061;</mo>
+<mrow>
 <mo>(</mo>
 <mfrac>
 <mn>1</mn>
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
+</mrow>
 </mrow>
 <mrow>
 <mn>360</mn>
@@ -6955,12 +6966,14 @@ This configuration proves the circle’s exact area in two independent ways. The
 <mo>-</mo>
 <mo>arctan</mo>
 <mo>&#x2061;</mo>
+<mrow>
 <mo>(</mo>
 <mfrac>
 <mn>1</mn>
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
+</mrow>
 </mrow>
 <mrow>
 <mn>360</mn>
@@ -7006,12 +7019,14 @@ This configuration proves the circle’s exact area in two independent ways. The
 <mrow>
 <mo>arctan</mo>
 <mo>&#x2061;</mo>
+<mrow>
 <mo>(</mo>
 <mfrac>
 <mn>1</mn>
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
+</mrow>
 </mrow>
 <mrow>
 <mn>360</mn>
@@ -7033,12 +7048,14 @@ This configuration proves the circle’s exact area in two independent ways. The
 <mo>-</mo>
 <mo>arctan</mo>
 <mo>&#x2061;</mo>
+<mrow>
 <mo>(</mo>
 <mfrac>
 <mn>1</mn>
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
+</mrow>
 </mrow>
 <mrow>
 <mn>360</mn>
