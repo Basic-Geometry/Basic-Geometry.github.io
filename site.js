@@ -27,6 +27,7 @@ self.addEventListener('install', (event) => {
         'crystal.jpeg',
         'traditionalTangency.png',
         'arcAndLine.png',
+        'arcAndOverlappingLine.jpeg',
         'isoperimetry.png',
         'polygonApproximation.png',
         'equityFigure.png',
