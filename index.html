@@ -114,7 +114,7 @@
 </div>
 <main itemscope itemtype="https://schema.org/LearningResource https://schema.org/MathSolver" id="cgs">
 <meta itemprop="name" content="Core Geometric System ™">
-<meta itemprop="dateModified" content="2026-10-09T18:16:29+02:00">
+<meta itemprop="dateModified" content="2026-10-09T18:55:29+02:00">
 <meta itemprop="accessMode" content="mathOnVisual">
 <meta itemprop="accessMode" content="textual">
 <meta itemprop="accessMode" content="visual">
@@ -6772,14 +6772,17 @@ The area balance is determined through the areas that arise in this configuratio
 <br><br>
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
 <meta itemprop="position" content="7">
-<p itemprop="description"><strong>Which is equivalent to 1 = 1 .
+<span itemprop="description"><strong>Which is equivalent to 1 = 1 .</strong></span>
 <br><br>
-Uncovered area = overlapping area
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<span itemprop="name">Uncovered area </span> equals 
+<span itemprop="value">overlapping area</span>
+</div>
 <br><br>
-Since the four quadrants are the original pieces of the circle, the circle area is exactly 3.2r².</strong></p>
+<span itemprop="description">Since the four quadrants are the original pieces of the circle, the circle area is exactly 3.2r².</strong></span>
 </div>
 </div>
-<br><br>
+<br><br><br>
 <h4 itemprop="description">Verifying that this is an identity; not tautology</h4>
 <br>
 <figure itemprop="image" class="imgbox" itemscope itemtype="http://schema.org/ImageObject">
@@ -6805,7 +6808,7 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <br><br>
 <strong>The areas are perfectly balanced if</strong></span>
 <ul style="margin:6px">
-    <li><strong>1. the parts of the circle uncovered by the smaller squares (the four curvilinear regions at the vertices and the four circular segments lying outside the equiareal square) equal the area where the smaller squares overlap, and</strong></li>
+    <li><strong>1. the parts of the circle uncovered by the smaller squares (the four circular segments lying outside the equiareal square, and the four curvilinear regions at the vertices) equal the area of the circle covered on the double by the smaller squares, and</strong></li>
 	<li><strong>2. the circular segments lying outside the equiareal square equal the straight‑edged vertex regions lying outside the circle.</strong></li>
 </ul>
 </div>
@@ -6813,75 +6816,11 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <meta itemprop="position" content="8">
 <meta itemprop="description" content="Subtracting a triangle from a circle slice">
-<meta itemprop="description" content="Triangle defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5): An intersection point of the arc and a side of the equiareal square, (1/√5, 1/√5): An intersection point of two smaller squares, and the diagonal of the equiareal square">
-<meta itemprop="description" content="Circle slice defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5), (√2/2, √2/2): An intersection point of the arc and the diagonal of the equiareal square">
-<meta itemprop="description" content="Half curvilinear region defined by points with reference to the origin (0, 0) with r=1: (1/√5, 1/√5), (2/√5, 1/√5), (√2/2, √2/2)">
-<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">Half of an uncovered region of the circle at a vertex </span>=
-<meta itemprop="value" content="3.2r^2×(45deg.-atan(1/2))/360deg.-r^2/10">
-<br><br>
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-<mrow>
-<mn>3.2</mn>
-<mo>&#x2062;</mo> <!-- invisible times -->
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
-<mo>&#x2062;</mo> <!-- invisible times -->
-<mfrac>
-<mrow>
-<mn>45</mn>
-<mo>&#xB0;</mo>
-<mo>-</mo>
-<mo>arctan</mo>
-<mo>&#x2061;</mo>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>1</mn>
-<mn>2</mn>
-</mfrac>
-<mo>)</mo>
-</mrow>
-</mrow>
-<mrow>
-<mn>360</mn>
-<mo>&#xB0;</mo>
-</mrow>
-</mfrac>
-<mo>-</mo>
-<mfrac>
-<mrow>
-<mfrac>
-<mi>r</mi>
-<msqrt>
-<mn>5</mn>
-</msqrt>
-</mfrac>
-<mo>×</mo>
-<mfrac>
-<mi>r</mi>
-<msqrt>
-<mn>5</mn>
-</msqrt>
-</mfrac>
-</mrow>
-<mn>2</mn>
-</mfrac>
-</mrow>
-</math>
-</div>
-</div>
-<br><br>
-<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="9">
-<meta itemprop="description" content="Subtracting a triangle from a circle slice">
 <meta itemprop="description" content="Triangle defined by points with reference to the origin (0, 0) with r=1: (0, 0), (0, 2/√5): An intersection point of the centerline and a side of the equiareal square, (-1/√5, 2/√5): An intersection point of the arc and a side of the equiareal square">
 <meta itemprop="description" content="Circle slice defined by points with reference to the origin (0, 0) with r=1: (0, 0), (0, 1): An intersection point of the arc and the centerline, (-1/√5, 2/√5)">
 <meta itemprop="description" content="Half segment defined by points with reference to the origin (0, 0) with r=1: (0, 1), (-1/√5, 2/√5), (0, 2/√5)">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">Half of a segment lying outside of the squares </span>=
+<span itemprop="name">Half the area of a segment lying outside of the squares </span>=
 <meta itemprop="value" content="3.2r^2×atan(1/2)/360deg.-r^2/5">
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -6940,10 +6879,74 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 </div>
 <br><br>
 <div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-<meta itemprop="position" content="10">
-<meta itemprop="description" content="Adding 8 half outlying segments and an uncovered curvilinear regions">
+<meta itemprop="position" content="9">
+<meta itemprop="description" content="Subtracting a triangle from a circle slice">
+<meta itemprop="description" content="Triangle defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5): An intersection point of the arc and a side of the equiareal square, (1/√5, 1/√5): An intersection point of two smaller squares, and the diagonal of the equiareal square">
+<meta itemprop="description" content="Circle slice defined by points with reference to the origin (0, 0) with r=1: (0, 0), (2/√5, 1/√5), (√2/2, √2/2): An intersection point of the arc and the diagonal of the equiareal square">
+<meta itemprop="description" content="Half curvilinear region defined by points with reference to the origin (0, 0) with r=1: (1/√5, 1/√5), (2/√5, 1/√5), (√2/2, √2/2)">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">The total uncovered area of the circle </span>=
+<span itemprop="name">Half of an uncovered curvilinear area of the circle at a vertex </span>=
+<meta itemprop="value" content="3.2r^2×(45deg.-atan(1/2))/360deg.-r^2/10">
+<br><br>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mn>45</mn>
+<mo>&#xB0;</mo>
+<mo>-</mo>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<mfrac>
+<mi>r</mi>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mi>r</mi>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</math>
+</div>
+</div>
+<br><br>
+<div itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
+<meta itemprop="position" content="10">
+<meta itemprop="description" content="Adding 8 half outlying segments and uncovered curvilinear regions">
+<div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
+<span itemprop="name">The uncovered area of the circle </span>=
 <meta itemprop="value" content="8(3.2r²(45°-arctan(1/2))/360°-r/5^(1/2)×r/5^(1/2)/2+3.2r²arctan(1/2)/360°-r/5^(1/2)×2r/5^(1/2)/2)">
 <br><br>
 <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -6954,6 +6957,55 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <mn>2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <mo>(</mo>
+<mn>3.2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mfrac>
+<mrow>
+<mo>arctan</mo>
+<mo>&#x2061;</mo>
+<mrow>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>360</mn>
+<mo>&#xB0;</mo>
+</mrow>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<mrow>
+<mfrac>
+<mi>r</mi>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+<mo>×</mo>
+<mfrac>
+<mrow>
+<mn>2</mn>
+<mo>&#x2062;</mo> <!-- invisible times -->
+<mi>r</mi>
+</mrow>
+<msqrt>
+<mn>5</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>+</mo>
 <mn>3.2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
 <msup>
@@ -7002,56 +7054,6 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <mn>2</mn>
 </mfrac>
 <mo>)</mo>
-<mo>+</mo>
-<mn>3.2</mn>
-<mo>&#x2062;</mo> <!-- invisible times -->
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
-<mo>&#x2062;</mo> <!-- invisible times -->
-<mfrac>
-<mrow>
-<mo>arctan</mo>
-<mo>&#x2061;</mo>
-<mrow>
-<mo>(</mo>
-<mfrac>
-<mn>1</mn>
-<mn>2</mn>
-</mfrac>
-<mo>)</mo>
-</mrow>
-</mrow>
-<mrow>
-<mn>360</mn>
-<mo>&#xB0;</mo>
-</mrow>
-</mfrac>
-<mo>-</mo>
-<mfrac>
-<mrow>
-<mfrac>
-<mi>r</mi>
-<msqrt>
-<mn>5</mn>
-</msqrt>
-</mfrac>
-<mo>×</mo>
-<mfrac>
-<mrow>
-<mn>2</mn>
-<mo>&#x2062;</mo> <!-- invisible times -->
-<mi>r</mi>
-</mrow>
-<msqrt>
-<mn>5</mn>
-</msqrt>
-</mfrac>
-</mrow>
-<mn>2</mn>
-</mfrac>
-<mo>)</mo>
 <mo>)</mo>
 </mrow>
 </math>
@@ -7080,14 +7082,6 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 </mfrac>
 <mo>-</mo>
 <mfrac>
-<msup>
-<mi>r</mi>
-<mn>2</mn>
-</msup>
-<mn>10</mn>
-</mfrac>
-<mo>-</mo>
-<mfrac>
 <mrow>
 <mn>2</mn>
 <mo>&#x2062;</mo> <!-- invisible times -->
@@ -7096,6 +7090,14 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <mn>2</mn>
 </msup>
 </mrow>
+<mn>10</mn>
+</mfrac>
+<mo>-</mo>
+<mfrac>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
 <mn>10</mn>
 </mfrac>
 <mo>)</mo>
@@ -7108,7 +7110,7 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <span itemprop="description">Simplify further:</span>
 <br><br>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Total area of the circle uncovered by the smaller squares">
+<meta itemprop="name" content="Area of the circle uncovered by the smaller squares">
 <meta itemprop="value" content="4r^2/5">
 <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mrow>
@@ -7198,18 +7200,18 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
 <meta itemprop="position" content="14">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">The total uncovered area of the circle </span> equals exactly 
+<span itemprop="name">The uncovered area of the circle </span> equals exactly 
 <span itemprop="value">the area of the circle covered on the double by the smaller squares.</span>
 </div>
 </div>
-<br><br>
+<br>
 <div itemprop="item" itemscope itemtype="https://schema.org/HowToTip">
 <meta itemprop="position" content="15">
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
-<span itemprop="name">The sum of an uncovered curvilinear area at the vertex and an outlying segment </span> is exactly 
+<span itemprop="name">The sum of an outlying segment and an uncovered curvilinear area at a vertex </span> is exactly 
 <span itemprop="value">r² / 5</span>, so
 </div>	
-<span itemprop="description">subtracting an uncovered curvilinear area at the vertex from a square with an area of r² / 5 shows, that 
+<span itemprop="description">subtracting an uncovered curvilinear area at a vertex from a square with an area of r² / 5 shows, that </span>
 <div itemprop="about" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="name">the area of a straight‑edged vertex region lying outside the circle </span> equals exactly 
 <span itemprop="value">the area of an outlying segment.</span>
@@ -7217,7 +7219,7 @@ Since the four quadrants are the original pieces of the circle, the circle area 
 </div>
 </div>
 </div>
-<br><br>
+<br>
 <div itemprop="result" itemscope itemtype="https://schema.org/PropertyValue">
 <span itemprop="description">The arc intersects the sides of a concentric square at its quarters only if </span>
 <span itemprop="name">side / radius </span>= 
