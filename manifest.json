@@ -188,7 +188,7 @@
 
 {
 	"name": "prove_circle_area",
-	"description": "Algebraic comparison of the area uncovered by the quadrant cicles in the middle of the square with the area where they overlap.",
+	"description": "Constructive algebraic proof and verification, 2 independent ways.",
 	"disambiguatingDescription": "Real proof",
 	"featureList": "Prove that the area of a circle equals exactly 3.2radius^2.",
 	"steps": [
